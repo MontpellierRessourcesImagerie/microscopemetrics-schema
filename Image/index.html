@@ -225,7 +225,23 @@
 
       Image : name
 
+      Image : shape_c
+
+      Image : shape_t
+
+      Image : shape_x
+
+      Image : shape_y
+
+      Image : shape_z
+
       Image : source_image_url
+
+      Image : voxel_size_x_micron
+
+      Image : voxel_size_y_micron
+
+      Image : voxel_size_z_micron
 
 
 </div>
@@ -264,6 +280,54 @@
 <td><a href="../source_image_url/">source_image_url</a></td>
 <td>0..* <br/> <a href="../String/">String</a></td>
 <td>A list of URLs linking to the images that were used as a source</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../voxel_size_x_micron/">voxel_size_x_micron</a></td>
+<td>0..1 <br/> <a href="../Float/">Float</a></td>
+<td>The physical size in the voxel in the x dimension in microns</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../voxel_size_y_micron/">voxel_size_y_micron</a></td>
+<td>0..1 <br/> <a href="../Float/">Float</a></td>
+<td>The physical size in the voxel in the y dimension in microns</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../voxel_size_z_micron/">voxel_size_z_micron</a></td>
+<td>0..1 <br/> <a href="../Float/">Float</a></td>
+<td>The physical size in the voxel in the z dimension in microns</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../shape_x/">shape_x</a></td>
+<td>1..1 <br/> <a href="../Integer/">Integer</a></td>
+<td>The shape of the image in the x dimension</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../shape_y/">shape_y</a></td>
+<td>1..1 <br/> <a href="../Integer/">Integer</a></td>
+<td>The shape of the image in the y dimension</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../shape_z/">shape_z</a></td>
+<td>1..1 <br/> <a href="../Integer/">Integer</a></td>
+<td>The shape of the image in the z dimension</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../shape_c/">shape_c</a></td>
+<td>1..1 <br/> <a href="../Integer/">Integer</a></td>
+<td>The shape of the image in the c dimension</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../shape_t/">shape_t</a></td>
+<td>1..1 <br/> <a href="../Integer/">Integer</a></td>
+<td>The shape of the image in the t dimension</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -335,6 +399,14 @@ abstract: true
 slots:
 - image_url
 - source_image_url
+- voxel_size_x_micron
+- voxel_size_y_micron
+- voxel_size_z_micron
+- shape_x
+- shape_y
+- shape_z
+- shape_c
+- shape_t
 
 </code></pre>
 </details>
@@ -371,6 +443,105 @@ attributes:
     - Image
     range: string
     required: false
+  voxel_size_x_micron:
+    name: voxel_size_x_micron
+    description: The physical size in the voxel in the x dimension in microns
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    rank: 1000
+    multivalued: false
+    alias: voxel_size_x_micron
+    owner: Image
+    domain_of:
+    - Image
+    range: float
+    required: false
+  voxel_size_y_micron:
+    name: voxel_size_y_micron
+    description: The physical size in the voxel in the y dimension in microns
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    rank: 1000
+    multivalued: false
+    alias: voxel_size_y_micron
+    owner: Image
+    domain_of:
+    - Image
+    range: float
+    required: false
+  voxel_size_z_micron:
+    name: voxel_size_z_micron
+    description: The physical size in the voxel in the z dimension in microns
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    rank: 1000
+    multivalued: false
+    alias: voxel_size_z_micron
+    owner: Image
+    domain_of:
+    - Image
+    range: float
+    required: false
+  shape_x:
+    name: shape_x
+    description: The shape of the image in the x dimension
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    rank: 1000
+    multivalued: false
+    alias: shape_x
+    owner: Image
+    domain_of:
+    - Image
+    range: integer
+    required: true
+  shape_y:
+    name: shape_y
+    description: The shape of the image in the y dimension
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    rank: 1000
+    multivalued: false
+    alias: shape_y
+    owner: Image
+    domain_of:
+    - Image
+    range: integer
+    required: true
+  shape_z:
+    name: shape_z
+    description: The shape of the image in the z dimension
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    rank: 1000
+    multivalued: false
+    ifabsent: int(1)
+    alias: shape_z
+    owner: Image
+    domain_of:
+    - Image
+    range: integer
+    required: true
+  shape_c:
+    name: shape_c
+    description: The shape of the image in the c dimension
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    rank: 1000
+    multivalued: false
+    ifabsent: int(1)
+    alias: shape_c
+    owner: Image
+    domain_of:
+    - Image
+    range: integer
+    required: true
+  shape_t:
+    name: shape_t
+    description: The shape of the image in the t dimension
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    rank: 1000
+    multivalued: false
+    ifabsent: int(1)
+    alias: shape_t
+    owner: Image
+    domain_of:
+    - Image
+    range: integer
+    required: true
   name:
     name: name
     description: The name of an entity

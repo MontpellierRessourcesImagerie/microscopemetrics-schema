@@ -473,6 +473,10 @@
 <td>An object with a name and a description</td>
 </tr>
 <tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Channel/">Channel</a></td>
+<td>A image channel</td>
+</tr>
+<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="MetricsDataset/">MetricsDataset</a></td>
 <td>A base object on which microscope-metrics runs the analysis</td>
 </tr>
@@ -547,10 +551,6 @@
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Sample/">Sample</a></td>
 <td>A sample is a standard physical object that is imaged by a microscope</td>
-</tr>
-<tr>
-<td><a href="PixelSeries/">PixelSeries</a></td>
-<td>A series whose values represent pixels or voxels or a single integer defining the shape of the dimension</td>
 </tr>
 <tr>
 <td><a href="Roi/">Roi</a></td>
@@ -665,7 +665,7 @@
 </tr>
 <tr>
 <td><a href="c/">c</a></td>
-<td></td>
+<td>The c coordinate of the shape</td>
 </tr>
 <tr>
 <td><a href="center_of_illumination/">center_of_illumination</a></td>
@@ -694,6 +694,10 @@
 <tr>
 <td><a href="channel_B/">channel_B</a></td>
 <td>The second channel number to which the measurements apply</td>
+</tr>
+<tr>
+<td><a href="channel_series/">channel_series</a></td>
+<td></td>
 </tr>
 <tr>
 <td><a href="columns/">columns</a></td>
@@ -766,6 +770,14 @@
 <tr>
 <td><a href="distance_measurements/">distance_measurements</a></td>
 <td>Key Distance Measurements on Argolight spots</td>
+</tr>
+<tr>
+<td><a href="emission_wavelength_nm/">emission_wavelength_nm</a></td>
+<td>The emission wavelength in nm</td>
+</tr>
+<tr>
+<td><a href="excitation_wavelength_nm/">excitation_wavelength_nm</a></td>
+<td>The excitation wavelength in nm</td>
 </tr>
 <tr>
 <td><a href="experimenter/">experimenter</a></td>
@@ -1036,6 +1048,26 @@
 <td>Tolerated saturation threshold</td>
 </tr>
 <tr>
+<td><a href="shape_c/">shape_c</a></td>
+<td>The shape of the image in the c dimension</td>
+</tr>
+<tr>
+<td><a href="shape_t/">shape_t</a></td>
+<td>The shape of the image in the t dimension</td>
+</tr>
+<tr>
+<td><a href="shape_x/">shape_x</a></td>
+<td>The shape of the image in the x dimension</td>
+</tr>
+<tr>
+<td><a href="shape_y/">shape_y</a></td>
+<td>The shape of the image in the y dimension</td>
+</tr>
+<tr>
+<td><a href="shape_z/">shape_z</a></td>
+<td>The shape of the image in the z dimension</td>
+</tr>
+<tr>
 <td><a href="shapes/">shapes</a></td>
 <td></td>
 </tr>
@@ -1101,11 +1133,15 @@
 </tr>
 <tr>
 <td><a href="t/">t</a></td>
-<td></td>
+<td>The t coordinate of the shape</td>
 </tr>
 <tr>
 <td><a href="text/">text</a></td>
 <td>The text of the tag</td>
+</tr>
+<tr>
+<td><a href="time_series/">time_series</a></td>
+<td></td>
 </tr>
 <tr>
 <td><a href="top_center_intensity_mean/">top_center_intensity_mean</a></td>
@@ -1156,12 +1192,24 @@
 <td>A list of vertexes defining the polygon</td>
 </tr>
 <tr>
+<td><a href="voxel_size_x_micron/">voxel_size_x_micron</a></td>
+<td>The physical size in the voxel in the x dimension in microns</td>
+</tr>
+<tr>
+<td><a href="voxel_size_y_micron/">voxel_size_y_micron</a></td>
+<td>The physical size in the voxel in the y dimension in microns</td>
+</tr>
+<tr>
+<td><a href="voxel_size_z_micron/">voxel_size_z_micron</a></td>
+<td>The physical size in the voxel in the z dimension in microns</td>
+</tr>
+<tr>
 <td><a href="w/">w</a></td>
 <td>The width of the rectangle</td>
 </tr>
 <tr>
 <td><a href="x/">x</a></td>
-<td></td>
+<td>The x coordinate of the point</td>
 </tr>
 <tr>
 <td><a href="x1/">x1</a></td>
@@ -1177,7 +1225,7 @@
 </tr>
 <tr>
 <td><a href="y/">y</a></td>
-<td></td>
+<td>The y coordinate of the point</td>
 </tr>
 <tr>
 <td><a href="y1/">y1</a></td>
@@ -1193,7 +1241,7 @@
 </tr>
 <tr>
 <td><a href="z/">z</a></td>
-<td></td>
+<td>The z coordinate of the shape</td>
 </tr>
 </tbody>
 </table>

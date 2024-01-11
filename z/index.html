@@ -274,6 +274,19 @@
     Identifier and Mapping Information
   </a>
   
+    <nav class="md-nav" aria-label="Identifier and Mapping Information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schema-source" class="md-nav__link">
+    Schema Source
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -304,6 +317,7 @@
 
 
 <h1 id="slot-z">Slot: z</h1>
+<p><em>The z coordinate of the shape</em></p>
 <p>URI: <a href="https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/z">microscopemetrics_schema:z</a></p>
 <!-- no inheritance hierarchy -->
 
@@ -317,11 +331,6 @@
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><a href="../Image5D/">Image5D</a></td>
-<td>A 5D image in TZYXC order</td>
-<td>no</td>
-</tr>
 <tr>
 <td><a href="../Shape/">Shape</a></td>
 <td>A shape</td>
@@ -361,18 +370,26 @@
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>Range: <a href="../String/">String</a></li>
+<li>Range: <a href="../Float/">Float</a></li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
+<h3 id="schema-source">Schema Source</h3>
+<ul>
+<li>from schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema</li>
+</ul>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
 <pre><code class="language-yaml">name: z
+description: The z coordinate of the shape
+from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+rank: 1000
 alias: z
+owner: Shape
 domain_of:
-- Image5D
 - Shape
-range: string
+range: float
+required: false
 
 </code></pre>
 

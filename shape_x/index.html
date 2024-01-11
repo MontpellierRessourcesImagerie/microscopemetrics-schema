@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/c/">
+        <link rel="canonical" href="https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/shape_x/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-8.5.10">
     
     
       
-        <title>Slot: c - microscopemetrics-schema</title>
+        <title>Slot: shape_x - microscopemetrics-schema</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slot-c" class="md-skip">
+        <a href="#slot-shape_x" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Slot: c
+              Slot: shape_x
             
           </span>
         </div>
@@ -310,15 +310,15 @@
                 
                   
 
-  <a href="https://github.com/MontpellierRessourcesImagerie/microscopemetrics-schema/edit/master/docs/c.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/MontpellierRessourcesImagerie/microscopemetrics-schema/edit/master/docs/shape_x.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="slot-c">Slot: c</h1>
-<p><em>The c coordinate of the shape</em></p>
-<p>URI: <a href="https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/c">microscopemetrics_schema:c</a></p>
+<h1 id="slot-shape_x">Slot: shape_x</h1>
+<p><em>The shape of the image in the x dimension</em></p>
+<p>URI: <a href="https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/shape_x">microscopemetrics_schema:shape_x</a></p>
 <!-- no inheritance hierarchy -->
 
 <h2 id="applicable-classes">Applicable Classes</h2>
@@ -332,45 +332,45 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../Shape/">Shape</a></td>
-<td>A shape</td>
+<td><a href="../Image/">Image</a></td>
+<td>A base object for all microscope-metrics images</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../Point/">Point</a></td>
-<td>A point as defined by x and y coordinates</td>
+<td><a href="../ImageAsNumpy/">ImageAsNumpy</a></td>
+<td>An image as a numpy array in TZYXC order</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../Line/">Line</a></td>
-<td>A line as defined by x1, y1, x2, y2 coordinates</td>
+<td><a href="../ImageInline/">ImageInline</a></td>
+<td>A base object for all microscope-metrics images that are stored as arrays in ...</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../Rectangle/">Rectangle</a></td>
-<td>A rectangle as defined by x, y coordinates and width, height</td>
+<td><a href="../ImageMask/">ImageMask</a></td>
+<td>A base object for all microscope-metrics masks</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../Ellipse/">Ellipse</a></td>
-<td>An ellipse as defined by x, y coordinates and x and y radii</td>
+<td><a href="../Image2D/">Image2D</a></td>
+<td>A 2D image in YX order</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../Polygon/">Polygon</a></td>
-<td>A polygon as defined by a series of vertexes and a boolean to indicate if clo...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Mask/">Mask</a></td>
-<td>A mask as defined by a boolean image</td>
+<td><a href="../Image5D/">Image5D</a></td>
+<td>A 5D image in TZYXC order</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>Range: <a href="../Integer/">Integer</a></li>
+<li>
+<p>Range: <a href="../Integer/">Integer</a></p>
+</li>
+<li>
+<p>Required: True</p>
+</li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
@@ -380,16 +380,16 @@
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
-<pre><code class="language-yaml">name: c
-description: The c coordinate of the shape
+<pre><code class="language-yaml">name: shape_x
+description: The shape of the image in the x dimension
 from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
 rank: 1000
-alias: c
-owner: Shape
+multivalued: false
+alias: shape_x
 domain_of:
-- Shape
+- Image
 range: integer
-required: false
+required: true
 
 </code></pre>
 

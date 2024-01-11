@@ -219,15 +219,23 @@
 
       ImageMask : name
 
+      ImageMask : shape_c
+
+      ImageMask : shape_t
+
+      ImageMask : shape_x
+
+      ImageMask : shape_y
+
+      ImageMask : shape_z
+
       ImageMask : source_image_url
 
-      ImageMask : x
+      ImageMask : voxel_size_x_micron
 
-          ImageMask --|&gt; PixelSeries : x
+      ImageMask : voxel_size_y_micron
 
-      ImageMask : y
-
-          ImageMask --|&gt; PixelSeries : y
+      ImageMask : voxel_size_z_micron
 
 
 </div>
@@ -259,18 +267,6 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../y/">y</a></td>
-<td>1..1 <br/> <a href="../PixelSeries/">PixelSeries</a></td>
-<td></td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../x/">x</a></td>
-<td>1..1 <br/> <a href="../PixelSeries/">PixelSeries</a></td>
-<td></td>
-<td>direct</td>
-</tr>
-<tr>
 <td><a href="../data/">data</a></td>
 <td>1..* <br/> <a href="../Boolean/">Boolean</a></td>
 <td></td>
@@ -286,6 +282,54 @@
 <td><a href="../source_image_url/">source_image_url</a></td>
 <td>0..* <br/> <a href="../String/">String</a></td>
 <td>A list of URLs linking to the images that were used as a source</td>
+<td><a href="../Image/">Image</a></td>
+</tr>
+<tr>
+<td><a href="../voxel_size_x_micron/">voxel_size_x_micron</a></td>
+<td>0..1 <br/> <a href="../Float/">Float</a></td>
+<td>The physical size in the voxel in the x dimension in microns</td>
+<td><a href="../Image/">Image</a></td>
+</tr>
+<tr>
+<td><a href="../voxel_size_y_micron/">voxel_size_y_micron</a></td>
+<td>0..1 <br/> <a href="../Float/">Float</a></td>
+<td>The physical size in the voxel in the y dimension in microns</td>
+<td><a href="../Image/">Image</a></td>
+</tr>
+<tr>
+<td><a href="../voxel_size_z_micron/">voxel_size_z_micron</a></td>
+<td>0..1 <br/> <a href="../Float/">Float</a></td>
+<td>The physical size in the voxel in the z dimension in microns</td>
+<td><a href="../Image/">Image</a></td>
+</tr>
+<tr>
+<td><a href="../shape_x/">shape_x</a></td>
+<td>1..1 <br/> <a href="../Integer/">Integer</a></td>
+<td>The shape of the image in the x dimension</td>
+<td><a href="../Image/">Image</a></td>
+</tr>
+<tr>
+<td><a href="../shape_y/">shape_y</a></td>
+<td>1..1 <br/> <a href="../Integer/">Integer</a></td>
+<td>The shape of the image in the y dimension</td>
+<td><a href="../Image/">Image</a></td>
+</tr>
+<tr>
+<td><a href="../shape_z/">shape_z</a></td>
+<td>1..1 <br/> <a href="../Integer/">Integer</a></td>
+<td>The shape of the image in the z dimension</td>
+<td><a href="../Image/">Image</a></td>
+</tr>
+<tr>
+<td><a href="../shape_c/">shape_c</a></td>
+<td>1..1 <br/> <a href="../Integer/">Integer</a></td>
+<td>The shape of the image in the c dimension</td>
+<td><a href="../Image/">Image</a></td>
+</tr>
+<tr>
+<td><a href="../shape_t/">shape_t</a></td>
+<td>1..1 <br/> <a href="../Integer/">Integer</a></td>
+<td>The shape of the image in the t dimension</td>
 <td><a href="../Image/">Image</a></td>
 </tr>
 <tr>
@@ -354,22 +398,6 @@ description: A base object for all microscope-metrics masks
 from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
 is_a: ImageInline
 attributes:
-  y:
-    name: y
-    implements:
-    - linkml:axis1
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
-    rank: 1000
-    range: PixelSeries
-    required: true
-  x:
-    name: x
-    implements:
-    - linkml:axis0
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
-    rank: 1000
-    range: PixelSeries
-    required: true
   data:
     name: data
     implements:
@@ -388,44 +416,6 @@ description: A base object for all microscope-metrics masks
 from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
 is_a: ImageInline
 attributes:
-  y:
-    name: y
-    implements:
-    - linkml:axis1
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
-    rank: 1000
-    alias: y
-    owner: ImageMask
-    domain_of:
-    - ImageMask
-    - Image2D
-    - Image5D
-    - Point
-    - Rectangle
-    - Ellipse
-    - Vertex
-    - Mask
-    range: PixelSeries
-    required: true
-  x:
-    name: x
-    implements:
-    - linkml:axis0
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
-    rank: 1000
-    alias: x
-    owner: ImageMask
-    domain_of:
-    - ImageMask
-    - Image2D
-    - Image5D
-    - Point
-    - Rectangle
-    - Ellipse
-    - Vertex
-    - Mask
-    range: PixelSeries
-    required: true
   data:
     name: data
     implements:
@@ -466,6 +456,105 @@ attributes:
     - Image
     range: string
     required: false
+  voxel_size_x_micron:
+    name: voxel_size_x_micron
+    description: The physical size in the voxel in the x dimension in microns
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    rank: 1000
+    multivalued: false
+    alias: voxel_size_x_micron
+    owner: ImageMask
+    domain_of:
+    - Image
+    range: float
+    required: false
+  voxel_size_y_micron:
+    name: voxel_size_y_micron
+    description: The physical size in the voxel in the y dimension in microns
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    rank: 1000
+    multivalued: false
+    alias: voxel_size_y_micron
+    owner: ImageMask
+    domain_of:
+    - Image
+    range: float
+    required: false
+  voxel_size_z_micron:
+    name: voxel_size_z_micron
+    description: The physical size in the voxel in the z dimension in microns
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    rank: 1000
+    multivalued: false
+    alias: voxel_size_z_micron
+    owner: ImageMask
+    domain_of:
+    - Image
+    range: float
+    required: false
+  shape_x:
+    name: shape_x
+    description: The shape of the image in the x dimension
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    rank: 1000
+    multivalued: false
+    alias: shape_x
+    owner: ImageMask
+    domain_of:
+    - Image
+    range: integer
+    required: true
+  shape_y:
+    name: shape_y
+    description: The shape of the image in the y dimension
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    rank: 1000
+    multivalued: false
+    alias: shape_y
+    owner: ImageMask
+    domain_of:
+    - Image
+    range: integer
+    required: true
+  shape_z:
+    name: shape_z
+    description: The shape of the image in the z dimension
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    rank: 1000
+    multivalued: false
+    ifabsent: int(1)
+    alias: shape_z
+    owner: ImageMask
+    domain_of:
+    - Image
+    range: integer
+    required: true
+  shape_c:
+    name: shape_c
+    description: The shape of the image in the c dimension
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    rank: 1000
+    multivalued: false
+    ifabsent: int(1)
+    alias: shape_c
+    owner: ImageMask
+    domain_of:
+    - Image
+    range: integer
+    required: true
+  shape_t:
+    name: shape_t
+    description: The shape of the image in the t dimension
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    rank: 1000
+    multivalued: false
+    ifabsent: int(1)
+    alias: shape_t
+    owner: ImageMask
+    domain_of:
+    - Image
+    range: integer
+    required: true
   name:
     name: name
     description: The name of an entity

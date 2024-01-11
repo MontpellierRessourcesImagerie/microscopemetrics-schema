@@ -387,9 +387,6 @@ attributes:
     alias: y
     owner: Mask
     domain_of:
-    - ImageMask
-    - Image2D
-    - Image5D
     - Point
     - Rectangle
     - Ellipse
@@ -405,9 +402,6 @@ attributes:
     alias: x
     owner: Mask
     domain_of:
-    - ImageMask
-    - Image2D
-    - Image5D
     - Point
     - Rectangle
     - Ellipse
@@ -442,10 +436,10 @@ attributes:
     name: z
     description: The z coordinate of the shape
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    rank: 1000
     alias: z
     owner: Mask
     domain_of:
-    - Image5D
     - Shape
     range: float
     required: false
@@ -453,10 +447,10 @@ attributes:
     name: c
     description: The c coordinate of the shape
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    rank: 1000
     alias: c
     owner: Mask
     domain_of:
-    - Image5D
     - Shape
     range: integer
     required: false
@@ -464,10 +458,10 @@ attributes:
     name: t
     description: The t coordinate of the shape
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    rank: 1000
     alias: t
     owner: Mask
     domain_of:
-    - Image5D
     - Shape
     range: integer
     required: false
