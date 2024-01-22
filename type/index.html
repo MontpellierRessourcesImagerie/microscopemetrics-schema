@@ -274,19 +274,6 @@
     Identifier and Mapping Information
   </a>
   
-    <nav class="md-nav" aria-label="Identifier and Mapping Information">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#schema-source" class="md-nav__link">
-    Schema Source
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -317,7 +304,6 @@
 
 
 <h1 id="slot-type">Slot: type</h1>
-<p><em>The type of the sample</em></p>
 <p>URI: <a href="https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/type">microscopemetrics_schema:type</a></p>
 <!-- no inheritance hierarchy -->
 
@@ -332,6 +318,11 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="../Microscope/">Microscope</a></td>
+<td>A microscope</td>
+<td>no</td>
+</tr>
+<tr>
 <td><a href="../Sample/">Sample</a></td>
 <td>A sample is a standard physical object that is imaged by a microscope</td>
 <td>no</td>
@@ -340,32 +331,18 @@
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>
-<p>Range: <a href="../String/">String</a></p>
-</li>
-<li>
-<p>Required: True</p>
-</li>
+<li>Range: <a href="../String/">String</a></li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
-<h3 id="schema-source">Schema Source</h3>
-<ul>
-<li>from schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema</li>
-</ul>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
 <pre><code class="language-yaml">name: type
-description: The type of the sample
-from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
-rank: 1000
-identifier: true
 alias: type
-owner: Sample
 domain_of:
+- Microscope
 - Sample
 range: string
-required: true
 
 </code></pre>
 

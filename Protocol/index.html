@@ -346,7 +346,6 @@ attributes:
     name: url
     description: The URL where the protocol can be found
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
-    rank: 1000
     identifier: true
     range: string
     required: true
@@ -387,11 +386,11 @@ attributes:
     name: url
     description: The URL where the protocol can be found
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
-    rank: 1000
     identifier: true
     alias: url
     owner: Protocol
     domain_of:
+    - Microscope
     - Protocol
     range: string
     required: true
@@ -422,6 +421,7 @@ attributes:
     - Roi
     - Tag
     range: string
+    required: false
 
 </code></pre>
 </details>

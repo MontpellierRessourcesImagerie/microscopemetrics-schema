@@ -341,7 +341,6 @@ attributes:
     name: type
     description: The type of the sample
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
-    rank: 1000
     identifier: true
     range: string
     required: true
@@ -368,11 +367,11 @@ attributes:
     name: type
     description: The type of the sample
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
-    rank: 1000
     identifier: true
     alias: type
     owner: Sample
     domain_of:
+    - Microscope
     - Sample
     range: string
     required: true
@@ -416,6 +415,7 @@ attributes:
     - Roi
     - Tag
     range: string
+    required: false
 
 </code></pre>
 </details>

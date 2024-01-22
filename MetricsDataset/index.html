@@ -224,6 +224,10 @@
 
           MetricsDataset --|&gt; Experimenter : experimenter
 
+      MetricsDataset : microscope
+
+          MetricsDataset --|&gt; Microscope : microscope
+
       MetricsDataset : name
 
       MetricsDataset : processed
@@ -261,6 +265,12 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><a href="../microscope/">microscope</a></td>
+<td>1..1 <br/> <a href="../Microscope/">Microscope</a></td>
+<td>The microscope that was used to acquire the dataset</td>
+<td>direct</td>
+</tr>
 <tr>
 <td><a href="../sample/">sample</a></td>
 <td>0..1 <br/> <a href="../Sample/">Sample</a></td>
@@ -350,6 +360,15 @@ description: A base object on which microscope-metrics runs the analysis
 from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
 is_a: NamedObject
 attributes:
+  microscope:
+    name: microscope
+    description: The microscope that was used to acquire the dataset
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    rank: 1000
+    multivalued: false
+    range: Microscope
+    required: true
+    inlined: false
   sample:
     name: sample
     description: The sample that was imaged
@@ -400,7 +419,6 @@ attributes:
     name: comment
     description: A human readable comment about the dataset
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
-    rank: 1000
     multivalued: true
     range: Comment
     required: false
@@ -416,6 +434,19 @@ description: A base object on which microscope-metrics runs the analysis
 from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
 is_a: NamedObject
 attributes:
+  microscope:
+    name: microscope
+    description: The microscope that was used to acquire the dataset
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    rank: 1000
+    multivalued: false
+    alias: microscope
+    owner: MetricsDataset
+    domain_of:
+    - MetricsDataset
+    range: Microscope
+    required: true
+    inlined: false
   sample:
     name: sample
     description: The sample that was imaged
@@ -490,11 +521,11 @@ attributes:
     name: comment
     description: A human readable comment about the dataset
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
-    rank: 1000
     multivalued: true
     alias: comment
     owner: MetricsDataset
     domain_of:
+    - Microscope
     - MetricsDataset
     range: Comment
     required: false
@@ -526,6 +557,7 @@ attributes:
     - Roi
     - Tag
     range: string
+    required: false
 tree_root: true
 
 </code></pre>

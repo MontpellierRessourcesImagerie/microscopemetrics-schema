@@ -222,6 +222,10 @@
 
           FieldIlluminationDataset --|&gt; FieldIlluminationInput : input
 
+      FieldIlluminationDataset : microscope
+
+          FieldIlluminationDataset --|&gt; Microscope : microscope
+
       FieldIlluminationDataset : name
 
       FieldIlluminationDataset : output
@@ -272,6 +276,12 @@
 <td>0..1 <br/> <a href="../FieldIlluminationOutput/">FieldIlluminationOutput</a></td>
 <td></td>
 <td>direct</td>
+</tr>
+<tr>
+<td><a href="../microscope/">microscope</a></td>
+<td>1..1 <br/> <a href="../Microscope/">Microscope</a></td>
+<td>The microscope that was used to acquire the dataset</td>
+<td><a href="../MetricsDataset/">MetricsDataset</a></td>
 </tr>
 <tr>
 <td><a href="../sample/">sample</a></td>
@@ -419,6 +429,19 @@ attributes:
     - FieldIlluminationDataset
     range: FieldIlluminationOutput
     required: false
+  microscope:
+    name: microscope
+    description: The microscope that was used to acquire the dataset
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    rank: 1000
+    multivalued: false
+    alias: microscope
+    owner: FieldIlluminationDataset
+    domain_of:
+    - MetricsDataset
+    range: Microscope
+    required: true
+    inlined: false
   sample:
     name: sample
     description: The sample that was imaged
@@ -493,11 +516,11 @@ attributes:
     name: comment
     description: A human readable comment about the dataset
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
-    rank: 1000
     multivalued: true
     alias: comment
     owner: FieldIlluminationDataset
     domain_of:
+    - Microscope
     - MetricsDataset
     range: Comment
     required: false
@@ -529,6 +552,7 @@ attributes:
     - Roi
     - Tag
     range: string
+    required: false
 rules:
 - preconditions:
     slot_conditions:
