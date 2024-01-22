@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/image/">
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-8.5.10">
     
     
       
@@ -317,7 +317,7 @@
 
 
 <h1 id="slot-image">Slot: image</h1>
-<p><em>The image to which the ROI is applied</em></p>
+<p><em>The image or images to which the ROI is applied</em></p>
 <p>URI: <a href="https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/image">microscopemetrics_schema:image</a></p>
 <!-- no inheritance hierarchy -->
 
@@ -333,7 +333,37 @@
 <tbody>
 <tr>
 <td><a href="../Roi/">Roi</a></td>
-<td>A ROI</td>
+<td>A ROI (Region Of Interest)</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../LinesRoi/">LinesRoi</a></td>
+<td>ROI representing a set of lines in a single channel</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../PointsRoi/">PointsRoi</a></td>
+<td>ROI representing a set of points in a single channel</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../RectanglesRoi/">RectanglesRoi</a></td>
+<td>ROI representing a set of rectangles in a single channel</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../RoiProfiles/">RoiProfiles</a></td>
+<td>line ROIs used to compute the intensity profiles</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../RoiCorners/">RoiCorners</a></td>
+<td>Rectangular ROIs used to compute the corner intensities</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../RoiCenter/">RoiCenter</a></td>
+<td>Point ROIs marking the center of illumination</td>
 <td>no</td>
 </tr>
 </tbody>
@@ -356,7 +386,7 @@
 <details>
 
 <pre><code class="language-yaml">name: image
-description: The image to which the ROI is applied
+description: The image or images to which the ROI is applied
 from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
 rank: 1000
 multivalued: true

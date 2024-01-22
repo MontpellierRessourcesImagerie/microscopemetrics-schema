@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/Polygon/" rel="canonical"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.5.2, mkdocs-material-8.5.10" name="generator"/>
+<meta content="mkdocs-1.5.3, mkdocs-material-8.5.10" name="generator"/>
 <title>Class: Polygon - microscopemetrics-schema</title>
 <link href="../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
@@ -264,7 +264,7 @@
 </tr>
 <tr>
 <td><a href="../label/">label</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>1..1 <br/> <a href="../String/">String</a></td>
 <td>The label of the shape</td>
 <td><a href="../Shape/">Shape</a></td>
 </tr>
@@ -401,13 +401,14 @@ attributes:
     name: label
     description: The label of the shape
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    identifier: true
     alias: label
     owner: Polygon
     domain_of:
     - Roi
     - Shape
     range: string
-    required: false
+    required: true
   z:
     name: z
     description: The z coordinate of the shape

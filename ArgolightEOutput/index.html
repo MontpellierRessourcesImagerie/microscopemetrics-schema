@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/ArgolightEOutput/" rel="canonical"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.5.2, mkdocs-material-8.5.10" name="generator"/>
+<meta content="mkdocs-1.5.3, mkdocs-material-8.5.10" name="generator"/>
 <title>Class: ArgolightEOutput - microscopemetrics-schema</title>
 <link href="../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
@@ -220,7 +220,7 @@
 
       ArgolightEOutput : peaks_rois
 
-          ArgolightEOutput --|&gt; Roi : peaks_rois
+          ArgolightEOutput --|&gt; LinesRoi : peaks_rois
 
 
 </div>
@@ -244,7 +244,7 @@
 <tbody>
 <tr>
 <td><a href="../peaks_rois/">peaks_rois</a></td>
-<td>0..* <br/> <a href="../Roi/">Roi</a></td>
+<td>0..* <br/> <a href="../LinesRoi/">LinesRoi</a></td>
 <td>ROIs of the peaks found in the argolight images</td>
 <td>direct</td>
 </tr>
@@ -315,11 +315,11 @@ is_a: MetricsOutput
 attributes:
   peaks_rois:
     name: peaks_rois
-    description: ROIs of the peaks found in the argolight images
+    description: ROIs of the peaks found in the argolight images. One per channel
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/samples/argolight_schema
     rank: 1000
     multivalued: true
-    range: Roi
+    range: LinesRoi
   key_measurements:
     name: key_measurements
     description: Key Measurements on Argolight E images
@@ -346,7 +346,7 @@ is_a: MetricsOutput
 attributes:
   peaks_rois:
     name: peaks_rois
-    description: ROIs of the peaks found in the argolight images
+    description: ROIs of the peaks found in the argolight images. One per channel
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/samples/argolight_schema
     rank: 1000
     multivalued: true
@@ -354,7 +354,7 @@ attributes:
     owner: ArgolightEOutput
     domain_of:
     - ArgolightEOutput
-    range: Roi
+    range: LinesRoi
   key_measurements:
     name: key_measurements
     description: Key Measurements on Argolight E images

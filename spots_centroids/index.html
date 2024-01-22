@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/spots_centroids/">
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-8.5.10">
     
     
       
@@ -317,7 +317,7 @@
 
 
 <h1 id="slot-spots_centroids">Slot: spots_centroids</h1>
-<p><em>Centroids of the argolight spots provided as a list of ROIs, one per channel</em></p>
+<p><em>Centroids of the argolight spots provided as a list of ROIs. One per channel</em></p>
 <p>URI: <a href="https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/spots_centroids">microscopemetrics_schema:spots_centroids</a></p>
 <!-- no inheritance hierarchy -->
 
@@ -341,7 +341,7 @@
 <h2 id="properties">Properties</h2>
 <ul>
 <li>
-<p>Range: <a href="../Roi/">Roi</a></p>
+<p>Range: <a href="../PointsRoi/">PointsRoi</a></p>
 </li>
 <li>
 <p>Multivalued: True</p>
@@ -356,7 +356,7 @@
 <details>
 
 <pre><code class="language-yaml">name: spots_centroids
-description: Centroids of the argolight spots provided as a list of ROIs, one per
+description: Centroids of the argolight spots provided as a list of ROIs. One per
   channel
 from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
 rank: 1000
@@ -365,7 +365,7 @@ alias: spots_centroids
 owner: ArgolightBOutput
 domain_of:
 - ArgolightBOutput
-range: Roi
+range: PointsRoi
 required: false
 
 </code></pre>

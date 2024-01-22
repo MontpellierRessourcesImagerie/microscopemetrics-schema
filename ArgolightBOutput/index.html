@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/ArgolightBOutput/" rel="canonical"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.5.2, mkdocs-material-8.5.10" name="generator"/>
+<meta content="mkdocs-1.5.3, mkdocs-material-8.5.10" name="generator"/>
 <title>Class: ArgolightBOutput - microscopemetrics-schema</title>
 <link href="../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
@@ -220,7 +220,7 @@
 
       ArgolightBOutput : spots_centroids
 
-          ArgolightBOutput --|&gt; Roi : spots_centroids
+          ArgolightBOutput --|&gt; PointsRoi : spots_centroids
 
       ArgolightBOutput : spots_distances
 
@@ -262,8 +262,8 @@
 </tr>
 <tr>
 <td><a href="../spots_centroids/">spots_centroids</a></td>
-<td>0..* <br/> <a href="../Roi/">Roi</a></td>
-<td>Centroids of the argolight spots provided as a list of ROIs, one per channel</td>
+<td>0..* <br/> <a href="../PointsRoi/">PointsRoi</a></td>
+<td>Centroids of the argolight spots provided as a list of ROIs</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -354,12 +354,12 @@ attributes:
     required: false
   spots_centroids:
     name: spots_centroids
-    description: Centroids of the argolight spots provided as a list of ROIs, one
+    description: Centroids of the argolight spots provided as a list of ROIs. One
       per channel
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/samples/argolight_schema
     rank: 1000
     multivalued: true
-    range: Roi
+    range: PointsRoi
     required: false
   intensity_measurements:
     name: intensity_measurements
@@ -417,7 +417,7 @@ attributes:
     required: false
   spots_centroids:
     name: spots_centroids
-    description: Centroids of the argolight spots provided as a list of ROIs, one
+    description: Centroids of the argolight spots provided as a list of ROIs. One
       per channel
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/samples/argolight_schema
     rank: 1000
@@ -426,7 +426,7 @@ attributes:
     owner: ArgolightBOutput
     domain_of:
     - ArgolightBOutput
-    range: Roi
+    range: PointsRoi
     required: false
   intensity_measurements:
     name: intensity_measurements

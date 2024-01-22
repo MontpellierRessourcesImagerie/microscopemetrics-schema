@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/">
       
       <link rel="icon" href="assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-8.5.10">
     
     
       
@@ -554,7 +554,31 @@
 </tr>
 <tr>
 <td><a href="Roi/">Roi</a></td>
-<td>A ROI. Collection of shapes and an image to which they are applied</td>
+<td>A ROI (Region Of Interest). Collection of shapes and an image to which they are applied</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="LinesRoi/">LinesRoi</a></td>
+<td>ROI representing a set of lines in a single channel</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="RoiProfiles/">RoiProfiles</a></td>
+<td>line ROIs used to compute the intensity profiles</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="PointsRoi/">PointsRoi</a></td>
+<td>ROI representing a set of points in a single channel</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="RectanglesRoi/">RectanglesRoi</a></td>
+<td>ROI representing a set of rectangles in a single channel</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="RoiCorners/">RoiCorners</a></td>
+<td>Rectangular ROIs used to compute the corner intensities</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="RoiCenter/">RoiCenter</a></td>
+<td>Point ROIs marking the center of illumination</td>
 </tr>
 <tr>
 <td><a href="Shape/">Shape</a></td>
@@ -648,6 +672,10 @@
 <td>The mean intensity of the bottom-center of the image  divided by the maximum ...</td>
 </tr>
 <tr>
+<td><a href="bottom_center_region/">bottom_center_region</a></td>
+<td>The bottom-center of the image</td>
+</tr>
+<tr>
 <td><a href="bottom_left_intensity_mean/">bottom_left_intensity_mean</a></td>
 <td>The mean intensity of the bottom-left of the image</td>
 </tr>
@@ -656,12 +684,20 @@
 <td>The mean intensity of the bottom-left of the image  divided by the maximum in...</td>
 </tr>
 <tr>
+<td><a href="bottom_left_region/">bottom_left_region</a></td>
+<td>The bottom-left corner of the image</td>
+</tr>
+<tr>
 <td><a href="bottom_right_intensity_mean/">bottom_right_intensity_mean</a></td>
 <td>The mean intensity of the bottom-right of the image</td>
 </tr>
 <tr>
 <td><a href="bottom_right_intensity_ratio/">bottom_right_intensity_ratio</a></td>
 <td>The mean intensity of the bottom-right of the image  divided by the maximum i...</td>
+</tr>
+<tr>
+<td><a href="bottom_right_region/">bottom_right_region</a></td>
+<td>The bottom-right corner of the image</td>
 </tr>
 <tr>
 <td><a href="c/">c</a></td>
@@ -678,6 +714,10 @@
 <tr>
 <td><a href="center_of_mass_y/">center_of_mass_y</a></td>
 <td>The y coordinate of the center of mass of the center of illumination region</td>
+</tr>
+<tr>
+<td><a href="center_points/">center_points</a></td>
+<td>The center of illumination</td>
 </tr>
 <tr>
 <td><a href="center_threshold/">center_threshold</a></td>
@@ -708,16 +748,24 @@
 <td>A human readable comment about the dataset</td>
 </tr>
 <tr>
+<td><a href="comment_type/">comment_type</a></td>
+<td>The type of the comment</td>
+</tr>
+<tr>
 <td><a href="corner_fraction/">corner_fraction</a></td>
 <td>Input parameter: the proportion of the image to be considered as corner or ce...</td>
 </tr>
 <tr>
 <td><a href="corner_rois/">corner_rois</a></td>
-<td>ROIs used to compute the corner intensities</td>
+<td>Rectangular ROIs used to compute the corner intensities</td>
 </tr>
 <tr>
 <td><a href="data/">data</a></td>
 <td></td>
+</tr>
+<tr>
+<td><a href="date/">date</a></td>
+<td>The date to which the comment is referring</td>
 </tr>
 <tr>
 <td><a href="decile_0/">decile_0</a></td>
@@ -809,7 +857,7 @@
 </tr>
 <tr>
 <td><a href="image/">image</a></td>
-<td>The image to which the ROI is applied</td>
+<td>The image or images to which the ROI is applied</td>
 </tr>
 <tr>
 <td><a href="image_url/">image_url</a></td>
@@ -866,6 +914,18 @@
 <tr>
 <td><a href="label/">label</a></td>
 <td>The label of the ROI</td>
+</tr>
+<tr>
+<td><a href="left_to_right_profile/">left_to_right_profile</a></td>
+<td>The line from the left to the right of the image</td>
+</tr>
+<tr>
+<td><a href="leftBottom_to_rightTop_profile/">leftBottom_to_rightTop_profile</a></td>
+<td>The line from the bottom-left to the top-right of the image</td>
+</tr>
+<tr>
+<td><a href="leftTop_to_rightBottom_profile/">leftTop_to_rightBottom_profile</a></td>
+<td>The line from the top-left to the bottom-right of the image</td>
 </tr>
 <tr>
 <td><a href="lower_threshold_correction_factors/">lower_threshold_correction_factors</a></td>
@@ -936,6 +996,10 @@
 <td>The mean intensity of the middle-center of the image  divided by the maximum ...</td>
 </tr>
 <tr>
+<td><a href="middle_center_region/">middle_center_region</a></td>
+<td>The middle-center of the image</td>
+</tr>
+<tr>
 <td><a href="middle_left_intensity_mean/">middle_left_intensity_mean</a></td>
 <td>The mean intensity of the middle-left of the image</td>
 </tr>
@@ -944,12 +1008,20 @@
 <td>The mean intensity of the middle-left of the image  divided by the maximum in...</td>
 </tr>
 <tr>
+<td><a href="middle_left_region/">middle_left_region</a></td>
+<td>The middle-left of the image</td>
+</tr>
+<tr>
 <td><a href="middle_right_intensity_mean/">middle_right_intensity_mean</a></td>
 <td>The mean intensity of the middle-right of the image</td>
 </tr>
 <tr>
 <td><a href="middle_right_intensity_ratio/">middle_right_intensity_ratio</a></td>
 <td>The mean intensity of the middle-right of the image  divided by the maximum i...</td>
+</tr>
+<tr>
+<td><a href="middle_right_region/">middle_right_region</a></td>
+<td>The middle-right of the image</td>
 </tr>
 <tr>
 <td><a href="min_max_intensity_ratio/">min_max_intensity_ratio</a></td>
@@ -1017,7 +1089,7 @@
 </tr>
 <tr>
 <td><a href="profile_rois/">profile_rois</a></td>
-<td>ROIs used to compute the intensity profiles</td>
+<td>line ROIs used to compute the intensity profiles</td>
 </tr>
 <tr>
 <td><a href="prominence_threshold/">prominence_threshold</a></td>
@@ -1093,7 +1165,7 @@
 </tr>
 <tr>
 <td><a href="spots_centroids/">spots_centroids</a></td>
-<td>Centroids of the argolight spots provided as a list of ROIs, one per channel</td>
+<td>Centroids of the argolight spots provided as a list of ROIs</td>
 </tr>
 <tr>
 <td><a href="spots_distance/">spots_distance</a></td>
@@ -1137,7 +1209,7 @@
 </tr>
 <tr>
 <td><a href="text/">text</a></td>
-<td>The text of the tag</td>
+<td>The text of the comment</td>
 </tr>
 <tr>
 <td><a href="time_series/">time_series</a></td>
@@ -1152,6 +1224,10 @@
 <td>The mean intensity of the top-center of the image  divided by the maximum int...</td>
 </tr>
 <tr>
+<td><a href="top_center_region/">top_center_region</a></td>
+<td>The top-center of the image</td>
+</tr>
+<tr>
 <td><a href="top_left_intensity_mean/">top_left_intensity_mean</a></td>
 <td>The mean intensity of the top-left corner of the image</td>
 </tr>
@@ -1160,12 +1236,24 @@
 <td>The mean intensity of the top-left corner of the image  divided by the maximu...</td>
 </tr>
 <tr>
+<td><a href="top_left_region/">top_left_region</a></td>
+<td>The top-left corner of the image</td>
+</tr>
+<tr>
 <td><a href="top_right_intensity_mean/">top_right_intensity_mean</a></td>
 <td>The mean intensity of the top-right corner of the image</td>
 </tr>
 <tr>
 <td><a href="top_right_intensity_ratio/">top_right_intensity_ratio</a></td>
 <td>The mean intensity of the top-right corner of the image  divided by the maxim...</td>
+</tr>
+<tr>
+<td><a href="top_right_region/">top_right_region</a></td>
+<td>The top-right corner of the image</td>
+</tr>
+<tr>
+<td><a href="top_to_bottom_profile/">top_to_bottom_profile</a></td>
+<td>The line from the top to the bottom of the image</td>
 </tr>
 <tr>
 <td><a href="type/">type</a></td>
@@ -1255,8 +1343,8 @@
 </thead>
 <tbody>
 <tr>
-<td></td>
-<td></td>
+<td><a href="CommentTypes/">CommentTypes</a></td>
+<td>The type of the comment</td>
 </tr>
 </tbody>
 </table>
@@ -1306,6 +1394,14 @@
 <td>An integer</td>
 </tr>
 <tr>
+<td><a href="Jsonpath/">Jsonpath</a></td>
+<td>A string encoding a JSON Path</td>
+</tr>
+<tr>
+<td><a href="Jsonpointer/">Jsonpointer</a></td>
+<td>A string encoding a JSON Pointer</td>
+</tr>
+<tr>
 <td><a href="Ncname/">Ncname</a></td>
 <td>Prefix part of CURIE</td>
 </tr>
@@ -1316,6 +1412,10 @@
 <tr>
 <td><a href="Objectidentifier/">Objectidentifier</a></td>
 <td>A URI or CURIE that represents an object in the model</td>
+</tr>
+<tr>
+<td><a href="Sparqlpath/">Sparqlpath</a></td>
+<td>A string encoding a SPARQL Property Path</td>
 </tr>
 <tr>
 <td><a href="String/">String</a></td>

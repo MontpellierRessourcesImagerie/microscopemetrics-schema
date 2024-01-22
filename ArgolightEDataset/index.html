@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/ArgolightEDataset/" rel="canonical"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.5.2, mkdocs-material-8.5.10" name="generator"/>
+<meta content="mkdocs-1.5.3, mkdocs-material-8.5.10" name="generator"/>
 <title>Class: ArgolightEDataset - microscopemetrics-schema</title>
 <link href="../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
@@ -290,7 +290,7 @@
 </tr>
 <tr>
 <td><a href="../acquisition_date/">acquisition_date</a></td>
-<td>0..1 <br/> <a href="../Date/">Date</a></td>
+<td>0..1 <br/> <a href="../date/">date</a></td>
 <td>The date of the acquisition</td>
 <td><a href="../MetricsDataset/">MetricsDataset</a></td>
 </tr>
@@ -302,7 +302,7 @@
 </tr>
 <tr>
 <td><a href="../processing_date/">processing_date</a></td>
-<td>0..1 <br/> <a href="../Date/">Date</a></td>
+<td>0..1 <br/> <a href="../date/">date</a></td>
 <td>The date of the processing by microscope-metrics</td>
 <td><a href="../MetricsDataset/">MetricsDataset</a></td>
 </tr>
@@ -461,6 +461,7 @@ attributes:
     domain_of:
     - MetricsDataset
     range: Experimenter
+    inlined: false
   acquisition_date:
     name: acquisition_date
     description: The date of the acquisition
@@ -519,6 +520,7 @@ attributes:
     - MetricsDataset
     range: Comment
     required: false
+    inlined: true
   name:
     name: name
     description: The name of an entity

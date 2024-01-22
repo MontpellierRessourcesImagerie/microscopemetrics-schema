@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/FieldIlluminationOutput/" rel="canonical"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.5.2, mkdocs-material-8.5.10" name="generator"/>
+<meta content="mkdocs-1.5.3, mkdocs-material-8.5.10" name="generator"/>
 <title>Class: FieldIlluminationOutput - microscopemetrics-schema</title>
 <link href="../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
@@ -212,11 +212,11 @@
 
       FieldIlluminationOutput : center_of_illumination
 
-          FieldIlluminationOutput --|&gt; Roi : center_of_illumination
+          FieldIlluminationOutput --|&gt; PointsRoi : center_of_illumination
 
       FieldIlluminationOutput : corner_rois
 
-          FieldIlluminationOutput --|&gt; Roi : corner_rois
+          FieldIlluminationOutput --|&gt; RectanglesRoi : corner_rois
 
       FieldIlluminationOutput : intensity_map
 
@@ -232,7 +232,7 @@
 
       FieldIlluminationOutput : profile_rois
 
-          FieldIlluminationOutput --|&gt; Roi : profile_rois
+          FieldIlluminationOutput --|&gt; LinesRoi : profile_rois
 
 
 </div>
@@ -274,19 +274,19 @@
 </tr>
 <tr>
 <td><a href="../profile_rois/">profile_rois</a></td>
-<td>0..1 <br/> <a href="../Roi/">Roi</a></td>
-<td>ROIs used to compute the intensity profiles</td>
+<td>0..1 <br/> <a href="../LinesRoi/">LinesRoi</a></td>
+<td>line ROIs used to compute the intensity profiles</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../corner_rois/">corner_rois</a></td>
-<td>0..1 <br/> <a href="../Roi/">Roi</a></td>
-<td>ROIs used to compute the corner intensities</td>
+<td>0..1 <br/> <a href="../RectanglesRoi/">RectanglesRoi</a></td>
+<td>Rectangular ROIs used to compute the corner intensities</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../center_of_illumination/">center_of_illumination</a></td>
-<td>0..1 <br/> <a href="../Roi/">Roi</a></td>
+<td>0..1 <br/> <a href="../PointsRoi/">PointsRoi</a></td>
 <td>Point ROIs marking the center of illumination</td>
 <td>direct</td>
 </tr>
@@ -366,25 +366,25 @@ attributes:
     range: Image5D
   profile_rois:
     name: profile_rois
-    description: ROIs used to compute the intensity profiles
+    description: line ROIs used to compute the intensity profiles
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/samples/field_illumination_schema
     rank: 1000
     multivalued: false
-    range: Roi
+    range: LinesRoi
   corner_rois:
     name: corner_rois
-    description: ROIs used to compute the corner intensities
+    description: Rectangular ROIs used to compute the corner intensities
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/samples/field_illumination_schema
     rank: 1000
     multivalued: false
-    range: Roi
+    range: RectanglesRoi
   center_of_illumination:
     name: center_of_illumination
     description: Point ROIs marking the center of illumination
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/samples/field_illumination_schema
     rank: 1000
     multivalued: false
-    range: Roi
+    range: PointsRoi
 
 </code></pre>
 </details>
@@ -430,7 +430,7 @@ attributes:
     range: Image5D
   profile_rois:
     name: profile_rois
-    description: ROIs used to compute the intensity profiles
+    description: line ROIs used to compute the intensity profiles
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/samples/field_illumination_schema
     rank: 1000
     multivalued: false
@@ -438,10 +438,10 @@ attributes:
     owner: FieldIlluminationOutput
     domain_of:
     - FieldIlluminationOutput
-    range: Roi
+    range: LinesRoi
   corner_rois:
     name: corner_rois
-    description: ROIs used to compute the corner intensities
+    description: Rectangular ROIs used to compute the corner intensities
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/samples/field_illumination_schema
     rank: 1000
     multivalued: false
@@ -449,7 +449,7 @@ attributes:
     owner: FieldIlluminationOutput
     domain_of:
     - FieldIlluminationOutput
-    range: Roi
+    range: RectanglesRoi
   center_of_illumination:
     name: center_of_illumination
     description: Point ROIs marking the center of illumination
@@ -460,7 +460,7 @@ attributes:
     owner: FieldIlluminationOutput
     domain_of:
     - FieldIlluminationOutput
-    range: Roi
+    range: PointsRoi
 
 </code></pre>
 </details>

@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/peaks_rois/">
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-8.5.10">
     
     
       
@@ -317,7 +317,7 @@
 
 
 <h1 id="slot-peaks_rois">Slot: peaks_rois</h1>
-<p><em>ROIs of the peaks found in the argolight images</em></p>
+<p><em>ROIs of the peaks found in the argolight images. One per channel</em></p>
 <p>URI: <a href="https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/peaks_rois">microscopemetrics_schema:peaks_rois</a></p>
 <!-- no inheritance hierarchy -->
 
@@ -341,7 +341,7 @@
 <h2 id="properties">Properties</h2>
 <ul>
 <li>
-<p>Range: <a href="../Roi/">Roi</a></p>
+<p>Range: <a href="../LinesRoi/">LinesRoi</a></p>
 </li>
 <li>
 <p>Multivalued: True</p>
@@ -356,7 +356,7 @@
 <details>
 
 <pre><code class="language-yaml">name: peaks_rois
-description: ROIs of the peaks found in the argolight images
+description: ROIs of the peaks found in the argolight images. One per channel
 from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
 rank: 1000
 multivalued: true
@@ -364,7 +364,7 @@ alias: peaks_rois
 owner: ArgolightEOutput
 domain_of:
 - ArgolightEOutput
-range: Roi
+range: LinesRoi
 
 </code></pre>
 
