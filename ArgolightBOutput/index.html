@@ -210,29 +210,47 @@
     class ArgolightBOutput
       MetricsOutput &lt;|-- ArgolightBOutput
 
-      ArgolightBOutput : distance_measurements
+      ArgolightBOutput : comment
 
-          ArgolightBOutput --|&gt; ArgolightBDistanceKeyValues : distance_measurements
+          ArgolightBOutput --&gt; Comment : comment
 
-      ArgolightBOutput : intensity_measurements
+      ArgolightBOutput : distance_key_values
 
-          ArgolightBOutput --|&gt; ArgolightBIntensityKeyValues : intensity_measurements
+          ArgolightBOutput --&gt; ArgolightBDistanceKeyValues : distance_key_values
 
-      ArgolightBOutput : spots_centroids
+      ArgolightBOutput : errors
 
-          ArgolightBOutput --|&gt; PointsRoi : spots_centroids
+      ArgolightBOutput : intensity_key_values
+
+          ArgolightBOutput --&gt; ArgolightBIntensityKeyValues : intensity_key_values
+
+      ArgolightBOutput : processing_application
+
+      ArgolightBOutput : processing_datetime
+
+      ArgolightBOutput : processing_entity
+
+      ArgolightBOutput : processing_log
+
+      ArgolightBOutput : processing_version
+
+      ArgolightBOutput : spots_centers_of_mass
+
+          ArgolightBOutput --&gt; ArgolightBCentersOfMass : spots_centers_of_mass
 
       ArgolightBOutput : spots_distances
 
-          ArgolightBOutput --|&gt; TableAsDict : spots_distances
+          ArgolightBOutput --&gt; Table : spots_distances
 
       ArgolightBOutput : spots_labels_image
 
-          ArgolightBOutput --|&gt; ImageAsNumpy : spots_labels_image
+          ArgolightBOutput --&gt; ImageMask : spots_labels_image
 
       ArgolightBOutput : spots_properties
 
-          ArgolightBOutput --|&gt; TableAsDict : spots_properties
+          ArgolightBOutput --&gt; Table : spots_properties
+
+      ArgolightBOutput : warnings
 
 
 </div>
@@ -256,39 +274,87 @@
 <tbody>
 <tr>
 <td><a href="../spots_labels_image/">spots_labels_image</a></td>
-<td>0..1 <br/> <a href="../ImageAsNumpy/">ImageAsNumpy</a></td>
-<td>Labels image of the argolight segmented spots provided as a 5D numpy array in...</td>
+<td>0..1 <br/> <a href="../ImageMask/">ImageMask</a></td>
+<td>Labels image of the argolight segmented spots provided in the order TZYXC</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../spots_centroids/">spots_centroids</a></td>
-<td>0..* <br/> <a href="../PointsRoi/">PointsRoi</a></td>
-<td>Centroids of the argolight spots provided as a list of ROIs</td>
+<td><a href="../spots_centers_of_mass/">spots_centers_of_mass</a></td>
+<td>0..* <br/> <a href="../ArgolightBCentersOfMass/">ArgolightBCentersOfMass</a></td>
+<td>Centers of mass of the argolight spots provided as a list of ROIs</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../intensity_measurements/">intensity_measurements</a></td>
+<td><a href="../intensity_key_values/">intensity_key_values</a></td>
 <td>0..1 <br/> <a href="../ArgolightBIntensityKeyValues/">ArgolightBIntensityKeyValues</a></td>
 <td>Key Intensity Measurements on Argolight spots</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../distance_measurements/">distance_measurements</a></td>
+<td><a href="../distance_key_values/">distance_key_values</a></td>
 <td>0..1 <br/> <a href="../ArgolightBDistanceKeyValues/">ArgolightBDistanceKeyValues</a></td>
 <td>Key Distance Measurements on Argolight spots</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../spots_properties/">spots_properties</a></td>
-<td>0..1 <br/> <a href="../TableAsDict/">TableAsDict</a></td>
+<td>0..1 <br/> <a href="../Table/">Table</a></td>
 <td>Table of properties of the argolight spots</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../spots_distances/">spots_distances</a></td>
-<td>0..1 <br/> <a href="../TableAsDict/">TableAsDict</a></td>
+<td>0..1 <br/> <a href="../Table/">Table</a></td>
 <td>Table of distances between argolight spots</td>
 <td>direct</td>
+</tr>
+<tr>
+<td><a href="../processing_application/">processing_application</a></td>
+<td>1..* <br/> <a href="../String/">String</a></td>
+<td>The application used to process the dataset</td>
+<td><a href="../MetricsOutput/">MetricsOutput</a></td>
+</tr>
+<tr>
+<td><a href="../processing_version/">processing_version</a></td>
+<td>1..* <br/> <a href="../String/">String</a></td>
+<td>The version of the application used to process the dataset</td>
+<td><a href="../MetricsOutput/">MetricsOutput</a></td>
+</tr>
+<tr>
+<td><a href="../processing_entity/">processing_entity</a></td>
+<td>0..* <br/> <a href="../String/">String</a></td>
+<td>The entity that processed the dataset</td>
+<td><a href="../MetricsOutput/">MetricsOutput</a></td>
+</tr>
+<tr>
+<td><a href="../processing_datetime/">processing_datetime</a></td>
+<td>1..1 <br/> <a href="../datetime/">datetime</a></td>
+<td>The datetime of the processing by microscope-metrics</td>
+<td><a href="../MetricsOutput/">MetricsOutput</a></td>
+</tr>
+<tr>
+<td><a href="../processing_log/">processing_log</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>The log of the processing by microscope-metrics</td>
+<td><a href="../MetricsOutput/">MetricsOutput</a></td>
+</tr>
+<tr>
+<td><a href="../warnings/">warnings</a></td>
+<td>0..* <br/> <a href="../String/">String</a></td>
+<td>The warnings of the processing by microscope-metrics</td>
+<td><a href="../MetricsOutput/">MetricsOutput</a></td>
+</tr>
+<tr>
+<td><a href="../errors/">errors</a></td>
+<td>0..* <br/> <a href="../String/">String</a></td>
+<td>The errors of the processing by microscope-metrics</td>
+<td><a href="../MetricsOutput/">MetricsOutput</a></td>
+</tr>
+<tr>
+<td><a href="../comment/">comment</a></td>
+<td>0..1 <br/> <a href="../Comment/">Comment</a></td>
+<td>A human readable comment about the dataset</td>
+<td><a href="../MetricsOutput/">MetricsOutput</a></td>
 </tr>
 </tbody>
 </table>
@@ -345,36 +411,44 @@ is_a: MetricsOutput
 attributes:
   spots_labels_image:
     name: spots_labels_image
-    description: Labels image of the argolight segmented spots provided as a 5D numpy
-      array in the order TZYXC. Image intensities correspond to ROI labels
+    description: Labels image of the argolight segmented spots provided in the order
+      TZYXC. Image intensities correspond to ROI labels
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/samples/argolight_schema
     rank: 1000
     multivalued: false
-    range: ImageAsNumpy
+    domain_of:
+    - ArgolightBOutput
+    range: ImageMask
     required: false
-  spots_centroids:
-    name: spots_centroids
-    description: Centroids of the argolight spots provided as a list of ROIs. One
-      per channel
+  spots_centers_of_mass:
+    name: spots_centers_of_mass
+    description: Centers of mass of the argolight spots provided as a list of ROIs.
+      One per channel
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/samples/argolight_schema
     rank: 1000
     multivalued: true
-    range: PointsRoi
+    domain_of:
+    - ArgolightBOutput
+    range: ArgolightBCentersOfMass
     required: false
-  intensity_measurements:
-    name: intensity_measurements
+  intensity_key_values:
+    name: intensity_key_values
     description: Key Intensity Measurements on Argolight spots
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/samples/argolight_schema
     rank: 1000
     multivalued: false
+    domain_of:
+    - ArgolightBOutput
     range: ArgolightBIntensityKeyValues
     required: false
-  distance_measurements:
-    name: distance_measurements
+  distance_key_values:
+    name: distance_key_values
     description: Key Distance Measurements on Argolight spots
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/samples/argolight_schema
     rank: 1000
     multivalued: false
+    domain_of:
+    - ArgolightBOutput
     range: ArgolightBDistanceKeyValues
     required: false
   spots_properties:
@@ -383,7 +457,9 @@ attributes:
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/samples/argolight_schema
     rank: 1000
     multivalued: false
-    range: TableAsDict
+    domain_of:
+    - ArgolightBOutput
+    range: Table
     required: false
   spots_distances:
     name: spots_distances
@@ -391,7 +467,9 @@ attributes:
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/samples/argolight_schema
     rank: 1000
     multivalued: false
-    range: TableAsDict
+    domain_of:
+    - ArgolightBOutput
+    range: Table
     required: false
 
 </code></pre>
@@ -404,8 +482,8 @@ is_a: MetricsOutput
 attributes:
   spots_labels_image:
     name: spots_labels_image
-    description: Labels image of the argolight segmented spots provided as a 5D numpy
-      array in the order TZYXC. Image intensities correspond to ROI labels
+    description: Labels image of the argolight segmented spots provided in the order
+      TZYXC. Image intensities correspond to ROI labels
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/samples/argolight_schema
     rank: 1000
     multivalued: false
@@ -413,40 +491,40 @@ attributes:
     owner: ArgolightBOutput
     domain_of:
     - ArgolightBOutput
-    range: ImageAsNumpy
+    range: ImageMask
     required: false
-  spots_centroids:
-    name: spots_centroids
-    description: Centroids of the argolight spots provided as a list of ROIs. One
-      per channel
+  spots_centers_of_mass:
+    name: spots_centers_of_mass
+    description: Centers of mass of the argolight spots provided as a list of ROIs.
+      One per channel
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/samples/argolight_schema
     rank: 1000
     multivalued: true
-    alias: spots_centroids
+    alias: spots_centers_of_mass
     owner: ArgolightBOutput
     domain_of:
     - ArgolightBOutput
-    range: PointsRoi
+    range: ArgolightBCentersOfMass
     required: false
-  intensity_measurements:
-    name: intensity_measurements
+  intensity_key_values:
+    name: intensity_key_values
     description: Key Intensity Measurements on Argolight spots
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/samples/argolight_schema
     rank: 1000
     multivalued: false
-    alias: intensity_measurements
+    alias: intensity_key_values
     owner: ArgolightBOutput
     domain_of:
     - ArgolightBOutput
     range: ArgolightBIntensityKeyValues
     required: false
-  distance_measurements:
-    name: distance_measurements
+  distance_key_values:
+    name: distance_key_values
     description: Key Distance Measurements on Argolight spots
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/samples/argolight_schema
     rank: 1000
     multivalued: false
-    alias: distance_measurements
+    alias: distance_key_values
     owner: ArgolightBOutput
     domain_of:
     - ArgolightBOutput
@@ -462,7 +540,7 @@ attributes:
     owner: ArgolightBOutput
     domain_of:
     - ArgolightBOutput
-    range: TableAsDict
+    range: Table
     required: false
   spots_distances:
     name: spots_distances
@@ -474,7 +552,103 @@ attributes:
     owner: ArgolightBOutput
     domain_of:
     - ArgolightBOutput
-    range: TableAsDict
+    range: Table
+    required: false
+  processing_application:
+    name: processing_application
+    description: The application used to process the dataset
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    rank: 1000
+    multivalued: true
+    alias: processing_application
+    owner: ArgolightBOutput
+    domain_of:
+    - MetricsOutput
+    range: string
+    required: true
+  processing_version:
+    name: processing_version
+    description: The version of the application used to process the dataset
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    rank: 1000
+    multivalued: true
+    alias: processing_version
+    owner: ArgolightBOutput
+    domain_of:
+    - MetricsOutput
+    range: string
+    required: true
+  processing_entity:
+    name: processing_entity
+    description: The entity that processed the dataset
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    rank: 1000
+    multivalued: true
+    alias: processing_entity
+    owner: ArgolightBOutput
+    domain_of:
+    - MetricsOutput
+    range: string
+    required: false
+  processing_datetime:
+    name: processing_datetime
+    description: The datetime of the processing by microscope-metrics
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    rank: 1000
+    multivalued: false
+    alias: processing_datetime
+    owner: ArgolightBOutput
+    domain_of:
+    - MetricsOutput
+    range: datetime
+    required: true
+  processing_log:
+    name: processing_log
+    description: The log of the processing by microscope-metrics
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    rank: 1000
+    multivalued: false
+    alias: processing_log
+    owner: ArgolightBOutput
+    domain_of:
+    - MetricsOutput
+    range: string
+    required: false
+  warnings:
+    name: warnings
+    description: The warnings of the processing by microscope-metrics
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    rank: 1000
+    multivalued: true
+    alias: warnings
+    owner: ArgolightBOutput
+    domain_of:
+    - MetricsOutput
+    range: string
+    required: false
+  errors:
+    name: errors
+    description: The errors of the processing by microscope-metrics
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    rank: 1000
+    multivalued: true
+    alias: errors
+    owner: ArgolightBOutput
+    domain_of:
+    - MetricsOutput
+    range: string
+    required: false
+  comment:
+    name: comment
+    description: A human readable comment about the dataset
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    rank: 1000
+    multivalued: false
+    alias: comment
+    owner: ArgolightBOutput
+    domain_of:
+    - MetricsOutput
+    range: Comment
     required: false
 
 </code></pre>

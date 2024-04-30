@@ -210,9 +210,21 @@
     class ArgolightEKeyValues
       KeyValues &lt;|-- ArgolightEKeyValues
 
-      ArgolightEKeyValues : channel
+      ArgolightEKeyValues : channel_nr
+
+      ArgolightEKeyValues : data_reference
+
+          ArgolightEKeyValues --&gt; DataReference : data_reference
+
+      ArgolightEKeyValues : description
 
       ArgolightEKeyValues : focus_slice
+
+      ArgolightEKeyValues : linked_references
+
+          ArgolightEKeyValues --&gt; DataReference : linked_references
+
+      ArgolightEKeyValues : name
 
       ArgolightEKeyValues : peak_height_A
 
@@ -226,14 +238,22 @@
 
       ArgolightEKeyValues : peak_prominence_B
 
-      ArgolightEKeyValues : rayleigh_resolution
+      ArgolightEKeyValues : rayleigh_resolution_microns
+
+      ArgolightEKeyValues : rayleigh_resolution_pixels
 
 
 </div>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
+<li><a href="../NamedObject/">NamedObject</a><ul>
+<li><a href="../MetricsObject/">MetricsObject</a><ul>
 <li><a href="../KeyValues/">KeyValues</a><ul>
 <li><strong>ArgolightEKeyValues</strong></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -249,7 +269,7 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../channel/">channel</a></td>
+<td><a href="../channel_nr/">channel_nr</a></td>
 <td>0..* <br/> <a href="../Integer/">Integer</a></td>
 <td>The channel number to which the measurements apply</td>
 <td>direct</td>
@@ -261,21 +281,27 @@
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../rayleigh_resolution/">rayleigh_resolution</a></td>
+<td><a href="../rayleigh_resolution_pixels/">rayleigh_resolution_pixels</a></td>
 <td>0..* <br/> <a href="../Float/">Float</a></td>
-<td>Rayleigh resolution measured</td>
+<td>Rayleigh resolution measured in pixels</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../rayleigh_resolution_microns/">rayleigh_resolution_microns</a></td>
+<td>0..* <br/> <a href="../Float/">Float</a></td>
+<td>Rayleigh resolution measured in microns</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../peak_position_A/">peak_position_A</a></td>
 <td>0..* <br/> <a href="../Float/">Float</a></td>
-<td>Position of first peak in the intensity profiles</td>
+<td>Position, in pixels, of first peak in the intensity profiles</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../peak_position_B/">peak_position_B</a></td>
 <td>0..* <br/> <a href="../Float/">Float</a></td>
-<td>Position of second peak in the intensity profiles</td>
+<td>Position, in pixels, of second peak in the intensity profiles</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -301,6 +327,30 @@
 <td>0..* <br/> <a href="../Float/">Float</a></td>
 <td>Prominence of second peak in the intensity profiles</td>
 <td>direct</td>
+</tr>
+<tr>
+<td><a href="../data_reference/">data_reference</a></td>
+<td>0..1 <br/> <a href="../DataReference/">DataReference</a></td>
+<td>A reference to the data</td>
+<td><a href="../MetricsObject/">MetricsObject</a></td>
+</tr>
+<tr>
+<td><a href="../linked_references/">linked_references</a></td>
+<td>0..* <br/> <a href="../DataReference/">DataReference</a></td>
+<td>A list of linked references</td>
+<td><a href="../MetricsObject/">MetricsObject</a></td>
+</tr>
+<tr>
+<td><a href="../name/">name</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>The human readable name of an entity</td>
+<td><a href="../NamedObject/">NamedObject</a></td>
+</tr>
+<tr>
+<td><a href="../description/">description</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A human readable description of an entity</td>
+<td><a href="../NamedObject/">NamedObject</a></td>
 </tr>
 </tbody>
 </table>
@@ -355,9 +405,10 @@
 from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
 is_a: KeyValues
 slots:
-- channel
+- channel_nr
 - focus_slice
-- rayleigh_resolution
+- rayleigh_resolution_pixels
+- rayleigh_resolution_microns
 - peak_position_A
 - peak_position_B
 - peak_height_A
@@ -373,22 +424,23 @@ slots:
 from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
 is_a: KeyValues
 attributes:
-  channel:
-    name: channel
+  channel_nr:
+    name: channel_nr
     description: The channel number to which the measurements apply
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
     rank: 1000
     multivalued: true
-    alias: channel
+    alias: channel_nr
     owner: ArgolightEKeyValues
     domain_of:
+    - PSFBeadsKeyValues
     - ArgolightBIntensityKeyValues
     - ArgolightEKeyValues
-    - FieldIlluminationKeyValues
     range: integer
+    minimum_value: 0
   focus_slice:
     name: focus_slice
-    description: Z position at which focus has been measured
+    description: Z position at which focus has been measured. One value per channel
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
     rank: 1000
     multivalued: true
@@ -398,20 +450,32 @@ attributes:
     - ArgolightEKeyValues
     range: integer
     minimum_value: 0
-  rayleigh_resolution:
-    name: rayleigh_resolution
-    description: Rayleigh resolution measured
+  rayleigh_resolution_pixels:
+    name: rayleigh_resolution_pixels
+    description: Rayleigh resolution measured in pixels. One value per channel
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
     rank: 1000
     multivalued: true
-    alias: rayleigh_resolution
+    alias: rayleigh_resolution_pixels
+    owner: ArgolightEKeyValues
+    domain_of:
+    - ArgolightEKeyValues
+    range: float
+  rayleigh_resolution_microns:
+    name: rayleigh_resolution_microns
+    description: Rayleigh resolution measured in microns. One value per channel
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    rank: 1000
+    multivalued: true
+    alias: rayleigh_resolution_microns
     owner: ArgolightEKeyValues
     domain_of:
     - ArgolightEKeyValues
     range: float
   peak_position_A:
     name: peak_position_A
-    description: Position of first peak in the intensity profiles
+    description: Position, in pixels, of first peak in the intensity profiles. One
+      value per channel
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
     rank: 1000
     multivalued: true
@@ -422,7 +486,8 @@ attributes:
     range: float
   peak_position_B:
     name: peak_position_B
-    description: Position of second peak in the intensity profiles
+    description: Position, in pixels, of second peak in the intensity profiles. One
+      value per channel
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
     rank: 1000
     multivalued: true
@@ -433,7 +498,7 @@ attributes:
     range: float
   peak_height_A:
     name: peak_height_A
-    description: Height of first peak in the intensity profiles
+    description: Height of first peak in the intensity profiles. One value per channel
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
     rank: 1000
     multivalued: true
@@ -444,7 +509,7 @@ attributes:
     range: float
   peak_height_B:
     name: peak_height_B
-    description: Height of second peak in the intensity profiles
+    description: Height of second peak in the intensity profiles. One value per channel
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
     rank: 1000
     multivalued: true
@@ -455,7 +520,8 @@ attributes:
     range: float
   peak_prominence_A:
     name: peak_prominence_A
-    description: Prominence of first peak in the intensity profiles
+    description: Prominence of first peak in the intensity profiles. One value per
+      channel
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
     rank: 1000
     multivalued: true
@@ -466,7 +532,8 @@ attributes:
     range: float
   peak_prominence_B:
     name: peak_prominence_B
-    description: Prominence of second peak in the intensity profiles
+    description: Prominence of second peak in the intensity profiles. One value per
+      channel
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
     rank: 1000
     multivalued: true
@@ -475,6 +542,58 @@ attributes:
     domain_of:
     - ArgolightEKeyValues
     range: float
+  data_reference:
+    name: data_reference
+    description: A reference to the data
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    rank: 1000
+    multivalued: false
+    alias: data_reference
+    owner: ArgolightEKeyValues
+    domain_of:
+    - MetricsObject
+    range: DataReference
+    required: false
+  linked_references:
+    name: linked_references
+    description: A list of linked references
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    rank: 1000
+    multivalued: true
+    alias: linked_references
+    owner: ArgolightEKeyValues
+    domain_of:
+    - MetricsObject
+    range: DataReference
+    required: false
+    inlined: true
+    inlined_as_list: true
+  name:
+    name: name
+    description: The human readable name of an entity
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    rank: 1000
+    multivalued: false
+    alias: name
+    owner: ArgolightEKeyValues
+    domain_of:
+    - NamedObject
+    - Experimenter
+    range: string
+    required: false
+  description:
+    name: description
+    description: A human readable description of an entity
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    rank: 1000
+    multivalued: false
+    alias: description
+    owner: ArgolightEKeyValues
+    domain_of:
+    - NamedObject
+    - Tag
+    range: string
+    required: false
 
 </code></pre>
 </details>

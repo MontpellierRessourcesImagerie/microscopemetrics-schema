@@ -200,55 +200,58 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
 <h1 id="class-argolightbdataset">Class: ArgolightBDataset</h1>
-<p><em>An Argolight sample pattern B dataset</em></p>
+<p><em>An Argolight sample pattern B dataset. This pattern consists of an array of circles</em></p>
 <p>URI: <a href="https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/ArgolightBDataset">microscopemetrics_schema:ArgolightBDataset</a></p>
 <div class="mermaid"> classDiagram
     class ArgolightBDataset
       MetricsDataset &lt;|-- ArgolightBDataset
 
-      ArgolightBDataset : acquisition_date
+      ArgolightBDataset : acquisition_datetime
 
-      ArgolightBDataset : comment
+      ArgolightBDataset : data_reference
 
-          ArgolightBDataset --|&gt; Comment : comment
+          ArgolightBDataset --&gt; DataReference : data_reference
 
       ArgolightBDataset : description
 
       ArgolightBDataset : experimenter
 
-          ArgolightBDataset --|&gt; Experimenter : experimenter
+          ArgolightBDataset --&gt; Experimenter : experimenter
 
       ArgolightBDataset : input
 
-          ArgolightBDataset --|&gt; ArgolightBInput : input
+          ArgolightBDataset --&gt; ArgolightBInput : input
+
+      ArgolightBDataset : linked_references
+
+          ArgolightBDataset --&gt; DataReference : linked_references
 
       ArgolightBDataset : microscope
 
-          ArgolightBDataset --|&gt; Microscope : microscope
+          ArgolightBDataset --&gt; Microscope : microscope
 
       ArgolightBDataset : name
 
       ArgolightBDataset : output
 
-          ArgolightBDataset --|&gt; ArgolightBOutput : output
+          ArgolightBDataset --&gt; ArgolightBOutput : output
 
       ArgolightBDataset : processed
 
-      ArgolightBDataset : processing_date
-
-      ArgolightBDataset : processing_log
-
       ArgolightBDataset : sample
 
-          ArgolightBDataset --|&gt; Sample : sample
+          ArgolightBDataset --&gt; Sample : sample
 
 
 </div>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
 <li><a href="../NamedObject/">NamedObject</a><ul>
+<li><a href="../MetricsObject/">MetricsObject</a><ul>
 <li><a href="../MetricsDataset/">MetricsDataset</a><ul>
 <li><strong>ArgolightBDataset</strong></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -267,14 +270,14 @@
 <tbody>
 <tr>
 <td><a href="../input/">input</a></td>
-<td>1..1 <br/> <a href="../ArgolightBInput/">ArgolightBInput</a></td>
-<td>An input element for the analysis</td>
+<td>0..1 <br/> <a href="../ArgolightBInput/">ArgolightBInput</a></td>
+<td></td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../output/">output</a></td>
 <td>0..1 <br/> <a href="../ArgolightBOutput/">ArgolightBOutput</a></td>
-<td>An output element from the analysis</td>
+<td></td>
 <td>direct</td>
 </tr>
 <tr>
@@ -291,14 +294,14 @@
 </tr>
 <tr>
 <td><a href="../experimenter/">experimenter</a></td>
-<td>0..* <br/> <a href="../Experimenter/">Experimenter</a></td>
+<td>0..1 <br/> <a href="../Experimenter/">Experimenter</a></td>
 <td>The experimenter that performed the imaging experiment</td>
 <td><a href="../MetricsDataset/">MetricsDataset</a></td>
 </tr>
 <tr>
-<td><a href="../acquisition_date/">acquisition_date</a></td>
-<td>0..1 <br/> <a href="../date/">date</a></td>
-<td>The date of the acquisition</td>
+<td><a href="../acquisition_datetime/">acquisition_datetime</a></td>
+<td>0..1 <br/> <a href="../datetime/">datetime</a></td>
+<td>The datetime of the acquisition</td>
 <td><a href="../MetricsDataset/">MetricsDataset</a></td>
 </tr>
 <tr>
@@ -308,33 +311,27 @@
 <td><a href="../MetricsDataset/">MetricsDataset</a></td>
 </tr>
 <tr>
-<td><a href="../processing_date/">processing_date</a></td>
-<td>0..1 <br/> <a href="../date/">date</a></td>
-<td>The date of the processing by microscope-metrics</td>
-<td><a href="../MetricsDataset/">MetricsDataset</a></td>
+<td><a href="../data_reference/">data_reference</a></td>
+<td>0..1 <br/> <a href="../DataReference/">DataReference</a></td>
+<td>A reference to the data</td>
+<td><a href="../MetricsObject/">MetricsObject</a></td>
 </tr>
 <tr>
-<td><a href="../processing_log/">processing_log</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The log of the processing by microscope-metrics</td>
-<td><a href="../MetricsDataset/">MetricsDataset</a></td>
-</tr>
-<tr>
-<td><a href="../comment/">comment</a></td>
-<td>0..* <br/> <a href="../Comment/">Comment</a></td>
-<td>A human readable comment about the dataset</td>
-<td><a href="../MetricsDataset/">MetricsDataset</a></td>
+<td><a href="../linked_references/">linked_references</a></td>
+<td>0..* <br/> <a href="../DataReference/">DataReference</a></td>
+<td>A list of linked references</td>
+<td><a href="../MetricsObject/">MetricsObject</a></td>
 </tr>
 <tr>
 <td><a href="../name/">name</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The name of an entity</td>
+<td>The human readable name of an entity</td>
 <td><a href="../NamedObject/">NamedObject</a></td>
 </tr>
 <tr>
 <td><a href="../description/">description</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>A description of an entity</td>
+<td>A human readable description of an entity</td>
 <td><a href="../NamedObject/">NamedObject</a></td>
 </tr>
 </tbody>
@@ -368,75 +365,66 @@
 <h3 id="direct">Direct</h3>
 <details>
 <pre><code class="language-yaml">name: ArgolightBDataset
-description: An Argolight sample pattern B dataset
+description: An Argolight sample pattern B dataset. This pattern consists of an array
+  of circles
 from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
 is_a: MetricsDataset
 attributes:
   input:
     name: input
-    description: An input element for the analysis
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/samples/argolight_schema
-    rank: 1000
-    multivalued: false
+    domain_of:
+    - MetricsDataset
+    - FieldIlluminationDataset
+    - PSFBeadsDataset
+    - ArgolightBDataset
+    - ArgolightEDataset
     range: ArgolightBInput
-    required: true
   output:
     name: output
-    description: An output element from the analysis
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/samples/argolight_schema
-    rank: 1000
-    multivalued: false
+    domain_of:
+    - MetricsDataset
+    - FieldIlluminationDataset
+    - PSFBeadsDataset
+    - ArgolightBDataset
+    - ArgolightEDataset
     range: ArgolightBOutput
-    required: false
-rules:
-- preconditions:
-    slot_conditions:
-      processed:
-        name: processed
-        equals_number: 1
-  postconditions:
-    slot_conditions:
-      output:
-        name: output
-        required: true
 
 </code></pre>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
 <pre><code class="language-yaml">name: ArgolightBDataset
-description: An Argolight sample pattern B dataset
+description: An Argolight sample pattern B dataset. This pattern consists of an array
+  of circles
 from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
 is_a: MetricsDataset
 attributes:
   input:
     name: input
-    description: An input element for the analysis
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/samples/argolight_schema
-    rank: 1000
-    multivalued: false
     alias: input
     owner: ArgolightBDataset
     domain_of:
+    - MetricsDataset
+    - FieldIlluminationDataset
+    - PSFBeadsDataset
     - ArgolightBDataset
     - ArgolightEDataset
-    - FieldIlluminationDataset
     range: ArgolightBInput
-    required: true
   output:
     name: output
-    description: An output element from the analysis
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/samples/argolight_schema
-    rank: 1000
-    multivalued: false
     alias: output
     owner: ArgolightBDataset
     domain_of:
+    - MetricsDataset
+    - FieldIlluminationDataset
+    - PSFBeadsDataset
     - ArgolightBDataset
     - ArgolightEDataset
-    - FieldIlluminationDataset
     range: ArgolightBOutput
-    required: false
   microscope:
     name: microscope
     description: The microscope that was used to acquire the dataset
@@ -449,7 +437,6 @@ attributes:
     - MetricsDataset
     range: Microscope
     required: true
-    inlined: false
   sample:
     name: sample
     description: The sample that was imaged
@@ -461,30 +448,29 @@ attributes:
     domain_of:
     - MetricsDataset
     range: Sample
-    inlined: false
   experimenter:
     name: experimenter
     description: The experimenter that performed the imaging experiment
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
     rank: 1000
-    multivalued: true
+    multivalued: false
     alias: experimenter
     owner: ArgolightBDataset
     domain_of:
     - MetricsDataset
     range: Experimenter
-    inlined: false
-  acquisition_date:
-    name: acquisition_date
-    description: The date of the acquisition
+  acquisition_datetime:
+    name: acquisition_datetime
+    description: The datetime of the acquisition
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: false
-    alias: acquisition_date
+    alias: acquisition_datetime
     owner: ArgolightBDataset
     domain_of:
     - MetricsDataset
-    range: date
+    - Image
+    range: datetime
   processed:
     name: processed
     description: Has the dataset been processed by microscope-metrics
@@ -498,44 +484,35 @@ attributes:
     - MetricsDataset
     range: boolean
     required: true
-  processing_date:
-    name: processing_date
-    description: The date of the processing by microscope-metrics
+  data_reference:
+    name: data_reference
+    description: A reference to the data
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: false
-    alias: processing_date
+    alias: data_reference
     owner: ArgolightBDataset
     domain_of:
-    - MetricsDataset
-    range: date
-  processing_log:
-    name: processing_log
-    description: The log of the processing by microscope-metrics
+    - MetricsObject
+    range: DataReference
+    required: false
+  linked_references:
+    name: linked_references
+    description: A list of linked references
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
     rank: 1000
-    multivalued: false
-    alias: processing_log
-    owner: ArgolightBDataset
-    domain_of:
-    - MetricsDataset
-    range: string
-  comment:
-    name: comment
-    description: A human readable comment about the dataset
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
     multivalued: true
-    alias: comment
+    alias: linked_references
     owner: ArgolightBDataset
     domain_of:
-    - Microscope
-    - MetricsDataset
-    range: Comment
+    - MetricsObject
+    range: DataReference
     required: false
     inlined: true
+    inlined_as_list: true
   name:
     name: name
-    description: The name of an entity
+    description: The human readable name of an entity
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
     rank: 1000
     multivalued: false
@@ -544,12 +521,11 @@ attributes:
     domain_of:
     - NamedObject
     - Experimenter
-    - Column
     range: string
     required: false
   description:
     name: description
-    description: A description of an entity
+    description: A human readable description of an entity
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
     rank: 1000
     multivalued: false
@@ -557,21 +533,9 @@ attributes:
     owner: ArgolightBDataset
     domain_of:
     - NamedObject
-    - Roi
     - Tag
     range: string
     required: false
-rules:
-- preconditions:
-    slot_conditions:
-      processed:
-        name: processed
-        equals_number: 1
-  postconditions:
-    slot_conditions:
-      output:
-        name: output
-        required: true
 
 </code></pre>
 </details>

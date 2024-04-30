@@ -207,20 +207,44 @@
 <p>URI: <a href="https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/KeyValues">microscopemetrics_schema:KeyValues</a></p>
 <div class="mermaid"> classDiagram
     class KeyValues
+      MetricsObject &lt;|-- KeyValues
+
+
+      KeyValues &lt;|-- FieldIlluminationKeyValues
+      KeyValues &lt;|-- PSFBeadsKeyValues
       KeyValues &lt;|-- ArgolightBIntensityKeyValues
       KeyValues &lt;|-- ArgolightBDistanceKeyValues
       KeyValues &lt;|-- ArgolightEKeyValues
-      KeyValues &lt;|-- FieldIlluminationKeyValues
+
+
+      KeyValues : data_reference
+
+          KeyValues --&gt; DataReference : data_reference
+
+      KeyValues : description
+
+      KeyValues : linked_references
+
+          KeyValues --&gt; DataReference : linked_references
+
+      KeyValues : name
 
 
 </div>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
+<li><a href="../NamedObject/">NamedObject</a><ul>
+<li><a href="../MetricsObject/">MetricsObject</a><ul>
 <li><strong>KeyValues</strong><ul>
+<li><a href="../FieldIlluminationKeyValues/">FieldIlluminationKeyValues</a></li>
+<li><a href="../PSFBeadsKeyValues/">PSFBeadsKeyValues</a></li>
 <li><a href="../ArgolightBIntensityKeyValues/">ArgolightBIntensityKeyValues</a></li>
 <li><a href="../ArgolightBDistanceKeyValues/">ArgolightBDistanceKeyValues</a></li>
 <li><a href="../ArgolightEKeyValues/">ArgolightEKeyValues</a></li>
-<li><a href="../FieldIlluminationKeyValues/">FieldIlluminationKeyValues</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -236,10 +260,28 @@
 </thead>
 <tbody>
 <tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td><a href="../data_reference/">data_reference</a></td>
+<td>0..1 <br/> <a href="../DataReference/">DataReference</a></td>
+<td>A reference to the data</td>
+<td><a href="../MetricsObject/">MetricsObject</a></td>
+</tr>
+<tr>
+<td><a href="../linked_references/">linked_references</a></td>
+<td>0..* <br/> <a href="../DataReference/">DataReference</a></td>
+<td>A list of linked references</td>
+<td><a href="../MetricsObject/">MetricsObject</a></td>
+</tr>
+<tr>
+<td><a href="../name/">name</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>The human readable name of an entity</td>
+<td><a href="../NamedObject/">NamedObject</a></td>
+</tr>
+<tr>
+<td><a href="../description/">description</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A human readable description of an entity</td>
+<td><a href="../NamedObject/">NamedObject</a></td>
 </tr>
 </tbody>
 </table>
@@ -274,6 +316,7 @@
 <pre><code class="language-yaml">name: KeyValues
 description: A collection of key-value pairs
 from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+is_a: MetricsObject
 abstract: true
 
 </code></pre>
@@ -283,7 +326,61 @@ abstract: true
 <pre><code class="language-yaml">name: KeyValues
 description: A collection of key-value pairs
 from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+is_a: MetricsObject
 abstract: true
+attributes:
+  data_reference:
+    name: data_reference
+    description: A reference to the data
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    rank: 1000
+    multivalued: false
+    alias: data_reference
+    owner: KeyValues
+    domain_of:
+    - MetricsObject
+    range: DataReference
+    required: false
+  linked_references:
+    name: linked_references
+    description: A list of linked references
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    rank: 1000
+    multivalued: true
+    alias: linked_references
+    owner: KeyValues
+    domain_of:
+    - MetricsObject
+    range: DataReference
+    required: false
+    inlined: true
+    inlined_as_list: true
+  name:
+    name: name
+    description: The human readable name of an entity
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    rank: 1000
+    multivalued: false
+    alias: name
+    owner: KeyValues
+    domain_of:
+    - NamedObject
+    - Experimenter
+    range: string
+    required: false
+  description:
+    name: description
+    description: A human readable description of an entity
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    rank: 1000
+    multivalued: false
+    alias: description
+    owner: KeyValues
+    domain_of:
+    - NamedObject
+    - Tag
+    range: string
+    required: false
 
 </code></pre>
 </details>

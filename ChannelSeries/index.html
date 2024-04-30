@@ -200,13 +200,13 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
 <h1 id="class-channelseries">Class: ChannelSeries</h1>
-<p><em>A series whose values represent channel</em></p>
+<p><em>A series representing channels</em></p>
 <p>URI: <a href="https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/ChannelSeries">microscopemetrics_schema:ChannelSeries</a></p>
 <div class="mermaid"> classDiagram
     class ChannelSeries
-      ChannelSeries : values
+      ChannelSeries : channels
 
-          ChannelSeries --|&gt; Channel : values
+          ChannelSeries --&gt; Channel : channels
 
 
 </div>
@@ -223,7 +223,7 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../values/">values</a></td>
+<td><a href="../channels/">channels</a></td>
 <td>1..* <br/> <a href="../Channel/">Channel</a></td>
 <td></td>
 <td>direct</td>
@@ -242,7 +242,13 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../Image5D/">Image5D</a></td>
+<td><a href="../Image/">Image</a></td>
+<td><a href="../channel_series/">channel_series</a></td>
+<td>range</td>
+<td><a href="./">ChannelSeries</a></td>
+</tr>
+<tr>
+<td><a href="../ImageMask/">ImageMask</a></td>
 <td><a href="../channel_series/">channel_series</a></td>
 <td>range</td>
 <td><a href="./">ChannelSeries</a></td>
@@ -280,16 +286,18 @@
 <pre><code class="language-yaml">name: ChannelSeries
 implements:
 - linkml:OneDimensionalSeries
-description: A series whose values represent channel
+description: A series representing channels
 from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
 attributes:
-  values:
-    name: values
+  channels:
+    name: channels
     implements:
     - linkml:elements
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: true
+    domain_of:
+    - ChannelSeries
     range: Channel
     required: true
 
@@ -300,22 +308,20 @@ attributes:
 <pre><code class="language-yaml">name: ChannelSeries
 implements:
 - linkml:OneDimensionalSeries
-description: A series whose values represent channel
+description: A series representing channels
 from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
 attributes:
-  values:
-    name: values
+  channels:
+    name: channels
     implements:
     - linkml:elements
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: true
-    alias: values
+    alias: channels
     owner: ChannelSeries
     domain_of:
     - ChannelSeries
-    - TimeSeries
-    - Column
     range: Channel
     required: true
 

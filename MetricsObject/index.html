@@ -200,7 +200,7 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
 <h1 id="class-metricsobject">Class: MetricsObject</h1>
-<p><em>A base object for all microscope-metrics objects</em></p>
+<p><em>A base object for all microscope-metrics objects.</em></p>
 <ul>
 <li><strong>NOTE</strong>: this is an abstract class and should not be instantiated directly</li>
 </ul>
@@ -210,12 +210,25 @@
       NamedObject &lt;|-- MetricsObject
 
 
-      MetricsObject &lt;|-- Device
+      MetricsObject &lt;|-- Microscope
+      MetricsObject &lt;|-- MetricsDatasetCollection
+      MetricsObject &lt;|-- MetricsDataset
       MetricsObject &lt;|-- Image
+      MetricsObject &lt;|-- Roi
+      MetricsObject &lt;|-- KeyValues
+      MetricsObject &lt;|-- Tag
       MetricsObject &lt;|-- Table
 
 
+      MetricsObject : data_reference
+
+          MetricsObject --&gt; DataReference : data_reference
+
       MetricsObject : description
+
+      MetricsObject : linked_references
+
+          MetricsObject --&gt; DataReference : linked_references
 
       MetricsObject : name
 
@@ -225,8 +238,13 @@
 <ul>
 <li><a href="../NamedObject/">NamedObject</a><ul>
 <li><strong>MetricsObject</strong><ul>
-<li><a href="../Device/">Device</a></li>
+<li><a href="../Microscope/">Microscope</a></li>
+<li><a href="../MetricsDatasetCollection/">MetricsDatasetCollection</a></li>
+<li><a href="../MetricsDataset/">MetricsDataset</a></li>
 <li><a href="../Image/">Image</a></li>
+<li><a href="../Roi/">Roi</a></li>
+<li><a href="../KeyValues/">KeyValues</a></li>
+<li><a href="../Tag/">Tag</a></li>
 <li><a href="../Table/">Table</a></li>
 </ul>
 </li>
@@ -245,15 +263,27 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="../data_reference/">data_reference</a></td>
+<td>0..1 <br/> <a href="../DataReference/">DataReference</a></td>
+<td>A reference to the data</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../linked_references/">linked_references</a></td>
+<td>0..* <br/> <a href="../DataReference/">DataReference</a></td>
+<td>A list of linked references</td>
+<td>direct</td>
+</tr>
+<tr>
 <td><a href="../name/">name</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The name of an entity</td>
+<td>The human readable name of an entity</td>
 <td><a href="../NamedObject/">NamedObject</a></td>
 </tr>
 <tr>
 <td><a href="../description/">description</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>A description of an entity</td>
+<td>A human readable description of an entity</td>
 <td><a href="../NamedObject/">NamedObject</a></td>
 </tr>
 </tbody>
@@ -287,24 +317,73 @@
 <h3 id="direct">Direct</h3>
 <details>
 <pre><code class="language-yaml">name: MetricsObject
-description: A base object for all microscope-metrics objects
+description: A base object for all microscope-metrics objects.
 from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
 is_a: NamedObject
 abstract: true
+attributes:
+  data_reference:
+    name: data_reference
+    description: A reference to the data
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    rank: 1000
+    multivalued: false
+    domain_of:
+    - MetricsObject
+    range: DataReference
+    required: false
+  linked_references:
+    name: linked_references
+    description: A list of linked references
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    rank: 1000
+    multivalued: true
+    domain_of:
+    - MetricsObject
+    range: DataReference
+    required: false
+    inlined: true
+    inlined_as_list: true
 
 </code></pre>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
 <pre><code class="language-yaml">name: MetricsObject
-description: A base object for all microscope-metrics objects
+description: A base object for all microscope-metrics objects.
 from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
 is_a: NamedObject
 abstract: true
 attributes:
+  data_reference:
+    name: data_reference
+    description: A reference to the data
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    rank: 1000
+    multivalued: false
+    alias: data_reference
+    owner: MetricsObject
+    domain_of:
+    - MetricsObject
+    range: DataReference
+    required: false
+  linked_references:
+    name: linked_references
+    description: A list of linked references
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    rank: 1000
+    multivalued: true
+    alias: linked_references
+    owner: MetricsObject
+    domain_of:
+    - MetricsObject
+    range: DataReference
+    required: false
+    inlined: true
+    inlined_as_list: true
   name:
     name: name
-    description: The name of an entity
+    description: The human readable name of an entity
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
     rank: 1000
     multivalued: false
@@ -313,12 +392,11 @@ attributes:
     domain_of:
     - NamedObject
     - Experimenter
-    - Column
     range: string
     required: false
   description:
     name: description
-    description: A description of an entity
+    description: A human readable description of an entity
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
     rank: 1000
     multivalued: false
@@ -326,7 +404,6 @@ attributes:
     owner: MetricsObject
     domain_of:
     - NamedObject
-    - Roi
     - Tag
     range: string
     required: false

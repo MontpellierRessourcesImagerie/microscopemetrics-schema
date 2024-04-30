@@ -152,6 +152,11 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#usages">
+    Usages
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#identifier-and-mapping-information">
     Identifier and Mapping Information
   </a>
@@ -208,17 +213,19 @@
 
       Polygon : c
 
+      Polygon : description
+
       Polygon : fill_color
 
-          Polygon --|&gt; Color : fill_color
+          Polygon --&gt; Color : fill_color
 
       Polygon : is_open
 
-      Polygon : label
+      Polygon : name
 
       Polygon : stroke_color
 
-          Polygon --|&gt; Color : stroke_color
+          Polygon --&gt; Color : stroke_color
 
       Polygon : stroke_width
 
@@ -226,7 +233,7 @@
 
       Polygon : vertexes
 
-          Polygon --|&gt; Vertex : vertexes
+          Polygon --&gt; Vertex : vertexes
 
       Polygon : z
 
@@ -234,8 +241,11 @@
 </div>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
+<li><a href="../NamedObject/">NamedObject</a><ul>
 <li><a href="../Shape/">Shape</a><ul>
 <li><strong>Polygon</strong></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -261,12 +271,6 @@
 <td>1..1 <br/> <a href="../Boolean/">Boolean</a></td>
 <td>Is the polygon open</td>
 <td>direct</td>
-</tr>
-<tr>
-<td><a href="../label/">label</a></td>
-<td>1..1 <br/> <a href="../String/">String</a></td>
-<td>The label of the shape</td>
-<td><a href="../Shape/">Shape</a></td>
 </tr>
 <tr>
 <td><a href="../z/">z</a></td>
@@ -303,6 +307,43 @@
 <td>0..1 <br/> <a href="../Integer/">Integer</a></td>
 <td>The stroke width of the shape</td>
 <td><a href="../Shape/">Shape</a></td>
+</tr>
+<tr>
+<td><a href="../name/">name</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>The human readable name of an entity</td>
+<td><a href="../NamedObject/">NamedObject</a></td>
+</tr>
+<tr>
+<td><a href="../description/">description</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A human readable description of an entity</td>
+<td><a href="../NamedObject/">NamedObject</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="usages">Usages</h2>
+<table>
+<thead>
+<tr>
+<th>used by</th>
+<th>used in</th>
+<th>type</th>
+<th>used</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../Roi/">Roi</a></td>
+<td><a href="../polygons/">polygons</a></td>
+<td>range</td>
+<td><a href="./">Polygon</a></td>
+</tr>
+<tr>
+<td><a href="../ArgolightBCentersOfMass/">ArgolightBCentersOfMass</a></td>
+<td><a href="../polygons/">polygons</a></td>
+<td>range</td>
+<td><a href="./">Polygon</a></td>
 </tr>
 </tbody>
 </table>
@@ -346,10 +387,10 @@ attributes:
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: true
+    domain_of:
+    - Polygon
     range: Vertex
     required: true
-    inlined: true
-    inlined_as_list: true
   is_open:
     name: is_open
     description: Is the polygon open. By default, it is closed (false)
@@ -357,6 +398,8 @@ attributes:
     rank: 1000
     multivalued: false
     ifabsent: 'False'
+    domain_of:
+    - Polygon
     range: boolean
     required: true
 
@@ -382,8 +425,6 @@ attributes:
     - Polygon
     range: Vertex
     required: true
-    inlined: true
-    inlined_as_list: true
   is_open:
     name: is_open
     description: Is the polygon open. By default, it is closed (false)
@@ -396,18 +437,6 @@ attributes:
     domain_of:
     - Polygon
     range: boolean
-    required: true
-  label:
-    name: label
-    description: The label of the shape
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
-    identifier: true
-    alias: label
-    owner: Polygon
-    domain_of:
-    - Roi
-    - Shape
-    range: string
     required: true
   z:
     name: z
@@ -475,6 +504,32 @@ attributes:
     domain_of:
     - Shape
     range: integer
+    required: false
+  name:
+    name: name
+    description: The human readable name of an entity
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    rank: 1000
+    multivalued: false
+    alias: name
+    owner: Polygon
+    domain_of:
+    - NamedObject
+    - Experimenter
+    range: string
+    required: false
+  description:
+    name: description
+    description: A human readable description of an entity
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    rank: 1000
+    multivalued: false
+    alias: description
+    owner: Polygon
+    domain_of:
+    - NamedObject
+    - Tag
+    range: string
     required: false
 
 </code></pre>

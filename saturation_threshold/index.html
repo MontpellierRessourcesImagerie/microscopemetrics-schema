@@ -332,17 +332,22 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="../FieldIlluminationInput/">FieldIlluminationInput</a></td>
+<td></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="../PSFBeadsInput/">PSFBeadsInput</a></td>
+<td></td>
+<td>no</td>
+</tr>
+<tr>
 <td><a href="../ArgolightBInput/">ArgolightBInput</a></td>
 <td></td>
 <td>yes</td>
 </tr>
 <tr>
 <td><a href="../ArgolightEInput/">ArgolightEInput</a></td>
-<td></td>
-<td>yes</td>
-</tr>
-<tr>
-<td><a href="../FieldIlluminationInput/">FieldIlluminationInput</a></td>
 <td></td>
 <td>yes</td>
 </tr>
@@ -378,12 +383,13 @@ multivalued: false
 ifabsent: float(0.01)
 alias: saturation_threshold
 domain_of:
+- FieldIlluminationInput
+- PSFBeadsInput
 - ArgolightBInput
 - ArgolightEInput
-- FieldIlluminationInput
 range: float
-minimum_value: 0
-maximum_value: 1
+minimum_value: 0.0
+maximum_value: 1.0
 
 </code></pre>
 

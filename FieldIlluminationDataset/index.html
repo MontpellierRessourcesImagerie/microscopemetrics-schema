@@ -206,49 +206,52 @@
     class FieldIlluminationDataset
       MetricsDataset &lt;|-- FieldIlluminationDataset
 
-      FieldIlluminationDataset : acquisition_date
+      FieldIlluminationDataset : acquisition_datetime
 
-      FieldIlluminationDataset : comment
+      FieldIlluminationDataset : data_reference
 
-          FieldIlluminationDataset --|&gt; Comment : comment
+          FieldIlluminationDataset --&gt; DataReference : data_reference
 
       FieldIlluminationDataset : description
 
       FieldIlluminationDataset : experimenter
 
-          FieldIlluminationDataset --|&gt; Experimenter : experimenter
+          FieldIlluminationDataset --&gt; Experimenter : experimenter
 
       FieldIlluminationDataset : input
 
-          FieldIlluminationDataset --|&gt; FieldIlluminationInput : input
+          FieldIlluminationDataset --&gt; FieldIlluminationInput : input
+
+      FieldIlluminationDataset : linked_references
+
+          FieldIlluminationDataset --&gt; DataReference : linked_references
 
       FieldIlluminationDataset : microscope
 
-          FieldIlluminationDataset --|&gt; Microscope : microscope
+          FieldIlluminationDataset --&gt; Microscope : microscope
 
       FieldIlluminationDataset : name
 
       FieldIlluminationDataset : output
 
-          FieldIlluminationDataset --|&gt; FieldIlluminationOutput : output
+          FieldIlluminationDataset --&gt; FieldIlluminationOutput : output
 
       FieldIlluminationDataset : processed
 
-      FieldIlluminationDataset : processing_date
-
-      FieldIlluminationDataset : processing_log
-
       FieldIlluminationDataset : sample
 
-          FieldIlluminationDataset --|&gt; Sample : sample
+          FieldIlluminationDataset --&gt; Sample : sample
 
 
 </div>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
 <li><a href="../NamedObject/">NamedObject</a><ul>
+<li><a href="../MetricsObject/">MetricsObject</a><ul>
 <li><a href="../MetricsDataset/">MetricsDataset</a><ul>
 <li><strong>FieldIlluminationDataset</strong></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -267,7 +270,7 @@
 <tbody>
 <tr>
 <td><a href="../input/">input</a></td>
-<td>1..1 <br/> <a href="../FieldIlluminationInput/">FieldIlluminationInput</a></td>
+<td>0..1 <br/> <a href="../FieldIlluminationInput/">FieldIlluminationInput</a></td>
 <td></td>
 <td>direct</td>
 </tr>
@@ -291,14 +294,14 @@
 </tr>
 <tr>
 <td><a href="../experimenter/">experimenter</a></td>
-<td>0..* <br/> <a href="../Experimenter/">Experimenter</a></td>
+<td>0..1 <br/> <a href="../Experimenter/">Experimenter</a></td>
 <td>The experimenter that performed the imaging experiment</td>
 <td><a href="../MetricsDataset/">MetricsDataset</a></td>
 </tr>
 <tr>
-<td><a href="../acquisition_date/">acquisition_date</a></td>
-<td>0..1 <br/> <a href="../date/">date</a></td>
-<td>The date of the acquisition</td>
+<td><a href="../acquisition_datetime/">acquisition_datetime</a></td>
+<td>0..1 <br/> <a href="../datetime/">datetime</a></td>
+<td>The datetime of the acquisition</td>
 <td><a href="../MetricsDataset/">MetricsDataset</a></td>
 </tr>
 <tr>
@@ -308,33 +311,27 @@
 <td><a href="../MetricsDataset/">MetricsDataset</a></td>
 </tr>
 <tr>
-<td><a href="../processing_date/">processing_date</a></td>
-<td>0..1 <br/> <a href="../date/">date</a></td>
-<td>The date of the processing by microscope-metrics</td>
-<td><a href="../MetricsDataset/">MetricsDataset</a></td>
+<td><a href="../data_reference/">data_reference</a></td>
+<td>0..1 <br/> <a href="../DataReference/">DataReference</a></td>
+<td>A reference to the data</td>
+<td><a href="../MetricsObject/">MetricsObject</a></td>
 </tr>
 <tr>
-<td><a href="../processing_log/">processing_log</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The log of the processing by microscope-metrics</td>
-<td><a href="../MetricsDataset/">MetricsDataset</a></td>
-</tr>
-<tr>
-<td><a href="../comment/">comment</a></td>
-<td>0..* <br/> <a href="../Comment/">Comment</a></td>
-<td>A human readable comment about the dataset</td>
-<td><a href="../MetricsDataset/">MetricsDataset</a></td>
+<td><a href="../linked_references/">linked_references</a></td>
+<td>0..* <br/> <a href="../DataReference/">DataReference</a></td>
+<td>A list of linked references</td>
+<td><a href="../MetricsObject/">MetricsObject</a></td>
 </tr>
 <tr>
 <td><a href="../name/">name</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The name of an entity</td>
+<td>The human readable name of an entity</td>
 <td><a href="../NamedObject/">NamedObject</a></td>
 </tr>
 <tr>
 <td><a href="../description/">description</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>A description of an entity</td>
+<td>A human readable description of an entity</td>
 <td><a href="../NamedObject/">NamedObject</a></td>
 </tr>
 </tbody>
@@ -375,26 +372,23 @@ attributes:
   input:
     name: input
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/samples/field_illumination_schema
-    multivalued: false
+    domain_of:
+    - MetricsDataset
+    - FieldIlluminationDataset
+    - PSFBeadsDataset
+    - ArgolightBDataset
+    - ArgolightEDataset
     range: FieldIlluminationInput
-    required: true
   output:
     name: output
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/samples/field_illumination_schema
-    multivalued: false
+    domain_of:
+    - MetricsDataset
+    - FieldIlluminationDataset
+    - PSFBeadsDataset
+    - ArgolightBDataset
+    - ArgolightEDataset
     range: FieldIlluminationOutput
-    required: false
-rules:
-- preconditions:
-    slot_conditions:
-      processed:
-        name: processed
-        equals_number: 1
-  postconditions:
-    slot_conditions:
-      output:
-        name: output
-        required: true
 
 </code></pre>
 </details>
@@ -408,27 +402,27 @@ attributes:
   input:
     name: input
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/samples/field_illumination_schema
-    multivalued: false
     alias: input
     owner: FieldIlluminationDataset
     domain_of:
+    - MetricsDataset
+    - FieldIlluminationDataset
+    - PSFBeadsDataset
     - ArgolightBDataset
     - ArgolightEDataset
-    - FieldIlluminationDataset
     range: FieldIlluminationInput
-    required: true
   output:
     name: output
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/samples/field_illumination_schema
-    multivalued: false
     alias: output
     owner: FieldIlluminationDataset
     domain_of:
+    - MetricsDataset
+    - FieldIlluminationDataset
+    - PSFBeadsDataset
     - ArgolightBDataset
     - ArgolightEDataset
-    - FieldIlluminationDataset
     range: FieldIlluminationOutput
-    required: false
   microscope:
     name: microscope
     description: The microscope that was used to acquire the dataset
@@ -441,7 +435,6 @@ attributes:
     - MetricsDataset
     range: Microscope
     required: true
-    inlined: false
   sample:
     name: sample
     description: The sample that was imaged
@@ -453,30 +446,29 @@ attributes:
     domain_of:
     - MetricsDataset
     range: Sample
-    inlined: false
   experimenter:
     name: experimenter
     description: The experimenter that performed the imaging experiment
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
     rank: 1000
-    multivalued: true
+    multivalued: false
     alias: experimenter
     owner: FieldIlluminationDataset
     domain_of:
     - MetricsDataset
     range: Experimenter
-    inlined: false
-  acquisition_date:
-    name: acquisition_date
-    description: The date of the acquisition
+  acquisition_datetime:
+    name: acquisition_datetime
+    description: The datetime of the acquisition
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: false
-    alias: acquisition_date
+    alias: acquisition_datetime
     owner: FieldIlluminationDataset
     domain_of:
     - MetricsDataset
-    range: date
+    - Image
+    range: datetime
   processed:
     name: processed
     description: Has the dataset been processed by microscope-metrics
@@ -490,44 +482,35 @@ attributes:
     - MetricsDataset
     range: boolean
     required: true
-  processing_date:
-    name: processing_date
-    description: The date of the processing by microscope-metrics
+  data_reference:
+    name: data_reference
+    description: A reference to the data
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: false
-    alias: processing_date
+    alias: data_reference
     owner: FieldIlluminationDataset
     domain_of:
-    - MetricsDataset
-    range: date
-  processing_log:
-    name: processing_log
-    description: The log of the processing by microscope-metrics
+    - MetricsObject
+    range: DataReference
+    required: false
+  linked_references:
+    name: linked_references
+    description: A list of linked references
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
     rank: 1000
-    multivalued: false
-    alias: processing_log
-    owner: FieldIlluminationDataset
-    domain_of:
-    - MetricsDataset
-    range: string
-  comment:
-    name: comment
-    description: A human readable comment about the dataset
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
     multivalued: true
-    alias: comment
+    alias: linked_references
     owner: FieldIlluminationDataset
     domain_of:
-    - Microscope
-    - MetricsDataset
-    range: Comment
+    - MetricsObject
+    range: DataReference
     required: false
     inlined: true
+    inlined_as_list: true
   name:
     name: name
-    description: The name of an entity
+    description: The human readable name of an entity
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
     rank: 1000
     multivalued: false
@@ -536,12 +519,11 @@ attributes:
     domain_of:
     - NamedObject
     - Experimenter
-    - Column
     range: string
     required: false
   description:
     name: description
-    description: A description of an entity
+    description: A human readable description of an entity
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
     rank: 1000
     multivalued: false
@@ -549,21 +531,9 @@ attributes:
     owner: FieldIlluminationDataset
     domain_of:
     - NamedObject
-    - Roi
     - Tag
     range: string
     required: false
-rules:
-- preconditions:
-    slot_conditions:
-      processed:
-        name: processed
-        equals_number: 1
-  postconditions:
-    slot_conditions:
-      output:
-        name: output
-        required: true
 
 </code></pre>
 </details>

@@ -240,7 +240,13 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../Image5D/">Image5D</a></td>
+<td><a href="../Image/">Image</a></td>
+<td><a href="../time_series/">time_series</a></td>
+<td>range</td>
+<td><a href="./">TimeSeries</a></td>
+</tr>
+<tr>
+<td><a href="../ImageMask/">ImageMask</a></td>
 <td><a href="../time_series/">time_series</a></td>
 <td>range</td>
 <td><a href="./">TimeSeries</a></td>
@@ -286,7 +292,10 @@ attributes:
     implements:
     - linkml:elements
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    rank: 1000
     multivalued: true
+    domain_of:
+    - TimeSeries
     range: float
     required: true
     unit:
@@ -307,13 +316,12 @@ attributes:
     implements:
     - linkml:elements
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    rank: 1000
     multivalued: true
     alias: values
     owner: TimeSeries
     domain_of:
-    - ChannelSeries
     - TimeSeries
-    - Column
     range: float
     required: true
     unit:

@@ -317,7 +317,7 @@
 
 
 <h1 id="slot-description">Slot: description</h1>
-<p><em>A description of an entity</em></p>
+<p><em>A human readable description of an entity</em></p>
 <p>URI: <a href="https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/description">microscopemetrics_schema:description</a></p>
 <!-- no inheritance hierarchy -->
 
@@ -337,23 +337,8 @@
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../ArgolightBDataset/">ArgolightBDataset</a></td>
-<td>An Argolight sample pattern B dataset</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../ArgolightEDataset/">ArgolightEDataset</a></td>
-<td>An Argolight sample pattern E dataset</td>
-<td>no</td>
-</tr>
-<tr>
 <td><a href="../MetricsObject/">MetricsObject</a></td>
 <td>A base object for all microscope-metrics objects</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Device/">Device</a></td>
-<td>A base object for all microscope-metrics devices</td>
 <td>no</td>
 </tr>
 <tr>
@@ -372,38 +357,28 @@
 <td>no</td>
 </tr>
 <tr>
+<td><a href="../MetricsDatasetCollection/">MetricsDatasetCollection</a></td>
+<td>A collection of microscope-metrics datasets</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../HarmonizedMetricsDatasetCollection/">HarmonizedMetricsDatasetCollection</a></td>
+<td>A collection of harmonized microscope-metrics datasets</td>
+<td>no</td>
+</tr>
+<tr>
 <td><a href="../MetricsDataset/">MetricsDataset</a></td>
 <td>A base object on which microscope-metrics runs the analysis</td>
 <td>no</td>
 </tr>
 <tr>
 <td><a href="../Image/">Image</a></td>
-<td>A base object for all microscope-metrics images</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../ImageAsNumpy/">ImageAsNumpy</a></td>
-<td>An image as a numpy array in TZYXC order</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../ImageInline/">ImageInline</a></td>
-<td>A base object for all microscope-metrics images that are stored as arrays in ...</td>
+<td>A microscope-metrics image</td>
 <td>no</td>
 </tr>
 <tr>
 <td><a href="../ImageMask/">ImageMask</a></td>
-<td>A base object for all microscope-metrics masks</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Image2D/">Image2D</a></td>
-<td>A 2D image in YX order</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Image5D/">Image5D</a></td>
-<td>A 5D image in TZYXC order</td>
+<td>A mask image</td>
 <td>no</td>
 </tr>
 <tr>
@@ -412,23 +387,53 @@
 <td>no</td>
 </tr>
 <tr>
+<td><a href="../Column/">Column</a></td>
+<td>Attributes of a column</td>
+<td>no</td>
+</tr>
+<tr>
 <td><a href="../Roi/">Roi</a></td>
 <td>A ROI (Region Of Interest)</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../LinesRoi/">LinesRoi</a></td>
-<td>ROI representing a set of lines in a single channel</td>
+<td><a href="../Shape/">Shape</a></td>
+<td>A shape</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../PointsRoi/">PointsRoi</a></td>
-<td>ROI representing a set of points in a single channel</td>
+<td><a href="../Point/">Point</a></td>
+<td>A point as defined by x and y coordinates</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../RectanglesRoi/">RectanglesRoi</a></td>
-<td>ROI representing a set of rectangles in a single channel</td>
+<td><a href="../Line/">Line</a></td>
+<td>A line as defined by x1, y1, x2, y2 coordinates</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Rectangle/">Rectangle</a></td>
+<td>A rectangle as defined by x, y coordinates and width, height</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Ellipse/">Ellipse</a></td>
+<td>An ellipse as defined by x, y coordinates and x and y radii</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Polygon/">Polygon</a></td>
+<td>A polygon as defined by a series of vertexes and a boolean to indicate if clo...</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Mask/">Mask</a></td>
+<td>A mask as defined by a boolean image</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../KeyValues/">KeyValues</a></td>
+<td>A collection of key-value pairs</td>
 <td>no</td>
 </tr>
 <tr>
@@ -438,17 +443,7 @@
 </tr>
 <tr>
 <td><a href="../Table/">Table</a></td>
-<td>A table</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../TableAsPandasDF/">TableAsPandasDF</a></td>
-<td>A table as a Pandas DataFrame</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../TableAsDict/">TableAsDict</a></td>
-<td>A table inlined in a metrics dataset</td>
+<td>A microscope-metrics table</td>
 <td>no</td>
 </tr>
 <tr>
@@ -457,18 +452,48 @@
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../RoiProfiles/">RoiProfiles</a></td>
-<td>line ROIs used to compute the intensity profiles</td>
+<td><a href="../FieldIlluminationKeyValues/">FieldIlluminationKeyValues</a></td>
+<td></td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../RoiCorners/">RoiCorners</a></td>
-<td>Rectangular ROIs used to compute the corner intensities</td>
+<td><a href="../PSFBeadsDataset/">PSFBeadsDataset</a></td>
+<td>A PSF beads dataset</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../RoiCenter/">RoiCenter</a></td>
-<td>Point ROIs marking the center of illumination</td>
+<td><a href="../PSFBeadsKeyValues/">PSFBeadsKeyValues</a></td>
+<td></td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../ArgolightBDataset/">ArgolightBDataset</a></td>
+<td>An Argolight sample pattern B dataset</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../ArgolightBCentersOfMass/">ArgolightBCentersOfMass</a></td>
+<td></td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../ArgolightBIntensityKeyValues/">ArgolightBIntensityKeyValues</a></td>
+<td></td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../ArgolightBDistanceKeyValues/">ArgolightBDistanceKeyValues</a></td>
+<td></td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../ArgolightEDataset/">ArgolightEDataset</a></td>
+<td>An Argolight sample pattern E dataset</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../ArgolightEKeyValues/">ArgolightEKeyValues</a></td>
+<td></td>
 <td>no</td>
 </tr>
 </tbody>
@@ -486,14 +511,13 @@
 <details>
 
 <pre><code class="language-yaml">name: description
-description: A description of an entity
+description: A human readable description of an entity
 from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
 rank: 1000
 multivalued: false
 alias: description
 domain_of:
 - NamedObject
-- Roi
 - Tag
 range: string
 required: false

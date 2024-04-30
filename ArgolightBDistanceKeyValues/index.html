@@ -214,6 +214,16 @@
 
       ArgolightBDistanceKeyValues : channel_B
 
+      ArgolightBDistanceKeyValues : data_reference
+
+          ArgolightBDistanceKeyValues --&gt; DataReference : data_reference
+
+      ArgolightBDistanceKeyValues : description
+
+      ArgolightBDistanceKeyValues : linked_references
+
+          ArgolightBDistanceKeyValues --&gt; DataReference : linked_references
+
       ArgolightBDistanceKeyValues : mad_3d_dist
 
       ArgolightBDistanceKeyValues : mad_z_dist
@@ -226,6 +236,8 @@
 
       ArgolightBDistanceKeyValues : median_z_dist
 
+      ArgolightBDistanceKeyValues : name
+
       ArgolightBDistanceKeyValues : std_3d_dist
 
       ArgolightBDistanceKeyValues : std_z_dist
@@ -234,8 +246,14 @@
 </div>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
+<li><a href="../NamedObject/">NamedObject</a><ul>
+<li><a href="../MetricsObject/">MetricsObject</a><ul>
 <li><a href="../KeyValues/">KeyValues</a><ul>
 <li><strong>ArgolightBDistanceKeyValues</strong></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -310,6 +328,30 @@
 <td>Median absolute deviation of the Z distances between spots for each permutati...</td>
 <td>direct</td>
 </tr>
+<tr>
+<td><a href="../data_reference/">data_reference</a></td>
+<td>0..1 <br/> <a href="../DataReference/">DataReference</a></td>
+<td>A reference to the data</td>
+<td><a href="../MetricsObject/">MetricsObject</a></td>
+</tr>
+<tr>
+<td><a href="../linked_references/">linked_references</a></td>
+<td>0..* <br/> <a href="../DataReference/">DataReference</a></td>
+<td>A list of linked references</td>
+<td><a href="../MetricsObject/">MetricsObject</a></td>
+</tr>
+<tr>
+<td><a href="../name/">name</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>The human readable name of an entity</td>
+<td><a href="../NamedObject/">NamedObject</a></td>
+</tr>
+<tr>
+<td><a href="../description/">description</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A human readable description of an entity</td>
+<td><a href="../NamedObject/">NamedObject</a></td>
+</tr>
 </tbody>
 </table>
 <h2 id="usages">Usages</h2>
@@ -325,7 +367,7 @@
 <tbody>
 <tr>
 <td><a href="../ArgolightBOutput/">ArgolightBOutput</a></td>
-<td><a href="../distance_measurements/">distance_measurements</a></td>
+<td><a href="../distance_key_values/">distance_key_values</a></td>
 <td>range</td>
 <td><a href="./">ArgolightBDistanceKeyValues</a></td>
 </tr>
@@ -387,7 +429,7 @@ attributes:
     description: The first channel number to which the measurements apply
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
     rank: 1000
-    is_a: channel
+    is_a: channel_nr
     multivalued: true
     alias: channel_A
     owner: ArgolightBDistanceKeyValues
@@ -399,7 +441,7 @@ attributes:
     description: The second channel number to which the measurements apply
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
     rank: 1000
-    is_a: channel
+    is_a: channel_nr
     multivalued: true
     alias: channel_B
     owner: ArgolightBDistanceKeyValues
@@ -502,6 +544,58 @@ attributes:
     domain_of:
     - ArgolightBDistanceKeyValues
     range: float
+  data_reference:
+    name: data_reference
+    description: A reference to the data
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    rank: 1000
+    multivalued: false
+    alias: data_reference
+    owner: ArgolightBDistanceKeyValues
+    domain_of:
+    - MetricsObject
+    range: DataReference
+    required: false
+  linked_references:
+    name: linked_references
+    description: A list of linked references
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    rank: 1000
+    multivalued: true
+    alias: linked_references
+    owner: ArgolightBDistanceKeyValues
+    domain_of:
+    - MetricsObject
+    range: DataReference
+    required: false
+    inlined: true
+    inlined_as_list: true
+  name:
+    name: name
+    description: The human readable name of an entity
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    rank: 1000
+    multivalued: false
+    alias: name
+    owner: ArgolightBDistanceKeyValues
+    domain_of:
+    - NamedObject
+    - Experimenter
+    range: string
+    required: false
+  description:
+    name: description
+    description: A human readable description of an entity
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    rank: 1000
+    multivalued: false
+    alias: description
+    owner: ArgolightBDistanceKeyValues
+    domain_of:
+    - NamedObject
+    - Tag
+    range: string
+    required: false
 
 </code></pre>
 </details>

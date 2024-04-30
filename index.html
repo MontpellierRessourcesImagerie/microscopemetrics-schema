@@ -393,44 +393,44 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="CentersFitted/">CentersFitted</a></td>
+<td>The fitted center of detected objects. Intended to be used with ROIs.</td>
+</tr>
+<tr>
+<td><a href="CentersGeometric/">CentersGeometric</a></td>
+<td>The geometric center of detected objects. Intended to be used with ROIs.</td>
+</tr>
+<tr>
+<td><a href="CentersMaxIntensity/">CentersMaxIntensity</a></td>
+<td>The position of maximum intensity of detected objects. Intended to be used with ROIs.</td>
+</tr>
+<tr>
+<td><a href="CentersOfMass/">CentersOfMass</a></td>
+<td>The center of mass of detected objects. Intended to be used with ROIs.</td>
+</tr>
+<tr>
 <td><a href="ChannelSeries/">ChannelSeries</a></td>
-<td>A series whose values represent channel</td>
+<td>A series representing channels</td>
 </tr>
 <tr>
 <td><a href="Color/">Color</a></td>
 <td>A color as defined by RGB values and an optional alpha value</td>
 </tr>
 <tr>
-<td><a href="Column/">Column</a></td>
-<td>A column</td>
+<td><a href="ColumnSeries/">ColumnSeries</a></td>
+<td>A series of columns</td>
 </tr>
 <tr>
 <td><a href="Comment/">Comment</a></td>
 <td>A comment</td>
 </tr>
 <tr>
+<td><a href="DataReference/">DataReference</a></td>
+<td>A reference to a data resource</td>
+</tr>
+<tr>
 <td><a href="Experimenter/">Experimenter</a></td>
 <td>The person that performed the experiment or developed the protocol</td>
-</tr>
-<tr>
-<td><a href="KeyValues/">KeyValues</a></td>
-<td>A collection of key-value pairs</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ArgolightBDistanceKeyValues/">ArgolightBDistanceKeyValues</a></td>
-<td>None</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ArgolightBIntensityKeyValues/">ArgolightBIntensityKeyValues</a></td>
-<td>None</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ArgolightEKeyValues/">ArgolightEKeyValues</a></td>
-<td>None</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="FieldIlluminationKeyValues/">FieldIlluminationKeyValues</a></td>
-<td>None</td>
 </tr>
 <tr>
 <td><a href="MetaObject/">MetaObject</a></td>
@@ -453,6 +453,10 @@
 <td>None</td>
 </tr>
 <tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="PSFBeadsInput/">PSFBeadsInput</a></td>
+<td>None</td>
+</tr>
+<tr>
 <td><a href="MetricsOutput/">MetricsOutput</a></td>
 <td>An abstract class for analysis outputs</td>
 </tr>
@@ -469,6 +473,14 @@
 <td>None</td>
 </tr>
 <tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="PSFBeadsOutput/">PSFBeadsOutput</a></td>
+<td>None</td>
+</tr>
+<tr>
+<td><a href="MicroscopeCollection/">MicroscopeCollection</a></td>
+<td>A collection of microscopes</td>
+</tr>
+<tr>
 <td><a href="NamedObject/">NamedObject</a></td>
 <td>An object with a name and a description</td>
 </tr>
@@ -477,15 +489,55 @@
 <td>A image channel</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="MetricsDataset/">MetricsDataset</a></td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Column/">Column</a></td>
+<td>Attributes of a column</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="MetricsObject/">MetricsObject</a></td>
+<td>A base object for all microscope-metrics objects.</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Image/">Image</a></td>
+<td>A microscope-metrics image</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ImageMask/">ImageMask</a></td>
+<td>A mask image. Either a binary image or a label image</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="KeyValues/">KeyValues</a></td>
+<td>A collection of key-value pairs</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ArgolightBDistanceKeyValues/">ArgolightBDistanceKeyValues</a></td>
+<td>None</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ArgolightBIntensityKeyValues/">ArgolightBIntensityKeyValues</a></td>
+<td>None</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ArgolightEKeyValues/">ArgolightEKeyValues</a></td>
+<td>None</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="FieldIlluminationKeyValues/">FieldIlluminationKeyValues</a></td>
+<td>None</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="PSFBeadsKeyValues/">PSFBeadsKeyValues</a></td>
+<td>None</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="MetricsDataset/">MetricsDataset</a></td>
 <td>A base object on which microscope-metrics runs the analysis</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ArgolightBDataset/">ArgolightBDataset</a></td>
-<td>An Argolight sample pattern B dataset</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ArgolightBDataset/">ArgolightBDataset</a></td>
+<td>An Argolight sample pattern B dataset. This pattern consists of an array of circles</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ArgolightEDataset/">ArgolightEDataset</a></td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ArgolightEDataset/">ArgolightEDataset</a></td>
 <td>An Argolight sample pattern E dataset.</td>
 </tr>
 <tr>
@@ -501,56 +553,40 @@
 <td></td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="FieldIlluminationDataset/">FieldIlluminationDataset</a></td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="FieldIlluminationDataset/">FieldIlluminationDataset</a></td>
 <td>A field illumination dataset</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="MetricsObject/">MetricsObject</a></td>
-<td>A base object for all microscope-metrics objects</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="PSFBeadsDataset/">PSFBeadsDataset</a></td>
+<td>A PSF beads dataset</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Device/">Device</a></td>
-<td>A base object for all microscope-metrics devices</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="MetricsDatasetCollection/">MetricsDatasetCollection</a></td>
+<td>A collection of microscope-metrics datasets</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Microscope/">Microscope</a></td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="HarmonizedMetricsDatasetCollection/">HarmonizedMetricsDatasetCollection</a></td>
+<td>A collection of harmonized microscope-metrics datasets. All of the datasets  in the collection share the same analysis and processing parameters.</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Microscope/">Microscope</a></td>
 <td>A microscope</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Image/">Image</a></td>
-<td>A base object for all microscope-metrics images</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Roi/">Roi</a></td>
+<td>A ROI (Region Of Interest). Collection of shapes and an image to which they are applied</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ImageAsNumpy/">ImageAsNumpy</a></td>
-<td>An image as a numpy array in TZYXC order</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ImageInline/">ImageInline</a></td>
-<td>A base object for all microscope-metrics images that are stored as arrays in line</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Image2D/">Image2D</a></td>
-<td>A 2D image in YX order</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Image5D/">Image5D</a></td>
-<td>A 5D image in TZYXC order</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ImageMask/">ImageMask</a></td>
-<td>A base object for all microscope-metrics masks</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ArgolightBCentersOfMass/">ArgolightBCentersOfMass</a></td>
+<td>None</td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Table/">Table</a></td>
-<td>A table</td>
+<td>A microscope-metrics table</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="TableAsDict/">TableAsDict</a></td>
-<td>A table inlined in a metrics dataset</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="TableAsPandasDF/">TableAsPandasDF</a></td>
-<td>A table as a Pandas DataFrame</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Tag/">Tag</a></td>
+<td>A tag</td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Protocol/">Protocol</a></td>
@@ -561,64 +597,40 @@
 <td>A sample is a standard physical object that is imaged by a microscope</td>
 </tr>
 <tr>
-<td><a href="Roi/">Roi</a></td>
-<td>A ROI (Region Of Interest). Collection of shapes and an image to which they are applied</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="LinesRoi/">LinesRoi</a></td>
-<td>ROI representing a set of lines in a single channel</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="RoiProfiles/">RoiProfiles</a></td>
-<td>line ROIs used to compute the intensity profiles</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="PointsRoi/">PointsRoi</a></td>
-<td>ROI representing a set of points in a single channel</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="RectanglesRoi/">RectanglesRoi</a></td>
-<td>ROI representing a set of rectangles in a single channel</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="RoiCorners/">RoiCorners</a></td>
-<td>Rectangular ROIs used to compute the corner intensities</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="RoiCenter/">RoiCenter</a></td>
-<td>Point ROIs marking the center of illumination</td>
-</tr>
-<tr>
-<td><a href="Shape/">Shape</a></td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Shape/">Shape</a></td>
 <td>A shape</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Ellipse/">Ellipse</a></td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Ellipse/">Ellipse</a></td>
 <td>An ellipse as defined by x, y coordinates and x and y radii</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Line/">Line</a></td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Line/">Line</a></td>
 <td>A line as defined by x1, y1, x2, y2 coordinates</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Mask/">Mask</a></td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Mask/">Mask</a></td>
 <td>A mask as defined by a boolean image</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Point/">Point</a></td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Point/">Point</a></td>
 <td>A point as defined by x and y coordinates</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Polygon/">Polygon</a></td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Polygon/">Polygon</a></td>
 <td>A polygon as defined by a series of vertexes and a boolean to indicate if closed or not</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Rectangle/">Rectangle</a></td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Rectangle/">Rectangle</a></td>
 <td>A rectangle as defined by x, y coordinates and width, height</td>
 </tr>
 <tr>
-<td><a href="Tag/">Tag</a></td>
-<td>A tag</td>
+<td><a href="ProfilesIntensity/">ProfilesIntensity</a></td>
+<td>Profiles computed on the image. Intended to be used with ROIs.</td>
+</tr>
+<tr>
+<td><a href="RoiMeasurements/">RoiMeasurements</a></td>
+<td>Measurements computed on the ROIs of an image. Intended to be used with ROIs.</td>
 </tr>
 <tr>
 <td><a href="TimeSeries/">TimeSeries</a></td>
@@ -640,32 +652,56 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="acquisition_date/">acquisition_date</a></td>
-<td>The date of the acquisition</td>
+<td><a href="acquisition_datetime/">acquisition_datetime</a></td>
+<td>The datetime of the acquisition</td>
 </tr>
 <tr>
 <td><a href="alpha/">alpha</a></td>
 <td>The alpha value of the color (optional)</td>
 </tr>
 <tr>
+<td><a href="analyzed_bead_centers/">analyzed_bead_centers</a></td>
+<td>The centers of the beads that have been analyzed</td>
+</tr>
+<tr>
 <td><a href="argolight_b_image/">argolight_b_image</a></td>
-<td>Input parameter: image of the argolight b pattern provided as a 5D numpy arra...</td>
+<td>Input parameter: image of the argolight b pattern in the order TZYXC</td>
 </tr>
 <tr>
 <td><a href="argolight_e_image/">argolight_e_image</a></td>
-<td>Image of the argolight e pattern provided as a 5D numpy array in the order TZ...</td>
+<td>Image of the argolight e pattern provided in the order TZYXC</td>
+</tr>
+<tr>
+<td><a href="array_data/">array_data</a></td>
+<td>A non-required slot for non-serializable array data object</td>
+</tr>
+<tr>
+<td><a href="author/">author</a></td>
+<td>The author of the comment</td>
 </tr>
 <tr>
 <td><a href="authors/">authors</a></td>
 <td>The authors of the protocol</td>
 </tr>
 <tr>
-<td><a href="axis/">axis</a></td>
-<td>Axis along which resolution is being measured</td>
-</tr>
-<tr>
 <td><a href="b/">b</a></td>
 <td>The blue value of the color</td>
+</tr>
+<tr>
+<td><a href="bead_properties/">bead_properties</a></td>
+<td>Properties associated with the analysis of the beads</td>
+</tr>
+<tr>
+<td><a href="bead_x_profiles/">bead_x_profiles</a></td>
+<td>The intensity profiles along the x axis of the analyzed beads as well as the ...</td>
+</tr>
+<tr>
+<td><a href="bead_y_profiles/">bead_y_profiles</a></td>
+<td>The intensity profiles along the y axis of the analyzed beads as well as the ...</td>
+</tr>
+<tr>
+<td><a href="bead_z_profiles/">bead_z_profiles</a></td>
+<td>The intensity profiles along the z axis of the analyzed beads as well as the ...</td>
 </tr>
 <tr>
 <td><a href="bit_depth/">bit_depth</a></td>
@@ -680,20 +716,12 @@
 <td>The mean intensity of the bottom-center of the image  divided by the maximum ...</td>
 </tr>
 <tr>
-<td><a href="bottom_center_region/">bottom_center_region</a></td>
-<td>The bottom-center of the image</td>
-</tr>
-<tr>
 <td><a href="bottom_left_intensity_mean/">bottom_left_intensity_mean</a></td>
 <td>The mean intensity of the bottom-left of the image</td>
 </tr>
 <tr>
 <td><a href="bottom_left_intensity_ratio/">bottom_left_intensity_ratio</a></td>
 <td>The mean intensity of the bottom-left of the image  divided by the maximum in...</td>
-</tr>
-<tr>
-<td><a href="bottom_left_region/">bottom_left_region</a></td>
-<td>The bottom-left corner of the image</td>
 </tr>
 <tr>
 <td><a href="bottom_right_intensity_mean/">bottom_right_intensity_mean</a></td>
@@ -704,36 +732,76 @@
 <td>The mean intensity of the bottom-right of the image  divided by the maximum i...</td>
 </tr>
 <tr>
-<td><a href="bottom_right_region/">bottom_right_region</a></td>
-<td>The bottom-right corner of the image</td>
-</tr>
-<tr>
 <td><a href="c/">c</a></td>
 <td>The c coordinate of the shape</td>
 </tr>
 <tr>
-<td><a href="center_of_illumination/">center_of_illumination</a></td>
-<td>Point ROIs marking the center of illumination</td>
+<td><a href="center_fitted_distance_relative/">center_fitted_distance_relative</a></td>
+<td>The relative distance of the fitted center of illumination to the center of t...</td>
+</tr>
+<tr>
+<td><a href="center_fitted_x/">center_fitted_x</a></td>
+<td>The x coordinate of the fitted center of illumination</td>
+</tr>
+<tr>
+<td><a href="center_fitted_x_relative/">center_fitted_x_relative</a></td>
+<td>The relative x position of the fitted center of illumination</td>
+</tr>
+<tr>
+<td><a href="center_fitted_y/">center_fitted_y</a></td>
+<td>The y coordinate of the fitted center of illumination</td>
+</tr>
+<tr>
+<td><a href="center_fitted_y_relative/">center_fitted_y_relative</a></td>
+<td>The relative y position of the fitted center of illumination</td>
+</tr>
+<tr>
+<td><a href="center_geometric_distance_relative/">center_geometric_distance_relative</a></td>
+<td>The relative distance of the geometric center to the center of the image</td>
+</tr>
+<tr>
+<td><a href="center_geometric_x/">center_geometric_x</a></td>
+<td>The x coordinate of the geometric center of the center of illumination region</td>
+</tr>
+<tr>
+<td><a href="center_geometric_x_relative/">center_geometric_x_relative</a></td>
+<td>The relative x position of the geometric center of the center of illumination...</td>
+</tr>
+<tr>
+<td><a href="center_geometric_y/">center_geometric_y</a></td>
+<td>The y coordinate of the geometric center of the center of illumination region</td>
+</tr>
+<tr>
+<td><a href="center_geometric_y_relative/">center_geometric_y_relative</a></td>
+<td>The relative y position of the geometric center of the center of illumination...</td>
+</tr>
+<tr>
+<td><a href="center_of_mass_distance_relative/">center_of_mass_distance_relative</a></td>
+<td>The relative distance of the centers of mass to the center of the image</td>
 </tr>
 <tr>
 <td><a href="center_of_mass_x/">center_of_mass_x</a></td>
 <td>The x coordinate of the center of mass of the center of illumination region</td>
 </tr>
 <tr>
+<td><a href="center_of_mass_x_relative/">center_of_mass_x_relative</a></td>
+<td>The relative x position of the center of mass of the center of illumination r...</td>
+</tr>
+<tr>
 <td><a href="center_of_mass_y/">center_of_mass_y</a></td>
 <td>The y coordinate of the center of mass of the center of illumination region</td>
 </tr>
 <tr>
-<td><a href="center_points/">center_points</a></td>
-<td>The center of illumination</td>
+<td><a href="center_of_mass_y_relative/">center_of_mass_y_relative</a></td>
+<td>The relative y position of the center of mass of the center of illumination r...</td>
 </tr>
 <tr>
-<td><a href="center_threshold/">center_threshold</a></td>
-<td>Input parameter: relative threshold for what is going to be considered as the...</td>
+<td><a href="center_region_area_fraction/">center_region_area_fraction</a></td>
+<td>The fraction of the area occupied by the center of illumination region</td>
 </tr>
 <tr>
-<td><a href="channel/">channel</a></td>
-<td>The channel number to which the measurements apply</td>
+<td><a href="center_region_intensity_fraction/">center_region_intensity_fraction</a></td>
+<td>The fraction of the upper intensity range occupied by the center of illuminat...</td>
 </tr>
 <tr>
 <td><a href="channel_A/">channel_A</a></td>
@@ -744,92 +812,112 @@
 <td>The second channel number to which the measurements apply</td>
 </tr>
 <tr>
+<td><a href="channel_name/">channel_name</a></td>
+<td>The channel name to which the measurements apply</td>
+</tr>
+<tr>
+<td><a href="channel_nr/">channel_nr</a></td>
+<td>The channel number to which the measurements apply</td>
+</tr>
+<tr>
 <td><a href="channel_series/">channel_series</a></td>
 <td></td>
 </tr>
 <tr>
+<td><a href="channels/">channels</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="column_series/">column_series</a></td>
+<td></td>
+</tr>
+<tr>
 <td><a href="columns/">columns</a></td>
-<td>A list of the columns of the table</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="comment/">comment</a></td>
-<td>A human readable comment about the microscope</td>
+<td>A human readable comment about the dataset</td>
 </tr>
 <tr>
 <td><a href="comment_type/">comment_type</a></td>
 <td>The type of the comment</td>
 </tr>
 <tr>
+<td><a href="comments/">comments</a></td>
+<td>A list of comments linked to the microscope</td>
+</tr>
+<tr>
+<td><a href="considered_bead_centers_axial_edge/">considered_bead_centers_axial_edge</a></td>
+<td>The centers of the beads detected but considered as too close to the top and ...</td>
+</tr>
+<tr>
+<td><a href="considered_bead_centers_intensity_outlier/">considered_bead_centers_intensity_outlier</a></td>
+<td>The centers of the beads detected but considered as being too intense and pot...</td>
+</tr>
+<tr>
+<td><a href="considered_bead_centers_x_fit_quality/">considered_bead_centers_x_fit_quality</a></td>
+<td>The centers of the beads detected but considered as the fit quality in x was ...</td>
+</tr>
+<tr>
+<td><a href="considered_bead_centers_y_fit_quality/">considered_bead_centers_y_fit_quality</a></td>
+<td>The centers of the beads detected but considered as the fit quality in y was ...</td>
+</tr>
+<tr>
+<td><a href="considered_bead_centers_z_fit_quality/">considered_bead_centers_z_fit_quality</a></td>
+<td>The centers of the beads detected but considered as the fit quality in z was ...</td>
+</tr>
+<tr>
 <td><a href="corner_fraction/">corner_fraction</a></td>
 <td>Input parameter: the proportion of the image to be considered as corner or ce...</td>
 </tr>
 <tr>
-<td><a href="corner_rois/">corner_rois</a></td>
-<td>Rectangular ROIs used to compute the corner intensities</td>
+<td><a href="data_reference/">data_reference</a></td>
+<td>A reference to the data</td>
 </tr>
 <tr>
-<td><a href="data/">data</a></td>
-<td></td>
+<td><a href="data_uri/">data_uri</a></td>
+<td>The URI of the object data</td>
 </tr>
 <tr>
-<td><a href="date/">date</a></td>
-<td>The date to which the comment is referring</td>
+<td><a href="dataset_class/">dataset_class</a></td>
+<td>The class of the datasets in the collection</td>
 </tr>
 <tr>
-<td><a href="decile_0/">decile_0</a></td>
-<td>The 0th decile of the intensity distribution of the maximum intensity</td>
+<td><a href="datasets/">datasets</a></td>
+<td>The datasets of the collection</td>
 </tr>
 <tr>
-<td><a href="decile_1/">decile_1</a></td>
-<td>The 1st decile of the intensity distribution of the maximum intensity</td>
-</tr>
-<tr>
-<td><a href="decile_2/">decile_2</a></td>
-<td>The 2nd decile of the intensity distribution of the maximum intensity</td>
-</tr>
-<tr>
-<td><a href="decile_3/">decile_3</a></td>
-<td>The 3rd decile of the intensity distribution of the maximum intensity</td>
-</tr>
-<tr>
-<td><a href="decile_4/">decile_4</a></td>
-<td>The 4th decile of the intensity distribution of the maximum intensity</td>
-</tr>
-<tr>
-<td><a href="decile_5/">decile_5</a></td>
-<td>The 5th decile of the intensity distribution of the maximum intensity</td>
-</tr>
-<tr>
-<td><a href="decile_6/">decile_6</a></td>
-<td>The 6th decile of the intensity distribution of the maximum intensity</td>
-</tr>
-<tr>
-<td><a href="decile_7/">decile_7</a></td>
-<td>The 7th decile of the intensity distribution of the maximum intensity</td>
-</tr>
-<tr>
-<td><a href="decile_8/">decile_8</a></td>
-<td>The 8th decile of the intensity distribution of the maximum intensity</td>
-</tr>
-<tr>
-<td><a href="decile_9/">decile_9</a></td>
-<td>The 9th decile of the intensity distribution of the maximum intensity</td>
+<td><a href="datetime/">datetime</a></td>
+<td>The datetime to which the comment is referring</td>
 </tr>
 <tr>
 <td><a href="description/">description</a></td>
-<td>A description of an entity</td>
+<td>A human readable description of an entity</td>
 </tr>
 <tr>
-<td><a href="df/">df</a></td>
-<td>A Pandas DataFrame object</td>
+<td><a href="discarded_bead_centers_lateral_edge/">discarded_bead_centers_lateral_edge</a></td>
+<td>The centers of the beads detected but discarded as too close to the edge of t...</td>
 </tr>
 <tr>
-<td><a href="distance_measurements/">distance_measurements</a></td>
+<td><a href="discarded_bead_centers_self_proximity/">discarded_bead_centers_self_proximity</a></td>
+<td>The centers of the beads detected but discarded as too close to another bead</td>
+</tr>
+<tr>
+<td><a href="distance_key_values/">distance_key_values</a></td>
 <td>Key Distance Measurements on Argolight spots</td>
+</tr>
+<tr>
+<td><a href="ellipses/">ellipses</a></td>
+<td>A list of ellipses included in the ROI</td>
 </tr>
 <tr>
 <td><a href="emission_wavelength_nm/">emission_wavelength_nm</a></td>
 <td>The emission wavelength in nm</td>
+</tr>
+<tr>
+<td><a href="errors/">errors</a></td>
+<td>The errors of the processing by microscope-metrics</td>
 </tr>
 <tr>
 <td><a href="excitation_wavelength_nm/">excitation_wavelength_nm</a></td>
@@ -841,11 +929,51 @@
 </tr>
 <tr>
 <td><a href="field_illumination_image/">field_illumination_image</a></td>
-<td>Input parameter: homogeneity image provided as a numpy array in the order</td>
+<td>Input parameter: homogeneity image provided in the order TZYXC</td>
 </tr>
 <tr>
 <td><a href="fill_color/">fill_color</a></td>
 <td>The fill color of the shape</td>
+</tr>
+<tr>
+<td><a href="fit_r2_x_mean/">fit_r2_x_mean</a></td>
+<td>Mean residual sum of squares in the x axis for the analyzed beads</td>
+</tr>
+<tr>
+<td><a href="fit_r2_x_median/">fit_r2_x_median</a></td>
+<td>Median residual sum of squares in the x axis for the analyzed beads</td>
+</tr>
+<tr>
+<td><a href="fit_r2_x_std/">fit_r2_x_std</a></td>
+<td>Standard deviation of the residual sum of squares in the x axis for the analy...</td>
+</tr>
+<tr>
+<td><a href="fit_r2_y_mean/">fit_r2_y_mean</a></td>
+<td>Mean residual sum of squares in the y axis for the analyzed beads</td>
+</tr>
+<tr>
+<td><a href="fit_r2_y_median/">fit_r2_y_median</a></td>
+<td>Median residual sum of squares in the y axis for the analyzed beads</td>
+</tr>
+<tr>
+<td><a href="fit_r2_y_std/">fit_r2_y_std</a></td>
+<td>Standard deviation of the residual sum of squares in the y axis for the analy...</td>
+</tr>
+<tr>
+<td><a href="fit_r2_z_mean/">fit_r2_z_mean</a></td>
+<td>Mean residual sum of squares in the z axis for the analyzed beads</td>
+</tr>
+<tr>
+<td><a href="fit_r2_z_median/">fit_r2_z_median</a></td>
+<td>Median residual sum of squares in the z axis for the analyzed beads</td>
+</tr>
+<tr>
+<td><a href="fit_r2_z_std/">fit_r2_z_std</a></td>
+<td>Standard deviation of the residual sum of squares in the z axis for the analy...</td>
+</tr>
+<tr>
+<td><a href="fitting_r2_threshold/">fitting_r2_threshold</a></td>
+<td>Threshold for the residual sum of squares of the fit to be considered good</td>
 </tr>
 <tr>
 <td><a href="focus_slice/">focus_slice</a></td>
@@ -860,28 +988,12 @@
 <td>The height of the rectangle</td>
 </tr>
 <tr>
-<td><a href="id/">id</a></td>
-<td>The unique identifier for an entity</td>
-</tr>
-<tr>
-<td><a href="image/">image</a></td>
-<td>The image or images to which the ROI is applied</td>
-</tr>
-<tr>
-<td><a href="image_url/">image_url</a></td>
-<td>An URL linking to the image</td>
-</tr>
-<tr>
 <td><a href="input/">input</a></td>
-<td>An input element for the analysis</td>
+<td>The input of the analysis</td>
 </tr>
 <tr>
-<td><a href="intensity_map/">intensity_map</a></td>
-<td>Intensity map of the field illumination</td>
-</tr>
-<tr>
-<td><a href="intensity_map_size/">intensity_map_size</a></td>
-<td>Input parameter: the size of the output intensity map in pixels</td>
+<td><a href="intensity_key_values/">intensity_key_values</a></td>
+<td>Key Intensity Measurements on Argolight spots</td>
 </tr>
 <tr>
 <td><a href="intensity_max_spot/">intensity_max_spot</a></td>
@@ -890,10 +1002,6 @@
 <tr>
 <td><a href="intensity_max_spot_roi/">intensity_max_spot_roi</a></td>
 <td>ROI number of the most intense spot for each channel</td>
-</tr>
-<tr>
-<td><a href="intensity_measurements/">intensity_measurements</a></td>
-<td>Key Intensity Measurements on Argolight spots</td>
 </tr>
 <tr>
 <td><a href="intensity_min_spot/">intensity_min_spot</a></td>
@@ -905,7 +1013,15 @@
 </tr>
 <tr>
 <td><a href="intensity_profiles/">intensity_profiles</a></td>
-<td>Intensity profiles of the argolight lines provided as tables</td>
+<td>Intensity profiles for the field illumination analysis in the different direc...</td>
+</tr>
+<tr>
+<td><a href="intensity_profiles_table/">intensity_profiles_table</a></td>
+<td>Linked table of profiles</td>
+</tr>
+<tr>
+<td><a href="intensity_robust_z_score_threshold/">intensity_robust_z_score_threshold</a></td>
+<td>Threshold for the robust z-score of the intensity of the bead to be considere...</td>
 </tr>
 <tr>
 <td><a href="is_open/">is_open</a></td>
@@ -920,20 +1036,12 @@
 <td>Key-Value pairs containing the Key measurements for the field illumination an...</td>
 </tr>
 <tr>
-<td><a href="label/">label</a></td>
-<td>The label of the ROI</td>
+<td><a href="lines/">lines</a></td>
+<td>A list of lines included in the ROI</td>
 </tr>
 <tr>
-<td><a href="left_to_right_profile/">left_to_right_profile</a></td>
-<td>The line from the left to the right of the image</td>
-</tr>
-<tr>
-<td><a href="leftBottom_to_rightTop_profile/">leftBottom_to_rightTop_profile</a></td>
-<td>The line from the bottom-left to the top-right of the image</td>
-</tr>
-<tr>
-<td><a href="leftTop_to_rightBottom_profile/">leftTop_to_rightBottom_profile</a></td>
-<td>The line from the top-left to the bottom-right of the image</td>
+<td><a href="linked_references/">linked_references</a></td>
+<td>A list of linked references</td>
 </tr>
 <tr>
 <td><a href="lower_threshold_correction_factors/">lower_threshold_correction_factors</a></td>
@@ -960,16 +1068,32 @@
 <td>The mask image</td>
 </tr>
 <tr>
+<td><a href="masks/">masks</a></td>
+<td>A list of masks included in the ROI</td>
+</tr>
+<tr>
 <td><a href="max_intensity/">max_intensity</a></td>
 <td>The maximum intensity of the center of illumination</td>
+</tr>
+<tr>
+<td><a href="max_intensity_distance_relative/">max_intensity_distance_relative</a></td>
+<td>The relative distance of the maximum intensity to the center of the image</td>
 </tr>
 <tr>
 <td><a href="max_intensity_pos_x/">max_intensity_pos_x</a></td>
 <td>The x coordinate of the maximum intensity of the center of illumination</td>
 </tr>
 <tr>
+<td><a href="max_intensity_pos_x_relative/">max_intensity_pos_x_relative</a></td>
+<td>The relative x position of the maximum intensity of the center of illuminatio...</td>
+</tr>
+<tr>
 <td><a href="max_intensity_pos_y/">max_intensity_pos_y</a></td>
 <td>The y coordinate of the maximum intensity of the center of illumination</td>
+</tr>
+<tr>
+<td><a href="max_intensity_pos_y_relative/">max_intensity_pos_y_relative</a></td>
+<td>The relative y position of the maximum intensity of the center of illuminatio...</td>
 </tr>
 <tr>
 <td><a href="mean_3d_dist/">mean_3d_dist</a></td>
@@ -988,6 +1112,10 @@
 <td>Fraction of the image across which intensity profiles are measured</td>
 </tr>
 <tr>
+<td><a href="measurements_table/">measurements_table</a></td>
+<td>Linked table of measurements</td>
+</tr>
+<tr>
 <td><a href="median_3d_dist/">median_3d_dist</a></td>
 <td>Median of the 3D distances between spots for each permutation of channel A an...</td>
 </tr>
@@ -1004,16 +1132,16 @@
 <td>The microscope that was used to acquire the dataset</td>
 </tr>
 <tr>
+<td><a href="microscopes/">microscopes</a></td>
+<td>The microscopes of the collection</td>
+</tr>
+<tr>
 <td><a href="middle_center_intensity_mean/">middle_center_intensity_mean</a></td>
 <td>The mean intensity of the middle-center of the image</td>
 </tr>
 <tr>
 <td><a href="middle_center_intensity_ratio/">middle_center_intensity_ratio</a></td>
 <td>The mean intensity of the middle-center of the image  divided by the maximum ...</td>
-</tr>
-<tr>
-<td><a href="middle_center_region/">middle_center_region</a></td>
-<td>The middle-center of the image</td>
 </tr>
 <tr>
 <td><a href="middle_left_intensity_mean/">middle_left_intensity_mean</a></td>
@@ -1024,10 +1152,6 @@
 <td>The mean intensity of the middle-left of the image  divided by the maximum in...</td>
 </tr>
 <tr>
-<td><a href="middle_left_region/">middle_left_region</a></td>
-<td>The middle-left of the image</td>
-</tr>
-<tr>
 <td><a href="middle_right_intensity_mean/">middle_right_intensity_mean</a></td>
 <td>The mean intensity of the middle-right of the image</td>
 </tr>
@@ -1036,8 +1160,8 @@
 <td>The mean intensity of the middle-right of the image  divided by the maximum i...</td>
 </tr>
 <tr>
-<td><a href="middle_right_region/">middle_right_region</a></td>
-<td>The middle-right of the image</td>
+<td><a href="min_lateral_distance_factor/">min_lateral_distance_factor</a></td>
+<td>Minimal distance that has to separate laterally the beads represented as the ...</td>
 </tr>
 <tr>
 <td><a href="min_max_intensity_ratio/">min_max_intensity_ratio</a></td>
@@ -1049,23 +1173,71 @@
 </tr>
 <tr>
 <td><a href="name/">name</a></td>
-<td>The name of an entity</td>
+<td>The human readable name of an entity</td>
 </tr>
 <tr>
-<td><a href="nb_pixels/">nb_pixels</a></td>
-<td>The area occupied by the center of illumination region</td>
+<td><a href="nr_of_beads_analyzed/">nr_of_beads_analyzed</a></td>
+<td>Number of beads analyzed</td>
+</tr>
+<tr>
+<td><a href="nr_of_beads_considered_axial_edge/">nr_of_beads_considered_axial_edge</a></td>
+<td>Number of beads considered as being too close to the top and or bottom of the...</td>
+</tr>
+<tr>
+<td><a href="nr_of_beads_considered_bad_x_fit/">nr_of_beads_considered_bad_x_fit</a></td>
+<td>Number of beads considered as having a bad fit quality in the x axis</td>
+</tr>
+<tr>
+<td><a href="nr_of_beads_considered_bad_y_fit/">nr_of_beads_considered_bad_y_fit</a></td>
+<td>Number of beads considered as having a bad fit quality in the y axis</td>
+</tr>
+<tr>
+<td><a href="nr_of_beads_considered_bad_z_fit/">nr_of_beads_considered_bad_z_fit</a></td>
+<td>Number of beads considered as having a bad fit quality in the z axis</td>
+</tr>
+<tr>
+<td><a href="nr_of_beads_considered_intensity_outlier/">nr_of_beads_considered_intensity_outlier</a></td>
+<td>Number of beads considered as being too intense and potentially represent a c...</td>
+</tr>
+<tr>
+<td><a href="nr_of_beads_discarded_lateral_edge/">nr_of_beads_discarded_lateral_edge</a></td>
+<td>Number of beads discarded for being too close to the edge of the image</td>
+</tr>
+<tr>
+<td><a href="nr_of_beads_discarded_self_proximity/">nr_of_beads_discarded_self_proximity</a></td>
+<td>Number of beads discarded for being too close to another bead</td>
 </tr>
 <tr>
 <td><a href="nr_of_spots/">nr_of_spots</a></td>
 <td>Number of argolight spots detected for each channel</td>
 </tr>
 <tr>
+<td><a href="omero_host/">omero_host</a></td>
+<td>The host of the OMERO server</td>
+</tr>
+<tr>
+<td><a href="omero_object_id/">omero_object_id</a></td>
+<td>The ID of the OMERO object</td>
+</tr>
+<tr>
+<td><a href="omero_object_type/">omero_object_type</a></td>
+<td>The type of the OMERO object</td>
+</tr>
+<tr>
+<td><a href="omero_port/">omero_port</a></td>
+<td>The port of the OMERO server</td>
+</tr>
+<tr>
 <td><a href="orcid/">orcid</a></td>
 <td>The ORCID of the experimenter</td>
 </tr>
 <tr>
+<td><a href="orientation_axis/">orientation_axis</a></td>
+<td>Axis along which resolution is being measured</td>
+</tr>
+<tr>
 <td><a href="output/">output</a></td>
-<td>An output element from the analysis</td>
+<td>The output of the analysis</td>
 </tr>
 <tr>
 <td><a href="peak_height_A/">peak_height_A</a></td>
@@ -1077,11 +1249,11 @@
 </tr>
 <tr>
 <td><a href="peak_position_A/">peak_position_A</a></td>
-<td>Position of first peak in the intensity profiles</td>
+<td>Position, in pixels, of first peak in the intensity profiles</td>
 </tr>
 <tr>
 <td><a href="peak_position_B/">peak_position_B</a></td>
-<td>Position of second peak in the intensity profiles</td>
+<td>Position, in pixels, of second peak in the intensity profiles</td>
 </tr>
 <tr>
 <td><a href="peak_prominence_A/">peak_prominence_A</a></td>
@@ -1096,20 +1268,36 @@
 <td>ROIs of the peaks found in the argolight images</td>
 </tr>
 <tr>
+<td><a href="points/">points</a></td>
+<td>A list of points included in the ROI</td>
+</tr>
+<tr>
+<td><a href="polygons/">polygons</a></td>
+<td>A list of polygons included in the ROI</td>
+</tr>
+<tr>
 <td><a href="processed/">processed</a></td>
 <td>Has the dataset been processed by microscope-metrics</td>
 </tr>
 <tr>
-<td><a href="processing_date/">processing_date</a></td>
-<td>The date of the processing by microscope-metrics</td>
+<td><a href="processing_application/">processing_application</a></td>
+<td>The application used to process the dataset</td>
+</tr>
+<tr>
+<td><a href="processing_datetime/">processing_datetime</a></td>
+<td>The datetime of the processing by microscope-metrics</td>
+</tr>
+<tr>
+<td><a href="processing_entity/">processing_entity</a></td>
+<td>The entity that processed the dataset</td>
 </tr>
 <tr>
 <td><a href="processing_log/">processing_log</a></td>
 <td>The log of the processing by microscope-metrics</td>
 </tr>
 <tr>
-<td><a href="profile_rois/">profile_rois</a></td>
-<td>line ROIs used to compute the intensity profiles</td>
+<td><a href="processing_version/">processing_version</a></td>
+<td>The version of the application used to process the dataset</td>
 </tr>
 <tr>
 <td><a href="prominence_threshold/">prominence_threshold</a></td>
@@ -1120,16 +1308,140 @@
 <td>The protocol used to prepare the sample</td>
 </tr>
 <tr>
+<td><a href="psf_beads_images/">psf_beads_images</a></td>
+<td>The image containing the beads provided in the order TZYXC</td>
+</tr>
+<tr>
 <td><a href="r/">r</a></td>
 <td>The red value of the color</td>
 </tr>
 <tr>
-<td><a href="rayleigh_resolution/">rayleigh_resolution</a></td>
-<td>Rayleigh resolution measured</td>
+<td><a href="rayleigh_resolution_microns/">rayleigh_resolution_microns</a></td>
+<td>Rayleigh resolution measured in microns</td>
+</tr>
+<tr>
+<td><a href="rayleigh_resolution_pixels/">rayleigh_resolution_pixels</a></td>
+<td>Rayleigh resolution measured in pixels</td>
+</tr>
+<tr>
+<td><a href="rectangles/">rectangles</a></td>
+<td>A list of rectangles included in the ROI</td>
 </tr>
 <tr>
 <td><a href="remove_center_cross/">remove_center_cross</a></td>
 <td>Input parameter: remove the center cross found in some Argolight patterns</td>
+</tr>
+<tr>
+<td><a href="resolution_mean_fwhm_lateral_asymmetry_ratio/">resolution_mean_fwhm_lateral_asymmetry_ratio</a></td>
+<td>Mean lateral FWHM asymmetry ratio for the analyzed beads</td>
+</tr>
+<tr>
+<td><a href="resolution_mean_fwhm_x_microns/">resolution_mean_fwhm_x_microns</a></td>
+<td>Mean FWHM for the analyzed beads in the X axis in microns</td>
+</tr>
+<tr>
+<td><a href="resolution_mean_fwhm_x_pixels/">resolution_mean_fwhm_x_pixels</a></td>
+<td>Mean FWHM for the analyzed beads in the X axis in pixels</td>
+</tr>
+<tr>
+<td><a href="resolution_mean_fwhm_y_microns/">resolution_mean_fwhm_y_microns</a></td>
+<td>Mean FWHM for the analyzed beads in the Y axis in microns</td>
+</tr>
+<tr>
+<td><a href="resolution_mean_fwhm_y_pixels/">resolution_mean_fwhm_y_pixels</a></td>
+<td>Mean FWHM for the analyzed beads in the Y axis in pixels</td>
+</tr>
+<tr>
+<td><a href="resolution_mean_fwhm_z_microns/">resolution_mean_fwhm_z_microns</a></td>
+<td>Mean FWHM for the analyzed beads in the Z axis in microns</td>
+</tr>
+<tr>
+<td><a href="resolution_mean_fwhm_z_pixels/">resolution_mean_fwhm_z_pixels</a></td>
+<td>Mean FWHM for the analyzed beads in the Z axis in pixels</td>
+</tr>
+<tr>
+<td><a href="resolution_median_fwhm_lateral_asymmetry_ratio/">resolution_median_fwhm_lateral_asymmetry_ratio</a></td>
+<td>Median lateral FWHM asymmetry ratio for the analyzed beads</td>
+</tr>
+<tr>
+<td><a href="resolution_median_fwhm_x_microns/">resolution_median_fwhm_x_microns</a></td>
+<td>Median FWHM for the analyzed beads in the X axis in microns</td>
+</tr>
+<tr>
+<td><a href="resolution_median_fwhm_x_pixels/">resolution_median_fwhm_x_pixels</a></td>
+<td>Median FWHM for the analyzed beads in the X axis in pixels</td>
+</tr>
+<tr>
+<td><a href="resolution_median_fwhm_y_microns/">resolution_median_fwhm_y_microns</a></td>
+<td>Median FWHM for the analyzed beads in the Y axis in microns</td>
+</tr>
+<tr>
+<td><a href="resolution_median_fwhm_y_pixels/">resolution_median_fwhm_y_pixels</a></td>
+<td>Median FWHM for the analyzed beads in the Y axis in pixels</td>
+</tr>
+<tr>
+<td><a href="resolution_median_fwhm_z_microns/">resolution_median_fwhm_z_microns</a></td>
+<td>Median FWHM for the analyzed beads in the Z axis in microns</td>
+</tr>
+<tr>
+<td><a href="resolution_median_fwhm_z_pixels/">resolution_median_fwhm_z_pixels</a></td>
+<td>Median FWHM for the analyzed beads in the Z axis in pixels</td>
+</tr>
+<tr>
+<td><a href="resolution_std_fwhm_lateral_asymmetry_ratio/">resolution_std_fwhm_lateral_asymmetry_ratio</a></td>
+<td>Standard deviation of the lateral FWHM asymmetry ratio for the analyzed beads</td>
+</tr>
+<tr>
+<td><a href="resolution_std_fwhm_x_microns/">resolution_std_fwhm_x_microns</a></td>
+<td>Standard deviation of the FWHM for the analyzed beads in the X axis in micron...</td>
+</tr>
+<tr>
+<td><a href="resolution_std_fwhm_x_pixels/">resolution_std_fwhm_x_pixels</a></td>
+<td>Standard deviation of the FWHM for the analyzed beads in the X axis in pixels</td>
+</tr>
+<tr>
+<td><a href="resolution_std_fwhm_y_microns/">resolution_std_fwhm_y_microns</a></td>
+<td>Standard deviation of the FWHM for the analyzed beads in the Y axis in micron...</td>
+</tr>
+<tr>
+<td><a href="resolution_std_fwhm_y_pixels/">resolution_std_fwhm_y_pixels</a></td>
+<td>Standard deviation of the FWHM for the analyzed beads in the Y axis in pixels</td>
+</tr>
+<tr>
+<td><a href="resolution_std_fwhm_z_microns/">resolution_std_fwhm_z_microns</a></td>
+<td>Standard deviation of the FWHM for the analyzed beads in the Z axis in micron...</td>
+</tr>
+<tr>
+<td><a href="resolution_std_fwhm_z_pixels/">resolution_std_fwhm_z_pixels</a></td>
+<td>Standard deviation of the FWHM for the analyzed beads in the Z axis in pixels</td>
+</tr>
+<tr>
+<td><a href="roi_center_region/">roi_center_region</a></td>
+<td>Mask ROIs marking the area of maximum illumination</td>
+</tr>
+<tr>
+<td><a href="roi_centers_fitted/">roi_centers_fitted</a></td>
+<td>Point ROIs marking the fitted center of the area of maximum illumination</td>
+</tr>
+<tr>
+<td><a href="roi_centers_geometric/">roi_centers_geometric</a></td>
+<td>Point ROIs marking the geometric center of the area of maximum illumination</td>
+</tr>
+<tr>
+<td><a href="roi_centers_max_intensity/">roi_centers_max_intensity</a></td>
+<td>Point ROIs marking the maximum intensity of the area of maximum illumination</td>
+</tr>
+<tr>
+<td><a href="roi_centers_of_mass/">roi_centers_of_mass</a></td>
+<td>Point ROIs marking the center of mass of the area of maximum illumination</td>
+</tr>
+<tr>
+<td><a href="roi_corners/">roi_corners</a></td>
+<td>Rectangular ROIs used to compute the corner intensities</td>
+</tr>
+<tr>
+<td><a href="roi_profiles/">roi_profiles</a></td>
+<td>line ROIs used to compute the intensity profiles</td>
 </tr>
 <tr>
 <td><a href="sample/">sample</a></td>
@@ -1164,32 +1476,36 @@
 <td>The shape of the image in the z dimension</td>
 </tr>
 <tr>
-<td><a href="shapes/">shapes</a></td>
-<td></td>
-</tr>
-<tr>
 <td><a href="sigma/">sigma</a></td>
 <td>Input parameter: the sigma for the smoothing gaussian filter to be applied pr...</td>
 </tr>
 <tr>
 <td><a href="sigma_x/">sigma_x</a></td>
-<td>Input parameter: smoothing factor for objects detection in the X axis</td>
+<td>Smoothing sigma to be applied to the image in the X axis</td>
 </tr>
 <tr>
 <td><a href="sigma_y/">sigma_y</a></td>
-<td>Input parameter: smoothing factor for objects detection in the Y axis</td>
+<td>Smoothing sigma to be applied to the image in the Y axis</td>
 </tr>
 <tr>
 <td><a href="sigma_z/">sigma_z</a></td>
-<td>Input parameter: smoothing factor for objects detection in the Z axis</td>
+<td>Smoothing sigma to be applied to the image in the Z axis</td>
 </tr>
 <tr>
-<td><a href="source_image_url/">source_image_url</a></td>
-<td>A list of URLs linking to the images that were used as a source</td>
+<td><a href="snr_threshold/">snr_threshold</a></td>
+<td>Signal to noise ratio threshold to be used for bead detection</td>
 </tr>
 <tr>
-<td><a href="spots_centroids/">spots_centroids</a></td>
-<td>Centroids of the argolight spots provided as a list of ROIs</td>
+<td><a href="source_images/">source_images</a></td>
+<td>A list of references linking to the images that were used as a source</td>
+</tr>
+<tr>
+<td><a href="source_reference/">source_reference</a></td>
+<td>The source object of the column</td>
+</tr>
+<tr>
+<td><a href="spots_centers_of_mass/">spots_centers_of_mass</a></td>
+<td>Centers of mass of the argolight spots provided as a list of ROIs</td>
 </tr>
 <tr>
 <td><a href="spots_distance/">spots_distance</a></td>
@@ -1201,7 +1517,7 @@
 </tr>
 <tr>
 <td><a href="spots_labels_image/">spots_labels_image</a></td>
-<td>Labels image of the argolight segmented spots provided as a 5D numpy array in...</td>
+<td>Labels image of the argolight segmented spots provided in the order TZYXC</td>
 </tr>
 <tr>
 <td><a href="spots_properties/">spots_properties</a></td>
@@ -1232,6 +1548,10 @@
 <td>The t coordinate of the shape</td>
 </tr>
 <tr>
+<td><a href="table_data/">table_data</a></td>
+<td>A non-required slot for non-serializable table data object</td>
+</tr>
+<tr>
 <td><a href="text/">text</a></td>
 <td>The text of the comment</td>
 </tr>
@@ -1248,10 +1568,6 @@
 <td>The mean intensity of the top-center of the image  divided by the maximum int...</td>
 </tr>
 <tr>
-<td><a href="top_center_region/">top_center_region</a></td>
-<td>The top-center of the image</td>
-</tr>
-<tr>
 <td><a href="top_left_intensity_mean/">top_left_intensity_mean</a></td>
 <td>The mean intensity of the top-left corner of the image</td>
 </tr>
@@ -1260,24 +1576,12 @@
 <td>The mean intensity of the top-left corner of the image  divided by the maximu...</td>
 </tr>
 <tr>
-<td><a href="top_left_region/">top_left_region</a></td>
-<td>The top-left corner of the image</td>
-</tr>
-<tr>
 <td><a href="top_right_intensity_mean/">top_right_intensity_mean</a></td>
 <td>The mean intensity of the top-right corner of the image</td>
 </tr>
 <tr>
 <td><a href="top_right_intensity_ratio/">top_right_intensity_ratio</a></td>
 <td>The mean intensity of the top-right corner of the image  divided by the maxim...</td>
-</tr>
-<tr>
-<td><a href="top_right_region/">top_right_region</a></td>
-<td>The top-right corner of the image</td>
-</tr>
-<tr>
-<td><a href="top_to_bottom_profile/">top_to_bottom_profile</a></td>
-<td>The line from the top to the bottom of the image</td>
 </tr>
 <tr>
 <td><a href="type/">type</a></td>
@@ -1289,7 +1593,7 @@
 </tr>
 <tr>
 <td><a href="url/">url</a></td>
-<td>The URL where the microscope can be found</td>
+<td>The URL where the protocol can be found</td>
 </tr>
 <tr>
 <td><a href="values/">values</a></td>
@@ -1318,6 +1622,10 @@
 <tr>
 <td><a href="w/">w</a></td>
 <td>The width of the rectangle</td>
+</tr>
+<tr>
+<td><a href="warnings/">warnings</a></td>
+<td>The warnings of the processing by microscope-metrics</td>
 </tr>
 <tr>
 <td><a href="x/">x</a></td>
@@ -1367,12 +1675,16 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="CommentTypes/">CommentTypes</a></td>
+<td><a href="CommentTypesEnum/">CommentTypesEnum</a></td>
 <td>The type of the comment</td>
 </tr>
 <tr>
-<td><a href="MicroscopeType/">MicroscopeType</a></td>
+<td><a href="MicroscopeTypeEnum/">MicroscopeTypeEnum</a></td>
 <td>The type of the microscope</td>
+</tr>
+<tr>
+<td><a href="OMEROObjectTypeEnum/">OMEROObjectTypeEnum</a></td>
+<td>The type of the OMERO object</td>
 </tr>
 </tbody>
 </table>

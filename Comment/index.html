@@ -204,11 +204,15 @@
 <p>URI: <a href="https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/Comment">microscopemetrics_schema:Comment</a></p>
 <div class="mermaid"> classDiagram
     class Comment
+      Comment : author
+
+          Comment --&gt; Experimenter : author
+
       Comment : comment_type
 
-          Comment --|&gt; CommentTypes : comment_type
+          Comment --&gt; CommentTypesEnum : comment_type
 
-      Comment : date
+      Comment : datetime
 
       Comment : text
 
@@ -227,14 +231,20 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../date/">date</a></td>
-<td>1..1 <br/> <a href="../date/">date</a></td>
-<td>The date to which the comment is referring</td>
+<td><a href="../datetime/">datetime</a></td>
+<td>1..1 <br/> <a href="../datetime/">datetime</a></td>
+<td>The datetime to which the comment is referring</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../author/">author</a></td>
+<td>0..1 <br/> <a href="../Experimenter/">Experimenter</a></td>
+<td>The author of the comment</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../comment_type/">comment_type</a></td>
-<td>0..1 <br/> <a href="../CommentTypes/">CommentTypes</a></td>
+<td>1..1 <br/> <a href="../CommentTypesEnum/">CommentTypesEnum</a></td>
 <td>The type of the comment</td>
 <td>direct</td>
 </tr>
@@ -258,31 +268,37 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../ArgolightBDataset/">ArgolightBDataset</a></td>
-<td><a href="../comment/">comment</a></td>
-<td>range</td>
-<td><a href="./">Comment</a></td>
-</tr>
-<tr>
-<td><a href="../ArgolightEDataset/">ArgolightEDataset</a></td>
-<td><a href="../comment/">comment</a></td>
-<td>range</td>
-<td><a href="./">Comment</a></td>
-</tr>
-<tr>
 <td><a href="../Microscope/">Microscope</a></td>
+<td><a href="../comments/">comments</a></td>
+<td>range</td>
+<td><a href="./">Comment</a></td>
+</tr>
+<tr>
+<td><a href="../MetricsOutput/">MetricsOutput</a></td>
 <td><a href="../comment/">comment</a></td>
 <td>range</td>
 <td><a href="./">Comment</a></td>
 </tr>
 <tr>
-<td><a href="../MetricsDataset/">MetricsDataset</a></td>
+<td><a href="../FieldIlluminationOutput/">FieldIlluminationOutput</a></td>
 <td><a href="../comment/">comment</a></td>
 <td>range</td>
 <td><a href="./">Comment</a></td>
 </tr>
 <tr>
-<td><a href="../FieldIlluminationDataset/">FieldIlluminationDataset</a></td>
+<td><a href="../PSFBeadsOutput/">PSFBeadsOutput</a></td>
+<td><a href="../comment/">comment</a></td>
+<td>range</td>
+<td><a href="./">Comment</a></td>
+</tr>
+<tr>
+<td><a href="../ArgolightBOutput/">ArgolightBOutput</a></td>
+<td><a href="../comment/">comment</a></td>
+<td>range</td>
+<td><a href="./">Comment</a></td>
+</tr>
+<tr>
+<td><a href="../ArgolightEOutput/">ArgolightEOutput</a></td>
 <td><a href="../comment/">comment</a></td>
 <td>range</td>
 <td><a href="./">Comment</a></td>
@@ -321,28 +337,44 @@
 description: A comment
 from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
 attributes:
-  date:
-    name: date
-    description: The date to which the comment is referring
+  datetime:
+    name: datetime
+    description: The datetime to which the comment is referring
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: false
-    range: date
+    domain_of:
+    - Comment
+    range: datetime
     required: true
+  author:
+    name: author
+    description: The author of the comment
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    rank: 1000
+    multivalued: false
+    domain_of:
+    - Comment
+    range: Experimenter
+    required: false
   comment_type:
     name: comment_type
     description: The type of the comment
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: false
-    range: CommentTypes
-    required: false
+    domain_of:
+    - Comment
+    range: CommentTypesEnum
+    required: true
   text:
     name: text
     description: The text of the comment
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: false
+    domain_of:
+    - Comment
     range: string
     required: true
 
@@ -354,18 +386,30 @@ attributes:
 description: A comment
 from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
 attributes:
-  date:
-    name: date
-    description: The date to which the comment is referring
+  datetime:
+    name: datetime
+    description: The datetime to which the comment is referring
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: false
-    alias: date
+    alias: datetime
     owner: Comment
     domain_of:
     - Comment
-    range: date
+    range: datetime
     required: true
+  author:
+    name: author
+    description: The author of the comment
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    rank: 1000
+    multivalued: false
+    alias: author
+    owner: Comment
+    domain_of:
+    - Comment
+    range: Experimenter
+    required: false
   comment_type:
     name: comment_type
     description: The type of the comment
@@ -376,8 +420,8 @@ attributes:
     owner: Comment
     domain_of:
     - Comment
-    range: CommentTypes
-    required: false
+    range: CommentTypesEnum
+    required: true
   text:
     name: text
     description: The text of the comment
@@ -388,7 +432,6 @@ attributes:
     owner: Comment
     domain_of:
     - Comment
-    - Tag
     range: string
     required: true
 

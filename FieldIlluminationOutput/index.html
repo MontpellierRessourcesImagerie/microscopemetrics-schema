@@ -210,29 +210,59 @@
     class FieldIlluminationOutput
       MetricsOutput &lt;|-- FieldIlluminationOutput
 
-      FieldIlluminationOutput : center_of_illumination
+      FieldIlluminationOutput : comment
 
-          FieldIlluminationOutput --|&gt; PointsRoi : center_of_illumination
+          FieldIlluminationOutput --&gt; Comment : comment
 
-      FieldIlluminationOutput : corner_rois
-
-          FieldIlluminationOutput --|&gt; RectanglesRoi : corner_rois
-
-      FieldIlluminationOutput : intensity_map
-
-          FieldIlluminationOutput --|&gt; Image5D : intensity_map
+      FieldIlluminationOutput : errors
 
       FieldIlluminationOutput : intensity_profiles
 
-          FieldIlluminationOutput --|&gt; TableAsDict : intensity_profiles
+          FieldIlluminationOutput --&gt; Table : intensity_profiles
 
       FieldIlluminationOutput : key_values
 
-          FieldIlluminationOutput --|&gt; FieldIlluminationKeyValues : key_values
+          FieldIlluminationOutput --&gt; FieldIlluminationKeyValues : key_values
 
-      FieldIlluminationOutput : profile_rois
+      FieldIlluminationOutput : processing_application
 
-          FieldIlluminationOutput --|&gt; LinesRoi : profile_rois
+      FieldIlluminationOutput : processing_datetime
+
+      FieldIlluminationOutput : processing_entity
+
+      FieldIlluminationOutput : processing_log
+
+      FieldIlluminationOutput : processing_version
+
+      FieldIlluminationOutput : roi_center_region
+
+          FieldIlluminationOutput --&gt; Roi : roi_center_region
+
+      FieldIlluminationOutput : roi_centers_fitted
+
+          FieldIlluminationOutput --&gt; Roi : roi_centers_fitted
+
+      FieldIlluminationOutput : roi_centers_geometric
+
+          FieldIlluminationOutput --&gt; Roi : roi_centers_geometric
+
+      FieldIlluminationOutput : roi_centers_max_intensity
+
+          FieldIlluminationOutput --&gt; Roi : roi_centers_max_intensity
+
+      FieldIlluminationOutput : roi_centers_of_mass
+
+          FieldIlluminationOutput --&gt; Roi : roi_centers_of_mass
+
+      FieldIlluminationOutput : roi_corners
+
+          FieldIlluminationOutput --&gt; Roi : roi_corners
+
+      FieldIlluminationOutput : roi_profiles
+
+          FieldIlluminationOutput --&gt; Roi : roi_profiles
+
+      FieldIlluminationOutput : warnings
 
 
 </div>
@@ -262,33 +292,99 @@
 </tr>
 <tr>
 <td><a href="../intensity_profiles/">intensity_profiles</a></td>
-<td>0..1 <br/> <a href="../TableAsDict/">TableAsDict</a></td>
+<td>0..* <br/> <a href="../Table/">Table</a></td>
 <td>Intensity profiles for the field illumination analysis in the different direc...</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../intensity_map/">intensity_map</a></td>
-<td>0..1 <br/> <a href="../Image5D/">Image5D</a></td>
-<td>Intensity map of the field illumination</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../profile_rois/">profile_rois</a></td>
-<td>0..1 <br/> <a href="../LinesRoi/">LinesRoi</a></td>
+<td><a href="../roi_profiles/">roi_profiles</a></td>
+<td>0..* <br/> <a href="../Roi/">Roi</a></td>
 <td>line ROIs used to compute the intensity profiles</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../corner_rois/">corner_rois</a></td>
-<td>0..1 <br/> <a href="../RectanglesRoi/">RectanglesRoi</a></td>
+<td><a href="../roi_corners/">roi_corners</a></td>
+<td>0..1 <br/> <a href="../Roi/">Roi</a></td>
 <td>Rectangular ROIs used to compute the corner intensities</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../center_of_illumination/">center_of_illumination</a></td>
-<td>0..1 <br/> <a href="../PointsRoi/">PointsRoi</a></td>
-<td>Point ROIs marking the center of illumination</td>
+<td><a href="../roi_centers_of_mass/">roi_centers_of_mass</a></td>
+<td>0..* <br/> <a href="../Roi/">Roi</a></td>
+<td>Point ROIs marking the center of mass of the area of maximum illumination</td>
 <td>direct</td>
+</tr>
+<tr>
+<td><a href="../roi_centers_geometric/">roi_centers_geometric</a></td>
+<td>0..* <br/> <a href="../Roi/">Roi</a></td>
+<td>Point ROIs marking the geometric center of the area of maximum illumination</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../roi_centers_fitted/">roi_centers_fitted</a></td>
+<td>0..* <br/> <a href="../Roi/">Roi</a></td>
+<td>Point ROIs marking the fitted center of the area of maximum illumination</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../roi_centers_max_intensity/">roi_centers_max_intensity</a></td>
+<td>0..* <br/> <a href="../Roi/">Roi</a></td>
+<td>Point ROIs marking the maximum intensity of the area of maximum illumination</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../roi_center_region/">roi_center_region</a></td>
+<td>0..* <br/> <a href="../Roi/">Roi</a></td>
+<td>Mask ROIs marking the area of maximum illumination</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../processing_application/">processing_application</a></td>
+<td>1..* <br/> <a href="../String/">String</a></td>
+<td>The application used to process the dataset</td>
+<td><a href="../MetricsOutput/">MetricsOutput</a></td>
+</tr>
+<tr>
+<td><a href="../processing_version/">processing_version</a></td>
+<td>1..* <br/> <a href="../String/">String</a></td>
+<td>The version of the application used to process the dataset</td>
+<td><a href="../MetricsOutput/">MetricsOutput</a></td>
+</tr>
+<tr>
+<td><a href="../processing_entity/">processing_entity</a></td>
+<td>0..* <br/> <a href="../String/">String</a></td>
+<td>The entity that processed the dataset</td>
+<td><a href="../MetricsOutput/">MetricsOutput</a></td>
+</tr>
+<tr>
+<td><a href="../processing_datetime/">processing_datetime</a></td>
+<td>1..1 <br/> <a href="../datetime/">datetime</a></td>
+<td>The datetime of the processing by microscope-metrics</td>
+<td><a href="../MetricsOutput/">MetricsOutput</a></td>
+</tr>
+<tr>
+<td><a href="../processing_log/">processing_log</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>The log of the processing by microscope-metrics</td>
+<td><a href="../MetricsOutput/">MetricsOutput</a></td>
+</tr>
+<tr>
+<td><a href="../warnings/">warnings</a></td>
+<td>0..* <br/> <a href="../String/">String</a></td>
+<td>The warnings of the processing by microscope-metrics</td>
+<td><a href="../MetricsOutput/">MetricsOutput</a></td>
+</tr>
+<tr>
+<td><a href="../errors/">errors</a></td>
+<td>0..* <br/> <a href="../String/">String</a></td>
+<td>The errors of the processing by microscope-metrics</td>
+<td><a href="../MetricsOutput/">MetricsOutput</a></td>
+</tr>
+<tr>
+<td><a href="../comment/">comment</a></td>
+<td>0..1 <br/> <a href="../Comment/">Comment</a></td>
+<td>A human readable comment about the dataset</td>
+<td><a href="../MetricsOutput/">MetricsOutput</a></td>
 </tr>
 </tbody>
 </table>
@@ -350,41 +446,93 @@ attributes:
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/samples/field_illumination_schema
     rank: 1000
     multivalued: false
+    domain_of:
+    - FieldIlluminationOutput
+    - PSFBeadsOutput
     range: FieldIlluminationKeyValues
   intensity_profiles:
     name: intensity_profiles
     description: Intensity profiles for the field illumination analysis in the different
       directions
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/samples/field_illumination_schema
-    range: TableAsDict
-  intensity_map:
-    name: intensity_map
-    description: Intensity map of the field illumination
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/samples/field_illumination_schema
     rank: 1000
-    multivalued: false
-    range: Image5D
-  profile_rois:
-    name: profile_rois
+    multivalued: true
+    domain_of:
+    - FieldIlluminationOutput
+    - ArgolightEOutput
+    range: Table
+    inlined: true
+    inlined_as_list: true
+  roi_profiles:
+    name: roi_profiles
     description: line ROIs used to compute the intensity profiles
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/samples/field_illumination_schema
     rank: 1000
-    multivalued: false
-    range: LinesRoi
-  corner_rois:
-    name: corner_rois
-    description: Rectangular ROIs used to compute the corner intensities
+    multivalued: true
+    domain_of:
+    - FieldIlluminationOutput
+    range: Roi
+  roi_corners:
+    name: roi_corners
+    description: Rectangular ROIs used to compute the corner intensities. The sama
+      ROI is assigned to multiple images.
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/samples/field_illumination_schema
     rank: 1000
     multivalued: false
-    range: RectanglesRoi
-  center_of_illumination:
-    name: center_of_illumination
-    description: Point ROIs marking the center of illumination
+    domain_of:
+    - FieldIlluminationOutput
+    range: Roi
+  roi_centers_of_mass:
+    name: roi_centers_of_mass
+    description: Point ROIs marking the center of mass of the area of maximum illumination.
+      When the image is very flat, the 99 percentile is used instead. One point per
+      channel.
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/samples/field_illumination_schema
     rank: 1000
-    multivalued: false
-    range: PointsRoi
+    multivalued: true
+    domain_of:
+    - FieldIlluminationOutput
+    range: Roi
+  roi_centers_geometric:
+    name: roi_centers_geometric
+    description: Point ROIs marking the geometric center of the area of maximum illumination.
+      One point per channel.
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/samples/field_illumination_schema
+    rank: 1000
+    multivalued: true
+    domain_of:
+    - FieldIlluminationOutput
+    range: Roi
+  roi_centers_fitted:
+    name: roi_centers_fitted
+    description: Point ROIs marking the fitted center of the area of maximum illumination.
+      One point per channel.
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/samples/field_illumination_schema
+    rank: 1000
+    multivalued: true
+    domain_of:
+    - FieldIlluminationOutput
+    range: Roi
+  roi_centers_max_intensity:
+    name: roi_centers_max_intensity
+    description: Point ROIs marking the maximum intensity of the area of maximum illumination.
+      One point per channel.
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/samples/field_illumination_schema
+    rank: 1000
+    multivalued: true
+    domain_of:
+    - FieldIlluminationOutput
+    range: Roi
+  roi_center_region:
+    name: roi_center_region
+    description: Mask ROIs marking the area of maximum illumination. One mask per
+      channel.
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/samples/field_illumination_schema
+    rank: 1000
+    multivalued: true
+    domain_of:
+    - FieldIlluminationOutput
+    range: Roi
 
 </code></pre>
 </details>
@@ -405,62 +553,203 @@ attributes:
     owner: FieldIlluminationOutput
     domain_of:
     - FieldIlluminationOutput
+    - PSFBeadsOutput
     range: FieldIlluminationKeyValues
   intensity_profiles:
     name: intensity_profiles
     description: Intensity profiles for the field illumination analysis in the different
       directions
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/samples/field_illumination_schema
+    rank: 1000
+    multivalued: true
     alias: intensity_profiles
     owner: FieldIlluminationOutput
     domain_of:
+    - FieldIlluminationOutput
     - ArgolightEOutput
-    - FieldIlluminationOutput
-    range: TableAsDict
-  intensity_map:
-    name: intensity_map
-    description: Intensity map of the field illumination
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/samples/field_illumination_schema
-    rank: 1000
-    multivalued: false
-    alias: intensity_map
-    owner: FieldIlluminationOutput
-    domain_of:
-    - FieldIlluminationOutput
-    range: Image5D
-  profile_rois:
-    name: profile_rois
+    range: Table
+    inlined: true
+    inlined_as_list: true
+  roi_profiles:
+    name: roi_profiles
     description: line ROIs used to compute the intensity profiles
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/samples/field_illumination_schema
     rank: 1000
-    multivalued: false
-    alias: profile_rois
+    multivalued: true
+    alias: roi_profiles
     owner: FieldIlluminationOutput
     domain_of:
     - FieldIlluminationOutput
-    range: LinesRoi
-  corner_rois:
-    name: corner_rois
-    description: Rectangular ROIs used to compute the corner intensities
+    range: Roi
+  roi_corners:
+    name: roi_corners
+    description: Rectangular ROIs used to compute the corner intensities. The sama
+      ROI is assigned to multiple images.
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/samples/field_illumination_schema
     rank: 1000
     multivalued: false
-    alias: corner_rois
+    alias: roi_corners
     owner: FieldIlluminationOutput
     domain_of:
     - FieldIlluminationOutput
-    range: RectanglesRoi
-  center_of_illumination:
-    name: center_of_illumination
-    description: Point ROIs marking the center of illumination
+    range: Roi
+  roi_centers_of_mass:
+    name: roi_centers_of_mass
+    description: Point ROIs marking the center of mass of the area of maximum illumination.
+      When the image is very flat, the 99 percentile is used instead. One point per
+      channel.
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/samples/field_illumination_schema
     rank: 1000
-    multivalued: false
-    alias: center_of_illumination
+    multivalued: true
+    alias: roi_centers_of_mass
     owner: FieldIlluminationOutput
     domain_of:
     - FieldIlluminationOutput
-    range: PointsRoi
+    range: Roi
+  roi_centers_geometric:
+    name: roi_centers_geometric
+    description: Point ROIs marking the geometric center of the area of maximum illumination.
+      One point per channel.
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/samples/field_illumination_schema
+    rank: 1000
+    multivalued: true
+    alias: roi_centers_geometric
+    owner: FieldIlluminationOutput
+    domain_of:
+    - FieldIlluminationOutput
+    range: Roi
+  roi_centers_fitted:
+    name: roi_centers_fitted
+    description: Point ROIs marking the fitted center of the area of maximum illumination.
+      One point per channel.
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/samples/field_illumination_schema
+    rank: 1000
+    multivalued: true
+    alias: roi_centers_fitted
+    owner: FieldIlluminationOutput
+    domain_of:
+    - FieldIlluminationOutput
+    range: Roi
+  roi_centers_max_intensity:
+    name: roi_centers_max_intensity
+    description: Point ROIs marking the maximum intensity of the area of maximum illumination.
+      One point per channel.
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/samples/field_illumination_schema
+    rank: 1000
+    multivalued: true
+    alias: roi_centers_max_intensity
+    owner: FieldIlluminationOutput
+    domain_of:
+    - FieldIlluminationOutput
+    range: Roi
+  roi_center_region:
+    name: roi_center_region
+    description: Mask ROIs marking the area of maximum illumination. One mask per
+      channel.
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/samples/field_illumination_schema
+    rank: 1000
+    multivalued: true
+    alias: roi_center_region
+    owner: FieldIlluminationOutput
+    domain_of:
+    - FieldIlluminationOutput
+    range: Roi
+  processing_application:
+    name: processing_application
+    description: The application used to process the dataset
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    rank: 1000
+    multivalued: true
+    alias: processing_application
+    owner: FieldIlluminationOutput
+    domain_of:
+    - MetricsOutput
+    range: string
+    required: true
+  processing_version:
+    name: processing_version
+    description: The version of the application used to process the dataset
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    rank: 1000
+    multivalued: true
+    alias: processing_version
+    owner: FieldIlluminationOutput
+    domain_of:
+    - MetricsOutput
+    range: string
+    required: true
+  processing_entity:
+    name: processing_entity
+    description: The entity that processed the dataset
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    rank: 1000
+    multivalued: true
+    alias: processing_entity
+    owner: FieldIlluminationOutput
+    domain_of:
+    - MetricsOutput
+    range: string
+    required: false
+  processing_datetime:
+    name: processing_datetime
+    description: The datetime of the processing by microscope-metrics
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    rank: 1000
+    multivalued: false
+    alias: processing_datetime
+    owner: FieldIlluminationOutput
+    domain_of:
+    - MetricsOutput
+    range: datetime
+    required: true
+  processing_log:
+    name: processing_log
+    description: The log of the processing by microscope-metrics
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    rank: 1000
+    multivalued: false
+    alias: processing_log
+    owner: FieldIlluminationOutput
+    domain_of:
+    - MetricsOutput
+    range: string
+    required: false
+  warnings:
+    name: warnings
+    description: The warnings of the processing by microscope-metrics
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    rank: 1000
+    multivalued: true
+    alias: warnings
+    owner: FieldIlluminationOutput
+    domain_of:
+    - MetricsOutput
+    range: string
+    required: false
+  errors:
+    name: errors
+    description: The errors of the processing by microscope-metrics
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    rank: 1000
+    multivalued: true
+    alias: errors
+    owner: FieldIlluminationOutput
+    domain_of:
+    - MetricsOutput
+    range: string
+    required: false
+  comment:
+    name: comment
+    description: A human readable comment about the dataset
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    rank: 1000
+    multivalued: false
+    alias: comment
+    owner: FieldIlluminationOutput
+    domain_of:
+    - MetricsOutput
+    range: Comment
+    required: false
 
 </code></pre>
 </details>

@@ -248,20 +248,14 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../ArgolightBDataset/">ArgolightBDataset</a></td>
-<td><a href="../experimenter/">experimenter</a></td>
-<td>range</td>
-<td><a href="./">Experimenter</a></td>
-</tr>
-<tr>
-<td><a href="../ArgolightEDataset/">ArgolightEDataset</a></td>
-<td><a href="../experimenter/">experimenter</a></td>
-<td>range</td>
-<td><a href="./">Experimenter</a></td>
-</tr>
-<tr>
 <td><a href="../Protocol/">Protocol</a></td>
 <td><a href="../authors/">authors</a></td>
+<td>range</td>
+<td><a href="./">Experimenter</a></td>
+</tr>
+<tr>
+<td><a href="../Comment/">Comment</a></td>
+<td><a href="../author/">author</a></td>
 <td>range</td>
 <td><a href="./">Experimenter</a></td>
 </tr>
@@ -273,6 +267,24 @@
 </tr>
 <tr>
 <td><a href="../FieldIlluminationDataset/">FieldIlluminationDataset</a></td>
+<td><a href="../experimenter/">experimenter</a></td>
+<td>range</td>
+<td><a href="./">Experimenter</a></td>
+</tr>
+<tr>
+<td><a href="../PSFBeadsDataset/">PSFBeadsDataset</a></td>
+<td><a href="../experimenter/">experimenter</a></td>
+<td>range</td>
+<td><a href="./">Experimenter</a></td>
+</tr>
+<tr>
+<td><a href="../ArgolightBDataset/">ArgolightBDataset</a></td>
+<td><a href="../experimenter/">experimenter</a></td>
+<td>range</td>
+<td><a href="./">Experimenter</a></td>
+</tr>
+<tr>
+<td><a href="../ArgolightEDataset/">ArgolightEDataset</a></td>
 <td><a href="../experimenter/">experimenter</a></td>
 <td>range</td>
 <td><a href="./">Experimenter</a></td>
@@ -315,6 +327,9 @@ attributes:
     name: name
     description: The name of the experimenter
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    domain_of:
+    - NamedObject
+    - Experimenter
     range: string
     required: true
   orcid:
@@ -323,6 +338,8 @@ attributes:
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
     rank: 1000
     identifier: true
+    domain_of:
+    - Experimenter
     range: string
     required: true
 
@@ -343,7 +360,6 @@ attributes:
     domain_of:
     - NamedObject
     - Experimenter
-    - Column
     range: string
     required: true
   orcid:

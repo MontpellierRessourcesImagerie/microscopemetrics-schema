@@ -213,17 +213,19 @@
 
       Rectangle : c
 
+      Rectangle : description
+
       Rectangle : fill_color
 
-          Rectangle --|&gt; Color : fill_color
+          Rectangle --&gt; Color : fill_color
 
       Rectangle : h
 
-      Rectangle : label
+      Rectangle : name
 
       Rectangle : stroke_color
 
-          Rectangle --|&gt; Color : stroke_color
+          Rectangle --&gt; Color : stroke_color
 
       Rectangle : stroke_width
 
@@ -241,8 +243,11 @@
 </div>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
+<li><a href="../NamedObject/">NamedObject</a><ul>
 <li><a href="../Shape/">Shape</a><ul>
 <li><strong>Rectangle</strong></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -282,12 +287,6 @@
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../label/">label</a></td>
-<td>1..1 <br/> <a href="../String/">String</a></td>
-<td>The label of the shape</td>
-<td><a href="../Shape/">Shape</a></td>
-</tr>
-<tr>
 <td><a href="../z/">z</a></td>
 <td>0..1 <br/> <a href="../Float/">Float</a></td>
 <td>The z coordinate of the shape</td>
@@ -323,6 +322,18 @@
 <td>The stroke width of the shape</td>
 <td><a href="../Shape/">Shape</a></td>
 </tr>
+<tr>
+<td><a href="../name/">name</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>The human readable name of an entity</td>
+<td><a href="../NamedObject/">NamedObject</a></td>
+</tr>
+<tr>
+<td><a href="../description/">description</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A human readable description of an entity</td>
+<td><a href="../NamedObject/">NamedObject</a></td>
+</tr>
 </tbody>
 </table>
 <h2 id="usages">Usages</h2>
@@ -337,68 +348,14 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../RectanglesRoi/">RectanglesRoi</a></td>
-<td><a href="../shapes/">shapes</a></td>
+<td><a href="../Roi/">Roi</a></td>
+<td><a href="../rectangles/">rectangles</a></td>
 <td>range</td>
 <td><a href="./">Rectangle</a></td>
 </tr>
 <tr>
-<td><a href="../RoiCorners/">RoiCorners</a></td>
-<td><a href="../top_left_region/">top_left_region</a></td>
-<td>range</td>
-<td><a href="./">Rectangle</a></td>
-</tr>
-<tr>
-<td><a href="../RoiCorners/">RoiCorners</a></td>
-<td><a href="../top_center_region/">top_center_region</a></td>
-<td>range</td>
-<td><a href="./">Rectangle</a></td>
-</tr>
-<tr>
-<td><a href="../RoiCorners/">RoiCorners</a></td>
-<td><a href="../top_right_region/">top_right_region</a></td>
-<td>range</td>
-<td><a href="./">Rectangle</a></td>
-</tr>
-<tr>
-<td><a href="../RoiCorners/">RoiCorners</a></td>
-<td><a href="../middle_left_region/">middle_left_region</a></td>
-<td>range</td>
-<td><a href="./">Rectangle</a></td>
-</tr>
-<tr>
-<td><a href="../RoiCorners/">RoiCorners</a></td>
-<td><a href="../middle_center_region/">middle_center_region</a></td>
-<td>range</td>
-<td><a href="./">Rectangle</a></td>
-</tr>
-<tr>
-<td><a href="../RoiCorners/">RoiCorners</a></td>
-<td><a href="../middle_right_region/">middle_right_region</a></td>
-<td>range</td>
-<td><a href="./">Rectangle</a></td>
-</tr>
-<tr>
-<td><a href="../RoiCorners/">RoiCorners</a></td>
-<td><a href="../bottom_left_region/">bottom_left_region</a></td>
-<td>range</td>
-<td><a href="./">Rectangle</a></td>
-</tr>
-<tr>
-<td><a href="../RoiCorners/">RoiCorners</a></td>
-<td><a href="../bottom_center_region/">bottom_center_region</a></td>
-<td>range</td>
-<td><a href="./">Rectangle</a></td>
-</tr>
-<tr>
-<td><a href="../RoiCorners/">RoiCorners</a></td>
-<td><a href="../bottom_right_region/">bottom_right_region</a></td>
-<td>range</td>
-<td><a href="./">Rectangle</a></td>
-</tr>
-<tr>
-<td><a href="../RoiCorners/">RoiCorners</a></td>
-<td><a href="../shapes/">shapes</a></td>
+<td><a href="../ArgolightBCentersOfMass/">ArgolightBCentersOfMass</a></td>
+<td><a href="../rectangles/">rectangles</a></td>
 <td>range</td>
 <td><a href="./">Rectangle</a></td>
 </tr>
@@ -442,6 +399,12 @@ attributes:
     description: The x coordinate of the top left corner of the rectangle
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
     multivalued: false
+    domain_of:
+    - Point
+    - Rectangle
+    - Ellipse
+    - Vertex
+    - Mask
     range: float
     required: true
   y:
@@ -449,6 +412,12 @@ attributes:
     description: The y coordinate of the top left corner of the rectangle
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
     multivalued: false
+    domain_of:
+    - Point
+    - Rectangle
+    - Ellipse
+    - Vertex
+    - Mask
     range: float
     required: true
   w:
@@ -457,6 +426,8 @@ attributes:
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: false
+    domain_of:
+    - Rectangle
     range: float
     required: true
   h:
@@ -465,6 +436,8 @@ attributes:
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: false
+    domain_of:
+    - Rectangle
     range: float
     required: true
 
@@ -530,18 +503,6 @@ attributes:
     domain_of:
     - Rectangle
     range: float
-    required: true
-  label:
-    name: label
-    description: The label of the shape
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
-    identifier: true
-    alias: label
-    owner: Rectangle
-    domain_of:
-    - Roi
-    - Shape
-    range: string
     required: true
   z:
     name: z
@@ -609,6 +570,32 @@ attributes:
     domain_of:
     - Shape
     range: integer
+    required: false
+  name:
+    name: name
+    description: The human readable name of an entity
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    rank: 1000
+    multivalued: false
+    alias: name
+    owner: Rectangle
+    domain_of:
+    - NamedObject
+    - Experimenter
+    range: string
+    required: false
+  description:
+    name: description
+    description: A human readable description of an entity
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    rank: 1000
+    multivalued: false
+    alias: description
+    owner: Rectangle
+    domain_of:
+    - NamedObject
+    - Tag
+    range: string
     required: false
 
 </code></pre>

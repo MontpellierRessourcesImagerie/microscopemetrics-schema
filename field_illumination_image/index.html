@@ -317,7 +317,7 @@
 
 
 <h1 id="slot-field_illumination_image">Slot: field_illumination_image</h1>
-<p><em>Input parameter: homogeneity image provided as a numpy array in the order. While the analysis accepts multiple channels, the T and Z dimensions are expected to be 1.</em></p>
+<p><em>Input parameter: homogeneity image provided in the order TZYXC. While the analysis accepts multiple channels, the T and Z dimensions are expected to be 1.</em></p>
 <p>URI: <a href="https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/field_illumination_image">microscopemetrics_schema:field_illumination_image</a></p>
 <!-- no inheritance hierarchy -->
 
@@ -341,7 +341,10 @@
 <h2 id="properties">Properties</h2>
 <ul>
 <li>
-<p>Range: <a href="../ImageAsNumpy/">ImageAsNumpy</a></p>
+<p>Range: <a href="../Image/">Image</a></p>
+</li>
+<li>
+<p>Multivalued: True</p>
 </li>
 <li>
 <p>Required: True</p>
@@ -356,18 +359,19 @@
 <details>
 
 <pre><code class="language-yaml">name: field_illumination_image
-description: 'Input parameter: homogeneity image provided as a numpy array in the
-  order. While the analysis accepts multiple channels, the T and Z dimensions are
-  expected to be 1.'
+description: 'Input parameter: homogeneity image provided in the order TZYXC. While
+  the analysis accepts multiple channels, the T and Z dimensions are expected to be
+  1.'
 from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
 rank: 1000
-multivalued: false
+multivalued: true
 alias: field_illumination_image
 domain_of:
 - FieldIlluminationInput
-range: ImageAsNumpy
+range: Image
 required: true
 inlined: true
+inlined_as_list: true
 
 </code></pre>
 

@@ -210,7 +210,13 @@
     class ArgolightBIntensityKeyValues
       KeyValues &lt;|-- ArgolightBIntensityKeyValues
 
-      ArgolightBIntensityKeyValues : channel
+      ArgolightBIntensityKeyValues : channel_nr
+
+      ArgolightBIntensityKeyValues : data_reference
+
+          ArgolightBIntensityKeyValues --&gt; DataReference : data_reference
+
+      ArgolightBIntensityKeyValues : description
 
       ArgolightBIntensityKeyValues : intensity_max_spot
 
@@ -220,6 +226,10 @@
 
       ArgolightBIntensityKeyValues : intensity_min_spot_roi
 
+      ArgolightBIntensityKeyValues : linked_references
+
+          ArgolightBIntensityKeyValues --&gt; DataReference : linked_references
+
       ArgolightBIntensityKeyValues : mad_mean_intensity
 
       ArgolightBIntensityKeyValues : mean_intensity
@@ -227,6 +237,8 @@
       ArgolightBIntensityKeyValues : median_intensity
 
       ArgolightBIntensityKeyValues : min_max_intensity_ratio
+
+      ArgolightBIntensityKeyValues : name
 
       ArgolightBIntensityKeyValues : nr_of_spots
 
@@ -236,8 +248,14 @@
 </div>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
+<li><a href="../NamedObject/">NamedObject</a><ul>
+<li><a href="../MetricsObject/">MetricsObject</a><ul>
 <li><a href="../KeyValues/">KeyValues</a><ul>
 <li><strong>ArgolightBIntensityKeyValues</strong></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -253,7 +271,7 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../channel/">channel</a></td>
+<td><a href="../channel_nr/">channel_nr</a></td>
 <td>0..* <br/> <a href="../Integer/">Integer</a></td>
 <td>The channel number to which the measurements apply</td>
 <td>direct</td>
@@ -318,6 +336,30 @@
 <td>Ratio between the integrated intensities between the most intense and the lea...</td>
 <td>direct</td>
 </tr>
+<tr>
+<td><a href="../data_reference/">data_reference</a></td>
+<td>0..1 <br/> <a href="../DataReference/">DataReference</a></td>
+<td>A reference to the data</td>
+<td><a href="../MetricsObject/">MetricsObject</a></td>
+</tr>
+<tr>
+<td><a href="../linked_references/">linked_references</a></td>
+<td>0..* <br/> <a href="../DataReference/">DataReference</a></td>
+<td>A list of linked references</td>
+<td><a href="../MetricsObject/">MetricsObject</a></td>
+</tr>
+<tr>
+<td><a href="../name/">name</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>The human readable name of an entity</td>
+<td><a href="../NamedObject/">NamedObject</a></td>
+</tr>
+<tr>
+<td><a href="../description/">description</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A human readable description of an entity</td>
+<td><a href="../NamedObject/">NamedObject</a></td>
+</tr>
 </tbody>
 </table>
 <h2 id="usages">Usages</h2>
@@ -333,7 +375,7 @@
 <tbody>
 <tr>
 <td><a href="../ArgolightBOutput/">ArgolightBOutput</a></td>
-<td><a href="../intensity_measurements/">intensity_measurements</a></td>
+<td><a href="../intensity_key_values/">intensity_key_values</a></td>
 <td>range</td>
 <td><a href="./">ArgolightBIntensityKeyValues</a></td>
 </tr>
@@ -371,7 +413,7 @@
 from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
 is_a: KeyValues
 slots:
-- channel
+- channel_nr
 - nr_of_spots
 - intensity_max_spot
 - intensity_max_spot_roi
@@ -391,19 +433,20 @@ slots:
 from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
 is_a: KeyValues
 attributes:
-  channel:
-    name: channel
+  channel_nr:
+    name: channel_nr
     description: The channel number to which the measurements apply
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
     rank: 1000
     multivalued: true
-    alias: channel
+    alias: channel_nr
     owner: ArgolightBIntensityKeyValues
     domain_of:
+    - PSFBeadsKeyValues
     - ArgolightBIntensityKeyValues
     - ArgolightEKeyValues
-    - FieldIlluminationKeyValues
     range: integer
+    minimum_value: 0
   nr_of_spots:
     name: nr_of_spots
     description: Number of argolight spots detected for each channel
@@ -516,6 +559,58 @@ attributes:
     domain_of:
     - ArgolightBIntensityKeyValues
     range: float
+  data_reference:
+    name: data_reference
+    description: A reference to the data
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    rank: 1000
+    multivalued: false
+    alias: data_reference
+    owner: ArgolightBIntensityKeyValues
+    domain_of:
+    - MetricsObject
+    range: DataReference
+    required: false
+  linked_references:
+    name: linked_references
+    description: A list of linked references
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    rank: 1000
+    multivalued: true
+    alias: linked_references
+    owner: ArgolightBIntensityKeyValues
+    domain_of:
+    - MetricsObject
+    range: DataReference
+    required: false
+    inlined: true
+    inlined_as_list: true
+  name:
+    name: name
+    description: The human readable name of an entity
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    rank: 1000
+    multivalued: false
+    alias: name
+    owner: ArgolightBIntensityKeyValues
+    domain_of:
+    - NamedObject
+    - Experimenter
+    range: string
+    required: false
+  description:
+    name: description
+    description: A human readable description of an entity
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    rank: 1000
+    multivalued: false
+    alias: description
+    owner: ArgolightBIntensityKeyValues
+    domain_of:
+    - NamedObject
+    - Tag
+    range: string
+    required: false
 
 </code></pre>
 </details>

@@ -213,15 +213,17 @@
 
       Line : c
 
+      Line : description
+
       Line : fill_color
 
-          Line --|&gt; Color : fill_color
+          Line --&gt; Color : fill_color
 
-      Line : label
+      Line : name
 
       Line : stroke_color
 
-          Line --|&gt; Color : stroke_color
+          Line --&gt; Color : stroke_color
 
       Line : stroke_width
 
@@ -241,8 +243,11 @@
 </div>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
+<li><a href="../NamedObject/">NamedObject</a><ul>
 <li><a href="../Shape/">Shape</a><ul>
 <li><strong>Line</strong></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -282,12 +287,6 @@
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../label/">label</a></td>
-<td>1..1 <br/> <a href="../String/">String</a></td>
-<td>The label of the shape</td>
-<td><a href="../Shape/">Shape</a></td>
-</tr>
-<tr>
 <td><a href="../z/">z</a></td>
 <td>0..1 <br/> <a href="../Float/">Float</a></td>
 <td>The z coordinate of the shape</td>
@@ -323,6 +322,18 @@
 <td>The stroke width of the shape</td>
 <td><a href="../Shape/">Shape</a></td>
 </tr>
+<tr>
+<td><a href="../name/">name</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>The human readable name of an entity</td>
+<td><a href="../NamedObject/">NamedObject</a></td>
+</tr>
+<tr>
+<td><a href="../description/">description</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A human readable description of an entity</td>
+<td><a href="../NamedObject/">NamedObject</a></td>
+</tr>
 </tbody>
 </table>
 <h2 id="usages">Usages</h2>
@@ -337,38 +348,14 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../LinesRoi/">LinesRoi</a></td>
-<td><a href="../shapes/">shapes</a></td>
+<td><a href="../Roi/">Roi</a></td>
+<td><a href="../lines/">lines</a></td>
 <td>range</td>
 <td><a href="./">Line</a></td>
 </tr>
 <tr>
-<td><a href="../RoiProfiles/">RoiProfiles</a></td>
-<td><a href="../leftTop_to_rightBottom_profile/">leftTop_to_rightBottom_profile</a></td>
-<td>range</td>
-<td><a href="./">Line</a></td>
-</tr>
-<tr>
-<td><a href="../RoiProfiles/">RoiProfiles</a></td>
-<td><a href="../leftBottom_to_rightTop_profile/">leftBottom_to_rightTop_profile</a></td>
-<td>range</td>
-<td><a href="./">Line</a></td>
-</tr>
-<tr>
-<td><a href="../RoiProfiles/">RoiProfiles</a></td>
-<td><a href="../left_to_right_profile/">left_to_right_profile</a></td>
-<td>range</td>
-<td><a href="./">Line</a></td>
-</tr>
-<tr>
-<td><a href="../RoiProfiles/">RoiProfiles</a></td>
-<td><a href="../top_to_bottom_profile/">top_to_bottom_profile</a></td>
-<td>range</td>
-<td><a href="./">Line</a></td>
-</tr>
-<tr>
-<td><a href="../RoiProfiles/">RoiProfiles</a></td>
-<td><a href="../shapes/">shapes</a></td>
+<td><a href="../ArgolightBCentersOfMass/">ArgolightBCentersOfMass</a></td>
+<td><a href="../lines/">lines</a></td>
 <td>range</td>
 <td><a href="./">Line</a></td>
 </tr>
@@ -413,6 +400,8 @@ attributes:
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: false
+    domain_of:
+    - Line
     range: float
     required: true
   y1:
@@ -421,6 +410,8 @@ attributes:
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: false
+    domain_of:
+    - Line
     range: float
     required: true
   x2:
@@ -429,6 +420,8 @@ attributes:
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: false
+    domain_of:
+    - Line
     range: float
     required: true
   y2:
@@ -437,6 +430,8 @@ attributes:
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: false
+    domain_of:
+    - Line
     range: float
     required: true
 
@@ -496,18 +491,6 @@ attributes:
     domain_of:
     - Line
     range: float
-    required: true
-  label:
-    name: label
-    description: The label of the shape
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
-    identifier: true
-    alias: label
-    owner: Line
-    domain_of:
-    - Roi
-    - Shape
-    range: string
     required: true
   z:
     name: z
@@ -575,6 +558,32 @@ attributes:
     domain_of:
     - Shape
     range: integer
+    required: false
+  name:
+    name: name
+    description: The human readable name of an entity
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    rank: 1000
+    multivalued: false
+    alias: name
+    owner: Line
+    domain_of:
+    - NamedObject
+    - Experimenter
+    range: string
+    required: false
+  description:
+    name: description
+    description: A human readable description of an entity
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    rank: 1000
+    multivalued: false
+    alias: description
+    owner: Line
+    domain_of:
+    - NamedObject
+    - Tag
+    range: string
     required: false
 
 </code></pre>

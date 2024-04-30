@@ -317,7 +317,7 @@
 
 
 <h1 id="slot-sigma_y">Slot: sigma_y</h1>
-<p><em>Input parameter: smoothing factor for objects detection in the Y axis</em></p>
+<p><em>Smoothing sigma to be applied to the image in the Y axis.</em></p>
 <p>URI: <a href="https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/sigma_y">microscopemetrics_schema:sigma_y</a></p>
 <!-- no inheritance hierarchy -->
 
@@ -332,26 +332,20 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="../PSFBeadsInput/">PSFBeadsInput</a></td>
+<td></td>
+<td>yes</td>
+</tr>
+<tr>
 <td><a href="../ArgolightBInput/">ArgolightBInput</a></td>
 <td></td>
-<td>no</td>
+<td>yes</td>
 </tr>
 </tbody>
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>
-<p>Range: <a href="../Float/">Float</a></p>
-</li>
-<li>
-<p>Required: True</p>
-</li>
-<li>
-<p>Minimum Value: 0</p>
-</li>
-<li>
-<p>Maximum Value: 10</p>
-</li>
+<li>Range: <a href="../Float/">Float</a></li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
@@ -362,18 +356,14 @@
 <details>
 
 <pre><code class="language-yaml">name: sigma_y
-description: 'Input parameter: smoothing factor for objects detection in the Y axis'
+description: Smoothing sigma to be applied to the image in the Y axis.
 from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
 rank: 1000
-multivalued: false
-ifabsent: float(3.0)
 alias: sigma_y
 domain_of:
+- PSFBeadsInput
 - ArgolightBInput
 range: float
-required: true
-minimum_value: 0
-maximum_value: 10
 
 </code></pre>
 

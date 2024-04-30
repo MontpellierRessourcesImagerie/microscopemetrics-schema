@@ -333,32 +333,12 @@
 <tbody>
 <tr>
 <td><a href="../Image/">Image</a></td>
-<td>A base object for all microscope-metrics images</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../ImageAsNumpy/">ImageAsNumpy</a></td>
-<td>An image as a numpy array in TZYXC order</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../ImageInline/">ImageInline</a></td>
-<td>A base object for all microscope-metrics images that are stored as arrays in ...</td>
+<td>A microscope-metrics image</td>
 <td>no</td>
 </tr>
 <tr>
 <td><a href="../ImageMask/">ImageMask</a></td>
-<td>A base object for all microscope-metrics masks</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Image2D/">Image2D</a></td>
-<td>A 2D image in YX order</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Image5D/">Image5D</a></td>
-<td>A 5D image in TZYXC order</td>
+<td>A mask image</td>
 <td>no</td>
 </tr>
 </tbody>
@@ -387,6 +367,7 @@ rank: 1000
 multivalued: false
 ifabsent: int(1)
 alias: shape_c
+owner: Image
 domain_of:
 - Image
 range: integer

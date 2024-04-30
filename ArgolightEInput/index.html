@@ -212,13 +212,13 @@
 
       ArgolightEInput : argolight_e_image
 
-          ArgolightEInput --|&gt; ImageAsNumpy : argolight_e_image
-
-      ArgolightEInput : axis
+          ArgolightEInput --&gt; Image : argolight_e_image
 
       ArgolightEInput : bit_depth
 
       ArgolightEInput : measured_band
+
+      ArgolightEInput : orientation_axis
 
       ArgolightEInput : prominence_threshold
 
@@ -246,8 +246,8 @@
 <tbody>
 <tr>
 <td><a href="../argolight_e_image/">argolight_e_image</a></td>
-<td>1..1 <br/> <a href="../ImageAsNumpy/">ImageAsNumpy</a></td>
-<td>Image of the argolight e pattern provided as a 5D numpy array in the order TZ...</td>
+<td>1..1 <br/> <a href="../Image/">Image</a></td>
+<td>Image of the argolight e pattern provided in the order TZYXC</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -263,7 +263,7 @@
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../axis/">axis</a></td>
+<td><a href="../orientation_axis/">orientation_axis</a></td>
 <td>1..1 <br/> <a href="../Integer/">Integer</a></td>
 <td>Axis along which resolution is being measured</td>
 <td>direct</td>
@@ -336,16 +336,17 @@ slots:
 - argolight_e_image
 - bit_depth
 - saturation_threshold
-- axis
+- orientation_axis
 - measured_band
 - prominence_threshold
 slot_usage:
   saturation_threshold:
     name: saturation_threshold
     domain_of:
+    - FieldIlluminationInput
+    - PSFBeadsInput
     - ArgolightBInput
     - ArgolightEInput
-    - FieldIlluminationInput
     required: true
 
 </code></pre>
@@ -359,15 +360,15 @@ slot_usage:
   saturation_threshold:
     name: saturation_threshold
     domain_of:
+    - FieldIlluminationInput
+    - PSFBeadsInput
     - ArgolightBInput
     - ArgolightEInput
-    - FieldIlluminationInput
     required: true
 attributes:
   argolight_e_image:
     name: argolight_e_image
-    description: Image of the argolight e pattern provided as a 5D numpy array in
-      the order TZYXC
+    description: Image of the argolight e pattern provided in the order TZYXC
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
     rank: 1000
     multivalued: false
@@ -375,9 +376,8 @@ attributes:
     owner: ArgolightEInput
     domain_of:
     - ArgolightEInput
-    range: ImageAsNumpy
+    range: Image
     required: true
-    inlined: true
   bit_depth:
     name: bit_depth
     description: Detector bit depth
@@ -387,9 +387,10 @@ attributes:
     alias: bit_depth
     owner: ArgolightEInput
     domain_of:
+    - FieldIlluminationInput
+    - PSFBeadsInput
     - ArgolightBInput
     - ArgolightEInput
-    - FieldIlluminationInput
     range: integer
     minimum_value: 1
     maximum_value: 64
@@ -405,20 +406,21 @@ attributes:
     alias: saturation_threshold
     owner: ArgolightEInput
     domain_of:
+    - FieldIlluminationInput
+    - PSFBeadsInput
     - ArgolightBInput
     - ArgolightEInput
-    - FieldIlluminationInput
     range: float
     required: true
-    minimum_value: 0
-    maximum_value: 1
-  axis:
-    name: axis
+    minimum_value: 0.0
+    maximum_value: 1.0
+  orientation_axis:
+    name: orientation_axis
     description: Axis along which resolution is being measured. 1=Y, 2=X
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
     rank: 1000
     multivalued: false
-    alias: axis
+    alias: orientation_axis
     owner: ArgolightEInput
     domain_of:
     - ArgolightEInput
@@ -439,8 +441,8 @@ attributes:
     - ArgolightEInput
     range: float
     required: true
-    minimum_value: 0
-    maximum_value: 1
+    minimum_value: 0.1
+    maximum_value: 1.0
   prominence_threshold:
     name: prominence_threshold
     description: Peak prominence used as a threshold to distinguish two peaks.  Defaults
@@ -455,8 +457,8 @@ attributes:
     - ArgolightEInput
     range: float
     required: true
-    minimum_value: 0
-    maximum_value: 0
+    minimum_value: 0.1
+    maximum_value: 0.99
 
 </code></pre>
 </details>

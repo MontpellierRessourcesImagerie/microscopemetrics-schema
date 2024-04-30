@@ -210,17 +210,35 @@
     class ArgolightEOutput
       MetricsOutput &lt;|-- ArgolightEOutput
 
+      ArgolightEOutput : comment
+
+          ArgolightEOutput --&gt; Comment : comment
+
+      ArgolightEOutput : errors
+
       ArgolightEOutput : intensity_profiles
 
-          ArgolightEOutput --|&gt; TableAsDict : intensity_profiles
+          ArgolightEOutput --&gt; Table : intensity_profiles
 
       ArgolightEOutput : key_measurements
 
-          ArgolightEOutput --|&gt; ArgolightEKeyValues : key_measurements
+          ArgolightEOutput --&gt; ArgolightEKeyValues : key_measurements
 
       ArgolightEOutput : peaks_rois
 
-          ArgolightEOutput --|&gt; LinesRoi : peaks_rois
+          ArgolightEOutput --&gt; Roi : peaks_rois
+
+      ArgolightEOutput : processing_application
+
+      ArgolightEOutput : processing_datetime
+
+      ArgolightEOutput : processing_entity
+
+      ArgolightEOutput : processing_log
+
+      ArgolightEOutput : processing_version
+
+      ArgolightEOutput : warnings
 
 
 </div>
@@ -244,7 +262,7 @@
 <tbody>
 <tr>
 <td><a href="../peaks_rois/">peaks_rois</a></td>
-<td>0..* <br/> <a href="../LinesRoi/">LinesRoi</a></td>
+<td>0..* <br/> <a href="../Roi/">Roi</a></td>
 <td>ROIs of the peaks found in the argolight images</td>
 <td>direct</td>
 </tr>
@@ -256,9 +274,57 @@
 </tr>
 <tr>
 <td><a href="../intensity_profiles/">intensity_profiles</a></td>
-<td>0..1 <br/> <a href="../TableAsDict/">TableAsDict</a></td>
+<td>0..1 <br/> <a href="../Table/">Table</a></td>
 <td>Intensity profiles of the argolight lines provided as tables</td>
 <td>direct</td>
+</tr>
+<tr>
+<td><a href="../processing_application/">processing_application</a></td>
+<td>1..* <br/> <a href="../String/">String</a></td>
+<td>The application used to process the dataset</td>
+<td><a href="../MetricsOutput/">MetricsOutput</a></td>
+</tr>
+<tr>
+<td><a href="../processing_version/">processing_version</a></td>
+<td>1..* <br/> <a href="../String/">String</a></td>
+<td>The version of the application used to process the dataset</td>
+<td><a href="../MetricsOutput/">MetricsOutput</a></td>
+</tr>
+<tr>
+<td><a href="../processing_entity/">processing_entity</a></td>
+<td>0..* <br/> <a href="../String/">String</a></td>
+<td>The entity that processed the dataset</td>
+<td><a href="../MetricsOutput/">MetricsOutput</a></td>
+</tr>
+<tr>
+<td><a href="../processing_datetime/">processing_datetime</a></td>
+<td>1..1 <br/> <a href="../datetime/">datetime</a></td>
+<td>The datetime of the processing by microscope-metrics</td>
+<td><a href="../MetricsOutput/">MetricsOutput</a></td>
+</tr>
+<tr>
+<td><a href="../processing_log/">processing_log</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>The log of the processing by microscope-metrics</td>
+<td><a href="../MetricsOutput/">MetricsOutput</a></td>
+</tr>
+<tr>
+<td><a href="../warnings/">warnings</a></td>
+<td>0..* <br/> <a href="../String/">String</a></td>
+<td>The warnings of the processing by microscope-metrics</td>
+<td><a href="../MetricsOutput/">MetricsOutput</a></td>
+</tr>
+<tr>
+<td><a href="../errors/">errors</a></td>
+<td>0..* <br/> <a href="../String/">String</a></td>
+<td>The errors of the processing by microscope-metrics</td>
+<td><a href="../MetricsOutput/">MetricsOutput</a></td>
+</tr>
+<tr>
+<td><a href="../comment/">comment</a></td>
+<td>0..1 <br/> <a href="../Comment/">Comment</a></td>
+<td>A human readable comment about the dataset</td>
+<td><a href="../MetricsOutput/">MetricsOutput</a></td>
 </tr>
 </tbody>
 </table>
@@ -319,22 +385,28 @@ attributes:
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/samples/argolight_schema
     rank: 1000
     multivalued: true
-    range: LinesRoi
+    domain_of:
+    - ArgolightEOutput
+    range: Roi
   key_measurements:
     name: key_measurements
     description: Key Measurements on Argolight E images
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/samples/argolight_schema
     rank: 1000
     multivalued: false
+    domain_of:
+    - ArgolightEOutput
     range: ArgolightEKeyValues
   intensity_profiles:
     name: intensity_profiles
     description: Intensity profiles of the argolight lines provided as tables. One
       table per channel
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/samples/argolight_schema
-    rank: 1000
     multivalued: false
-    range: TableAsDict
+    domain_of:
+    - FieldIlluminationOutput
+    - ArgolightEOutput
+    range: Table
 
 </code></pre>
 </details>
@@ -354,7 +426,7 @@ attributes:
     owner: ArgolightEOutput
     domain_of:
     - ArgolightEOutput
-    range: LinesRoi
+    range: Roi
   key_measurements:
     name: key_measurements
     description: Key Measurements on Argolight E images
@@ -371,14 +443,109 @@ attributes:
     description: Intensity profiles of the argolight lines provided as tables. One
       table per channel
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/samples/argolight_schema
-    rank: 1000
     multivalued: false
     alias: intensity_profiles
     owner: ArgolightEOutput
     domain_of:
-    - ArgolightEOutput
     - FieldIlluminationOutput
-    range: TableAsDict
+    - ArgolightEOutput
+    range: Table
+  processing_application:
+    name: processing_application
+    description: The application used to process the dataset
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    rank: 1000
+    multivalued: true
+    alias: processing_application
+    owner: ArgolightEOutput
+    domain_of:
+    - MetricsOutput
+    range: string
+    required: true
+  processing_version:
+    name: processing_version
+    description: The version of the application used to process the dataset
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    rank: 1000
+    multivalued: true
+    alias: processing_version
+    owner: ArgolightEOutput
+    domain_of:
+    - MetricsOutput
+    range: string
+    required: true
+  processing_entity:
+    name: processing_entity
+    description: The entity that processed the dataset
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    rank: 1000
+    multivalued: true
+    alias: processing_entity
+    owner: ArgolightEOutput
+    domain_of:
+    - MetricsOutput
+    range: string
+    required: false
+  processing_datetime:
+    name: processing_datetime
+    description: The datetime of the processing by microscope-metrics
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    rank: 1000
+    multivalued: false
+    alias: processing_datetime
+    owner: ArgolightEOutput
+    domain_of:
+    - MetricsOutput
+    range: datetime
+    required: true
+  processing_log:
+    name: processing_log
+    description: The log of the processing by microscope-metrics
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    rank: 1000
+    multivalued: false
+    alias: processing_log
+    owner: ArgolightEOutput
+    domain_of:
+    - MetricsOutput
+    range: string
+    required: false
+  warnings:
+    name: warnings
+    description: The warnings of the processing by microscope-metrics
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    rank: 1000
+    multivalued: true
+    alias: warnings
+    owner: ArgolightEOutput
+    domain_of:
+    - MetricsOutput
+    range: string
+    required: false
+  errors:
+    name: errors
+    description: The errors of the processing by microscope-metrics
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    rank: 1000
+    multivalued: true
+    alias: errors
+    owner: ArgolightEOutput
+    domain_of:
+    - MetricsOutput
+    range: string
+    required: false
+  comment:
+    name: comment
+    description: A human readable comment about the dataset
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    rank: 1000
+    multivalued: false
+    alias: comment
+    owner: ArgolightEOutput
+    domain_of:
+    - MetricsOutput
+    range: Comment
+    required: false
 
 </code></pre>
 </details>

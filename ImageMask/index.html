@@ -205,17 +205,31 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
 <h1 id="class-imagemask">Class: ImageMask</h1>
-<p><em>A base object for all microscope-metrics masks</em></p>
+<p><em>A mask image. Either a binary image or a label image</em></p>
 <p>URI: <a href="https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/ImageMask">microscopemetrics_schema:ImageMask</a></p>
 <div class="mermaid"> classDiagram
     class ImageMask
-      ImageInline &lt;|-- ImageMask
+      Image &lt;|-- ImageMask
 
-      ImageMask : data
+      ImageMask : acquisition_datetime
+
+      ImageMask : array_data
+
+          ImageMask --&gt; MetaObject : array_data
+
+      ImageMask : channel_series
+
+          ImageMask --&gt; ChannelSeries : channel_series
+
+      ImageMask : data_reference
+
+          ImageMask --&gt; DataReference : data_reference
 
       ImageMask : description
 
-      ImageMask : image_url
+      ImageMask : linked_references
+
+          ImageMask --&gt; DataReference : linked_references
 
       ImageMask : name
 
@@ -229,7 +243,13 @@
 
       ImageMask : shape_z
 
-      ImageMask : source_image_url
+      ImageMask : source_images
+
+          ImageMask --&gt; DataReference : source_images
+
+      ImageMask : time_series
+
+          ImageMask --&gt; TimeSeries : time_series
 
       ImageMask : voxel_size_x_micron
 
@@ -244,10 +264,7 @@
 <li><a href="../NamedObject/">NamedObject</a><ul>
 <li><a href="../MetricsObject/">MetricsObject</a><ul>
 <li><a href="../Image/">Image</a><ul>
-<li><a href="../ImageInline/">ImageInline</a><ul>
 <li><strong>ImageMask</strong></li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -266,24 +283,6 @@
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><a href="../data/">data</a></td>
-<td>1..* <br/> <a href="../Boolean/">Boolean</a></td>
-<td></td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../image_url/">image_url</a></td>
-<td>1..1 <br/> <a href="../String/">String</a></td>
-<td>An URL linking to the image</td>
-<td><a href="../Image/">Image</a></td>
-</tr>
-<tr>
-<td><a href="../source_image_url/">source_image_url</a></td>
-<td>0..* <br/> <a href="../String/">String</a></td>
-<td>A list of URLs linking to the images that were used as a source</td>
-<td><a href="../Image/">Image</a></td>
-</tr>
 <tr>
 <td><a href="../voxel_size_x_micron/">voxel_size_x_micron</a></td>
 <td>0..1 <br/> <a href="../Float/">Float</a></td>
@@ -333,15 +332,57 @@
 <td><a href="../Image/">Image</a></td>
 </tr>
 <tr>
+<td><a href="../time_series/">time_series</a></td>
+<td>0..1 <br/> <a href="../TimeSeries/">TimeSeries</a></td>
+<td></td>
+<td><a href="../Image/">Image</a></td>
+</tr>
+<tr>
+<td><a href="../channel_series/">channel_series</a></td>
+<td>0..1 <br/> <a href="../ChannelSeries/">ChannelSeries</a></td>
+<td></td>
+<td><a href="../Image/">Image</a></td>
+</tr>
+<tr>
+<td><a href="../acquisition_datetime/">acquisition_datetime</a></td>
+<td>1..1 <br/> <a href="../datetime/">datetime</a></td>
+<td>The datetime of the acquisition</td>
+<td><a href="../Image/">Image</a></td>
+</tr>
+<tr>
+<td><a href="../source_images/">source_images</a></td>
+<td>0..* <br/> <a href="../DataReference/">DataReference</a></td>
+<td>A list of references linking to the images that were used as a source</td>
+<td><a href="../Image/">Image</a></td>
+</tr>
+<tr>
+<td><a href="../array_data/">array_data</a></td>
+<td>0..1 <br/> <a href="../MetaObject/">MetaObject</a></td>
+<td>A non-required slot for non-serializable array data object</td>
+<td><a href="../Image/">Image</a></td>
+</tr>
+<tr>
+<td><a href="../data_reference/">data_reference</a></td>
+<td>0..1 <br/> <a href="../DataReference/">DataReference</a></td>
+<td>A reference to the data</td>
+<td><a href="../MetricsObject/">MetricsObject</a></td>
+</tr>
+<tr>
+<td><a href="../linked_references/">linked_references</a></td>
+<td>0..* <br/> <a href="../DataReference/">DataReference</a></td>
+<td>A list of linked references</td>
+<td><a href="../MetricsObject/">MetricsObject</a></td>
+</tr>
+<tr>
 <td><a href="../name/">name</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The name of an entity</td>
+<td>The human readable name of an entity</td>
 <td><a href="../NamedObject/">NamedObject</a></td>
 </tr>
 <tr>
 <td><a href="../description/">description</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>A description of an entity</td>
+<td>A human readable description of an entity</td>
 <td><a href="../NamedObject/">NamedObject</a></td>
 </tr>
 </tbody>
@@ -360,6 +401,12 @@
 <tr>
 <td><a href="../Mask/">Mask</a></td>
 <td><a href="../mask/">mask</a></td>
+<td>range</td>
+<td><a href="./">ImageMask</a></td>
+</tr>
+<tr>
+<td><a href="../ArgolightBOutput/">ArgolightBOutput</a></td>
+<td><a href="../spots_labels_image/">spots_labels_image</a></td>
 <td>range</td>
 <td><a href="./">ImageMask</a></td>
 </tr>
@@ -394,72 +441,23 @@
 <h3 id="direct">Direct</h3>
 <details>
 <pre><code class="language-yaml">name: ImageMask
-description: A base object for all microscope-metrics masks
+description: A mask image. Either a binary image or a label image
 from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
-is_a: ImageInline
-attributes:
-  data:
-    name: data
-    implements:
-    - linkml:elements
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
-    multivalued: true
-    range: boolean
-    required: true
+is_a: Image
 
 </code></pre>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
 <pre><code class="language-yaml">name: ImageMask
-description: A base object for all microscope-metrics masks
+description: A mask image. Either a binary image or a label image
 from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
-is_a: ImageInline
+is_a: Image
 attributes:
-  data:
-    name: data
-    implements:
-    - linkml:elements
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
-    multivalued: true
-    alias: data
-    owner: ImageMask
-    domain_of:
-    - ImageAsNumpy
-    - ImageMask
-    - Image2D
-    - Image5D
-    range: boolean
-    required: true
-  image_url:
-    name: image_url
-    description: An URL linking to the image
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
-    rank: 1000
-    multivalued: false
-    identifier: true
-    alias: image_url
-    owner: ImageMask
-    domain_of:
-    - Image
-    range: string
-    required: true
-  source_image_url:
-    name: source_image_url
-    description: A list of URLs linking to the images that were used as a source
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
-    rank: 1000
-    multivalued: true
-    alias: source_image_url
-    owner: ImageMask
-    domain_of:
-    - Image
-    range: string
-    required: false
   voxel_size_x_micron:
     name: voxel_size_x_micron
     description: The physical size in the voxel in the x dimension in microns
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: false
     alias: voxel_size_x_micron
@@ -471,7 +469,7 @@ attributes:
   voxel_size_y_micron:
     name: voxel_size_y_micron
     description: The physical size in the voxel in the y dimension in microns
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: false
     alias: voxel_size_y_micron
@@ -483,7 +481,7 @@ attributes:
   voxel_size_z_micron:
     name: voxel_size_z_micron
     description: The physical size in the voxel in the z dimension in microns
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: false
     alias: voxel_size_z_micron
@@ -495,7 +493,7 @@ attributes:
   shape_x:
     name: shape_x
     description: The shape of the image in the x dimension
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: false
     alias: shape_x
@@ -507,7 +505,7 @@ attributes:
   shape_y:
     name: shape_y
     description: The shape of the image in the y dimension
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: false
     alias: shape_y
@@ -519,7 +517,7 @@ attributes:
   shape_z:
     name: shape_z
     description: The shape of the image in the z dimension
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: false
     ifabsent: int(1)
@@ -532,7 +530,7 @@ attributes:
   shape_c:
     name: shape_c
     description: The shape of the image in the c dimension
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: false
     ifabsent: int(1)
@@ -545,7 +543,7 @@ attributes:
   shape_t:
     name: shape_t
     description: The shape of the image in the t dimension
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: false
     ifabsent: int(1)
@@ -555,9 +553,97 @@ attributes:
     - Image
     range: integer
     required: true
+  time_series:
+    name: time_series
+    implements:
+    - linkml:axis0
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    rank: 1000
+    alias: time_series
+    owner: ImageMask
+    domain_of:
+    - Image
+    range: TimeSeries
+    required: false
+  channel_series:
+    name: channel_series
+    implements:
+    - linkml:axis4
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    rank: 1000
+    alias: channel_series
+    owner: ImageMask
+    domain_of:
+    - Image
+    range: ChannelSeries
+    required: false
+  acquisition_datetime:
+    name: acquisition_datetime
+    description: The datetime of the acquisition
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    multivalued: false
+    alias: acquisition_datetime
+    owner: ImageMask
+    domain_of:
+    - MetricsDataset
+    - Image
+    range: datetime
+    required: true
+  source_images:
+    name: source_images
+    description: A list of references linking to the images that were used as a source
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    rank: 1000
+    multivalued: true
+    alias: source_images
+    owner: ImageMask
+    domain_of:
+    - Image
+    range: DataReference
+    required: false
+    inlined: true
+    inlined_as_list: true
+  array_data:
+    name: array_data
+    description: A non-required slot for non-serializable array data object
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    rank: 1000
+    multivalued: false
+    alias: array_data
+    owner: ImageMask
+    domain_of:
+    - Image
+    range: MetaObject
+    required: false
+  data_reference:
+    name: data_reference
+    description: A reference to the data
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    rank: 1000
+    multivalued: false
+    alias: data_reference
+    owner: ImageMask
+    domain_of:
+    - MetricsObject
+    range: DataReference
+    required: false
+  linked_references:
+    name: linked_references
+    description: A list of linked references
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    rank: 1000
+    multivalued: true
+    alias: linked_references
+    owner: ImageMask
+    domain_of:
+    - MetricsObject
+    range: DataReference
+    required: false
+    inlined: true
+    inlined_as_list: true
   name:
     name: name
-    description: The name of an entity
+    description: The human readable name of an entity
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
     rank: 1000
     multivalued: false
@@ -566,12 +652,11 @@ attributes:
     domain_of:
     - NamedObject
     - Experimenter
-    - Column
     range: string
     required: false
   description:
     name: description
-    description: A description of an entity
+    description: A human readable description of an entity
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
     rank: 1000
     multivalued: false
@@ -579,7 +664,6 @@ attributes:
     owner: ImageMask
     domain_of:
     - NamedObject
-    - Roi
     - Tag
     range: string
     required: false

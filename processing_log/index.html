@@ -332,23 +332,28 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../ArgolightBDataset/">ArgolightBDataset</a></td>
-<td>An Argolight sample pattern B dataset</td>
+<td><a href="../MetricsOutput/">MetricsOutput</a></td>
+<td>An abstract class for analysis outputs</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../ArgolightEDataset/">ArgolightEDataset</a></td>
-<td>An Argolight sample pattern E dataset</td>
+<td><a href="../FieldIlluminationOutput/">FieldIlluminationOutput</a></td>
+<td></td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../MetricsDataset/">MetricsDataset</a></td>
-<td>A base object on which microscope-metrics runs the analysis</td>
+<td><a href="../PSFBeadsOutput/">PSFBeadsOutput</a></td>
+<td></td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../FieldIlluminationDataset/">FieldIlluminationDataset</a></td>
-<td>A field illumination dataset</td>
+<td><a href="../ArgolightBOutput/">ArgolightBOutput</a></td>
+<td></td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../ArgolightEOutput/">ArgolightEOutput</a></td>
+<td></td>
 <td>no</td>
 </tr>
 </tbody>
@@ -371,10 +376,11 @@ from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-sc
 rank: 1000
 multivalued: false
 alias: processing_log
-owner: MetricsDataset
+owner: MetricsOutput
 domain_of:
-- MetricsDataset
+- MetricsOutput
 range: string
+required: false
 
 </code></pre>
 

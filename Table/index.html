@@ -152,6 +152,11 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#usages">
+    Usages
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#identifier-and-mapping-information">
     Identifier and Mapping Information
   </a>
@@ -200,23 +205,31 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
 <h1 id="class-table">Class: Table</h1>
-<p><em>A table</em></p>
-<ul>
-<li><strong>NOTE</strong>: this is an abstract class and should not be instantiated directly</li>
-</ul>
+<p><em>A microscope-metrics table</em></p>
 <p>URI: <a href="https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/Table">microscopemetrics_schema:Table</a></p>
 <div class="mermaid"> classDiagram
     class Table
       MetricsObject &lt;|-- Table
 
+      Table : column_series
 
-      Table &lt;|-- TableAsPandasDF
-      Table &lt;|-- TableAsDict
+          Table --&gt; ColumnSeries : column_series
 
+      Table : data_reference
+
+          Table --&gt; DataReference : data_reference
 
       Table : description
 
+      Table : linked_references
+
+          Table --&gt; DataReference : linked_references
+
       Table : name
+
+      Table : table_data
+
+          Table --&gt; MetaObject : table_data
 
 
 </div>
@@ -224,11 +237,7 @@
 <ul>
 <li><a href="../NamedObject/">NamedObject</a><ul>
 <li><a href="../MetricsObject/">MetricsObject</a><ul>
-<li><strong>Table</strong><ul>
-<li><a href="../TableAsPandasDF/">TableAsPandasDF</a></li>
-<li><a href="../TableAsDict/">TableAsDict</a></li>
-</ul>
-</li>
+<li><strong>Table</strong></li>
 </ul>
 </li>
 </ul>
@@ -246,16 +255,113 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="../column_series/">column_series</a></td>
+<td>1..1 <br/> <a href="../ColumnSeries/">ColumnSeries</a></td>
+<td></td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../table_data/">table_data</a></td>
+<td>0..1 <br/> <a href="../MetaObject/">MetaObject</a></td>
+<td>A non-required slot for non-serializable table data object</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../data_reference/">data_reference</a></td>
+<td>0..1 <br/> <a href="../DataReference/">DataReference</a></td>
+<td>A reference to the data</td>
+<td><a href="../MetricsObject/">MetricsObject</a></td>
+</tr>
+<tr>
+<td><a href="../linked_references/">linked_references</a></td>
+<td>0..* <br/> <a href="../DataReference/">DataReference</a></td>
+<td>A list of linked references</td>
+<td><a href="../MetricsObject/">MetricsObject</a></td>
+</tr>
+<tr>
 <td><a href="../name/">name</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The name of an entity</td>
+<td>The human readable name of an entity</td>
 <td><a href="../NamedObject/">NamedObject</a></td>
 </tr>
 <tr>
 <td><a href="../description/">description</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>A description of an entity</td>
+<td>A human readable description of an entity</td>
 <td><a href="../NamedObject/">NamedObject</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="usages">Usages</h2>
+<table>
+<thead>
+<tr>
+<th>used by</th>
+<th>used in</th>
+<th>type</th>
+<th>used</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../ProfilesIntensity/">ProfilesIntensity</a></td>
+<td><a href="../intensity_profiles_table/">intensity_profiles_table</a></td>
+<td>range</td>
+<td><a href="./">Table</a></td>
+</tr>
+<tr>
+<td><a href="../RoiMeasurements/">RoiMeasurements</a></td>
+<td><a href="../measurements_table/">measurements_table</a></td>
+<td>range</td>
+<td><a href="./">Table</a></td>
+</tr>
+<tr>
+<td><a href="../FieldIlluminationOutput/">FieldIlluminationOutput</a></td>
+<td><a href="../intensity_profiles/">intensity_profiles</a></td>
+<td>range</td>
+<td><a href="./">Table</a></td>
+</tr>
+<tr>
+<td><a href="../PSFBeadsOutput/">PSFBeadsOutput</a></td>
+<td><a href="../bead_properties/">bead_properties</a></td>
+<td>range</td>
+<td><a href="./">Table</a></td>
+</tr>
+<tr>
+<td><a href="../PSFBeadsOutput/">PSFBeadsOutput</a></td>
+<td><a href="../bead_z_profiles/">bead_z_profiles</a></td>
+<td>range</td>
+<td><a href="./">Table</a></td>
+</tr>
+<tr>
+<td><a href="../PSFBeadsOutput/">PSFBeadsOutput</a></td>
+<td><a href="../bead_y_profiles/">bead_y_profiles</a></td>
+<td>range</td>
+<td><a href="./">Table</a></td>
+</tr>
+<tr>
+<td><a href="../PSFBeadsOutput/">PSFBeadsOutput</a></td>
+<td><a href="../bead_x_profiles/">bead_x_profiles</a></td>
+<td>range</td>
+<td><a href="./">Table</a></td>
+</tr>
+<tr>
+<td><a href="../ArgolightBOutput/">ArgolightBOutput</a></td>
+<td><a href="../spots_properties/">spots_properties</a></td>
+<td>range</td>
+<td><a href="./">Table</a></td>
+</tr>
+<tr>
+<td><a href="../ArgolightBOutput/">ArgolightBOutput</a></td>
+<td><a href="../spots_distances/">spots_distances</a></td>
+<td>range</td>
+<td><a href="./">Table</a></td>
+</tr>
+<tr>
+<td><a href="../ArgolightEOutput/">ArgolightEOutput</a></td>
+<td><a href="../intensity_profiles/">intensity_profiles</a></td>
+<td>range</td>
+<td><a href="./">Table</a></td>
 </tr>
 </tbody>
 </table>
@@ -288,24 +394,89 @@
 <h3 id="direct">Direct</h3>
 <details>
 <pre><code class="language-yaml">name: Table
-description: A table
+description: A microscope-metrics table
 from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
 is_a: MetricsObject
-abstract: true
+attributes:
+  column_series:
+    name: column_series
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    rank: 1000
+    domain_of:
+    - Table
+    range: ColumnSeries
+    required: true
+  table_data:
+    name: table_data
+    description: A non-required slot for non-serializable table data object
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    rank: 1000
+    multivalued: false
+    domain_of:
+    - Table
+    range: MetaObject
+    required: false
 
 </code></pre>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
 <pre><code class="language-yaml">name: Table
-description: A table
+description: A microscope-metrics table
 from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
 is_a: MetricsObject
-abstract: true
 attributes:
+  column_series:
+    name: column_series
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    rank: 1000
+    alias: column_series
+    owner: Table
+    domain_of:
+    - Table
+    range: ColumnSeries
+    required: true
+  table_data:
+    name: table_data
+    description: A non-required slot for non-serializable table data object
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    rank: 1000
+    multivalued: false
+    alias: table_data
+    owner: Table
+    domain_of:
+    - Table
+    range: MetaObject
+    required: false
+  data_reference:
+    name: data_reference
+    description: A reference to the data
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    rank: 1000
+    multivalued: false
+    alias: data_reference
+    owner: Table
+    domain_of:
+    - MetricsObject
+    range: DataReference
+    required: false
+  linked_references:
+    name: linked_references
+    description: A list of linked references
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    rank: 1000
+    multivalued: true
+    alias: linked_references
+    owner: Table
+    domain_of:
+    - MetricsObject
+    range: DataReference
+    required: false
+    inlined: true
+    inlined_as_list: true
   name:
     name: name
-    description: The name of an entity
+    description: The human readable name of an entity
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
     rank: 1000
     multivalued: false
@@ -314,12 +485,11 @@ attributes:
     domain_of:
     - NamedObject
     - Experimenter
-    - Column
     range: string
     required: false
   description:
     name: description
-    description: A description of an entity
+    description: A human readable description of an entity
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
     rank: 1000
     multivalued: false
@@ -327,7 +497,6 @@ attributes:
     owner: Table
     domain_of:
     - NamedObject
-    - Roi
     - Tag
     range: string
     required: false

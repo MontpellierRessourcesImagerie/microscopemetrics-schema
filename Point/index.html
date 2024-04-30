@@ -213,15 +213,17 @@
 
       Point : c
 
+      Point : description
+
       Point : fill_color
 
-          Point --|&gt; Color : fill_color
+          Point --&gt; Color : fill_color
 
-      Point : label
+      Point : name
 
       Point : stroke_color
 
-          Point --|&gt; Color : stroke_color
+          Point --&gt; Color : stroke_color
 
       Point : stroke_width
 
@@ -237,8 +239,11 @@
 </div>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
+<li><a href="../NamedObject/">NamedObject</a><ul>
 <li><a href="../Shape/">Shape</a><ul>
 <li><strong>Point</strong></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -264,12 +269,6 @@
 <td>1..1 <br/> <a href="../Float/">Float</a></td>
 <td>The x coordinate of the point</td>
 <td>direct</td>
-</tr>
-<tr>
-<td><a href="../label/">label</a></td>
-<td>1..1 <br/> <a href="../String/">String</a></td>
-<td>The label of the shape</td>
-<td><a href="../Shape/">Shape</a></td>
 </tr>
 <tr>
 <td><a href="../z/">z</a></td>
@@ -307,6 +306,18 @@
 <td>The stroke width of the shape</td>
 <td><a href="../Shape/">Shape</a></td>
 </tr>
+<tr>
+<td><a href="../name/">name</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>The human readable name of an entity</td>
+<td><a href="../NamedObject/">NamedObject</a></td>
+</tr>
+<tr>
+<td><a href="../description/">description</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A human readable description of an entity</td>
+<td><a href="../NamedObject/">NamedObject</a></td>
+</tr>
 </tbody>
 </table>
 <h2 id="usages">Usages</h2>
@@ -321,14 +332,14 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../PointsRoi/">PointsRoi</a></td>
-<td><a href="../shapes/">shapes</a></td>
+<td><a href="../Roi/">Roi</a></td>
+<td><a href="../points/">points</a></td>
 <td>range</td>
 <td><a href="./">Point</a></td>
 </tr>
 <tr>
-<td><a href="../RoiCenter/">RoiCenter</a></td>
-<td><a href="../center_points/">center_points</a></td>
+<td><a href="../ArgolightBCentersOfMass/">ArgolightBCentersOfMass</a></td>
+<td><a href="../points/">points</a></td>
 <td>range</td>
 <td><a href="./">Point</a></td>
 </tr>
@@ -373,6 +384,12 @@ attributes:
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: false
+    domain_of:
+    - Point
+    - Rectangle
+    - Ellipse
+    - Vertex
+    - Mask
     range: float
     required: true
   x:
@@ -381,6 +398,12 @@ attributes:
     from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: false
+    domain_of:
+    - Point
+    - Rectangle
+    - Ellipse
+    - Vertex
+    - Mask
     range: float
     required: true
 
@@ -424,18 +447,6 @@ attributes:
     - Vertex
     - Mask
     range: float
-    required: true
-  label:
-    name: label
-    description: The label of the shape
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
-    identifier: true
-    alias: label
-    owner: Point
-    domain_of:
-    - Roi
-    - Shape
-    range: string
     required: true
   z:
     name: z
@@ -503,6 +514,32 @@ attributes:
     domain_of:
     - Shape
     range: integer
+    required: false
+  name:
+    name: name
+    description: The human readable name of an entity
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    rank: 1000
+    multivalued: false
+    alias: name
+    owner: Point
+    domain_of:
+    - NamedObject
+    - Experimenter
+    range: string
+    required: false
+  description:
+    name: description
+    description: A human readable description of an entity
+    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    rank: 1000
+    multivalued: false
+    alias: description
+    owner: Point
+    domain_of:
+    - NamedObject
+    - Tag
+    range: string
     required: false
 
 </code></pre>
