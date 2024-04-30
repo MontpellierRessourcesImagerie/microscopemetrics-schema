@@ -206,7 +206,7 @@
 </a>
 <h1 id="class-imagemask">Class: ImageMask</h1>
 <p><em>A mask image. Either a binary image or a label image</em></p>
-<p>URI: <a href="https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/ImageMask">microscopemetrics_schema:ImageMask</a></p>
+<p>URI: <a href="https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/ImageMask">microscopemetrics_schema:ImageMask</a></p>
 <div class="mermaid"> classDiagram
     class ImageMask
       Image &lt;|-- ImageMask
@@ -415,7 +415,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema</li>
+<li>from schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -442,7 +442,7 @@
 <details>
 <pre><code class="language-yaml">name: ImageMask
 description: A mask image. Either a binary image or a label image
-from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
 is_a: Image
 
 </code></pre>
@@ -451,13 +451,13 @@ is_a: Image
 <details>
 <pre><code class="language-yaml">name: ImageMask
 description: A mask image. Either a binary image or a label image
-from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
 is_a: Image
 attributes:
   voxel_size_x_micron:
     name: voxel_size_x_micron
     description: The physical size in the voxel in the x dimension in microns
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: false
     alias: voxel_size_x_micron
@@ -469,7 +469,7 @@ attributes:
   voxel_size_y_micron:
     name: voxel_size_y_micron
     description: The physical size in the voxel in the y dimension in microns
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: false
     alias: voxel_size_y_micron
@@ -481,7 +481,7 @@ attributes:
   voxel_size_z_micron:
     name: voxel_size_z_micron
     description: The physical size in the voxel in the z dimension in microns
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: false
     alias: voxel_size_z_micron
@@ -493,7 +493,7 @@ attributes:
   shape_x:
     name: shape_x
     description: The shape of the image in the x dimension
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: false
     alias: shape_x
@@ -505,7 +505,7 @@ attributes:
   shape_y:
     name: shape_y
     description: The shape of the image in the y dimension
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: false
     alias: shape_y
@@ -517,7 +517,7 @@ attributes:
   shape_z:
     name: shape_z
     description: The shape of the image in the z dimension
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: false
     ifabsent: int(1)
@@ -530,7 +530,7 @@ attributes:
   shape_c:
     name: shape_c
     description: The shape of the image in the c dimension
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: false
     ifabsent: int(1)
@@ -543,7 +543,7 @@ attributes:
   shape_t:
     name: shape_t
     description: The shape of the image in the t dimension
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: false
     ifabsent: int(1)
@@ -557,7 +557,7 @@ attributes:
     name: time_series
     implements:
     - linkml:axis0
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
     alias: time_series
     owner: ImageMask
@@ -569,7 +569,7 @@ attributes:
     name: channel_series
     implements:
     - linkml:axis4
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
     alias: channel_series
     owner: ImageMask
@@ -580,7 +580,7 @@ attributes:
   acquisition_datetime:
     name: acquisition_datetime
     description: The datetime of the acquisition
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     multivalued: false
     alias: acquisition_datetime
     owner: ImageMask
@@ -592,7 +592,7 @@ attributes:
   source_images:
     name: source_images
     description: A list of references linking to the images that were used as a source
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: true
     alias: source_images
@@ -606,7 +606,7 @@ attributes:
   array_data:
     name: array_data
     description: A non-required slot for non-serializable array data object
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: false
     alias: array_data
@@ -618,7 +618,7 @@ attributes:
   data_reference:
     name: data_reference
     description: A reference to the data
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: false
     alias: data_reference
@@ -630,7 +630,7 @@ attributes:
   linked_references:
     name: linked_references
     description: A list of linked references
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: true
     alias: linked_references
@@ -644,7 +644,7 @@ attributes:
   name:
     name: name
     description: The human readable name of an entity
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: false
     alias: name
@@ -657,7 +657,7 @@ attributes:
   description:
     name: description
     description: A human readable description of an entity
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: false
     alias: description

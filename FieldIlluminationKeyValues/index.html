@@ -205,7 +205,7 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
 <h1 id="class-fieldilluminationkeyvalues">Class: FieldIlluminationKeyValues</h1>
-<p>URI: <a href="https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/FieldIlluminationKeyValues">microscopemetrics_schema:FieldIlluminationKeyValues</a></p>
+<p>URI: <a href="https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/FieldIlluminationKeyValues">microscopemetrics_schema:FieldIlluminationKeyValues</a></p>
 <div class="mermaid"> classDiagram
     class FieldIlluminationKeyValues
       KeyValues &lt;|-- FieldIlluminationKeyValues
@@ -632,7 +632,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema</li>
+<li>from schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -658,7 +658,7 @@
 <h3 id="direct">Direct</h3>
 <details>
 <pre><code class="language-yaml">name: FieldIlluminationKeyValues
-from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
 is_a: KeyValues
 slots:
 - channel_name
@@ -709,13 +709,13 @@ slots:
 <h3 id="induced">Induced</h3>
 <details>
 <pre><code class="language-yaml">name: FieldIlluminationKeyValues
-from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
 is_a: KeyValues
 attributes:
   channel_name:
     name: channel_name
     description: The channel name to which the measurements apply
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: channel_name
@@ -730,7 +730,7 @@ attributes:
       occupies the top 10% of the intensity range. microscope-metrics tries to adapt
       the threshold of this intensity so that the area occupied is not too large.
       One value per channel.
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: center_region_intensity_fraction
@@ -745,7 +745,7 @@ attributes:
     description: The fraction of the area occupied by the center of illumination region.
       If the centre upper intensity fraction is 0.1, that means that the center of
       illumination occupies 10% of the area of the image. One value per channel.
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: center_region_area_fraction
@@ -759,7 +759,7 @@ attributes:
     name: center_of_mass_y
     description: The y coordinate of the center of mass of the center of illumination
       region. In pixels. One value per channel.
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: center_of_mass_y
@@ -772,7 +772,7 @@ attributes:
     description: The relative y position of the center of mass of the center of illumination
       region.  Relative to the image size along that axis. -1.0 is upper edge, 0.0
       is center and 1.0 is lower edge. One value per channel.
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: center_of_mass_y_relative
@@ -786,7 +786,7 @@ attributes:
     name: center_of_mass_x
     description: The x coordinate of the center of mass of the center of illumination
       region. In pixels. One value per channel.
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: center_of_mass_x
@@ -799,7 +799,7 @@ attributes:
     description: The relative x position of the center of mass of the center of illumination
       region.  Relative to the image size along that axis. -1.0 is left edge, 0.0
       is center and 1.0 is right edge. One value per channel.
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: center_of_mass_x_relative
@@ -814,7 +814,7 @@ attributes:
     description: The relative distance of the centers of mass to the center of the
       image. Relative to the distance to  an image corner. 0.0 is centered and 1.0
       at a distance equal to the the corner of the image. One value per channel.
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: center_of_mass_distance_relative
@@ -828,7 +828,7 @@ attributes:
     name: center_geometric_y
     description: The y coordinate of the geometric center of the center of illumination
       region. In pixels. One value per channel.
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: center_geometric_y
@@ -841,7 +841,7 @@ attributes:
     description: The relative y position of the geometric center of the center of
       illumination region.  Relative to the image size along that axis. -1.0 is upper
       edge, 0.0 is center and 1.0 is lower edge. One value per channel.
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: center_geometric_y_relative
@@ -855,7 +855,7 @@ attributes:
     name: center_geometric_x
     description: The x coordinate of the geometric center of the center of illumination
       region. In pixels
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: center_geometric_x
@@ -868,7 +868,7 @@ attributes:
     description: The relative x position of the geometric center of the center of
       illumination region.  Relative to the image size along that axis. -1.0 is left
       edge, 0.0 is center and 1.0 is right edge.
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: center_geometric_x_relative
@@ -883,7 +883,7 @@ attributes:
     description: The relative distance of the geometric center to the center of the
       image. Relative to the distance to  an image corner. 0.0 is centered and 1.0
       at a distance equal to the the corner of the image.
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: center_geometric_distance_relative
@@ -896,7 +896,7 @@ attributes:
   center_fitted_y:
     name: center_fitted_y
     description: The y coordinate of the fitted center of illumination. In pixels
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: center_fitted_y
@@ -909,7 +909,7 @@ attributes:
     description: The relative y position of the fitted center of illumination.  Relative
       to the image size along that axis. -1.0 is upper edge, 0.0 is center and 1.0
       is lower edge.
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: center_fitted_y_relative
@@ -922,7 +922,7 @@ attributes:
   center_fitted_x:
     name: center_fitted_x
     description: The x coordinate of the fitted center of illumination. In pixels
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: center_fitted_x
@@ -935,7 +935,7 @@ attributes:
     description: The relative x position of the fitted center of illumination.  Relative
       to the image size along that axis. -1.0 is left edge, 0.0 is center and 1.0
       is right edge.
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: center_fitted_x_relative
@@ -950,7 +950,7 @@ attributes:
     description: The relative distance of the fitted center of illumination to the
       center of the image. Relative to the distance to  an image corner. 0.0 is centered
       and 1.0 at a distance equal to the the corner of the image.
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: center_fitted_distance_relative
@@ -963,7 +963,7 @@ attributes:
   max_intensity:
     name: max_intensity
     description: The maximum intensity of the center of illumination
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: max_intensity
@@ -975,7 +975,7 @@ attributes:
     name: max_intensity_pos_y
     description: The y coordinate of the maximum intensity of the center of illumination.
       In pixels
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: max_intensity_pos_y
@@ -988,7 +988,7 @@ attributes:
     description: The relative y position of the maximum intensity of the center of
       illumination.  Relative to the image size along that axis. -1.0 is upper edge,
       0.0 is center and 1.0 is lower edge.
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: max_intensity_pos_y_relative
@@ -1002,7 +1002,7 @@ attributes:
     name: max_intensity_pos_x
     description: The x coordinate of the maximum intensity of the center of illumination.
       In pixels
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: max_intensity_pos_x
@@ -1015,7 +1015,7 @@ attributes:
     description: The relative x position of the maximum intensity of the center of
       illumination.  Relative to the image size along that axis. -1.0 is left edge,
       0.0 is center and 1.0 is right edge.
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: max_intensity_pos_x_relative
@@ -1030,7 +1030,7 @@ attributes:
     description: The relative distance of the maximum intensity to the center of the
       image. Relative to the distance to  an image corner. 0.0 is centered and 1.0
       at a distance equal to the the corner of the image.
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: max_intensity_distance_relative
@@ -1043,7 +1043,7 @@ attributes:
   top_left_intensity_mean:
     name: top_left_intensity_mean
     description: The mean intensity of the top-left corner of the image
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: top_left_intensity_mean
@@ -1055,7 +1055,7 @@ attributes:
     name: top_left_intensity_ratio
     description: The mean intensity of the top-left corner of the image  divided by
       the maximum intensity of the center of illumination
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: top_left_intensity_ratio
@@ -1066,7 +1066,7 @@ attributes:
   top_center_intensity_mean:
     name: top_center_intensity_mean
     description: The mean intensity of the top-center of the image
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: top_center_intensity_mean
@@ -1078,7 +1078,7 @@ attributes:
     name: top_center_intensity_ratio
     description: The mean intensity of the top-center of the image  divided by the
       maximum intensity of the center of illumination
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: top_center_intensity_ratio
@@ -1089,7 +1089,7 @@ attributes:
   top_right_intensity_mean:
     name: top_right_intensity_mean
     description: The mean intensity of the top-right corner of the image
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: top_right_intensity_mean
@@ -1101,7 +1101,7 @@ attributes:
     name: top_right_intensity_ratio
     description: The mean intensity of the top-right corner of the image  divided
       by the maximum intensity of the center of illumination
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: top_right_intensity_ratio
@@ -1112,7 +1112,7 @@ attributes:
   middle_left_intensity_mean:
     name: middle_left_intensity_mean
     description: The mean intensity of the middle-left of the image
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: middle_left_intensity_mean
@@ -1124,7 +1124,7 @@ attributes:
     name: middle_left_intensity_ratio
     description: The mean intensity of the middle-left of the image  divided by the
       maximum intensity of the center of illumination
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: middle_left_intensity_ratio
@@ -1135,7 +1135,7 @@ attributes:
   middle_center_intensity_mean:
     name: middle_center_intensity_mean
     description: The mean intensity of the middle-center of the image
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: middle_center_intensity_mean
@@ -1147,7 +1147,7 @@ attributes:
     name: middle_center_intensity_ratio
     description: The mean intensity of the middle-center of the image  divided by
       the maximum intensity of the center of illumination
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: middle_center_intensity_ratio
@@ -1158,7 +1158,7 @@ attributes:
   middle_right_intensity_mean:
     name: middle_right_intensity_mean
     description: The mean intensity of the middle-right of the image
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: middle_right_intensity_mean
@@ -1170,7 +1170,7 @@ attributes:
     name: middle_right_intensity_ratio
     description: The mean intensity of the middle-right of the image  divided by the
       maximum intensity of the center of illumination
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: middle_right_intensity_ratio
@@ -1181,7 +1181,7 @@ attributes:
   bottom_left_intensity_mean:
     name: bottom_left_intensity_mean
     description: The mean intensity of the bottom-left of the image
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: bottom_left_intensity_mean
@@ -1193,7 +1193,7 @@ attributes:
     name: bottom_left_intensity_ratio
     description: The mean intensity of the bottom-left of the image  divided by the
       maximum intensity of the center of illumination
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: bottom_left_intensity_ratio
@@ -1204,7 +1204,7 @@ attributes:
   bottom_center_intensity_mean:
     name: bottom_center_intensity_mean
     description: The mean intensity of the bottom-center of the image
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: bottom_center_intensity_mean
@@ -1216,7 +1216,7 @@ attributes:
     name: bottom_center_intensity_ratio
     description: The mean intensity of the bottom-center of the image  divided by
       the maximum intensity of the center of illumination
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: bottom_center_intensity_ratio
@@ -1227,7 +1227,7 @@ attributes:
   bottom_right_intensity_mean:
     name: bottom_right_intensity_mean
     description: The mean intensity of the bottom-right of the image
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: bottom_right_intensity_mean
@@ -1239,7 +1239,7 @@ attributes:
     name: bottom_right_intensity_ratio
     description: The mean intensity of the bottom-right of the image  divided by the
       maximum intensity of the center of illumination
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: bottom_right_intensity_ratio
@@ -1250,7 +1250,7 @@ attributes:
   data_reference:
     name: data_reference
     description: A reference to the data
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: false
     alias: data_reference
@@ -1262,7 +1262,7 @@ attributes:
   linked_references:
     name: linked_references
     description: A list of linked references
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: true
     alias: linked_references
@@ -1276,7 +1276,7 @@ attributes:
   name:
     name: name
     description: The human readable name of an entity
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: false
     alias: name
@@ -1289,7 +1289,7 @@ attributes:
   description:
     name: description
     description: A human readable description of an entity
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: false
     alias: description

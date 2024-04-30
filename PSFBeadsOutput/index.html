@@ -205,7 +205,7 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
 <h1 id="class-psfbeadsoutput">Class: PSFBeadsOutput</h1>
-<p>URI: <a href="https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/PSFBeadsOutput">microscopemetrics_schema:PSFBeadsOutput</a></p>
+<p>URI: <a href="https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/PSFBeadsOutput">microscopemetrics_schema:PSFBeadsOutput</a></p>
 <div class="mermaid"> classDiagram
     class PSFBeadsOutput
       MetricsOutput &lt;|-- PSFBeadsOutput
@@ -450,7 +450,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema</li>
+<li>from schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -476,14 +476,14 @@
 <h3 id="direct">Direct</h3>
 <details>
 <pre><code class="language-yaml">name: PSFBeadsOutput
-from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
 is_a: MetricsOutput
 attributes:
   analyzed_bead_centers:
     name: analyzed_bead_centers
     description: The centers of the beads that have been analyzed. One point shape
       will be provided per bead correctly detected. One ROI per channel.
-    from_schema: https://github.com/MontpellierRessourcesImagerie/microscope-metrics/blob/main/src/microscopemetrics/data_schema/samples/argolight_schema.yaml
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/argolight_schema
     rank: 1000
     multivalued: true
     domain_of:
@@ -495,7 +495,7 @@ attributes:
     name: discarded_bead_centers_lateral_edge
     description: The centers of the beads detected but discarded as too close to the
       edge of the image. One point will be provided per bead. One ROI per channel.
-    from_schema: https://github.com/MontpellierRessourcesImagerie/microscope-metrics/blob/main/src/microscopemetrics/data_schema/samples/argolight_schema.yaml
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/argolight_schema
     rank: 1000
     multivalued: true
     domain_of:
@@ -507,7 +507,7 @@ attributes:
     name: discarded_bead_centers_self_proximity
     description: The centers of the beads detected but discarded as too close to another
       bead. One point will be provided per bead. One ROI per channel.
-    from_schema: https://github.com/MontpellierRessourcesImagerie/microscope-metrics/blob/main/src/microscopemetrics/data_schema/samples/argolight_schema.yaml
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/argolight_schema
     rank: 1000
     multivalued: true
     domain_of:
@@ -520,7 +520,7 @@ attributes:
     description: The centers of the beads detected but considered as too close to
       the top and or bottom of the image. Measurements not considered for the dataset
       analysis. One point will be provided per bead. One ROI per channel.
-    from_schema: https://github.com/MontpellierRessourcesImagerie/microscope-metrics/blob/main/src/microscopemetrics/data_schema/samples/argolight_schema.yaml
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/argolight_schema
     rank: 1000
     multivalued: true
     domain_of:
@@ -534,7 +534,7 @@ attributes:
       and potentially represent a cluster of beads. Intensity robust z-score over
       requested threshold. Measurements not considered for the dataset analysis. One
       point will be provided per bead. One ROI per channel.
-    from_schema: https://github.com/MontpellierRessourcesImagerie/microscope-metrics/blob/main/src/microscopemetrics/data_schema/samples/argolight_schema.yaml
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/argolight_schema
     rank: 1000
     multivalued: true
     domain_of:
@@ -548,7 +548,7 @@ attributes:
       in z was not good enough.  Coefficient of determination (R^2) over requested
       threshold. Measurements in z not considered for the dataset analysis. One point
       will be provided per bead. One ROI per channel.
-    from_schema: https://github.com/MontpellierRessourcesImagerie/microscope-metrics/blob/main/src/microscopemetrics/data_schema/samples/argolight_schema.yaml
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/argolight_schema
     rank: 1000
     multivalued: true
     domain_of:
@@ -562,7 +562,7 @@ attributes:
       in y was not good enough.  Coefficient of determination (R^2) over requested
       threshold. Measurements in y not considered for the dataset analysis. One point
       will be provided per bead. One ROI per channel.
-    from_schema: https://github.com/MontpellierRessourcesImagerie/microscope-metrics/blob/main/src/microscopemetrics/data_schema/samples/argolight_schema.yaml
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/argolight_schema
     rank: 1000
     multivalued: true
     domain_of:
@@ -576,7 +576,7 @@ attributes:
       in x was not good enough.  Coefficient of determination (R^2) over requested
       threshold. Measurements in x not considered for the dataset analysis. One point
       will be provided per bead. One ROI per channel.
-    from_schema: https://github.com/MontpellierRessourcesImagerie/microscope-metrics/blob/main/src/microscopemetrics/data_schema/samples/argolight_schema.yaml
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/argolight_schema
     rank: 1000
     multivalued: true
     domain_of:
@@ -587,7 +587,7 @@ attributes:
   key_values:
     name: key_values
     description: The key measurements of the PSF beads analysis.
-    from_schema: https://github.com/MontpellierRessourcesImagerie/microscope-metrics/blob/main/src/microscopemetrics/data_schema/samples/argolight_schema.yaml
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/argolight_schema
     multivalued: false
     domain_of:
     - FieldIlluminationOutput
@@ -598,7 +598,7 @@ attributes:
   bead_properties:
     name: bead_properties
     description: Properties associated with the analysis of the beads.
-    from_schema: https://github.com/MontpellierRessourcesImagerie/microscope-metrics/blob/main/src/microscopemetrics/data_schema/samples/argolight_schema.yaml
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/argolight_schema
     rank: 1000
     multivalued: false
     domain_of:
@@ -610,7 +610,7 @@ attributes:
     name: bead_z_profiles
     description: The intensity profiles along the z axis of the analyzed beads as
       well as the fits.
-    from_schema: https://github.com/MontpellierRessourcesImagerie/microscope-metrics/blob/main/src/microscopemetrics/data_schema/samples/argolight_schema.yaml
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/argolight_schema
     rank: 1000
     multivalued: false
     domain_of:
@@ -622,7 +622,7 @@ attributes:
     name: bead_y_profiles
     description: The intensity profiles along the y axis of the analyzed beads as
       well as the fits.
-    from_schema: https://github.com/MontpellierRessourcesImagerie/microscope-metrics/blob/main/src/microscopemetrics/data_schema/samples/argolight_schema.yaml
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/argolight_schema
     rank: 1000
     multivalued: false
     domain_of:
@@ -634,7 +634,7 @@ attributes:
     name: bead_x_profiles
     description: The intensity profiles along the x axis of the analyzed beads as
       well as the fits.
-    from_schema: https://github.com/MontpellierRessourcesImagerie/microscope-metrics/blob/main/src/microscopemetrics/data_schema/samples/argolight_schema.yaml
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/argolight_schema
     rank: 1000
     multivalued: false
     domain_of:
@@ -648,14 +648,14 @@ attributes:
 <h3 id="induced">Induced</h3>
 <details>
 <pre><code class="language-yaml">name: PSFBeadsOutput
-from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
 is_a: MetricsOutput
 attributes:
   analyzed_bead_centers:
     name: analyzed_bead_centers
     description: The centers of the beads that have been analyzed. One point shape
       will be provided per bead correctly detected. One ROI per channel.
-    from_schema: https://github.com/MontpellierRessourcesImagerie/microscope-metrics/blob/main/src/microscopemetrics/data_schema/samples/argolight_schema.yaml
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/argolight_schema
     rank: 1000
     multivalued: true
     alias: analyzed_bead_centers
@@ -669,7 +669,7 @@ attributes:
     name: discarded_bead_centers_lateral_edge
     description: The centers of the beads detected but discarded as too close to the
       edge of the image. One point will be provided per bead. One ROI per channel.
-    from_schema: https://github.com/MontpellierRessourcesImagerie/microscope-metrics/blob/main/src/microscopemetrics/data_schema/samples/argolight_schema.yaml
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/argolight_schema
     rank: 1000
     multivalued: true
     alias: discarded_bead_centers_lateral_edge
@@ -683,7 +683,7 @@ attributes:
     name: discarded_bead_centers_self_proximity
     description: The centers of the beads detected but discarded as too close to another
       bead. One point will be provided per bead. One ROI per channel.
-    from_schema: https://github.com/MontpellierRessourcesImagerie/microscope-metrics/blob/main/src/microscopemetrics/data_schema/samples/argolight_schema.yaml
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/argolight_schema
     rank: 1000
     multivalued: true
     alias: discarded_bead_centers_self_proximity
@@ -698,7 +698,7 @@ attributes:
     description: The centers of the beads detected but considered as too close to
       the top and or bottom of the image. Measurements not considered for the dataset
       analysis. One point will be provided per bead. One ROI per channel.
-    from_schema: https://github.com/MontpellierRessourcesImagerie/microscope-metrics/blob/main/src/microscopemetrics/data_schema/samples/argolight_schema.yaml
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/argolight_schema
     rank: 1000
     multivalued: true
     alias: considered_bead_centers_axial_edge
@@ -714,7 +714,7 @@ attributes:
       and potentially represent a cluster of beads. Intensity robust z-score over
       requested threshold. Measurements not considered for the dataset analysis. One
       point will be provided per bead. One ROI per channel.
-    from_schema: https://github.com/MontpellierRessourcesImagerie/microscope-metrics/blob/main/src/microscopemetrics/data_schema/samples/argolight_schema.yaml
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/argolight_schema
     rank: 1000
     multivalued: true
     alias: considered_bead_centers_intensity_outlier
@@ -730,7 +730,7 @@ attributes:
       in z was not good enough.  Coefficient of determination (R^2) over requested
       threshold. Measurements in z not considered for the dataset analysis. One point
       will be provided per bead. One ROI per channel.
-    from_schema: https://github.com/MontpellierRessourcesImagerie/microscope-metrics/blob/main/src/microscopemetrics/data_schema/samples/argolight_schema.yaml
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/argolight_schema
     rank: 1000
     multivalued: true
     alias: considered_bead_centers_z_fit_quality
@@ -746,7 +746,7 @@ attributes:
       in y was not good enough.  Coefficient of determination (R^2) over requested
       threshold. Measurements in y not considered for the dataset analysis. One point
       will be provided per bead. One ROI per channel.
-    from_schema: https://github.com/MontpellierRessourcesImagerie/microscope-metrics/blob/main/src/microscopemetrics/data_schema/samples/argolight_schema.yaml
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/argolight_schema
     rank: 1000
     multivalued: true
     alias: considered_bead_centers_y_fit_quality
@@ -762,7 +762,7 @@ attributes:
       in x was not good enough.  Coefficient of determination (R^2) over requested
       threshold. Measurements in x not considered for the dataset analysis. One point
       will be provided per bead. One ROI per channel.
-    from_schema: https://github.com/MontpellierRessourcesImagerie/microscope-metrics/blob/main/src/microscopemetrics/data_schema/samples/argolight_schema.yaml
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/argolight_schema
     rank: 1000
     multivalued: true
     alias: considered_bead_centers_x_fit_quality
@@ -775,7 +775,7 @@ attributes:
   key_values:
     name: key_values
     description: The key measurements of the PSF beads analysis.
-    from_schema: https://github.com/MontpellierRessourcesImagerie/microscope-metrics/blob/main/src/microscopemetrics/data_schema/samples/argolight_schema.yaml
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/argolight_schema
     multivalued: false
     alias: key_values
     owner: PSFBeadsOutput
@@ -788,7 +788,7 @@ attributes:
   bead_properties:
     name: bead_properties
     description: Properties associated with the analysis of the beads.
-    from_schema: https://github.com/MontpellierRessourcesImagerie/microscope-metrics/blob/main/src/microscopemetrics/data_schema/samples/argolight_schema.yaml
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/argolight_schema
     rank: 1000
     multivalued: false
     alias: bead_properties
@@ -802,7 +802,7 @@ attributes:
     name: bead_z_profiles
     description: The intensity profiles along the z axis of the analyzed beads as
       well as the fits.
-    from_schema: https://github.com/MontpellierRessourcesImagerie/microscope-metrics/blob/main/src/microscopemetrics/data_schema/samples/argolight_schema.yaml
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/argolight_schema
     rank: 1000
     multivalued: false
     alias: bead_z_profiles
@@ -816,7 +816,7 @@ attributes:
     name: bead_y_profiles
     description: The intensity profiles along the y axis of the analyzed beads as
       well as the fits.
-    from_schema: https://github.com/MontpellierRessourcesImagerie/microscope-metrics/blob/main/src/microscopemetrics/data_schema/samples/argolight_schema.yaml
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/argolight_schema
     rank: 1000
     multivalued: false
     alias: bead_y_profiles
@@ -830,7 +830,7 @@ attributes:
     name: bead_x_profiles
     description: The intensity profiles along the x axis of the analyzed beads as
       well as the fits.
-    from_schema: https://github.com/MontpellierRessourcesImagerie/microscope-metrics/blob/main/src/microscopemetrics/data_schema/samples/argolight_schema.yaml
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/argolight_schema
     rank: 1000
     multivalued: false
     alias: bead_x_profiles
@@ -843,7 +843,7 @@ attributes:
   processing_application:
     name: processing_application
     description: The application used to process the dataset
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: true
     alias: processing_application
@@ -855,7 +855,7 @@ attributes:
   processing_version:
     name: processing_version
     description: The version of the application used to process the dataset
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: true
     alias: processing_version
@@ -867,7 +867,7 @@ attributes:
   processing_entity:
     name: processing_entity
     description: The entity that processed the dataset
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: true
     alias: processing_entity
@@ -879,7 +879,7 @@ attributes:
   processing_datetime:
     name: processing_datetime
     description: The datetime of the processing by microscope-metrics
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: false
     alias: processing_datetime
@@ -891,7 +891,7 @@ attributes:
   processing_log:
     name: processing_log
     description: The log of the processing by microscope-metrics
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: false
     alias: processing_log
@@ -903,7 +903,7 @@ attributes:
   warnings:
     name: warnings
     description: The warnings of the processing by microscope-metrics
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: true
     alias: warnings
@@ -915,7 +915,7 @@ attributes:
   errors:
     name: errors
     description: The errors of the processing by microscope-metrics
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: true
     alias: errors
@@ -927,7 +927,7 @@ attributes:
   comment:
     name: comment
     description: A human readable comment about the dataset
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: false
     alias: comment

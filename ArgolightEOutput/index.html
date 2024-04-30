@@ -205,7 +205,7 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
 <h1 id="class-argolighteoutput">Class: ArgolightEOutput</h1>
-<p>URI: <a href="https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/ArgolightEOutput">microscopemetrics_schema:ArgolightEOutput</a></p>
+<p>URI: <a href="https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/ArgolightEOutput">microscopemetrics_schema:ArgolightEOutput</a></p>
 <div class="mermaid"> classDiagram
     class ArgolightEOutput
       MetricsOutput &lt;|-- ArgolightEOutput
@@ -350,7 +350,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema</li>
+<li>from schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -376,13 +376,13 @@
 <h3 id="direct">Direct</h3>
 <details>
 <pre><code class="language-yaml">name: ArgolightEOutput
-from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
 is_a: MetricsOutput
 attributes:
   peaks_rois:
     name: peaks_rois
     description: ROIs of the peaks found in the argolight images. One per channel
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/samples/argolight_schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/argolight_schema
     rank: 1000
     multivalued: true
     domain_of:
@@ -391,7 +391,7 @@ attributes:
   key_measurements:
     name: key_measurements
     description: Key Measurements on Argolight E images
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/samples/argolight_schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/argolight_schema
     rank: 1000
     multivalued: false
     domain_of:
@@ -401,7 +401,7 @@ attributes:
     name: intensity_profiles
     description: Intensity profiles of the argolight lines provided as tables. One
       table per channel
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/samples/argolight_schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/argolight_schema
     multivalued: false
     domain_of:
     - FieldIlluminationOutput
@@ -413,13 +413,13 @@ attributes:
 <h3 id="induced">Induced</h3>
 <details>
 <pre><code class="language-yaml">name: ArgolightEOutput
-from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
 is_a: MetricsOutput
 attributes:
   peaks_rois:
     name: peaks_rois
     description: ROIs of the peaks found in the argolight images. One per channel
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/samples/argolight_schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/argolight_schema
     rank: 1000
     multivalued: true
     alias: peaks_rois
@@ -430,7 +430,7 @@ attributes:
   key_measurements:
     name: key_measurements
     description: Key Measurements on Argolight E images
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/samples/argolight_schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/argolight_schema
     rank: 1000
     multivalued: false
     alias: key_measurements
@@ -442,7 +442,7 @@ attributes:
     name: intensity_profiles
     description: Intensity profiles of the argolight lines provided as tables. One
       table per channel
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/samples/argolight_schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/argolight_schema
     multivalued: false
     alias: intensity_profiles
     owner: ArgolightEOutput
@@ -453,7 +453,7 @@ attributes:
   processing_application:
     name: processing_application
     description: The application used to process the dataset
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: true
     alias: processing_application
@@ -465,7 +465,7 @@ attributes:
   processing_version:
     name: processing_version
     description: The version of the application used to process the dataset
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: true
     alias: processing_version
@@ -477,7 +477,7 @@ attributes:
   processing_entity:
     name: processing_entity
     description: The entity that processed the dataset
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: true
     alias: processing_entity
@@ -489,7 +489,7 @@ attributes:
   processing_datetime:
     name: processing_datetime
     description: The datetime of the processing by microscope-metrics
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: false
     alias: processing_datetime
@@ -501,7 +501,7 @@ attributes:
   processing_log:
     name: processing_log
     description: The log of the processing by microscope-metrics
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: false
     alias: processing_log
@@ -513,7 +513,7 @@ attributes:
   warnings:
     name: warnings
     description: The warnings of the processing by microscope-metrics
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: true
     alias: warnings
@@ -525,7 +525,7 @@ attributes:
   errors:
     name: errors
     description: The errors of the processing by microscope-metrics
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: true
     alias: errors
@@ -537,7 +537,7 @@ attributes:
   comment:
     name: comment
     description: A human readable comment about the dataset
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: false
     alias: comment

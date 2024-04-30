@@ -205,7 +205,7 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
 <h1 id="class-fieldilluminationinput">Class: FieldIlluminationInput</h1>
-<p>URI: <a href="https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/FieldIlluminationInput">microscopemetrics_schema:FieldIlluminationInput</a></p>
+<p>URI: <a href="https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/FieldIlluminationInput">microscopemetrics_schema:FieldIlluminationInput</a></p>
 <div class="mermaid"> classDiagram
     class FieldIlluminationInput
       MetricsInput &lt;|-- FieldIlluminationInput
@@ -296,7 +296,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema</li>
+<li>from schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -322,7 +322,7 @@
 <h3 id="direct">Direct</h3>
 <details>
 <pre><code class="language-yaml">name: FieldIlluminationInput
-from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
 is_a: MetricsInput
 slots:
 - field_illumination_image
@@ -345,7 +345,7 @@ slot_usage:
 <h3 id="induced">Induced</h3>
 <details>
 <pre><code class="language-yaml">name: FieldIlluminationInput
-from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
 is_a: MetricsInput
 slot_usage:
   saturation_threshold:
@@ -362,7 +362,7 @@ attributes:
     description: 'Input parameter: homogeneity image provided in the order TZYXC.
       While the analysis accepts multiple channels, the T and Z dimensions are expected
       to be 1.'
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: field_illumination_image
@@ -376,7 +376,7 @@ attributes:
   bit_depth:
     name: bit_depth
     description: Detector bit depth
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: false
     alias: bit_depth
@@ -394,7 +394,7 @@ attributes:
     description: Tolerated saturation threshold. If the amount of saturated pixels
       is above this threshold,  the image is considered as saturated and the analysis
       is not performed.
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: false
     ifabsent: float(0.01)
@@ -413,7 +413,7 @@ attributes:
     name: corner_fraction
     description: 'Input parameter: the proportion of the image to be considered as
       corner or center'
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: false
     ifabsent: float(0.1)
@@ -429,7 +429,7 @@ attributes:
     name: sigma
     description: 'Input parameter: the sigma for the smoothing gaussian filter to
       be applied prior to analysis'
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: false
     ifabsent: float(5.0)

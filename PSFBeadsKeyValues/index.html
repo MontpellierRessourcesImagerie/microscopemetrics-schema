@@ -205,7 +205,7 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
 <h1 id="class-psfbeadskeyvalues">Class: PSFBeadsKeyValues</h1>
-<p>URI: <a href="https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/PSFBeadsKeyValues">microscopemetrics_schema:PSFBeadsKeyValues</a></p>
+<p>URI: <a href="https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/PSFBeadsKeyValues">microscopemetrics_schema:PSFBeadsKeyValues</a></p>
 <div class="mermaid"> classDiagram
     class PSFBeadsKeyValues
       KeyValues &lt;|-- PSFBeadsKeyValues
@@ -608,7 +608,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema</li>
+<li>from schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -634,7 +634,7 @@
 <h3 id="direct">Direct</h3>
 <details>
 <pre><code class="language-yaml">name: PSFBeadsKeyValues
-from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
 is_a: KeyValues
 slots:
 - channel_nr
@@ -682,13 +682,13 @@ slots:
 <h3 id="induced">Induced</h3>
 <details>
 <pre><code class="language-yaml">name: PSFBeadsKeyValues
-from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
 is_a: KeyValues
 attributes:
   channel_nr:
     name: channel_nr
     description: The channel number to which the measurements apply
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: channel_nr
@@ -702,7 +702,7 @@ attributes:
   nr_of_beads_analyzed:
     name: nr_of_beads_analyzed
     description: Number of beads analyzed. One value per channel.
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: nr_of_beads_analyzed
@@ -714,7 +714,7 @@ attributes:
     name: nr_of_beads_discarded_lateral_edge
     description: Number of beads discarded for being too close to the edge of the
       image. One value per channel.
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: nr_of_beads_discarded_lateral_edge
@@ -726,7 +726,7 @@ attributes:
     name: nr_of_beads_discarded_self_proximity
     description: Number of beads discarded for being too close to another bead. One
       value per channel.
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: nr_of_beads_discarded_self_proximity
@@ -739,7 +739,7 @@ attributes:
     description: Number of beads considered as being too close to the top and or bottom
       of the image. These beads are not considered for the z axis FWHM measurements.
       One value per channel.
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: nr_of_beads_considered_axial_edge
@@ -753,7 +753,7 @@ attributes:
       a cluster of beads. These beads have a robust z-score over the requested threshold.
       Measurements on these beads are not averaged into the key measurements. One
       value per channel.
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: nr_of_beads_considered_intensity_outlier
@@ -766,7 +766,7 @@ attributes:
     description: Number of beads considered as having a bad fit quality in the z axis.
       The fitting meassureemnts are  not averaged into the key measurements. One value
       per channel.
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: nr_of_beads_considered_bad_z_fit
@@ -779,7 +779,7 @@ attributes:
     description: Number of beads considered as having a bad fit quality in the y axis.
       The fitting meassureemnts are  not averaged into the key measurements. One value
       per channel.
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: nr_of_beads_considered_bad_y_fit
@@ -792,7 +792,7 @@ attributes:
     description: Number of beads considered as having a bad fit quality in the x axis.
       The fitting meassureemnts are  not averaged into the key measurements. One value
       per channel.
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: nr_of_beads_considered_bad_x_fit
@@ -804,7 +804,7 @@ attributes:
     name: fit_r2_z_mean
     description: Mean residual sum of squares in the z axis for the analyzed beads.
       One value per channel.
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: fit_r2_z_mean
@@ -816,7 +816,7 @@ attributes:
     name: fit_r2_z_median
     description: Median residual sum of squares in the z axis for the analyzed beads.
       One value per channel.
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: fit_r2_z_median
@@ -828,7 +828,7 @@ attributes:
     name: fit_r2_z_std
     description: Standard deviation of the residual sum of squares in the z axis for
       the analyzed beads. One value per channel.
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: fit_r2_z_std
@@ -840,7 +840,7 @@ attributes:
     name: fit_r2_y_mean
     description: Mean residual sum of squares in the y axis for the analyzed beads.
       One value per channel.
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: fit_r2_y_mean
@@ -852,7 +852,7 @@ attributes:
     name: fit_r2_y_median
     description: Median residual sum of squares in the y axis for the analyzed beads.
       One value per channel.
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: fit_r2_y_median
@@ -864,7 +864,7 @@ attributes:
     name: fit_r2_y_std
     description: Standard deviation of the residual sum of squares in the y axis for
       the analyzed beads. One value per channel.
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: fit_r2_y_std
@@ -876,7 +876,7 @@ attributes:
     name: fit_r2_x_mean
     description: Mean residual sum of squares in the x axis for the analyzed beads.
       One value per channel.
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: fit_r2_x_mean
@@ -888,7 +888,7 @@ attributes:
     name: fit_r2_x_median
     description: Median residual sum of squares in the x axis for the analyzed beads.
       One value per channel.
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: fit_r2_x_median
@@ -900,7 +900,7 @@ attributes:
     name: fit_r2_x_std
     description: Standard deviation of the residual sum of squares in the x axis for
       the analyzed beads. One value per channel.
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: fit_r2_x_std
@@ -912,7 +912,7 @@ attributes:
     name: resolution_mean_fwhm_z_pixels
     description: Mean FWHM for the analyzed beads in the Z axis in pixels. One value
       per channel.
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: resolution_mean_fwhm_z_pixels
@@ -924,7 +924,7 @@ attributes:
     name: resolution_median_fwhm_z_pixels
     description: Median FWHM for the analyzed beads in the Z axis in pixels. One value
       per channel.
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: resolution_median_fwhm_z_pixels
@@ -936,7 +936,7 @@ attributes:
     name: resolution_std_fwhm_z_pixels
     description: Standard deviation of the FWHM for the analyzed beads in the Z axis
       in pixels. One value per channel.
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: resolution_std_fwhm_z_pixels
@@ -948,7 +948,7 @@ attributes:
     name: resolution_mean_fwhm_y_pixels
     description: Mean FWHM for the analyzed beads in the Y axis in pixels. One value
       per channel.
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: resolution_mean_fwhm_y_pixels
@@ -960,7 +960,7 @@ attributes:
     name: resolution_median_fwhm_y_pixels
     description: Median FWHM for the analyzed beads in the Y axis in pixels. One value
       per channel.
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: resolution_median_fwhm_y_pixels
@@ -972,7 +972,7 @@ attributes:
     name: resolution_std_fwhm_y_pixels
     description: Standard deviation of the FWHM for the analyzed beads in the Y axis
       in pixels. One value per channel.
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: resolution_std_fwhm_y_pixels
@@ -984,7 +984,7 @@ attributes:
     name: resolution_mean_fwhm_x_pixels
     description: Mean FWHM for the analyzed beads in the X axis in pixels. One value
       per channel.
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: resolution_mean_fwhm_x_pixels
@@ -996,7 +996,7 @@ attributes:
     name: resolution_median_fwhm_x_pixels
     description: Median FWHM for the analyzed beads in the X axis in pixels. One value
       per channel.
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: resolution_median_fwhm_x_pixels
@@ -1008,7 +1008,7 @@ attributes:
     name: resolution_std_fwhm_x_pixels
     description: Standard deviation of the FWHM for the analyzed beads in the X axis
       in pixels. One value per channel.
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: resolution_std_fwhm_x_pixels
@@ -1020,7 +1020,7 @@ attributes:
     name: resolution_mean_fwhm_z_microns
     description: Mean FWHM for the analyzed beads in the Z axis in microns. One value
       per channel.
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: resolution_mean_fwhm_z_microns
@@ -1032,7 +1032,7 @@ attributes:
     name: resolution_median_fwhm_z_microns
     description: Median FWHM for the analyzed beads in the Z axis in microns. One
       value per channel.
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: resolution_median_fwhm_z_microns
@@ -1044,7 +1044,7 @@ attributes:
     name: resolution_std_fwhm_z_microns
     description: Standard deviation of the FWHM for the analyzed beads in the Z axis
       in microns. One value per channel.
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: resolution_std_fwhm_z_microns
@@ -1056,7 +1056,7 @@ attributes:
     name: resolution_mean_fwhm_y_microns
     description: Mean FWHM for the analyzed beads in the Y axis in microns. One value
       per channel.
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: resolution_mean_fwhm_y_microns
@@ -1068,7 +1068,7 @@ attributes:
     name: resolution_median_fwhm_y_microns
     description: Median FWHM for the analyzed beads in the Y axis in microns. One
       value per channel.
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: resolution_median_fwhm_y_microns
@@ -1080,7 +1080,7 @@ attributes:
     name: resolution_std_fwhm_y_microns
     description: Standard deviation of the FWHM for the analyzed beads in the Y axis
       in microns. One value per channel.
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: resolution_std_fwhm_y_microns
@@ -1092,7 +1092,7 @@ attributes:
     name: resolution_mean_fwhm_x_microns
     description: Mean FWHM for the analyzed beads in the X axis in microns. One value
       per channel.
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: resolution_mean_fwhm_x_microns
@@ -1104,7 +1104,7 @@ attributes:
     name: resolution_median_fwhm_x_microns
     description: Median FWHM for the analyzed beads in the X axis in microns. One
       value per channel.
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: resolution_median_fwhm_x_microns
@@ -1116,7 +1116,7 @@ attributes:
     name: resolution_std_fwhm_x_microns
     description: Standard deviation of the FWHM for the analyzed beads in the X axis
       in microns. One value per channel.
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: resolution_std_fwhm_x_microns
@@ -1128,7 +1128,7 @@ attributes:
     name: resolution_mean_fwhm_lateral_asymmetry_ratio
     description: Mean lateral FWHM asymmetry ratio for the analyzed beads. One value
       per channel.
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: resolution_mean_fwhm_lateral_asymmetry_ratio
@@ -1140,7 +1140,7 @@ attributes:
     name: resolution_median_fwhm_lateral_asymmetry_ratio
     description: Median lateral FWHM asymmetry ratio for the analyzed beads. One value
       per channel.
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: resolution_median_fwhm_lateral_asymmetry_ratio
@@ -1152,7 +1152,7 @@ attributes:
     name: resolution_std_fwhm_lateral_asymmetry_ratio
     description: Standard deviation of the lateral FWHM asymmetry ratio for the analyzed
       beads. One value per channel.
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: true
     alias: resolution_std_fwhm_lateral_asymmetry_ratio
@@ -1163,7 +1163,7 @@ attributes:
   data_reference:
     name: data_reference
     description: A reference to the data
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: false
     alias: data_reference
@@ -1175,7 +1175,7 @@ attributes:
   linked_references:
     name: linked_references
     description: A list of linked references
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema/core_schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
     multivalued: true
     alias: linked_references
@@ -1189,7 +1189,7 @@ attributes:
   name:
     name: name
     description: The human readable name of an entity
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: false
     alias: name
@@ -1202,7 +1202,7 @@ attributes:
   description:
     name: description
     description: A human readable description of an entity
-    from_schema: https://w3id.org/MontpellierRessourcesImagerie/microscopemetrics-schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
     multivalued: false
     alias: description
