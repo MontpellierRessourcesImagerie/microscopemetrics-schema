@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/channels/">
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-8.5.10">
     
     
       
@@ -317,6 +317,7 @@
 
 
 <h1 id="slot-channels">Slot: channels</h1>
+<p><em>The channels of the ChannelSeries</em></p>
 <p>URI: <a href="https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/channels">microscopemetrics_schema:channels</a></p>
 <!-- no inheritance hierarchy -->
 
@@ -360,15 +361,16 @@
 <pre><code class="language-yaml">name: channels
 implements:
 - linkml:elements
+description: The channels of the ChannelSeries
 from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
 rank: 1000
-multivalued: true
 alias: channels
 owner: ChannelSeries
 domain_of:
 - ChannelSeries
 range: Channel
 required: true
+multivalued: true
 
 </code></pre>
 

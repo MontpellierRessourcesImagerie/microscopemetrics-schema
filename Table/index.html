@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/Table/" rel="canonical"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.5.3, mkdocs-material-8.5.10" name="generator"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-8.5.10" name="generator"/>
 <title>Class: Table - microscopemetrics-schema</title>
 <link href="../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
@@ -206,30 +206,55 @@
 </a>
 <h1 id="class-table">Class: Table</h1>
 <p><em>A microscope-metrics table</em></p>
+<ul>
+<li><strong>NOTE</strong>: this is an abstract class and should not be instantiated directly</li>
+</ul>
 <p>URI: <a href="https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/Table">microscopemetrics_schema:Table</a></p>
 <div class="mermaid"> classDiagram
     class Table
+    click Table href "../Table"
       MetricsObject &lt;|-- Table
+        click MetricsObject href "../MetricsObject"
 
-      Table : column_series
+      Table : columns
 
-          Table --&gt; ColumnSeries : column_series
+
+
+
+    Table --&gt; "1..*" Column : columns
+    click Column href "../Column"
+
 
       Table : data_reference
 
-          Table --&gt; DataReference : data_reference
+
+
+
+    Table --&gt; "0..1" DataReference : data_reference
+    click DataReference href "../DataReference"
+
 
       Table : description
 
       Table : linked_references
 
-          Table --&gt; DataReference : linked_references
+
+
+
+    Table --&gt; "*" DataReference : linked_references
+    click DataReference href "../DataReference"
+
 
       Table : name
 
       Table : table_data
 
-          Table --&gt; MetaObject : table_data
+
+
+
+    Table --&gt; "0..1" MetaObject : table_data
+    click MetaObject href "../MetaObject"
+
 
 
 </div>
@@ -255,9 +280,9 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../column_series/">column_series</a></td>
-<td>1..1 <br/> <a href="../ColumnSeries/">ColumnSeries</a></td>
-<td></td>
+<td><a href="../columns/">columns</a></td>
+<td>1..* <br/> <a href="../Column/">Column</a></td>
+<td>The columns of the table</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -274,7 +299,7 @@
 </tr>
 <tr>
 <td><a href="../linked_references/">linked_references</a></td>
-<td>0..* <br/> <a href="../DataReference/">DataReference</a></td>
+<td>* <br/> <a href="../DataReference/">DataReference</a></td>
 <td>A list of linked references</td>
 <td><a href="../MetricsObject/">MetricsObject</a></td>
 </tr>
@@ -329,37 +354,19 @@
 </tr>
 <tr>
 <td><a href="../PSFBeadsOutput/">PSFBeadsOutput</a></td>
-<td><a href="../bead_z_profiles/">bead_z_profiles</a></td>
+<td><a href="../bead_profiles_z/">bead_profiles_z</a></td>
 <td>range</td>
 <td><a href="./">Table</a></td>
 </tr>
 <tr>
 <td><a href="../PSFBeadsOutput/">PSFBeadsOutput</a></td>
-<td><a href="../bead_y_profiles/">bead_y_profiles</a></td>
+<td><a href="../bead_profiles_y/">bead_profiles_y</a></td>
 <td>range</td>
 <td><a href="./">Table</a></td>
 </tr>
 <tr>
 <td><a href="../PSFBeadsOutput/">PSFBeadsOutput</a></td>
-<td><a href="../bead_x_profiles/">bead_x_profiles</a></td>
-<td>range</td>
-<td><a href="./">Table</a></td>
-</tr>
-<tr>
-<td><a href="../ArgolightBOutput/">ArgolightBOutput</a></td>
-<td><a href="../spots_properties/">spots_properties</a></td>
-<td>range</td>
-<td><a href="./">Table</a></td>
-</tr>
-<tr>
-<td><a href="../ArgolightBOutput/">ArgolightBOutput</a></td>
-<td><a href="../spots_distances/">spots_distances</a></td>
-<td>range</td>
-<td><a href="./">Table</a></td>
-</tr>
-<tr>
-<td><a href="../ArgolightEOutput/">ArgolightEOutput</a></td>
-<td><a href="../intensity_profiles/">intensity_profiles</a></td>
+<td><a href="../bead_profiles_x/">bead_profiles_x</a></td>
 <td>range</td>
 <td><a href="./">Table</a></td>
 </tr>
@@ -397,25 +404,32 @@
 description: A microscope-metrics table
 from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
 is_a: MetricsObject
+abstract: true
 attributes:
-  column_series:
-    name: column_series
+  columns:
+    name: columns
+    implements:
+    - linkml:elements
+    description: The columns of the table
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
     domain_of:
     - Table
-    range: ColumnSeries
+    range: Column
     required: true
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
   table_data:
     name: table_data
     description: A non-required slot for non-serializable table data object
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
-    rank: 1000
-    multivalued: false
     domain_of:
+    - KeyMeasurements
     - Table
     range: MetaObject
     required: false
+    multivalued: false
 
 </code></pre>
 </details>
@@ -425,53 +439,60 @@ attributes:
 description: A microscope-metrics table
 from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
 is_a: MetricsObject
+abstract: true
 attributes:
-  column_series:
-    name: column_series
+  columns:
+    name: columns
+    implements:
+    - linkml:elements
+    description: The columns of the table
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
-    alias: column_series
+    alias: columns
     owner: Table
     domain_of:
     - Table
-    range: ColumnSeries
+    range: Column
     required: true
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
   table_data:
     name: table_data
     description: A non-required slot for non-serializable table data object
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
-    rank: 1000
-    multivalued: false
     alias: table_data
     owner: Table
     domain_of:
+    - KeyMeasurements
     - Table
     range: MetaObject
     required: false
+    multivalued: false
   data_reference:
     name: data_reference
     description: A reference to the data
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
-    multivalued: false
     alias: data_reference
     owner: Table
     domain_of:
     - MetricsObject
     range: DataReference
     required: false
+    multivalued: false
   linked_references:
     name: linked_references
     description: A list of linked references
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
-    multivalued: true
     alias: linked_references
     owner: Table
     domain_of:
     - MetricsObject
     range: DataReference
     required: false
+    multivalued: true
     inlined: true
     inlined_as_list: true
   name:
@@ -479,7 +500,6 @@ attributes:
     description: The human readable name of an entity
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
-    multivalued: false
     alias: name
     owner: Table
     domain_of:
@@ -487,12 +507,12 @@ attributes:
     - Experimenter
     range: string
     required: false
+    multivalued: false
   description:
     name: description
     description: A human readable description of an entity
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
-    multivalued: false
     alias: description
     owner: Table
     domain_of:
@@ -500,6 +520,7 @@ attributes:
     - Tag
     range: string
     required: false
+    multivalued: false
 
 </code></pre>
 </details>
@@ -528,5 +549,7 @@ attributes:
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["content.tabs.link"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
 <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
-<script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script><script>mermaid.initialize({});</script></body>
+<script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
+mermaid.initialize({});</script><script type="module">import mermaid from "https://unpkg.com/mermaid@10.9.0/dist/mermaid.esm.min.mjs";
+mermaid.initialize({});</script></body>
 </html>

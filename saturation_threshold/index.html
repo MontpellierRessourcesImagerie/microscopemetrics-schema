@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/saturation_threshold/">
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-8.5.10">
     
     
       
@@ -332,24 +332,14 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../FieldIlluminationInput/">FieldIlluminationInput</a></td>
+<td><a href="../FieldIlluminationInputParameters/">FieldIlluminationInputParameters</a></td>
 <td></td>
 <td>yes</td>
 </tr>
 <tr>
-<td><a href="../PSFBeadsInput/">PSFBeadsInput</a></td>
+<td><a href="../PSFBeadsInputParameters/">PSFBeadsInputParameters</a></td>
 <td></td>
 <td>no</td>
-</tr>
-<tr>
-<td><a href="../ArgolightBInput/">ArgolightBInput</a></td>
-<td></td>
-<td>yes</td>
-</tr>
-<tr>
-<td><a href="../ArgolightEInput/">ArgolightEInput</a></td>
-<td></td>
-<td>yes</td>
 </tr>
 </tbody>
 </table>
@@ -379,15 +369,13 @@ description: Tolerated saturation threshold. If the amount of saturated pixels i
   not performed.
 from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
 rank: 1000
-multivalued: false
 ifabsent: float(0.01)
 alias: saturation_threshold
 domain_of:
-- FieldIlluminationInput
-- PSFBeadsInput
-- ArgolightBInput
-- ArgolightEInput
+- FieldIlluminationInputParameters
+- PSFBeadsInputParameters
 range: float
+multivalued: false
 minimum_value: 0.0
 maximum_value: 1.0
 

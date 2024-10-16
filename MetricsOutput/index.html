@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/MetricsOutput/" rel="canonical"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.5.3, mkdocs-material-8.5.10" name="generator"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-8.5.10" name="generator"/>
 <title>Class: MetricsOutput - microscopemetrics-schema</title>
 <link href="../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
@@ -212,14 +212,20 @@
 <p>URI: <a href="https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/MetricsOutput">microscopemetrics_schema:MetricsOutput</a></p>
 <div class="mermaid"> classDiagram
     class MetricsOutput
+    click MetricsOutput href "../MetricsOutput"
       MetricsOutput &lt;|-- FieldIlluminationOutput
+        click FieldIlluminationOutput href "../FieldIlluminationOutput"
       MetricsOutput &lt;|-- PSFBeadsOutput
-      MetricsOutput &lt;|-- ArgolightBOutput
-      MetricsOutput &lt;|-- ArgolightEOutput
+        click PSFBeadsOutput href "../PSFBeadsOutput"
 
       MetricsOutput : comment
 
-          MetricsOutput --&gt; Comment : comment
+
+
+
+    MetricsOutput --&gt; "0..1" Comment : comment
+    click Comment href "../Comment"
+
 
       MetricsOutput : errors
 
@@ -233,6 +239,10 @@
 
       MetricsOutput : processing_version
 
+      MetricsOutput : validated
+
+      MetricsOutput : validation_datetime
+
       MetricsOutput : warnings
 
 
@@ -242,8 +252,6 @@
 <li><strong>MetricsOutput</strong><ul>
 <li><a href="../FieldIlluminationOutput/">FieldIlluminationOutput</a></li>
 <li><a href="../PSFBeadsOutput/">PSFBeadsOutput</a></li>
-<li><a href="../ArgolightBOutput/">ArgolightBOutput</a></li>
-<li><a href="../ArgolightEOutput/">ArgolightEOutput</a></li>
 </ul>
 </li>
 </ul>
@@ -272,13 +280,13 @@
 </tr>
 <tr>
 <td><a href="../processing_entity/">processing_entity</a></td>
-<td>0..* <br/> <a href="../String/">String</a></td>
+<td>* <br/> <a href="../String/">String</a></td>
 <td>The entity that processed the dataset</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../processing_datetime/">processing_datetime</a></td>
-<td>1..1 <br/> <a href="../datetime/">datetime</a></td>
+<td>1 <br/> <a href="../datetime/">datetime</a></td>
 <td>The datetime of the processing by microscope-metrics</td>
 <td>direct</td>
 </tr>
@@ -290,14 +298,26 @@
 </tr>
 <tr>
 <td><a href="../warnings/">warnings</a></td>
-<td>0..* <br/> <a href="../String/">String</a></td>
+<td>* <br/> <a href="../String/">String</a></td>
 <td>The warnings of the processing by microscope-metrics</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../errors/">errors</a></td>
-<td>0..* <br/> <a href="../String/">String</a></td>
+<td>* <br/> <a href="../String/">String</a></td>
 <td>The errors of the processing by microscope-metrics</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../validated/">validated</a></td>
+<td>1 <br/> <a href="../Boolean/">Boolean</a></td>
+<td>Has the dataset been validated by a human</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../validation_datetime/">validation_datetime</a></td>
+<td>0..1 <br/> <a href="../datetime/">datetime</a></td>
+<td>The datetime of the validation</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -365,81 +385,102 @@ attributes:
     description: The application used to process the dataset
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
-    multivalued: true
     domain_of:
     - MetricsOutput
     range: string
     required: true
+    multivalued: true
   processing_version:
     name: processing_version
     description: The version of the application used to process the dataset
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
-    multivalued: true
     domain_of:
     - MetricsOutput
     range: string
     required: true
+    multivalued: true
   processing_entity:
     name: processing_entity
     description: The entity that processed the dataset
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
-    multivalued: true
     domain_of:
     - MetricsOutput
     range: string
     required: false
+    multivalued: true
   processing_datetime:
     name: processing_datetime
     description: The datetime of the processing by microscope-metrics
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
-    multivalued: false
     domain_of:
     - MetricsOutput
     range: datetime
     required: true
+    multivalued: false
   processing_log:
     name: processing_log
     description: The log of the processing by microscope-metrics
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
-    multivalued: false
     domain_of:
     - MetricsOutput
     range: string
     required: false
+    multivalued: false
   warnings:
     name: warnings
     description: The warnings of the processing by microscope-metrics
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
-    multivalued: true
     domain_of:
     - MetricsOutput
     range: string
     required: false
+    multivalued: true
   errors:
     name: errors
     description: The errors of the processing by microscope-metrics
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
-    multivalued: true
     domain_of:
     - MetricsOutput
     range: string
     required: false
+    multivalued: true
+  validated:
+    name: validated
+    description: Has the dataset been validated by a human
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
+    rank: 1000
+    ifabsent: 'False'
+    domain_of:
+    - MetricsOutput
+    range: boolean
+    required: true
+    multivalued: false
+  validation_datetime:
+    name: validation_datetime
+    description: The datetime of the validation
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
+    rank: 1000
+    domain_of:
+    - MetricsOutput
+    range: datetime
+    required: false
+    multivalued: false
   comment:
     name: comment
     description: A human readable comment about the dataset
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
-    multivalued: false
     domain_of:
     - MetricsOutput
     range: Comment
     required: false
+    multivalued: false
 
 </code></pre>
 </details>
@@ -455,97 +496,122 @@ attributes:
     description: The application used to process the dataset
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
-    multivalued: true
     alias: processing_application
     owner: MetricsOutput
     domain_of:
     - MetricsOutput
     range: string
     required: true
+    multivalued: true
   processing_version:
     name: processing_version
     description: The version of the application used to process the dataset
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
-    multivalued: true
     alias: processing_version
     owner: MetricsOutput
     domain_of:
     - MetricsOutput
     range: string
     required: true
+    multivalued: true
   processing_entity:
     name: processing_entity
     description: The entity that processed the dataset
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
-    multivalued: true
     alias: processing_entity
     owner: MetricsOutput
     domain_of:
     - MetricsOutput
     range: string
     required: false
+    multivalued: true
   processing_datetime:
     name: processing_datetime
     description: The datetime of the processing by microscope-metrics
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
-    multivalued: false
     alias: processing_datetime
     owner: MetricsOutput
     domain_of:
     - MetricsOutput
     range: datetime
     required: true
+    multivalued: false
   processing_log:
     name: processing_log
     description: The log of the processing by microscope-metrics
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
-    multivalued: false
     alias: processing_log
     owner: MetricsOutput
     domain_of:
     - MetricsOutput
     range: string
     required: false
+    multivalued: false
   warnings:
     name: warnings
     description: The warnings of the processing by microscope-metrics
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
-    multivalued: true
     alias: warnings
     owner: MetricsOutput
     domain_of:
     - MetricsOutput
     range: string
     required: false
+    multivalued: true
   errors:
     name: errors
     description: The errors of the processing by microscope-metrics
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
-    multivalued: true
     alias: errors
     owner: MetricsOutput
     domain_of:
     - MetricsOutput
     range: string
     required: false
+    multivalued: true
+  validated:
+    name: validated
+    description: Has the dataset been validated by a human
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
+    rank: 1000
+    ifabsent: 'False'
+    alias: validated
+    owner: MetricsOutput
+    domain_of:
+    - MetricsOutput
+    range: boolean
+    required: true
+    multivalued: false
+  validation_datetime:
+    name: validation_datetime
+    description: The datetime of the validation
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
+    rank: 1000
+    alias: validation_datetime
+    owner: MetricsOutput
+    domain_of:
+    - MetricsOutput
+    range: datetime
+    required: false
+    multivalued: false
   comment:
     name: comment
     description: A human readable comment about the dataset
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
-    multivalued: false
     alias: comment
     owner: MetricsOutput
     domain_of:
     - MetricsOutput
     range: Comment
     required: false
+    multivalued: false
 
 </code></pre>
 </details>
@@ -574,5 +640,7 @@ attributes:
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["content.tabs.link"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
 <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
-<script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script><script>mermaid.initialize({});</script></body>
+<script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
+mermaid.initialize({});</script><script type="module">import mermaid from "https://unpkg.com/mermaid@10.9.0/dist/mermaid.esm.min.mjs";
+mermaid.initialize({});</script></body>
 </html>

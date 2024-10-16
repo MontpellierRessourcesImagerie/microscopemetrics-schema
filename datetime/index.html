@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/datetime/">
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-8.5.10">
     
     
       
@@ -384,6 +384,12 @@
 <td><a href="./">datetime</a></td>
 </tr>
 <tr>
+<td><a href="../MetricsOutput/">MetricsOutput</a></td>
+<td><a href="../validation_datetime/">validation_datetime</a></td>
+<td>range</td>
+<td><a href="./">datetime</a></td>
+</tr>
+<tr>
 <td><a href="../Image/">Image</a></td>
 <td><a href="../acquisition_datetime/">acquisition_datetime</a></td>
 <td>range</td>
@@ -408,6 +414,12 @@
 <td><a href="./">datetime</a></td>
 </tr>
 <tr>
+<td><a href="../FieldIlluminationOutput/">FieldIlluminationOutput</a></td>
+<td><a href="../validation_datetime/">validation_datetime</a></td>
+<td>range</td>
+<td><a href="./">datetime</a></td>
+</tr>
+<tr>
 <td><a href="../PSFBeadsDataset/">PSFBeadsDataset</a></td>
 <td><a href="../acquisition_datetime/">acquisition_datetime</a></td>
 <td>range</td>
@@ -420,26 +432,8 @@
 <td><a href="./">datetime</a></td>
 </tr>
 <tr>
-<td><a href="../ArgolightBDataset/">ArgolightBDataset</a></td>
-<td><a href="../acquisition_datetime/">acquisition_datetime</a></td>
-<td>range</td>
-<td><a href="./">datetime</a></td>
-</tr>
-<tr>
-<td><a href="../ArgolightBOutput/">ArgolightBOutput</a></td>
-<td><a href="../processing_datetime/">processing_datetime</a></td>
-<td>range</td>
-<td><a href="./">datetime</a></td>
-</tr>
-<tr>
-<td><a href="../ArgolightEDataset/">ArgolightEDataset</a></td>
-<td><a href="../acquisition_datetime/">acquisition_datetime</a></td>
-<td>range</td>
-<td><a href="./">datetime</a></td>
-</tr>
-<tr>
-<td><a href="../ArgolightEOutput/">ArgolightEOutput</a></td>
-<td><a href="../processing_datetime/">processing_datetime</a></td>
+<td><a href="../PSFBeadsOutput/">PSFBeadsOutput</a></td>
+<td><a href="../validation_datetime/">validation_datetime</a></td>
 <td>range</td>
 <td><a href="./">datetime</a></td>
 </tr>
@@ -457,13 +451,13 @@
 description: The datetime to which the comment is referring
 from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
 rank: 1000
-multivalued: false
 alias: datetime
 owner: Comment
 domain_of:
 - Comment
 range: datetime
 required: true
+multivalued: false
 
 </code></pre>
 

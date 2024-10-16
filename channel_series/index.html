@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/channel_series/">
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-8.5.10">
     
     
       
@@ -317,6 +317,7 @@
 
 
 <h1 id="slot-channel_series">Slot: channel_series</h1>
+<p><em>A series representing channels for multi-channel images.</em></p>
 <p>URI: <a href="https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/channel_series">microscopemetrics_schema:channel_series</a></p>
 <!-- no inheritance hierarchy -->
 
@@ -331,13 +332,13 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../Image/">Image</a></td>
-<td>A microscope-metrics image</td>
+<td><a href="../ImageMask/">ImageMask</a></td>
+<td>A mask image</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../ImageMask/">ImageMask</a></td>
-<td>A mask image</td>
+<td><a href="../Image/">Image</a></td>
+<td>A microscope-metrics image</td>
 <td>no</td>
 </tr>
 </tbody>
@@ -357,6 +358,7 @@
 <pre><code class="language-yaml">name: channel_series
 implements:
 - linkml:axis4
+description: A series representing channels for multi-channel images.
 from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
 rank: 1000
 alias: channel_series

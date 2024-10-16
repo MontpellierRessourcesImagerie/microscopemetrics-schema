@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/protocol/">
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-8.5.10">
     
     
       
@@ -336,6 +336,26 @@
 <td>A sample is a standard physical object that is imaged by a microscope</td>
 <td>no</td>
 </tr>
+<tr>
+<td><a href="../HomogeneousField/">HomogeneousField</a></td>
+<td>An homogeneous field</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../FluorescentHomogeneousThickField/">FluorescentHomogeneousThickField</a></td>
+<td>An homogeneous field with a fluorescent thick sample</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../PSFBeads/">PSFBeads</a></td>
+<td>A sample of sub-resolution sized beads used to measure the PSF of a microscop...</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../FluorescentHomogeneousThinField/">FluorescentHomogeneousThinField</a></td>
+<td>An homogeneous field with a fluorescent thin sample</td>
+<td>no</td>
+</tr>
 </tbody>
 </table>
 <h2 id="properties">Properties</h2>
@@ -359,13 +379,13 @@
 description: The protocol used to prepare the sample
 from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
 rank: 1000
-multivalued: false
 alias: protocol
 owner: Sample
 domain_of:
 - Sample
 range: Protocol
 required: true
+multivalued: false
 inlined: false
 
 </code></pre>

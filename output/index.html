@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/output/">
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-8.5.10">
     
     
       
@@ -274,6 +274,19 @@
     Identifier and Mapping Information
   </a>
   
+    <nav class="md-nav" aria-label="Identifier and Mapping Information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schema-source" class="md-nav__link">
+    Schema Source
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -304,6 +317,7 @@
 
 
 <h1 id="slot-output">Slot: output</h1>
+<p><em>The output of the analysis</em></p>
 <p>URI: <a href="https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/output">microscopemetrics_schema:output</a></p>
 <!-- no inheritance hierarchy -->
 
@@ -318,11 +332,6 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../MetricsDataset/">MetricsDataset</a></td>
-<td>A base object on which microscope-metrics runs the analysis</td>
-<td>no</td>
-</tr>
-<tr>
 <td><a href="../FieldIlluminationDataset/">FieldIlluminationDataset</a></td>
 <td>A field illumination dataset</td>
 <td>no</td>
@@ -333,34 +342,36 @@
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../ArgolightBDataset/">ArgolightBDataset</a></td>
-<td>An Argolight sample pattern B dataset</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../ArgolightEDataset/">ArgolightEDataset</a></td>
-<td>An Argolight sample pattern E dataset</td>
+<td><a href="../MetricsDataset/">MetricsDataset</a></td>
+<td>A base object on which microscope-metrics runs the analysis</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>Range: <a href="../String/">String</a></li>
+<li>Range: <a href="../MetricsOutput/">MetricsOutput</a></li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
+<h3 id="schema-source">Schema Source</h3>
+<ul>
+<li>from schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema</li>
+</ul>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
 <pre><code class="language-yaml">name: output
+description: The output of the analysis
+from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
+rank: 1000
 alias: output
 domain_of:
 - MetricsDataset
 - FieldIlluminationDataset
 - PSFBeadsDataset
-- ArgolightBDataset
-- ArgolightEDataset
-range: string
+range: MetricsOutput
+required: false
+multivalued: false
 
 </code></pre>
 

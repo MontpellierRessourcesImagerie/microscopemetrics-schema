@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/considered_bead_centers_intensity_outlier/">
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-8.5.10">
     
     
       
@@ -317,7 +317,7 @@
 
 
 <h1 id="slot-considered_bead_centers_intensity_outlier">Slot: considered_bead_centers_intensity_outlier</h1>
-<p><em>The centers of the beads detected but considered as being too intense and potentially represent a cluster of beads. Intensity robust z-score over requested threshold. Measurements not considered for the dataset analysis. One point will be provided per bead. One ROI per channel.</em></p>
+<p><em>The centers of the beads detected but considered as being too intense and potentially represent a cluster of beads. Intensity robust z-score over requested threshold. Measurements on these bead not considered for the dataset analysis. One point will be provided per bead. One ROI per channel.</em></p>
 <p>URI: <a href="https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/considered_bead_centers_intensity_outlier">microscopemetrics_schema:considered_bead_centers_intensity_outlier</a></p>
 <!-- no inheritance hierarchy -->
 
@@ -358,16 +358,16 @@
 <pre><code class="language-yaml">name: considered_bead_centers_intensity_outlier
 description: The centers of the beads detected but considered as being too intense
   and potentially represent a cluster of beads. Intensity robust z-score over requested
-  threshold. Measurements not considered for the dataset analysis. One point will
-  be provided per bead. One ROI per channel.
+  threshold. Measurements on these bead not considered for the dataset analysis. One
+  point will be provided per bead. One ROI per channel.
 from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
 rank: 1000
-multivalued: true
 alias: considered_bead_centers_intensity_outlier
 owner: PSFBeadsOutput
 domain_of:
 - PSFBeadsOutput
 range: Roi
+multivalued: true
 inlined: true
 inlined_as_list: true
 

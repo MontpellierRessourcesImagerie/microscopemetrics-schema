@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/MetricsDataset/" rel="canonical"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.5.3, mkdocs-material-8.5.10" name="generator"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-8.5.10" name="generator"/>
 <title>Class: MetricsDataset - microscopemetrics-schema</title>
 <link href="../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
@@ -206,53 +206,102 @@
 </a>
 <h1 id="class-metricsdataset">Class: MetricsDataset</h1>
 <p><em>A base object on which microscope-metrics runs the analysis</em></p>
+<ul>
+<li><strong>NOTE</strong>: this is an abstract class and should not be instantiated directly</li>
+</ul>
 <p>URI: <a href="https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/MetricsDataset">microscopemetrics_schema:MetricsDataset</a></p>
 <div class="mermaid"> classDiagram
     class MetricsDataset
+    click MetricsDataset href "../MetricsDataset"
       MetricsObject &lt;|-- MetricsDataset
+        click MetricsObject href "../MetricsObject"
 
 
       MetricsDataset &lt;|-- FieldIlluminationDataset
+        click FieldIlluminationDataset href "../FieldIlluminationDataset"
       MetricsDataset &lt;|-- PSFBeadsDataset
-      MetricsDataset &lt;|-- ArgolightBDataset
-      MetricsDataset &lt;|-- ArgolightEDataset
+        click PSFBeadsDataset href "../PSFBeadsDataset"
 
 
       MetricsDataset : acquisition_datetime
 
       MetricsDataset : data_reference
 
-          MetricsDataset --&gt; DataReference : data_reference
+
+
+
+    MetricsDataset --&gt; "0..1" DataReference : data_reference
+    click DataReference href "../DataReference"
+
 
       MetricsDataset : description
 
       MetricsDataset : experimenter
 
-          MetricsDataset --&gt; Experimenter : experimenter
 
-      MetricsDataset : input
 
-          MetricsDataset --&gt; MetricsInput : input
+
+    MetricsDataset --&gt; "0..1" Experimenter : experimenter
+    click Experimenter href "../Experimenter"
+
+
+      MetricsDataset : input_data
+
+
+
+
+    MetricsDataset --&gt; "1" MetricsInputData : input_data
+    click MetricsInputData href "../MetricsInputData"
+
+
+      MetricsDataset : input_parameters
+
+
+
+
+    MetricsDataset --&gt; "1" MetricsInputParameters : input_parameters
+    click MetricsInputParameters href "../MetricsInputParameters"
+
 
       MetricsDataset : linked_references
 
-          MetricsDataset --&gt; DataReference : linked_references
+
+
+
+    MetricsDataset --&gt; "*" DataReference : linked_references
+    click DataReference href "../DataReference"
+
 
       MetricsDataset : microscope
 
-          MetricsDataset --&gt; Microscope : microscope
+
+
+
+    MetricsDataset --&gt; "1" Microscope : microscope
+    click Microscope href "../Microscope"
+
 
       MetricsDataset : name
 
       MetricsDataset : output
 
-          MetricsDataset --&gt; MetricsOutput : output
+
+
+
+    MetricsDataset --&gt; "0..1" MetricsOutput : output
+    click MetricsOutput href "../MetricsOutput"
+
 
       MetricsDataset : processed
 
       MetricsDataset : sample
 
-          MetricsDataset --&gt; Sample : sample
+
+
+
+    MetricsDataset --&gt; "0..1" Sample : sample
+    click Sample href "../Sample"
+
 
 
 </div>
@@ -263,8 +312,6 @@
 <li><strong>MetricsDataset</strong><ul>
 <li><a href="../FieldIlluminationDataset/">FieldIlluminationDataset</a></li>
 <li><a href="../PSFBeadsDataset/">PSFBeadsDataset</a></li>
-<li><a href="../ArgolightBDataset/">ArgolightBDataset</a></li>
-<li><a href="../ArgolightEDataset/">ArgolightEDataset</a></li>
 </ul>
 </li>
 </ul>
@@ -284,15 +331,15 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../microscope/">microscope</a></td>
-<td>1..1 <br/> <a href="../Microscope/">Microscope</a></td>
-<td>The microscope that was used to acquire the dataset</td>
+<td><a href="../sample/">sample</a></td>
+<td>0..1 <br/> <a href="../Sample/">Sample</a></td>
+<td>The physical sample that was imaged</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../sample/">sample</a></td>
-<td>0..1 <br/> <a href="../Sample/">Sample</a></td>
-<td>The sample that was imaged</td>
+<td><a href="../microscope/">microscope</a></td>
+<td>1 <br/> <a href="../Microscope/">Microscope</a></td>
+<td>The microscope that was used to acquire the dataset</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -309,14 +356,20 @@
 </tr>
 <tr>
 <td><a href="../processed/">processed</a></td>
-<td>1..1 <br/> <a href="../Boolean/">Boolean</a></td>
+<td>1 <br/> <a href="../Boolean/">Boolean</a></td>
 <td>Has the dataset been processed by microscope-metrics</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../input/">input</a></td>
-<td>1..1 <br/> <a href="../MetricsInput/">MetricsInput</a></td>
-<td>The input of the analysis</td>
+<td><a href="../input_data/">input_data</a></td>
+<td>1 <br/> <a href="../MetricsInputData/">MetricsInputData</a></td>
+<td>The input data for the analysis</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../input_parameters/">input_parameters</a></td>
+<td>1 <br/> <a href="../MetricsInputParameters/">MetricsInputParameters</a></td>
+<td>The input parameters for the analysis</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -333,7 +386,7 @@
 </tr>
 <tr>
 <td><a href="../linked_references/">linked_references</a></td>
-<td>0..* <br/> <a href="../DataReference/">DataReference</a></td>
+<td>* <br/> <a href="../DataReference/">DataReference</a></td>
 <td>A list of linked references</td>
 <td><a href="../MetricsObject/">MetricsObject</a></td>
 </tr>
@@ -408,84 +461,80 @@
 description: A base object on which microscope-metrics runs the analysis
 from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
 is_a: MetricsObject
+abstract: true
+slots:
+- sample
 attributes:
   microscope:
     name: microscope
     description: The microscope that was used to acquire the dataset
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
-    rank: 1000
-    multivalued: false
     domain_of:
     - MetricsDataset
     range: Microscope
     required: true
-  sample:
-    name: sample
-    description: The sample that was imaged
-    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
-    rank: 1000
     multivalued: false
-    domain_of:
-    - MetricsDataset
-    range: Sample
   experimenter:
     name: experimenter
     description: The experimenter that performed the imaging experiment
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
-    rank: 1000
-    multivalued: false
     domain_of:
     - MetricsDataset
     range: Experimenter
+    multivalued: false
   acquisition_datetime:
     name: acquisition_datetime
     description: The datetime of the acquisition
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
-    rank: 1000
-    multivalued: false
     domain_of:
     - MetricsDataset
     - Image
     range: datetime
+    multivalued: false
   processed:
     name: processed
     description: Has the dataset been processed by microscope-metrics
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
-    multivalued: false
     ifabsent: 'False'
     domain_of:
     - MetricsDataset
     range: boolean
     required: true
-  input:
-    name: input
-    description: The input of the analysis
-    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
-    rank: 1000
     multivalued: false
+  input_data:
+    name: input_data
+    description: The input data for the analysis
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     domain_of:
     - MetricsDataset
     - FieldIlluminationDataset
     - PSFBeadsDataset
-    - ArgolightBDataset
-    - ArgolightEDataset
-    range: MetricsInput
+    range: MetricsInputData
     required: true
+    multivalued: false
+  input_parameters:
+    name: input_parameters
+    description: The input parameters for the analysis
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
+    domain_of:
+    - MetricsDataset
+    - FieldIlluminationDataset
+    - PSFBeadsDataset
+    range: MetricsInputParameters
+    required: true
+    multivalued: false
   output:
     name: output
     description: The output of the analysis
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
-    rank: 1000
-    multivalued: false
     domain_of:
     - MetricsDataset
     - FieldIlluminationDataset
     - PSFBeadsDataset
-    - ArgolightBDataset
-    - ArgolightEDataset
     range: MetricsOutput
     required: false
+    multivalued: false
 tree_root: true
 rules:
 - preconditions:
@@ -507,59 +556,45 @@ rules:
 description: A base object on which microscope-metrics runs the analysis
 from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
 is_a: MetricsObject
+abstract: true
 attributes:
   microscope:
     name: microscope
     description: The microscope that was used to acquire the dataset
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
-    rank: 1000
-    multivalued: false
     alias: microscope
     owner: MetricsDataset
     domain_of:
     - MetricsDataset
     range: Microscope
     required: true
-  sample:
-    name: sample
-    description: The sample that was imaged
-    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
-    rank: 1000
     multivalued: false
-    alias: sample
-    owner: MetricsDataset
-    domain_of:
-    - MetricsDataset
-    range: Sample
   experimenter:
     name: experimenter
     description: The experimenter that performed the imaging experiment
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
-    rank: 1000
-    multivalued: false
     alias: experimenter
     owner: MetricsDataset
     domain_of:
     - MetricsDataset
     range: Experimenter
+    multivalued: false
   acquisition_datetime:
     name: acquisition_datetime
     description: The datetime of the acquisition
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
-    rank: 1000
-    multivalued: false
     alias: acquisition_datetime
     owner: MetricsDataset
     domain_of:
     - MetricsDataset
     - Image
     range: datetime
+    multivalued: false
   processed:
     name: processed
     description: Has the dataset been processed by microscope-metrics
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
-    multivalued: false
     ifabsent: 'False'
     alias: processed
     owner: MetricsDataset
@@ -567,62 +602,84 @@ attributes:
     - MetricsDataset
     range: boolean
     required: true
-  input:
-    name: input
-    description: The input of the analysis
-    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
-    rank: 1000
     multivalued: false
-    alias: input
+  input_data:
+    name: input_data
+    description: The input data for the analysis
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
+    alias: input_data
     owner: MetricsDataset
     domain_of:
     - MetricsDataset
     - FieldIlluminationDataset
     - PSFBeadsDataset
-    - ArgolightBDataset
-    - ArgolightEDataset
-    range: MetricsInput
+    range: MetricsInputData
     required: true
+    multivalued: false
+  input_parameters:
+    name: input_parameters
+    description: The input parameters for the analysis
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
+    alias: input_parameters
+    owner: MetricsDataset
+    domain_of:
+    - MetricsDataset
+    - FieldIlluminationDataset
+    - PSFBeadsDataset
+    range: MetricsInputParameters
+    required: true
+    multivalued: false
   output:
     name: output
     description: The output of the analysis
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
-    rank: 1000
-    multivalued: false
     alias: output
     owner: MetricsDataset
     domain_of:
     - MetricsDataset
     - FieldIlluminationDataset
     - PSFBeadsDataset
-    - ArgolightBDataset
-    - ArgolightEDataset
     range: MetricsOutput
     required: false
+    multivalued: false
+  sample:
+    name: sample
+    description: The physical sample that was imaged
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
+    rank: 1000
+    alias: sample
+    owner: MetricsDataset
+    domain_of:
+    - MetricsDataset
+    - FieldIlluminationDataset
+    - PSFBeadsDataset
+    range: Sample
+    required: false
+    multivalued: false
   data_reference:
     name: data_reference
     description: A reference to the data
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
-    multivalued: false
     alias: data_reference
     owner: MetricsDataset
     domain_of:
     - MetricsObject
     range: DataReference
     required: false
+    multivalued: false
   linked_references:
     name: linked_references
     description: A list of linked references
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
-    multivalued: true
     alias: linked_references
     owner: MetricsDataset
     domain_of:
     - MetricsObject
     range: DataReference
     required: false
+    multivalued: true
     inlined: true
     inlined_as_list: true
   name:
@@ -630,7 +687,6 @@ attributes:
     description: The human readable name of an entity
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
-    multivalued: false
     alias: name
     owner: MetricsDataset
     domain_of:
@@ -638,12 +694,12 @@ attributes:
     - Experimenter
     range: string
     required: false
+    multivalued: false
   description:
     name: description
     description: A human readable description of an entity
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
-    multivalued: false
     alias: description
     owner: MetricsDataset
     domain_of:
@@ -651,6 +707,7 @@ attributes:
     - Tag
     range: string
     required: false
+    multivalued: false
 tree_root: true
 rules:
 - preconditions:
@@ -691,5 +748,7 @@ rules:
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["content.tabs.link"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
 <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
-<script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script><script>mermaid.initialize({});</script></body>
+<script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
+mermaid.initialize({});</script><script type="module">import mermaid from "https://unpkg.com/mermaid@10.9.0/dist/mermaid.esm.min.mjs";
+mermaid.initialize({});</script></body>
 </html>

@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/considered_bead_centers_y_fit_quality/">
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-8.5.10">
     
     
       
@@ -317,7 +317,7 @@
 
 
 <h1 id="slot-considered_bead_centers_y_fit_quality">Slot: considered_bead_centers_y_fit_quality</h1>
-<p><em>The centers of the beads detected but considered as the fit quality in y was not good enough.  Coefficient of determination (R^2) over requested threshold. Measurements in y not considered for the dataset analysis. One point will be provided per bead. One ROI per channel.</em></p>
+<p><em>The centers of the beads detected but considered as the fit quality in y was not good enough.  coefficient of determination (R^2) (R^2) over requested threshold. Measurements in y for this bead not considered for the dataset analysis. One point will be provided per bead. One ROI per channel.</em></p>
 <p>URI: <a href="https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/considered_bead_centers_y_fit_quality">microscopemetrics_schema:considered_bead_centers_y_fit_quality</a></p>
 <!-- no inheritance hierarchy -->
 
@@ -357,17 +357,17 @@
 
 <pre><code class="language-yaml">name: considered_bead_centers_y_fit_quality
 description: The centers of the beads detected but considered as the fit quality in
-  y was not good enough.  Coefficient of determination (R^2) over requested threshold.
-  Measurements in y not considered for the dataset analysis. One point will be provided
-  per bead. One ROI per channel.
+  y was not good enough.  coefficient of determination (R^2) (R^2) over requested
+  threshold. Measurements in y for this bead not considered for the dataset analysis.
+  One point will be provided per bead. One ROI per channel.
 from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
 rank: 1000
-multivalued: true
 alias: considered_bead_centers_y_fit_quality
 owner: PSFBeadsOutput
 domain_of:
 - PSFBeadsOutput
 range: Roi
+multivalued: true
 inlined: true
 inlined_as_list: true
 

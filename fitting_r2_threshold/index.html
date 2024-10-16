@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/fitting_r2_threshold/">
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-8.5.10">
     
     
       
@@ -317,7 +317,7 @@
 
 
 <h1 id="slot-fitting_r2_threshold">Slot: fitting_r2_threshold</h1>
-<p><em>Threshold for the residual sum of squares of the fit to be considered good.</em></p>
+<p><em>Threshold for the coefficient of determination (R^2) of the fit to be considered good.</em></p>
 <p>URI: <a href="https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/fitting_r2_threshold">microscopemetrics_schema:fitting_r2_threshold</a></p>
 <!-- no inheritance hierarchy -->
 
@@ -332,7 +332,7 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../PSFBeadsInput/">PSFBeadsInput</a></td>
+<td><a href="../PSFBeadsInputParameters/">PSFBeadsInputParameters</a></td>
 <td></td>
 <td>no</td>
 </tr>
@@ -356,14 +356,14 @@
 <details>
 
 <pre><code class="language-yaml">name: fitting_r2_threshold
-description: Threshold for the residual sum of squares of the fit to be considered
-  good.
+description: Threshold for the coefficient of determination (R^2) of the fit to be
+  considered good.
 from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
 rank: 1000
-ifabsent: float(0.95)
+ifabsent: float(0.85)
 alias: fitting_r2_threshold
 domain_of:
-- PSFBeadsInput
+- PSFBeadsInputParameters
 range: float
 required: true
 

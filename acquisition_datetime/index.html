@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/acquisition_datetime/">
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-8.5.10">
     
     
       
@@ -274,6 +274,19 @@
     Identifier and Mapping Information
   </a>
   
+    <nav class="md-nav" aria-label="Identifier and Mapping Information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schema-source" class="md-nav__link">
+    Schema Source
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -304,6 +317,7 @@
 
 
 <h1 id="slot-acquisition_datetime">Slot: acquisition_datetime</h1>
+<p><em>The datetime of the acquisition</em></p>
 <p>URI: <a href="https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/acquisition_datetime">microscopemetrics_schema:acquisition_datetime</a></p>
 <!-- no inheritance hierarchy -->
 
@@ -323,18 +337,13 @@
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../Image/">Image</a></td>
-<td>A microscope-metrics image</td>
-<td>no</td>
-</tr>
-<tr>
 <td><a href="../ImageMask/">ImageMask</a></td>
 <td>A mask image</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../FieldIlluminationDataset/">FieldIlluminationDataset</a></td>
-<td>A field illumination dataset</td>
+<td><a href="../Image/">Image</a></td>
+<td>A microscope-metrics image</td>
 <td>no</td>
 </tr>
 <tr>
@@ -343,31 +352,34 @@
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../ArgolightBDataset/">ArgolightBDataset</a></td>
-<td>An Argolight sample pattern B dataset</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../ArgolightEDataset/">ArgolightEDataset</a></td>
-<td>An Argolight sample pattern E dataset</td>
+<td><a href="../FieldIlluminationDataset/">FieldIlluminationDataset</a></td>
+<td>A field illumination dataset</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>Range: <a href="../String/">String</a></li>
+<li>Range: <a href="../datetime/">datetime</a></li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
+<h3 id="schema-source">Schema Source</h3>
+<ul>
+<li>from schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema</li>
+</ul>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
 <pre><code class="language-yaml">name: acquisition_datetime
+description: The datetime of the acquisition
+from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
+rank: 1000
 alias: acquisition_datetime
 domain_of:
 - MetricsDataset
 - Image
-range: string
+range: datetime
+multivalued: false
 
 </code></pre>
 

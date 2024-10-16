@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/fit_r2_y_median/">
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-8.5.10">
     
     
       
@@ -317,7 +317,7 @@
 
 
 <h1 id="slot-fit_r2_y_median">Slot: fit_r2_y_median</h1>
-<p><em>Median residual sum of squares in the y axis for the analyzed beads. One value per channel.</em></p>
+<p><em>Median coefficient of determination (R^2) in the y axis for the analyzed beads. One value per channel.</em></p>
 <p>URI: <a href="https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/fit_r2_y_median">microscopemetrics_schema:fit_r2_y_median</a></p>
 <!-- no inheritance hierarchy -->
 
@@ -332,7 +332,7 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../PSFBeadsKeyValues/">PSFBeadsKeyValues</a></td>
+<td><a href="../PSFBeadsKeyMeasurements/">PSFBeadsKeyMeasurements</a></td>
 <td></td>
 <td>no</td>
 </tr>
@@ -356,15 +356,15 @@
 <details>
 
 <pre><code class="language-yaml">name: fit_r2_y_median
-description: Median residual sum of squares in the y axis for the analyzed beads.
-  One value per channel.
+description: Median coefficient of determination (R^2) in the y axis for the analyzed
+  beads. One value per channel.
 from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
 rank: 1000
-multivalued: true
 alias: fit_r2_y_median
 domain_of:
-- PSFBeadsKeyValues
+- PSFBeadsKeyMeasurements
 range: float
+multivalued: true
 
 </code></pre>
 

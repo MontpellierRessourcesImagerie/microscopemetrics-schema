@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/columns/">
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-8.5.10">
     
     
       
@@ -317,6 +317,7 @@
 
 
 <h1 id="slot-columns">Slot: columns</h1>
+<p><em>The columns of the table</em></p>
 <p>URI: <a href="https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/columns">microscopemetrics_schema:columns</a></p>
 <!-- no inheritance hierarchy -->
 
@@ -331,8 +332,8 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../ColumnSeries/">ColumnSeries</a></td>
-<td>A series of columns</td>
+<td><a href="../Table/">Table</a></td>
+<td>A microscope-metrics table</td>
 <td>no</td>
 </tr>
 </tbody>
@@ -360,15 +361,16 @@
 <pre><code class="language-yaml">name: columns
 implements:
 - linkml:elements
+description: The columns of the table
 from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
 rank: 1000
-multivalued: true
 alias: columns
-owner: ColumnSeries
+owner: Table
 domain_of:
-- ColumnSeries
+- Table
 range: Column
 required: true
+multivalued: true
 inlined: true
 inlined_as_list: true
 

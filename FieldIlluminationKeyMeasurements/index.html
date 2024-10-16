@@ -1,0 +1,1460 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/FieldIlluminationKeyMeasurements/" rel="canonical"/>
+<link href="../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-8.5.10" name="generator"/>
+<title>Class: FieldIlluminationKeyMeasurements - microscopemetrics-schema</title>
+<link href="../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="None" data-md-color-primary="None" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#class-fieldilluminationkeymeasurements">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="microscopemetrics-schema" class="md-header__button md-logo" data-md-component="logo" href=".." title="microscopemetrics-schema">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            microscopemetrics-schema
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Class: FieldIlluminationKeyMeasurements
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/MontpellierRessourcesImagerie/microscopemetrics-schema" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="microscopemetrics-schema" class="md-nav__button md-logo" data-md-component="logo" href=".." title="microscopemetrics-schema">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+    microscopemetrics-schema
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/MontpellierRessourcesImagerie/microscopemetrics-schema" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
+        Index
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../about/">
+        About
+      </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inheritance">
+    Inheritance
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#slots">
+    Slots
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#usages">
+    Usages
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#identifier-and-mapping-information">
+    Identifier and Mapping Information
+  </a>
+<nav aria-label="Identifier and Mapping Information" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#schema-source">
+    Schema Source
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mappings">
+    Mappings
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#linkml-source">
+    LinkML Source
+  </a>
+<nav aria-label="LinkML Source" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#direct">
+    Direct
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#induced">
+    Induced
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<a class="md-content__button md-icon" href="https://github.com/MontpellierRessourcesImagerie/microscopemetrics-schema/edit/master/docs/FieldIlluminationKeyMeasurements.md" title="Edit this page">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
+</a>
+<h1 id="class-fieldilluminationkeymeasurements">Class: FieldIlluminationKeyMeasurements</h1>
+<p>URI: <a href="https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/FieldIlluminationKeyMeasurements">microscopemetrics_schema:FieldIlluminationKeyMeasurements</a></p>
+<div class="mermaid"> classDiagram
+    class FieldIlluminationKeyMeasurements
+    click FieldIlluminationKeyMeasurements href "../FieldIlluminationKeyMeasurements"
+      KeyMeasurements &lt;|-- FieldIlluminationKeyMeasurements
+        click KeyMeasurements href "../KeyMeasurements"
+
+      FieldIlluminationKeyMeasurements : bottom_center_intensity_mean
+
+      FieldIlluminationKeyMeasurements : bottom_center_intensity_ratio
+
+      FieldIlluminationKeyMeasurements : bottom_left_intensity_mean
+
+      FieldIlluminationKeyMeasurements : bottom_left_intensity_ratio
+
+      FieldIlluminationKeyMeasurements : bottom_right_intensity_mean
+
+      FieldIlluminationKeyMeasurements : bottom_right_intensity_ratio
+
+      FieldIlluminationKeyMeasurements : center_fitted_distance_relative
+
+      FieldIlluminationKeyMeasurements : center_fitted_x
+
+      FieldIlluminationKeyMeasurements : center_fitted_x_relative
+
+      FieldIlluminationKeyMeasurements : center_fitted_y
+
+      FieldIlluminationKeyMeasurements : center_fitted_y_relative
+
+      FieldIlluminationKeyMeasurements : center_geometric_distance_relative
+
+      FieldIlluminationKeyMeasurements : center_geometric_x
+
+      FieldIlluminationKeyMeasurements : center_geometric_x_relative
+
+      FieldIlluminationKeyMeasurements : center_geometric_y
+
+      FieldIlluminationKeyMeasurements : center_geometric_y_relative
+
+      FieldIlluminationKeyMeasurements : center_of_mass_distance_relative
+
+      FieldIlluminationKeyMeasurements : center_of_mass_x
+
+      FieldIlluminationKeyMeasurements : center_of_mass_x_relative
+
+      FieldIlluminationKeyMeasurements : center_of_mass_y
+
+      FieldIlluminationKeyMeasurements : center_of_mass_y_relative
+
+      FieldIlluminationKeyMeasurements : center_region_area_fraction
+
+      FieldIlluminationKeyMeasurements : center_region_intensity_fraction
+
+      FieldIlluminationKeyMeasurements : channel_id
+
+      FieldIlluminationKeyMeasurements : channel_name
+
+      FieldIlluminationKeyMeasurements : channel_nr
+
+      FieldIlluminationKeyMeasurements : data_reference
+
+
+
+
+    FieldIlluminationKeyMeasurements --&gt; "0..1" DataReference : data_reference
+    click DataReference href "../DataReference"
+
+
+      FieldIlluminationKeyMeasurements : description
+
+      FieldIlluminationKeyMeasurements : image_id
+
+      FieldIlluminationKeyMeasurements : image_name
+
+      FieldIlluminationKeyMeasurements : linked_references
+
+
+
+
+    FieldIlluminationKeyMeasurements --&gt; "*" DataReference : linked_references
+    click DataReference href "../DataReference"
+
+
+      FieldIlluminationKeyMeasurements : max_intensity
+
+      FieldIlluminationKeyMeasurements : max_intensity_distance_relative
+
+      FieldIlluminationKeyMeasurements : max_intensity_pos_x
+
+      FieldIlluminationKeyMeasurements : max_intensity_pos_x_relative
+
+      FieldIlluminationKeyMeasurements : max_intensity_pos_y
+
+      FieldIlluminationKeyMeasurements : max_intensity_pos_y_relative
+
+      FieldIlluminationKeyMeasurements : middle_center_intensity_mean
+
+      FieldIlluminationKeyMeasurements : middle_center_intensity_ratio
+
+      FieldIlluminationKeyMeasurements : middle_left_intensity_mean
+
+      FieldIlluminationKeyMeasurements : middle_left_intensity_ratio
+
+      FieldIlluminationKeyMeasurements : middle_right_intensity_mean
+
+      FieldIlluminationKeyMeasurements : middle_right_intensity_ratio
+
+      FieldIlluminationKeyMeasurements : name
+
+      FieldIlluminationKeyMeasurements : table_data
+
+
+
+
+    FieldIlluminationKeyMeasurements --&gt; "0..1" MetaObject : table_data
+    click MetaObject href "../MetaObject"
+
+
+      FieldIlluminationKeyMeasurements : top_center_intensity_mean
+
+      FieldIlluminationKeyMeasurements : top_center_intensity_ratio
+
+      FieldIlluminationKeyMeasurements : top_left_intensity_mean
+
+      FieldIlluminationKeyMeasurements : top_left_intensity_ratio
+
+      FieldIlluminationKeyMeasurements : top_right_intensity_mean
+
+      FieldIlluminationKeyMeasurements : top_right_intensity_ratio
+
+
+</div>
+<h2 id="inheritance">Inheritance</h2>
+<ul>
+<li><a href="../NamedObject/">NamedObject</a><ul>
+<li><a href="../MetricsObject/">MetricsObject</a><ul>
+<li><a href="../KeyValues/">KeyValues</a><ul>
+<li><a href="../KeyMeasurements/">KeyMeasurements</a><ul>
+<li><strong>FieldIlluminationKeyMeasurements</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="slots">Slots</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+<th>Inheritance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../image_name/">image_name</a></td>
+<td>* <br/> <a href="../String/">String</a></td>
+<td>The name of the image where the measurement was taken</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../image_id/">image_id</a></td>
+<td>* <br/> <a href="../String/">String</a></td>
+<td>The id of the image where the measurement was taken</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../channel_name/">channel_name</a></td>
+<td>* <br/> <a href="../String/">String</a></td>
+<td>The channel name to which the measurements apply</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../channel_nr/">channel_nr</a></td>
+<td>* <br/> <a href="../Integer/">Integer</a></td>
+<td>The channel number to which the measurements apply</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../channel_id/">channel_id</a></td>
+<td>* <br/> <a href="../String/">String</a></td>
+<td>The channel id to which the measurements apply</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../center_region_intensity_fraction/">center_region_intensity_fraction</a></td>
+<td>* <br/> <a href="../Float/">Float</a></td>
+<td>The fraction of the upper intensity range occupied by the center of illuminat...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../center_region_area_fraction/">center_region_area_fraction</a></td>
+<td>* <br/> <a href="../Float/">Float</a></td>
+<td>The fraction of the area occupied by the center of illumination region</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../center_of_mass_y/">center_of_mass_y</a></td>
+<td>* <br/> <a href="../Float/">Float</a></td>
+<td>The y coordinate of the center of mass of the center of illumination region</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../center_of_mass_y_relative/">center_of_mass_y_relative</a></td>
+<td>* <br/> <a href="../Float/">Float</a></td>
+<td>The relative y position of the center of mass of the center of illumination r...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../center_of_mass_x/">center_of_mass_x</a></td>
+<td>* <br/> <a href="../Float/">Float</a></td>
+<td>The x coordinate of the center of mass of the center of illumination region</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../center_of_mass_x_relative/">center_of_mass_x_relative</a></td>
+<td>* <br/> <a href="../Float/">Float</a></td>
+<td>The relative x position of the center of mass of the center of illumination r...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../center_of_mass_distance_relative/">center_of_mass_distance_relative</a></td>
+<td>* <br/> <a href="../Float/">Float</a></td>
+<td>The relative distance of the centers of mass to the center of the image</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../center_geometric_y/">center_geometric_y</a></td>
+<td>* <br/> <a href="../Float/">Float</a></td>
+<td>The y coordinate of the geometric center of the center of illumination region</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../center_geometric_y_relative/">center_geometric_y_relative</a></td>
+<td>* <br/> <a href="../Float/">Float</a></td>
+<td>The relative y position of the geometric center of the center of illumination...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../center_geometric_x/">center_geometric_x</a></td>
+<td>* <br/> <a href="../Float/">Float</a></td>
+<td>The x coordinate of the geometric center of the center of illumination region</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../center_geometric_x_relative/">center_geometric_x_relative</a></td>
+<td>* <br/> <a href="../Float/">Float</a></td>
+<td>The relative x position of the geometric center of the center of illumination...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../center_geometric_distance_relative/">center_geometric_distance_relative</a></td>
+<td>* <br/> <a href="../Float/">Float</a></td>
+<td>The relative distance of the geometric center to the center of the image</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../center_fitted_y/">center_fitted_y</a></td>
+<td>* <br/> <a href="../Float/">Float</a></td>
+<td>The y coordinate of the fitted center of illumination</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../center_fitted_y_relative/">center_fitted_y_relative</a></td>
+<td>* <br/> <a href="../Float/">Float</a></td>
+<td>The relative y position of the fitted center of illumination</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../center_fitted_x/">center_fitted_x</a></td>
+<td>* <br/> <a href="../Float/">Float</a></td>
+<td>The x coordinate of the fitted center of illumination</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../center_fitted_x_relative/">center_fitted_x_relative</a></td>
+<td>* <br/> <a href="../Float/">Float</a></td>
+<td>The relative x position of the fitted center of illumination</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../center_fitted_distance_relative/">center_fitted_distance_relative</a></td>
+<td>* <br/> <a href="../Float/">Float</a></td>
+<td>The relative distance of the fitted center of illumination to the center of t...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../max_intensity/">max_intensity</a></td>
+<td>* <br/> <a href="../Float/">Float</a></td>
+<td>The maximum intensity of the center of illumination</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../max_intensity_pos_y/">max_intensity_pos_y</a></td>
+<td>* <br/> <a href="../Float/">Float</a></td>
+<td>The y coordinate of the maximum intensity of the center of illumination</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../max_intensity_pos_y_relative/">max_intensity_pos_y_relative</a></td>
+<td>* <br/> <a href="../Float/">Float</a></td>
+<td>The relative y position of the maximum intensity of the center of illuminatio...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../max_intensity_pos_x/">max_intensity_pos_x</a></td>
+<td>* <br/> <a href="../Float/">Float</a></td>
+<td>The x coordinate of the maximum intensity of the center of illumination</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../max_intensity_pos_x_relative/">max_intensity_pos_x_relative</a></td>
+<td>* <br/> <a href="../Float/">Float</a></td>
+<td>The relative x position of the maximum intensity of the center of illuminatio...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../max_intensity_distance_relative/">max_intensity_distance_relative</a></td>
+<td>* <br/> <a href="../Float/">Float</a></td>
+<td>The relative distance of the maximum intensity to the center of the image</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../top_left_intensity_mean/">top_left_intensity_mean</a></td>
+<td>* <br/> <a href="../Float/">Float</a></td>
+<td>The mean intensity of the top-left corner of the image</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../top_left_intensity_ratio/">top_left_intensity_ratio</a></td>
+<td>* <br/> <a href="../Float/">Float</a></td>
+<td>The mean intensity of the top-left corner of the image  divided by the maximu...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../top_center_intensity_mean/">top_center_intensity_mean</a></td>
+<td>* <br/> <a href="../Float/">Float</a></td>
+<td>The mean intensity of the top-center of the image</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../top_center_intensity_ratio/">top_center_intensity_ratio</a></td>
+<td>* <br/> <a href="../Float/">Float</a></td>
+<td>The mean intensity of the top-center of the image  divided by the maximum int...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../top_right_intensity_mean/">top_right_intensity_mean</a></td>
+<td>* <br/> <a href="../Float/">Float</a></td>
+<td>The mean intensity of the top-right corner of the image</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../top_right_intensity_ratio/">top_right_intensity_ratio</a></td>
+<td>* <br/> <a href="../Float/">Float</a></td>
+<td>The mean intensity of the top-right corner of the image  divided by the maxim...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../middle_left_intensity_mean/">middle_left_intensity_mean</a></td>
+<td>* <br/> <a href="../Float/">Float</a></td>
+<td>The mean intensity of the middle-left of the image</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../middle_left_intensity_ratio/">middle_left_intensity_ratio</a></td>
+<td>* <br/> <a href="../Float/">Float</a></td>
+<td>The mean intensity of the middle-left of the image  divided by the maximum in...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../middle_center_intensity_mean/">middle_center_intensity_mean</a></td>
+<td>* <br/> <a href="../Float/">Float</a></td>
+<td>The mean intensity of the middle-center of the image</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../middle_center_intensity_ratio/">middle_center_intensity_ratio</a></td>
+<td>* <br/> <a href="../Float/">Float</a></td>
+<td>The mean intensity of the middle-center of the image  divided by the maximum ...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../middle_right_intensity_mean/">middle_right_intensity_mean</a></td>
+<td>* <br/> <a href="../Float/">Float</a></td>
+<td>The mean intensity of the middle-right of the image</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../middle_right_intensity_ratio/">middle_right_intensity_ratio</a></td>
+<td>* <br/> <a href="../Float/">Float</a></td>
+<td>The mean intensity of the middle-right of the image  divided by the maximum i...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../bottom_left_intensity_mean/">bottom_left_intensity_mean</a></td>
+<td>* <br/> <a href="../Float/">Float</a></td>
+<td>The mean intensity of the bottom-left of the image</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../bottom_left_intensity_ratio/">bottom_left_intensity_ratio</a></td>
+<td>* <br/> <a href="../Float/">Float</a></td>
+<td>The mean intensity of the bottom-left of the image  divided by the maximum in...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../bottom_center_intensity_mean/">bottom_center_intensity_mean</a></td>
+<td>* <br/> <a href="../Float/">Float</a></td>
+<td>The mean intensity of the bottom-center of the image</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../bottom_center_intensity_ratio/">bottom_center_intensity_ratio</a></td>
+<td>* <br/> <a href="../Float/">Float</a></td>
+<td>The mean intensity of the bottom-center of the image  divided by the maximum ...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../bottom_right_intensity_mean/">bottom_right_intensity_mean</a></td>
+<td>* <br/> <a href="../Float/">Float</a></td>
+<td>The mean intensity of the bottom-right of the image</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../bottom_right_intensity_ratio/">bottom_right_intensity_ratio</a></td>
+<td>* <br/> <a href="../Float/">Float</a></td>
+<td>The mean intensity of the bottom-right of the image  divided by the maximum i...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../table_data/">table_data</a></td>
+<td>0..1 <br/> <a href="../MetaObject/">MetaObject</a></td>
+<td>A non-required slot for non-serializable table data object</td>
+<td><a href="../KeyMeasurements/">KeyMeasurements</a></td>
+</tr>
+<tr>
+<td><a href="../data_reference/">data_reference</a></td>
+<td>0..1 <br/> <a href="../DataReference/">DataReference</a></td>
+<td>A reference to the data</td>
+<td><a href="../MetricsObject/">MetricsObject</a></td>
+</tr>
+<tr>
+<td><a href="../linked_references/">linked_references</a></td>
+<td>* <br/> <a href="../DataReference/">DataReference</a></td>
+<td>A list of linked references</td>
+<td><a href="../MetricsObject/">MetricsObject</a></td>
+</tr>
+<tr>
+<td><a href="../name/">name</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>The human readable name of an entity</td>
+<td><a href="../NamedObject/">NamedObject</a></td>
+</tr>
+<tr>
+<td><a href="../description/">description</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A human readable description of an entity</td>
+<td><a href="../NamedObject/">NamedObject</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="usages">Usages</h2>
+<table>
+<thead>
+<tr>
+<th>used by</th>
+<th>used in</th>
+<th>type</th>
+<th>used</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../FieldIlluminationOutput/">FieldIlluminationOutput</a></td>
+<td><a href="../key_measurements/">key_measurements</a></td>
+<td>range</td>
+<td><a href="./">FieldIlluminationKeyMeasurements</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
+<h3 id="schema-source">Schema Source</h3>
+<ul>
+<li>from schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema</li>
+</ul>
+<h2 id="mappings">Mappings</h2>
+<table>
+<thead>
+<tr>
+<th>Mapping Type</th>
+<th>Mapped Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>self</td>
+<td>microscopemetrics_schema:FieldIlluminationKeyMeasurements</td>
+</tr>
+<tr>
+<td>native</td>
+<td>microscopemetrics_schema:FieldIlluminationKeyMeasurements</td>
+</tr>
+</tbody>
+</table>
+<h2 id="linkml-source">LinkML Source</h2>
+<!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
+<h3 id="direct">Direct</h3>
+<details>
+<pre><code class="language-yaml">name: FieldIlluminationKeyMeasurements
+from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
+is_a: KeyMeasurements
+slots:
+- image_name
+- image_id
+- channel_name
+- channel_nr
+- channel_id
+- center_region_intensity_fraction
+- center_region_area_fraction
+- center_of_mass_y
+- center_of_mass_y_relative
+- center_of_mass_x
+- center_of_mass_x_relative
+- center_of_mass_distance_relative
+- center_geometric_y
+- center_geometric_y_relative
+- center_geometric_x
+- center_geometric_x_relative
+- center_geometric_distance_relative
+- center_fitted_y
+- center_fitted_y_relative
+- center_fitted_x
+- center_fitted_x_relative
+- center_fitted_distance_relative
+- max_intensity
+- max_intensity_pos_y
+- max_intensity_pos_y_relative
+- max_intensity_pos_x
+- max_intensity_pos_x_relative
+- max_intensity_distance_relative
+- top_left_intensity_mean
+- top_left_intensity_ratio
+- top_center_intensity_mean
+- top_center_intensity_ratio
+- top_right_intensity_mean
+- top_right_intensity_ratio
+- middle_left_intensity_mean
+- middle_left_intensity_ratio
+- middle_center_intensity_mean
+- middle_center_intensity_ratio
+- middle_right_intensity_mean
+- middle_right_intensity_ratio
+- bottom_left_intensity_mean
+- bottom_left_intensity_ratio
+- bottom_center_intensity_mean
+- bottom_center_intensity_ratio
+- bottom_right_intensity_mean
+- bottom_right_intensity_ratio
+
+</code></pre>
+</details>
+<h3 id="induced">Induced</h3>
+<details>
+<pre><code class="language-yaml">name: FieldIlluminationKeyMeasurements
+from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
+is_a: KeyMeasurements
+attributes:
+  image_name:
+    name: image_name
+    description: The name of the image where the measurement was taken
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
+    rank: 1000
+    alias: image_name
+    owner: FieldIlluminationKeyMeasurements
+    domain_of:
+    - FieldIlluminationKeyMeasurements
+    range: string
+    multivalued: true
+  image_id:
+    name: image_id
+    description: The id of the image where the measurement was taken. If images are
+      originary in OMERO this is the image_id.
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
+    rank: 1000
+    alias: image_id
+    owner: FieldIlluminationKeyMeasurements
+    domain_of:
+    - FieldIlluminationKeyMeasurements
+    range: string
+    multivalued: true
+  channel_name:
+    name: channel_name
+    description: The channel name to which the measurements apply
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
+    rank: 1000
+    alias: channel_name
+    owner: FieldIlluminationKeyMeasurements
+    domain_of:
+    - FieldIlluminationKeyMeasurements
+    - PSFBeadsKeyMeasurements
+    range: string
+    multivalued: true
+  channel_nr:
+    name: channel_nr
+    description: The channel number to which the measurements apply
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
+    rank: 1000
+    alias: channel_nr
+    owner: FieldIlluminationKeyMeasurements
+    domain_of:
+    - FieldIlluminationKeyMeasurements
+    - PSFBeadsKeyMeasurements
+    range: integer
+    multivalued: true
+    minimum_value: 0
+  channel_id:
+    name: channel_id
+    description: The channel id to which the measurements apply
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
+    rank: 1000
+    alias: channel_id
+    owner: FieldIlluminationKeyMeasurements
+    domain_of:
+    - FieldIlluminationKeyMeasurements
+    range: string
+    multivalued: true
+  center_region_intensity_fraction:
+    name: center_region_intensity_fraction
+    description: The fraction of the upper intensity range occupied by the center
+      of illumination region. That is, a value of 0.1 means that the center of illumination
+      occupies the top 10% of the intensity range. microscope-metrics tries to adapt
+      the threshold of this intensity so that the area occupied is not too large.
+      One value per channel.
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
+    rank: 1000
+    alias: center_region_intensity_fraction
+    owner: FieldIlluminationKeyMeasurements
+    domain_of:
+    - FieldIlluminationKeyMeasurements
+    range: float
+    multivalued: true
+    minimum_value: 0.0
+    maximum_value: 1.0
+  center_region_area_fraction:
+    name: center_region_area_fraction
+    description: The fraction of the area occupied by the center of illumination region.
+      If the centre upper intensity fraction is 0.1, that means that the center of
+      illumination occupies 10% of the area of the image. One value per channel.
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
+    rank: 1000
+    alias: center_region_area_fraction
+    owner: FieldIlluminationKeyMeasurements
+    domain_of:
+    - FieldIlluminationKeyMeasurements
+    range: float
+    multivalued: true
+    minimum_value: 0.0
+    maximum_value: 1.0
+  center_of_mass_y:
+    name: center_of_mass_y
+    description: The y coordinate of the center of mass of the center of illumination
+      region. In pixels. One value per channel.
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
+    rank: 1000
+    alias: center_of_mass_y
+    owner: FieldIlluminationKeyMeasurements
+    domain_of:
+    - FieldIlluminationKeyMeasurements
+    range: float
+    multivalued: true
+  center_of_mass_y_relative:
+    name: center_of_mass_y_relative
+    description: The relative y position of the center of mass of the center of illumination
+      region.  Relative to the image size along that axis. -1.0 is upper edge, 0.0
+      is center and 1.0 is lower edge. One value per channel.
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
+    rank: 1000
+    alias: center_of_mass_y_relative
+    owner: FieldIlluminationKeyMeasurements
+    domain_of:
+    - FieldIlluminationKeyMeasurements
+    range: float
+    multivalued: true
+    minimum_value: -1.0
+    maximum_value: 1.0
+  center_of_mass_x:
+    name: center_of_mass_x
+    description: The x coordinate of the center of mass of the center of illumination
+      region. In pixels. One value per channel.
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
+    rank: 1000
+    alias: center_of_mass_x
+    owner: FieldIlluminationKeyMeasurements
+    domain_of:
+    - FieldIlluminationKeyMeasurements
+    range: float
+    multivalued: true
+  center_of_mass_x_relative:
+    name: center_of_mass_x_relative
+    description: The relative x position of the center of mass of the center of illumination
+      region.  Relative to the image size along that axis. -1.0 is left edge, 0.0
+      is center and 1.0 is right edge. One value per channel.
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
+    rank: 1000
+    alias: center_of_mass_x_relative
+    owner: FieldIlluminationKeyMeasurements
+    domain_of:
+    - FieldIlluminationKeyMeasurements
+    range: float
+    multivalued: true
+    minimum_value: -1.0
+    maximum_value: 1.0
+  center_of_mass_distance_relative:
+    name: center_of_mass_distance_relative
+    description: The relative distance of the centers of mass to the center of the
+      image. Relative to the distance to  an image corner. 0.0 is centered and 1.0
+      at a distance equal to the the corner of the image. One value per channel.
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
+    rank: 1000
+    alias: center_of_mass_distance_relative
+    owner: FieldIlluminationKeyMeasurements
+    domain_of:
+    - FieldIlluminationKeyMeasurements
+    range: float
+    multivalued: true
+    minimum_value: 0.0
+    maximum_value: 1.0
+  center_geometric_y:
+    name: center_geometric_y
+    description: The y coordinate of the geometric center of the center of illumination
+      region. In pixels. One value per channel.
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
+    rank: 1000
+    alias: center_geometric_y
+    owner: FieldIlluminationKeyMeasurements
+    domain_of:
+    - FieldIlluminationKeyMeasurements
+    range: float
+    multivalued: true
+  center_geometric_y_relative:
+    name: center_geometric_y_relative
+    description: The relative y position of the geometric center of the center of
+      illumination region.  Relative to the image size along that axis. -1.0 is upper
+      edge, 0.0 is center and 1.0 is lower edge. One value per channel.
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
+    rank: 1000
+    alias: center_geometric_y_relative
+    owner: FieldIlluminationKeyMeasurements
+    domain_of:
+    - FieldIlluminationKeyMeasurements
+    range: float
+    multivalued: true
+    minimum_value: -1.0
+    maximum_value: 1.0
+  center_geometric_x:
+    name: center_geometric_x
+    description: The x coordinate of the geometric center of the center of illumination
+      region. In pixels
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
+    rank: 1000
+    alias: center_geometric_x
+    owner: FieldIlluminationKeyMeasurements
+    domain_of:
+    - FieldIlluminationKeyMeasurements
+    range: float
+    multivalued: true
+  center_geometric_x_relative:
+    name: center_geometric_x_relative
+    description: The relative x position of the geometric center of the center of
+      illumination region.  Relative to the image size along that axis. -1.0 is left
+      edge, 0.0 is center and 1.0 is right edge.
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
+    rank: 1000
+    alias: center_geometric_x_relative
+    owner: FieldIlluminationKeyMeasurements
+    domain_of:
+    - FieldIlluminationKeyMeasurements
+    range: float
+    multivalued: true
+    minimum_value: -1.0
+    maximum_value: 1.0
+  center_geometric_distance_relative:
+    name: center_geometric_distance_relative
+    description: The relative distance of the geometric center to the center of the
+      image. Relative to the distance to  an image corner. 0.0 is centered and 1.0
+      at a distance equal to the the corner of the image.
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
+    rank: 1000
+    alias: center_geometric_distance_relative
+    owner: FieldIlluminationKeyMeasurements
+    domain_of:
+    - FieldIlluminationKeyMeasurements
+    range: float
+    multivalued: true
+    minimum_value: 0.0
+    maximum_value: 1.0
+  center_fitted_y:
+    name: center_fitted_y
+    description: The y coordinate of the fitted center of illumination. In pixels
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
+    rank: 1000
+    alias: center_fitted_y
+    owner: FieldIlluminationKeyMeasurements
+    domain_of:
+    - FieldIlluminationKeyMeasurements
+    range: float
+    multivalued: true
+  center_fitted_y_relative:
+    name: center_fitted_y_relative
+    description: The relative y position of the fitted center of illumination.  Relative
+      to the image size along that axis. -1.0 is upper edge, 0.0 is center and 1.0
+      is lower edge.
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
+    rank: 1000
+    alias: center_fitted_y_relative
+    owner: FieldIlluminationKeyMeasurements
+    domain_of:
+    - FieldIlluminationKeyMeasurements
+    range: float
+    multivalued: true
+    minimum_value: -1.0
+    maximum_value: 1.0
+  center_fitted_x:
+    name: center_fitted_x
+    description: The x coordinate of the fitted center of illumination. In pixels
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
+    rank: 1000
+    alias: center_fitted_x
+    owner: FieldIlluminationKeyMeasurements
+    domain_of:
+    - FieldIlluminationKeyMeasurements
+    range: float
+    multivalued: true
+  center_fitted_x_relative:
+    name: center_fitted_x_relative
+    description: The relative x position of the fitted center of illumination.  Relative
+      to the image size along that axis. -1.0 is left edge, 0.0 is center and 1.0
+      is right edge.
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
+    rank: 1000
+    alias: center_fitted_x_relative
+    owner: FieldIlluminationKeyMeasurements
+    domain_of:
+    - FieldIlluminationKeyMeasurements
+    range: float
+    multivalued: true
+    minimum_value: -1.0
+    maximum_value: 1.0
+  center_fitted_distance_relative:
+    name: center_fitted_distance_relative
+    description: The relative distance of the fitted center of illumination to the
+      center of the image. Relative to the distance to  an image corner. 0.0 is centered
+      and 1.0 at a distance equal to the the corner of the image.
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
+    rank: 1000
+    alias: center_fitted_distance_relative
+    owner: FieldIlluminationKeyMeasurements
+    domain_of:
+    - FieldIlluminationKeyMeasurements
+    range: float
+    multivalued: true
+    minimum_value: 0.0
+    maximum_value: 1.0
+  max_intensity:
+    name: max_intensity
+    description: The maximum intensity of the center of illumination
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
+    rank: 1000
+    alias: max_intensity
+    owner: FieldIlluminationKeyMeasurements
+    domain_of:
+    - FieldIlluminationKeyMeasurements
+    range: float
+    multivalued: true
+  max_intensity_pos_y:
+    name: max_intensity_pos_y
+    description: The y coordinate of the maximum intensity of the center of illumination.
+      In pixels
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
+    rank: 1000
+    alias: max_intensity_pos_y
+    owner: FieldIlluminationKeyMeasurements
+    domain_of:
+    - FieldIlluminationKeyMeasurements
+    range: float
+    multivalued: true
+  max_intensity_pos_y_relative:
+    name: max_intensity_pos_y_relative
+    description: The relative y position of the maximum intensity of the center of
+      illumination.  Relative to the image size along that axis. -1.0 is upper edge,
+      0.0 is center and 1.0 is lower edge.
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
+    rank: 1000
+    alias: max_intensity_pos_y_relative
+    owner: FieldIlluminationKeyMeasurements
+    domain_of:
+    - FieldIlluminationKeyMeasurements
+    range: float
+    multivalued: true
+    minimum_value: -1.0
+    maximum_value: 1.0
+  max_intensity_pos_x:
+    name: max_intensity_pos_x
+    description: The x coordinate of the maximum intensity of the center of illumination.
+      In pixels
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
+    rank: 1000
+    alias: max_intensity_pos_x
+    owner: FieldIlluminationKeyMeasurements
+    domain_of:
+    - FieldIlluminationKeyMeasurements
+    range: float
+    multivalued: true
+  max_intensity_pos_x_relative:
+    name: max_intensity_pos_x_relative
+    description: The relative x position of the maximum intensity of the center of
+      illumination.  Relative to the image size along that axis. -1.0 is left edge,
+      0.0 is center and 1.0 is right edge.
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
+    rank: 1000
+    alias: max_intensity_pos_x_relative
+    owner: FieldIlluminationKeyMeasurements
+    domain_of:
+    - FieldIlluminationKeyMeasurements
+    range: float
+    multivalued: true
+    minimum_value: -1.0
+    maximum_value: 1.0
+  max_intensity_distance_relative:
+    name: max_intensity_distance_relative
+    description: The relative distance of the maximum intensity to the center of the
+      image. Relative to the distance to  an image corner. 0.0 is centered and 1.0
+      at a distance equal to the the corner of the image.
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
+    rank: 1000
+    alias: max_intensity_distance_relative
+    owner: FieldIlluminationKeyMeasurements
+    domain_of:
+    - FieldIlluminationKeyMeasurements
+    range: float
+    multivalued: true
+    minimum_value: 0.0
+    maximum_value: 1.0
+  top_left_intensity_mean:
+    name: top_left_intensity_mean
+    description: The mean intensity of the top-left corner of the image
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
+    rank: 1000
+    alias: top_left_intensity_mean
+    owner: FieldIlluminationKeyMeasurements
+    domain_of:
+    - FieldIlluminationKeyMeasurements
+    range: float
+    multivalued: true
+  top_left_intensity_ratio:
+    name: top_left_intensity_ratio
+    description: The mean intensity of the top-left corner of the image  divided by
+      the maximum intensity of the center of illumination
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
+    rank: 1000
+    alias: top_left_intensity_ratio
+    owner: FieldIlluminationKeyMeasurements
+    domain_of:
+    - FieldIlluminationKeyMeasurements
+    range: float
+    multivalued: true
+  top_center_intensity_mean:
+    name: top_center_intensity_mean
+    description: The mean intensity of the top-center of the image
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
+    rank: 1000
+    alias: top_center_intensity_mean
+    owner: FieldIlluminationKeyMeasurements
+    domain_of:
+    - FieldIlluminationKeyMeasurements
+    range: float
+    multivalued: true
+  top_center_intensity_ratio:
+    name: top_center_intensity_ratio
+    description: The mean intensity of the top-center of the image  divided by the
+      maximum intensity of the center of illumination
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
+    rank: 1000
+    alias: top_center_intensity_ratio
+    owner: FieldIlluminationKeyMeasurements
+    domain_of:
+    - FieldIlluminationKeyMeasurements
+    range: float
+    multivalued: true
+  top_right_intensity_mean:
+    name: top_right_intensity_mean
+    description: The mean intensity of the top-right corner of the image
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
+    rank: 1000
+    alias: top_right_intensity_mean
+    owner: FieldIlluminationKeyMeasurements
+    domain_of:
+    - FieldIlluminationKeyMeasurements
+    range: float
+    multivalued: true
+  top_right_intensity_ratio:
+    name: top_right_intensity_ratio
+    description: The mean intensity of the top-right corner of the image  divided
+      by the maximum intensity of the center of illumination
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
+    rank: 1000
+    alias: top_right_intensity_ratio
+    owner: FieldIlluminationKeyMeasurements
+    domain_of:
+    - FieldIlluminationKeyMeasurements
+    range: float
+    multivalued: true
+  middle_left_intensity_mean:
+    name: middle_left_intensity_mean
+    description: The mean intensity of the middle-left of the image
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
+    rank: 1000
+    alias: middle_left_intensity_mean
+    owner: FieldIlluminationKeyMeasurements
+    domain_of:
+    - FieldIlluminationKeyMeasurements
+    range: float
+    multivalued: true
+  middle_left_intensity_ratio:
+    name: middle_left_intensity_ratio
+    description: The mean intensity of the middle-left of the image  divided by the
+      maximum intensity of the center of illumination
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
+    rank: 1000
+    alias: middle_left_intensity_ratio
+    owner: FieldIlluminationKeyMeasurements
+    domain_of:
+    - FieldIlluminationKeyMeasurements
+    range: float
+    multivalued: true
+  middle_center_intensity_mean:
+    name: middle_center_intensity_mean
+    description: The mean intensity of the middle-center of the image
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
+    rank: 1000
+    alias: middle_center_intensity_mean
+    owner: FieldIlluminationKeyMeasurements
+    domain_of:
+    - FieldIlluminationKeyMeasurements
+    range: float
+    multivalued: true
+  middle_center_intensity_ratio:
+    name: middle_center_intensity_ratio
+    description: The mean intensity of the middle-center of the image  divided by
+      the maximum intensity of the center of illumination
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
+    rank: 1000
+    alias: middle_center_intensity_ratio
+    owner: FieldIlluminationKeyMeasurements
+    domain_of:
+    - FieldIlluminationKeyMeasurements
+    range: float
+    multivalued: true
+  middle_right_intensity_mean:
+    name: middle_right_intensity_mean
+    description: The mean intensity of the middle-right of the image
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
+    rank: 1000
+    alias: middle_right_intensity_mean
+    owner: FieldIlluminationKeyMeasurements
+    domain_of:
+    - FieldIlluminationKeyMeasurements
+    range: float
+    multivalued: true
+  middle_right_intensity_ratio:
+    name: middle_right_intensity_ratio
+    description: The mean intensity of the middle-right of the image  divided by the
+      maximum intensity of the center of illumination
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
+    rank: 1000
+    alias: middle_right_intensity_ratio
+    owner: FieldIlluminationKeyMeasurements
+    domain_of:
+    - FieldIlluminationKeyMeasurements
+    range: float
+    multivalued: true
+  bottom_left_intensity_mean:
+    name: bottom_left_intensity_mean
+    description: The mean intensity of the bottom-left of the image
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
+    rank: 1000
+    alias: bottom_left_intensity_mean
+    owner: FieldIlluminationKeyMeasurements
+    domain_of:
+    - FieldIlluminationKeyMeasurements
+    range: float
+    multivalued: true
+  bottom_left_intensity_ratio:
+    name: bottom_left_intensity_ratio
+    description: The mean intensity of the bottom-left of the image  divided by the
+      maximum intensity of the center of illumination
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
+    rank: 1000
+    alias: bottom_left_intensity_ratio
+    owner: FieldIlluminationKeyMeasurements
+    domain_of:
+    - FieldIlluminationKeyMeasurements
+    range: float
+    multivalued: true
+  bottom_center_intensity_mean:
+    name: bottom_center_intensity_mean
+    description: The mean intensity of the bottom-center of the image
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
+    rank: 1000
+    alias: bottom_center_intensity_mean
+    owner: FieldIlluminationKeyMeasurements
+    domain_of:
+    - FieldIlluminationKeyMeasurements
+    range: float
+    multivalued: true
+  bottom_center_intensity_ratio:
+    name: bottom_center_intensity_ratio
+    description: The mean intensity of the bottom-center of the image  divided by
+      the maximum intensity of the center of illumination
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
+    rank: 1000
+    alias: bottom_center_intensity_ratio
+    owner: FieldIlluminationKeyMeasurements
+    domain_of:
+    - FieldIlluminationKeyMeasurements
+    range: float
+    multivalued: true
+  bottom_right_intensity_mean:
+    name: bottom_right_intensity_mean
+    description: The mean intensity of the bottom-right of the image
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
+    rank: 1000
+    alias: bottom_right_intensity_mean
+    owner: FieldIlluminationKeyMeasurements
+    domain_of:
+    - FieldIlluminationKeyMeasurements
+    range: float
+    multivalued: true
+  bottom_right_intensity_ratio:
+    name: bottom_right_intensity_ratio
+    description: The mean intensity of the bottom-right of the image  divided by the
+      maximum intensity of the center of illumination
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
+    rank: 1000
+    alias: bottom_right_intensity_ratio
+    owner: FieldIlluminationKeyMeasurements
+    domain_of:
+    - FieldIlluminationKeyMeasurements
+    range: float
+    multivalued: true
+  table_data:
+    name: table_data
+    description: A non-required slot for non-serializable table data object
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
+    rank: 1000
+    alias: table_data
+    owner: FieldIlluminationKeyMeasurements
+    domain_of:
+    - KeyMeasurements
+    - Table
+    range: MetaObject
+    required: false
+    multivalued: false
+  data_reference:
+    name: data_reference
+    description: A reference to the data
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
+    rank: 1000
+    alias: data_reference
+    owner: FieldIlluminationKeyMeasurements
+    domain_of:
+    - MetricsObject
+    range: DataReference
+    required: false
+    multivalued: false
+  linked_references:
+    name: linked_references
+    description: A list of linked references
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
+    rank: 1000
+    alias: linked_references
+    owner: FieldIlluminationKeyMeasurements
+    domain_of:
+    - MetricsObject
+    range: DataReference
+    required: false
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+  name:
+    name: name
+    description: The human readable name of an entity
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
+    rank: 1000
+    alias: name
+    owner: FieldIlluminationKeyMeasurements
+    domain_of:
+    - NamedObject
+    - Experimenter
+    range: string
+    required: false
+    multivalued: false
+  description:
+    name: description
+    description: A human readable description of an entity
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
+    rank: 1000
+    alias: description
+    owner: FieldIlluminationKeyMeasurements
+    domain_of:
+    - NamedObject
+    - Tag
+    range: string
+    required: false
+    multivalued: false
+
+</code></pre>
+</details>
+</article>
+</div>
+<script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": ["content.tabs.link"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+<script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+<script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
+mermaid.initialize({});</script><script type="module">import mermaid from "https://unpkg.com/mermaid@10.9.0/dist/mermaid.esm.min.mjs";
+mermaid.initialize({});</script></body>
+</html>

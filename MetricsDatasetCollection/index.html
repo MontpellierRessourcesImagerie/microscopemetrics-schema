@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/MetricsDatasetCollection/" rel="canonical"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.5.3, mkdocs-material-8.5.10" name="generator"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-8.5.10" name="generator"/>
 <title>Class: MetricsDatasetCollection - microscopemetrics-schema</title>
 <link href="../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
@@ -204,25 +204,43 @@
 <p>URI: <a href="https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/MetricsDatasetCollection">microscopemetrics_schema:MetricsDatasetCollection</a></p>
 <div class="mermaid"> classDiagram
     class MetricsDatasetCollection
+    click MetricsDatasetCollection href "../MetricsDatasetCollection"
       MetricsObject &lt;|-- MetricsDatasetCollection
+        click MetricsObject href "../MetricsObject"
 
 
       MetricsDatasetCollection &lt;|-- HarmonizedMetricsDatasetCollection
+        click HarmonizedMetricsDatasetCollection href "../HarmonizedMetricsDatasetCollection"
 
 
       MetricsDatasetCollection : data_reference
 
-          MetricsDatasetCollection --&gt; DataReference : data_reference
+
+
+
+    MetricsDatasetCollection --&gt; "0..1" DataReference : data_reference
+    click DataReference href "../DataReference"
+
 
       MetricsDatasetCollection : datasets
 
-          MetricsDatasetCollection --&gt; MetricsDataset : datasets
+
+
+
+    MetricsDatasetCollection --&gt; "*" MetricsDataset : datasets
+    click MetricsDataset href "../MetricsDataset"
+
 
       MetricsDatasetCollection : description
 
       MetricsDatasetCollection : linked_references
 
-          MetricsDatasetCollection --&gt; DataReference : linked_references
+
+
+
+    MetricsDatasetCollection --&gt; "*" DataReference : linked_references
+    click DataReference href "../DataReference"
+
 
       MetricsDatasetCollection : name
 
@@ -254,7 +272,7 @@
 <tbody>
 <tr>
 <td><a href="../datasets/">datasets</a></td>
-<td>0..* <br/> <a href="../MetricsDataset/">MetricsDataset</a></td>
+<td>* <br/> <a href="../MetricsDataset/">MetricsDataset</a></td>
 <td>The datasets of the collection</td>
 <td>direct</td>
 </tr>
@@ -266,7 +284,7 @@
 </tr>
 <tr>
 <td><a href="../linked_references/">linked_references</a></td>
-<td>0..* <br/> <a href="../DataReference/">DataReference</a></td>
+<td>* <br/> <a href="../DataReference/">DataReference</a></td>
 <td>A list of linked references</td>
 <td><a href="../MetricsObject/">MetricsObject</a></td>
 </tr>
@@ -322,10 +340,10 @@ attributes:
     description: The datasets of the collection
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
-    multivalued: true
     domain_of:
     - MetricsDatasetCollection
     range: MetricsDataset
+    multivalued: true
     inlined: true
     inlined_as_list: true
 
@@ -343,12 +361,12 @@ attributes:
     description: The datasets of the collection
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
-    multivalued: true
     alias: datasets
     owner: MetricsDatasetCollection
     domain_of:
     - MetricsDatasetCollection
     range: MetricsDataset
+    multivalued: true
     inlined: true
     inlined_as_list: true
   data_reference:
@@ -356,25 +374,25 @@ attributes:
     description: A reference to the data
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
-    multivalued: false
     alias: data_reference
     owner: MetricsDatasetCollection
     domain_of:
     - MetricsObject
     range: DataReference
     required: false
+    multivalued: false
   linked_references:
     name: linked_references
     description: A list of linked references
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
-    multivalued: true
     alias: linked_references
     owner: MetricsDatasetCollection
     domain_of:
     - MetricsObject
     range: DataReference
     required: false
+    multivalued: true
     inlined: true
     inlined_as_list: true
   name:
@@ -382,7 +400,6 @@ attributes:
     description: The human readable name of an entity
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
-    multivalued: false
     alias: name
     owner: MetricsDatasetCollection
     domain_of:
@@ -390,12 +407,12 @@ attributes:
     - Experimenter
     range: string
     required: false
+    multivalued: false
   description:
     name: description
     description: A human readable description of an entity
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
-    multivalued: false
     alias: description
     owner: MetricsDatasetCollection
     domain_of:
@@ -403,6 +420,7 @@ attributes:
     - Tag
     range: string
     required: false
+    multivalued: false
 
 </code></pre>
 </details>
@@ -431,5 +449,7 @@ attributes:
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["content.tabs.link"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
 <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
-<script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script><script>mermaid.initialize({});</script></body>
+<script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
+mermaid.initialize({});</script><script type="module">import mermaid from "https://unpkg.com/mermaid@10.9.0/dist/mermaid.esm.min.mjs";
+mermaid.initialize({});</script></body>
 </html>

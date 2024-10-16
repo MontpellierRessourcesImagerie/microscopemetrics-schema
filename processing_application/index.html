@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/processing_application/">
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-8.5.10">
     
     
       
@@ -332,11 +332,6 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../MetricsOutput/">MetricsOutput</a></td>
-<td>An abstract class for analysis outputs</td>
-<td>no</td>
-</tr>
-<tr>
 <td><a href="../FieldIlluminationOutput/">FieldIlluminationOutput</a></td>
 <td></td>
 <td>no</td>
@@ -347,13 +342,8 @@
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../ArgolightBOutput/">ArgolightBOutput</a></td>
-<td></td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../ArgolightEOutput/">ArgolightEOutput</a></td>
-<td></td>
+<td><a href="../MetricsOutput/">MetricsOutput</a></td>
+<td>An abstract class for analysis outputs</td>
 <td>no</td>
 </tr>
 </tbody>
@@ -382,13 +372,13 @@
 description: The application used to process the dataset
 from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
 rank: 1000
-multivalued: true
 alias: processing_application
 owner: MetricsOutput
 domain_of:
 - MetricsOutput
 range: string
 required: true
+multivalued: true
 
 </code></pre>
 

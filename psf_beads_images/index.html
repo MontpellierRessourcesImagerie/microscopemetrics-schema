@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/psf_beads_images/">
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-8.5.10">
     
     
       
@@ -332,7 +332,7 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../PSFBeadsInput/">PSFBeadsInput</a></td>
+<td><a href="../PSFBeadsInputData/">PSFBeadsInputData</a></td>
 <td></td>
 <td>no</td>
 </tr>
@@ -363,12 +363,12 @@ description: The image containing the beads provided in the order TZYXC. More th
   one image can be provided if the image conditions are the same.
 from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
 rank: 1000
-multivalued: true
 alias: psf_beads_images
 domain_of:
-- PSFBeadsInput
+- PSFBeadsInputData
 range: Image
 required: true
+multivalued: true
 inlined: true
 inlined_as_list: true
 

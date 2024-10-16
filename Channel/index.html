@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/Channel/" rel="canonical"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.5.3, mkdocs-material-8.5.10" name="generator"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-8.5.10" name="generator"/>
 <title>Class: Channel - microscopemetrics-schema</title>
 <link href="../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
@@ -209,13 +209,33 @@
 <p>URI: <a href="https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/Channel">microscopemetrics_schema:Channel</a></p>
 <div class="mermaid"> classDiagram
     class Channel
-      NamedObject &lt;|-- Channel
+    click Channel href "../Channel"
+      MetricsObject &lt;|-- Channel
+        click MetricsObject href "../MetricsObject"
+
+      Channel : data_reference
+
+
+
+
+    Channel --&gt; "0..1" DataReference : data_reference
+    click DataReference href "../DataReference"
+
 
       Channel : description
 
       Channel : emission_wavelength_nm
 
       Channel : excitation_wavelength_nm
+
+      Channel : linked_references
+
+
+
+
+    Channel --&gt; "*" DataReference : linked_references
+    click DataReference href "../DataReference"
+
 
       Channel : name
 
@@ -224,7 +244,10 @@
 <h2 id="inheritance">Inheritance</h2>
 <ul>
 <li><a href="../NamedObject/">NamedObject</a><ul>
+<li><a href="../MetricsObject/">MetricsObject</a><ul>
 <li><strong>Channel</strong></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -250,6 +273,18 @@
 <td>0..1 <br/> <a href="../Float/">Float</a></td>
 <td>The emission wavelength in nm</td>
 <td>direct</td>
+</tr>
+<tr>
+<td><a href="../data_reference/">data_reference</a></td>
+<td>0..1 <br/> <a href="../DataReference/">DataReference</a></td>
+<td>A reference to the data</td>
+<td><a href="../MetricsObject/">MetricsObject</a></td>
+</tr>
+<tr>
+<td><a href="../linked_references/">linked_references</a></td>
+<td>* <br/> <a href="../DataReference/">DataReference</a></td>
+<td>A list of linked references</td>
+<td><a href="../MetricsObject/">MetricsObject</a></td>
 </tr>
 <tr>
 <td><a href="../name/">name</a></td>
@@ -315,7 +350,7 @@
 <pre><code class="language-yaml">name: Channel
 description: A image channel
 from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
-is_a: NamedObject
+is_a: MetricsObject
 slots:
 - excitation_wavelength_nm
 - emission_wavelength_nm
@@ -327,38 +362,63 @@ slots:
 <pre><code class="language-yaml">name: Channel
 description: A image channel
 from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
-is_a: NamedObject
+is_a: MetricsObject
 attributes:
   excitation_wavelength_nm:
     name: excitation_wavelength_nm
     description: The excitation wavelength in nm
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
-    multivalued: false
     alias: excitation_wavelength_nm
     owner: Channel
     domain_of:
     - Channel
     range: float
     required: false
+    multivalued: false
   emission_wavelength_nm:
     name: emission_wavelength_nm
     description: The emission wavelength in nm
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
-    multivalued: false
     alias: emission_wavelength_nm
     owner: Channel
     domain_of:
     - Channel
     range: float
     required: false
+    multivalued: false
+  data_reference:
+    name: data_reference
+    description: A reference to the data
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
+    rank: 1000
+    alias: data_reference
+    owner: Channel
+    domain_of:
+    - MetricsObject
+    range: DataReference
+    required: false
+    multivalued: false
+  linked_references:
+    name: linked_references
+    description: A list of linked references
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
+    rank: 1000
+    alias: linked_references
+    owner: Channel
+    domain_of:
+    - MetricsObject
+    range: DataReference
+    required: false
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
   name:
     name: name
     description: The human readable name of an entity
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
-    multivalued: false
     alias: name
     owner: Channel
     domain_of:
@@ -366,12 +426,12 @@ attributes:
     - Experimenter
     range: string
     required: false
+    multivalued: false
   description:
     name: description
     description: A human readable description of an entity
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
-    multivalued: false
     alias: description
     owner: Channel
     domain_of:
@@ -379,6 +439,7 @@ attributes:
     - Tag
     range: string
     required: false
+    multivalued: false
 
 </code></pre>
 </details>
@@ -407,5 +468,7 @@ attributes:
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["content.tabs.link"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
 <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
-<script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script><script>mermaid.initialize({});</script></body>
+<script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
+mermaid.initialize({});</script><script type="module">import mermaid from "https://unpkg.com/mermaid@10.9.0/dist/mermaid.esm.min.mjs";
+mermaid.initialize({});</script></body>
 </html>

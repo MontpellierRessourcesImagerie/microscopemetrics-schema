@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/sigma/">
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-8.5.10">
     
     
       
@@ -332,7 +332,7 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../FieldIlluminationInput/">FieldIlluminationInput</a></td>
+<td><a href="../FieldIlluminationInputParameters/">FieldIlluminationInputParameters</a></td>
 <td></td>
 <td>no</td>
 </tr>
@@ -366,13 +366,13 @@ description: 'Input parameter: the sigma for the smoothing gaussian filter to be
   prior to analysis'
 from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
 rank: 1000
-multivalued: false
 ifabsent: float(5.0)
 alias: sigma
 domain_of:
-- FieldIlluminationInput
+- FieldIlluminationInputParameters
 range: float
 required: true
+multivalued: false
 minimum_value: 2.0
 maximum_value: 8.0
 

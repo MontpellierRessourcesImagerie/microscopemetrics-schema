@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/Microscope/" rel="canonical"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.5.3, mkdocs-material-8.5.10" name="generator"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-8.5.10" name="generator"/>
 <title>Class: Microscope - microscopemetrics-schema</title>
 <link href="../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
@@ -209,21 +209,38 @@
 <p>URI: <a href="https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/Microscope">microscopemetrics_schema:Microscope</a></p>
 <div class="mermaid"> classDiagram
     class Microscope
+    click Microscope href "../Microscope"
       MetricsObject &lt;|-- Microscope
+        click MetricsObject href "../MetricsObject"
 
       Microscope : comments
 
-          Microscope --&gt; Comment : comments
+
+
+
+    Microscope --&gt; "*" Comment : comments
+    click Comment href "../Comment"
+
 
       Microscope : data_reference
 
-          Microscope --&gt; DataReference : data_reference
+
+
+
+    Microscope --&gt; "0..1" DataReference : data_reference
+    click DataReference href "../DataReference"
+
 
       Microscope : description
 
       Microscope : linked_references
 
-          Microscope --&gt; DataReference : linked_references
+
+
+
+    Microscope --&gt; "*" DataReference : linked_references
+    click DataReference href "../DataReference"
+
 
       Microscope : manufacturer
 
@@ -235,7 +252,12 @@
 
       Microscope : type
 
-          Microscope --&gt; MicroscopeTypeEnum : type
+
+
+
+    Microscope --&gt; "0..1" MicroscopeTypeEnum : type
+    click MicroscopeTypeEnum href "../MicroscopeTypeEnum"
+
 
 
 </div>
@@ -286,7 +308,7 @@
 </tr>
 <tr>
 <td><a href="../comments/">comments</a></td>
-<td>0..* <br/> <a href="../Comment/">Comment</a></td>
+<td>* <br/> <a href="../Comment/">Comment</a></td>
 <td>A list of comments linked to the microscope</td>
 <td>direct</td>
 </tr>
@@ -298,7 +320,7 @@
 </tr>
 <tr>
 <td><a href="../linked_references/">linked_references</a></td>
-<td>0..* <br/> <a href="../DataReference/">DataReference</a></td>
+<td>* <br/> <a href="../DataReference/">DataReference</a></td>
 <td>A list of linked references</td>
 <td><a href="../MetricsObject/">MetricsObject</a></td>
 </tr>
@@ -351,18 +373,6 @@
 <td>range</td>
 <td><a href="./">Microscope</a></td>
 </tr>
-<tr>
-<td><a href="../ArgolightBDataset/">ArgolightBDataset</a></td>
-<td><a href="../microscope/">microscope</a></td>
-<td>range</td>
-<td><a href="./">Microscope</a></td>
-</tr>
-<tr>
-<td><a href="../ArgolightEDataset/">ArgolightEDataset</a></td>
-<td><a href="../microscope/">microscope</a></td>
-<td>range</td>
-<td><a href="./">Microscope</a></td>
-</tr>
 </tbody>
 </table>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
@@ -405,7 +415,6 @@ attributes:
     rank: 1000
     domain_of:
     - Microscope
-    - Sample
     range: MicroscopeTypeEnum
     required: false
   manufacturer:
@@ -415,6 +424,7 @@ attributes:
     rank: 1000
     domain_of:
     - Microscope
+    - Sample
     range: string
     required: false
   model:
@@ -440,11 +450,11 @@ attributes:
     description: A list of comments linked to the microscope
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
-    multivalued: true
     domain_of:
     - Microscope
     range: Comment
     required: false
+    multivalued: true
 
 </code></pre>
 </details>
@@ -464,7 +474,6 @@ attributes:
     owner: Microscope
     domain_of:
     - Microscope
-    - Sample
     range: MicroscopeTypeEnum
     required: false
   manufacturer:
@@ -476,6 +485,7 @@ attributes:
     owner: Microscope
     domain_of:
     - Microscope
+    - Sample
     range: string
     required: false
   model:
@@ -505,37 +515,37 @@ attributes:
     description: A list of comments linked to the microscope
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
-    multivalued: true
     alias: comments
     owner: Microscope
     domain_of:
     - Microscope
     range: Comment
     required: false
+    multivalued: true
   data_reference:
     name: data_reference
     description: A reference to the data
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
-    multivalued: false
     alias: data_reference
     owner: Microscope
     domain_of:
     - MetricsObject
     range: DataReference
     required: false
+    multivalued: false
   linked_references:
     name: linked_references
     description: A list of linked references
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
-    multivalued: true
     alias: linked_references
     owner: Microscope
     domain_of:
     - MetricsObject
     range: DataReference
     required: false
+    multivalued: true
     inlined: true
     inlined_as_list: true
   name:
@@ -543,7 +553,6 @@ attributes:
     description: The human readable name of an entity
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
-    multivalued: false
     alias: name
     owner: Microscope
     domain_of:
@@ -551,12 +560,12 @@ attributes:
     - Experimenter
     range: string
     required: false
+    multivalued: false
   description:
     name: description
     description: A human readable description of an entity
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
-    multivalued: false
     alias: description
     owner: Microscope
     domain_of:
@@ -564,6 +573,7 @@ attributes:
     - Tag
     range: string
     required: false
+    multivalued: false
 
 </code></pre>
 </details>
@@ -592,5 +602,7 @@ attributes:
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["content.tabs.link"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
 <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
-<script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script><script>mermaid.initialize({});</script></body>
+<script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
+mermaid.initialize({});</script><script type="module">import mermaid from "https://unpkg.com/mermaid@10.9.0/dist/mermaid.esm.min.mjs";
+mermaid.initialize({});</script></body>
 </html>

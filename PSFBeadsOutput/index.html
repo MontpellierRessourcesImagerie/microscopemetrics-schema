@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/PSFBeadsOutput/" rel="canonical"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.5.3, mkdocs-material-8.5.10" name="generator"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-8.5.10" name="generator"/>
 <title>Class: PSFBeadsOutput - microscopemetrics-schema</title>
 <link href="../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
@@ -208,65 +208,146 @@
 <p>URI: <a href="https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/PSFBeadsOutput">microscopemetrics_schema:PSFBeadsOutput</a></p>
 <div class="mermaid"> classDiagram
     class PSFBeadsOutput
+    click PSFBeadsOutput href "../PSFBeadsOutput"
       MetricsOutput &lt;|-- PSFBeadsOutput
+        click MetricsOutput href "../MetricsOutput"
 
       PSFBeadsOutput : analyzed_bead_centers
 
-          PSFBeadsOutput --&gt; Roi : analyzed_bead_centers
+
+
+
+    PSFBeadsOutput --&gt; "*" Roi : analyzed_bead_centers
+    click Roi href "../Roi"
+
+
+      PSFBeadsOutput : average_bead
+
+
+
+
+    PSFBeadsOutput --&gt; "0..1" Image : average_bead
+    click Image href "../Image"
+
+
+      PSFBeadsOutput : bead_profiles_x
+
+
+
+
+    PSFBeadsOutput --&gt; "0..1" Table : bead_profiles_x
+    click Table href "../Table"
+
+
+      PSFBeadsOutput : bead_profiles_y
+
+
+
+
+    PSFBeadsOutput --&gt; "0..1" Table : bead_profiles_y
+    click Table href "../Table"
+
+
+      PSFBeadsOutput : bead_profiles_z
+
+
+
+
+    PSFBeadsOutput --&gt; "0..1" Table : bead_profiles_z
+    click Table href "../Table"
+
 
       PSFBeadsOutput : bead_properties
 
-          PSFBeadsOutput --&gt; Table : bead_properties
 
-      PSFBeadsOutput : bead_x_profiles
 
-          PSFBeadsOutput --&gt; Table : bead_x_profiles
 
-      PSFBeadsOutput : bead_y_profiles
+    PSFBeadsOutput --&gt; "0..1" Table : bead_properties
+    click Table href "../Table"
 
-          PSFBeadsOutput --&gt; Table : bead_y_profiles
-
-      PSFBeadsOutput : bead_z_profiles
-
-          PSFBeadsOutput --&gt; Table : bead_z_profiles
 
       PSFBeadsOutput : comment
 
-          PSFBeadsOutput --&gt; Comment : comment
+
+
+
+    PSFBeadsOutput --&gt; "0..1" Comment : comment
+    click Comment href "../Comment"
+
 
       PSFBeadsOutput : considered_bead_centers_axial_edge
 
-          PSFBeadsOutput --&gt; Roi : considered_bead_centers_axial_edge
+
+
+
+    PSFBeadsOutput --&gt; "*" Roi : considered_bead_centers_axial_edge
+    click Roi href "../Roi"
+
 
       PSFBeadsOutput : considered_bead_centers_intensity_outlier
 
-          PSFBeadsOutput --&gt; Roi : considered_bead_centers_intensity_outlier
+
+
+
+    PSFBeadsOutput --&gt; "*" Roi : considered_bead_centers_intensity_outlier
+    click Roi href "../Roi"
+
+
+      PSFBeadsOutput : considered_bead_centers_lateral_edge
+
+
+
+
+    PSFBeadsOutput --&gt; "*" Roi : considered_bead_centers_lateral_edge
+    click Roi href "../Roi"
+
+
+      PSFBeadsOutput : considered_bead_centers_self_proximity
+
+
+
+
+    PSFBeadsOutput --&gt; "*" Roi : considered_bead_centers_self_proximity
+    click Roi href "../Roi"
+
 
       PSFBeadsOutput : considered_bead_centers_x_fit_quality
 
-          PSFBeadsOutput --&gt; Roi : considered_bead_centers_x_fit_quality
+
+
+
+    PSFBeadsOutput --&gt; "*" Roi : considered_bead_centers_x_fit_quality
+    click Roi href "../Roi"
+
 
       PSFBeadsOutput : considered_bead_centers_y_fit_quality
 
-          PSFBeadsOutput --&gt; Roi : considered_bead_centers_y_fit_quality
+
+
+
+    PSFBeadsOutput --&gt; "*" Roi : considered_bead_centers_y_fit_quality
+    click Roi href "../Roi"
+
 
       PSFBeadsOutput : considered_bead_centers_z_fit_quality
 
-          PSFBeadsOutput --&gt; Roi : considered_bead_centers_z_fit_quality
 
-      PSFBeadsOutput : discarded_bead_centers_lateral_edge
 
-          PSFBeadsOutput --&gt; Roi : discarded_bead_centers_lateral_edge
 
-      PSFBeadsOutput : discarded_bead_centers_self_proximity
+    PSFBeadsOutput --&gt; "*" Roi : considered_bead_centers_z_fit_quality
+    click Roi href "../Roi"
 
-          PSFBeadsOutput --&gt; Roi : discarded_bead_centers_self_proximity
 
       PSFBeadsOutput : errors
 
-      PSFBeadsOutput : key_values
+      PSFBeadsOutput : key_measurements
 
-          PSFBeadsOutput --&gt; PSFBeadsKeyValues : key_values
+
+
+
+    PSFBeadsOutput --&gt; "0..1" PSFBeadsKeyMeasurements : key_measurements
+    click PSFBeadsKeyMeasurements href "../PSFBeadsKeyMeasurements"
+
 
       PSFBeadsOutput : processing_application
 
@@ -277,6 +358,10 @@
       PSFBeadsOutput : processing_log
 
       PSFBeadsOutput : processing_version
+
+      PSFBeadsOutput : validated
+
+      PSFBeadsOutput : validation_datetime
 
       PSFBeadsOutput : warnings
 
@@ -302,55 +387,55 @@
 <tbody>
 <tr>
 <td><a href="../analyzed_bead_centers/">analyzed_bead_centers</a></td>
-<td>0..* <br/> <a href="../Roi/">Roi</a></td>
+<td>* <br/> <a href="../Roi/">Roi</a></td>
 <td>The centers of the beads that have been analyzed</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../discarded_bead_centers_lateral_edge/">discarded_bead_centers_lateral_edge</a></td>
-<td>0..* <br/> <a href="../Roi/">Roi</a></td>
-<td>The centers of the beads detected but discarded as too close to the edge of t...</td>
+<td><a href="../considered_bead_centers_lateral_edge/">considered_bead_centers_lateral_edge</a></td>
+<td>* <br/> <a href="../Roi/">Roi</a></td>
+<td>The centers of the beads detected but considered as too close to the edge of ...</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../discarded_bead_centers_self_proximity/">discarded_bead_centers_self_proximity</a></td>
-<td>0..* <br/> <a href="../Roi/">Roi</a></td>
-<td>The centers of the beads detected but discarded as too close to another bead</td>
+<td><a href="../considered_bead_centers_self_proximity/">considered_bead_centers_self_proximity</a></td>
+<td>* <br/> <a href="../Roi/">Roi</a></td>
+<td>The centers of the beads detected but considered as too close to another bead</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../considered_bead_centers_axial_edge/">considered_bead_centers_axial_edge</a></td>
-<td>0..* <br/> <a href="../Roi/">Roi</a></td>
+<td>* <br/> <a href="../Roi/">Roi</a></td>
 <td>The centers of the beads detected but considered as too close to the top and ...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../considered_bead_centers_intensity_outlier/">considered_bead_centers_intensity_outlier</a></td>
-<td>0..* <br/> <a href="../Roi/">Roi</a></td>
+<td>* <br/> <a href="../Roi/">Roi</a></td>
 <td>The centers of the beads detected but considered as being too intense and pot...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../considered_bead_centers_z_fit_quality/">considered_bead_centers_z_fit_quality</a></td>
-<td>0..* <br/> <a href="../Roi/">Roi</a></td>
+<td>* <br/> <a href="../Roi/">Roi</a></td>
 <td>The centers of the beads detected but considered as the fit quality in z was ...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../considered_bead_centers_y_fit_quality/">considered_bead_centers_y_fit_quality</a></td>
-<td>0..* <br/> <a href="../Roi/">Roi</a></td>
+<td>* <br/> <a href="../Roi/">Roi</a></td>
 <td>The centers of the beads detected but considered as the fit quality in y was ...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../considered_bead_centers_x_fit_quality/">considered_bead_centers_x_fit_quality</a></td>
-<td>0..* <br/> <a href="../Roi/">Roi</a></td>
+<td>* <br/> <a href="../Roi/">Roi</a></td>
 <td>The centers of the beads detected but considered as the fit quality in x was ...</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../key_values/">key_values</a></td>
-<td>0..1 <br/> <a href="../PSFBeadsKeyValues/">PSFBeadsKeyValues</a></td>
+<td><a href="../key_measurements/">key_measurements</a></td>
+<td>0..1 <br/> <a href="../PSFBeadsKeyMeasurements/">PSFBeadsKeyMeasurements</a></td>
 <td>The key measurements of the PSF beads analysis</td>
 <td>direct</td>
 </tr>
@@ -361,21 +446,27 @@
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../bead_z_profiles/">bead_z_profiles</a></td>
+<td><a href="../bead_profiles_z/">bead_profiles_z</a></td>
 <td>0..1 <br/> <a href="../Table/">Table</a></td>
 <td>The intensity profiles along the z axis of the analyzed beads as well as the ...</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../bead_y_profiles/">bead_y_profiles</a></td>
+<td><a href="../bead_profiles_y/">bead_profiles_y</a></td>
 <td>0..1 <br/> <a href="../Table/">Table</a></td>
 <td>The intensity profiles along the y axis of the analyzed beads as well as the ...</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../bead_x_profiles/">bead_x_profiles</a></td>
+<td><a href="../bead_profiles_x/">bead_profiles_x</a></td>
 <td>0..1 <br/> <a href="../Table/">Table</a></td>
 <td>The intensity profiles along the x axis of the analyzed beads as well as the ...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../average_bead/">average_bead</a></td>
+<td>0..1 <br/> <a href="../Image/">Image</a></td>
+<td>The average bead image created from all the beads considered valid</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -392,13 +483,13 @@
 </tr>
 <tr>
 <td><a href="../processing_entity/">processing_entity</a></td>
-<td>0..* <br/> <a href="../String/">String</a></td>
+<td>* <br/> <a href="../String/">String</a></td>
 <td>The entity that processed the dataset</td>
 <td><a href="../MetricsOutput/">MetricsOutput</a></td>
 </tr>
 <tr>
 <td><a href="../processing_datetime/">processing_datetime</a></td>
-<td>1..1 <br/> <a href="../datetime/">datetime</a></td>
+<td>1 <br/> <a href="../datetime/">datetime</a></td>
 <td>The datetime of the processing by microscope-metrics</td>
 <td><a href="../MetricsOutput/">MetricsOutput</a></td>
 </tr>
@@ -410,14 +501,26 @@
 </tr>
 <tr>
 <td><a href="../warnings/">warnings</a></td>
-<td>0..* <br/> <a href="../String/">String</a></td>
+<td>* <br/> <a href="../String/">String</a></td>
 <td>The warnings of the processing by microscope-metrics</td>
 <td><a href="../MetricsOutput/">MetricsOutput</a></td>
 </tr>
 <tr>
 <td><a href="../errors/">errors</a></td>
-<td>0..* <br/> <a href="../String/">String</a></td>
+<td>* <br/> <a href="../String/">String</a></td>
 <td>The errors of the processing by microscope-metrics</td>
+<td><a href="../MetricsOutput/">MetricsOutput</a></td>
+</tr>
+<tr>
+<td><a href="../validated/">validated</a></td>
+<td>1 <br/> <a href="../Boolean/">Boolean</a></td>
+<td>Has the dataset been validated by a human</td>
+<td><a href="../MetricsOutput/">MetricsOutput</a></td>
+</tr>
+<tr>
+<td><a href="../validation_datetime/">validation_datetime</a></td>
+<td>0..1 <br/> <a href="../datetime/">datetime</a></td>
+<td>The datetime of the validation</td>
 <td><a href="../MetricsOutput/">MetricsOutput</a></td>
 </tr>
 <tr>
@@ -483,163 +586,180 @@ attributes:
     name: analyzed_bead_centers
     description: The centers of the beads that have been analyzed. One point shape
       will be provided per bead correctly detected. One ROI per channel.
-    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/psf_beads_schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/analyses/psf_beads_schema
     rank: 1000
-    multivalued: true
     domain_of:
     - PSFBeadsOutput
     range: Roi
+    multivalued: true
     inlined: true
     inlined_as_list: true
-  discarded_bead_centers_lateral_edge:
-    name: discarded_bead_centers_lateral_edge
-    description: The centers of the beads detected but discarded as too close to the
-      edge of the image. One point will be provided per bead. One ROI per channel.
-    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/psf_beads_schema
+  considered_bead_centers_lateral_edge:
+    name: considered_bead_centers_lateral_edge
+    description: The centers of the beads detected but considered as too close to
+      the edge of the image. Measurements on these bead not considered for the dataset
+      analysis. One point will be provided per bead. One ROI per channel.
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/analyses/psf_beads_schema
     rank: 1000
-    multivalued: true
     domain_of:
     - PSFBeadsOutput
     range: Roi
+    multivalued: true
     inlined: true
     inlined_as_list: true
-  discarded_bead_centers_self_proximity:
-    name: discarded_bead_centers_self_proximity
-    description: The centers of the beads detected but discarded as too close to another
-      bead. One point will be provided per bead. One ROI per channel.
-    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/psf_beads_schema
+  considered_bead_centers_self_proximity:
+    name: considered_bead_centers_self_proximity
+    description: The centers of the beads detected but considered as too close to
+      another bead. Measurements on these bead not considered for the dataset analysis.
+      One point will be provided per bead. One ROI per channel.
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/analyses/psf_beads_schema
     rank: 1000
-    multivalued: true
     domain_of:
     - PSFBeadsOutput
     range: Roi
+    multivalued: true
     inlined: true
     inlined_as_list: true
   considered_bead_centers_axial_edge:
     name: considered_bead_centers_axial_edge
     description: The centers of the beads detected but considered as too close to
-      the top and or bottom of the image. Measurements not considered for the dataset
-      analysis. One point will be provided per bead. One ROI per channel.
-    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/psf_beads_schema
+      the top and or bottom of the image. Measurements on these bead not considered
+      for the dataset analysis. One point will be provided per bead. One ROI per channel.
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/analyses/psf_beads_schema
     rank: 1000
-    multivalued: true
     domain_of:
     - PSFBeadsOutput
     range: Roi
+    multivalued: true
     inlined: true
     inlined_as_list: true
   considered_bead_centers_intensity_outlier:
     name: considered_bead_centers_intensity_outlier
     description: The centers of the beads detected but considered as being too intense
       and potentially represent a cluster of beads. Intensity robust z-score over
-      requested threshold. Measurements not considered for the dataset analysis. One
-      point will be provided per bead. One ROI per channel.
-    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/psf_beads_schema
+      requested threshold. Measurements on these bead not considered for the dataset
+      analysis. One point will be provided per bead. One ROI per channel.
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/analyses/psf_beads_schema
     rank: 1000
-    multivalued: true
     domain_of:
     - PSFBeadsOutput
     range: Roi
+    multivalued: true
     inlined: true
     inlined_as_list: true
   considered_bead_centers_z_fit_quality:
     name: considered_bead_centers_z_fit_quality
     description: The centers of the beads detected but considered as the fit quality
-      in z was not good enough.  Coefficient of determination (R^2) over requested
-      threshold. Measurements in z not considered for the dataset analysis. One point
-      will be provided per bead. One ROI per channel.
-    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/psf_beads_schema
+      in z was not good enough.  coefficient of determination (R^2) (R^2) over requested
+      threshold. Measurements in z for this bead not considered for the dataset analysis.
+      One point will be provided per bead. One ROI per channel.
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/analyses/psf_beads_schema
     rank: 1000
-    multivalued: true
     domain_of:
     - PSFBeadsOutput
     range: Roi
+    multivalued: true
     inlined: true
     inlined_as_list: true
   considered_bead_centers_y_fit_quality:
     name: considered_bead_centers_y_fit_quality
     description: The centers of the beads detected but considered as the fit quality
-      in y was not good enough.  Coefficient of determination (R^2) over requested
-      threshold. Measurements in y not considered for the dataset analysis. One point
-      will be provided per bead. One ROI per channel.
-    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/psf_beads_schema
+      in y was not good enough.  coefficient of determination (R^2) (R^2) over requested
+      threshold. Measurements in y for this bead not considered for the dataset analysis.
+      One point will be provided per bead. One ROI per channel.
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/analyses/psf_beads_schema
     rank: 1000
-    multivalued: true
     domain_of:
     - PSFBeadsOutput
     range: Roi
+    multivalued: true
     inlined: true
     inlined_as_list: true
   considered_bead_centers_x_fit_quality:
     name: considered_bead_centers_x_fit_quality
     description: The centers of the beads detected but considered as the fit quality
-      in x was not good enough.  Coefficient of determination (R^2) over requested
-      threshold. Measurements in x not considered for the dataset analysis. One point
-      will be provided per bead. One ROI per channel.
-    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/psf_beads_schema
+      in x was not good enough.  coefficient of determination (R^2) (R^2) over requested
+      threshold. Measurements in x for this bead not considered for the dataset analysis.
+      One point will be provided per bead. One ROI per channel.
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/analyses/psf_beads_schema
     rank: 1000
-    multivalued: true
     domain_of:
     - PSFBeadsOutput
     range: Roi
+    multivalued: true
     inlined: true
     inlined_as_list: true
-  key_values:
-    name: key_values
+  key_measurements:
+    name: key_measurements
     description: The key measurements of the PSF beads analysis.
-    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/psf_beads_schema
-    multivalued: false
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/analyses/psf_beads_schema
     domain_of:
     - FieldIlluminationOutput
     - PSFBeadsOutput
-    range: PSFBeadsKeyValues
+    range: PSFBeadsKeyMeasurements
+    multivalued: false
     inlined: true
     inlined_as_list: true
   bead_properties:
     name: bead_properties
     description: Properties associated with the analysis of the beads.
-    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/psf_beads_schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/analyses/psf_beads_schema
     rank: 1000
-    multivalued: false
     domain_of:
     - PSFBeadsOutput
     range: Table
+    multivalued: false
     inlined: true
     inlined_as_list: true
-  bead_z_profiles:
-    name: bead_z_profiles
+  bead_profiles_z:
+    name: bead_profiles_z
     description: The intensity profiles along the z axis of the analyzed beads as
       well as the fits.
-    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/psf_beads_schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/analyses/psf_beads_schema
     rank: 1000
-    multivalued: false
     domain_of:
     - PSFBeadsOutput
     range: Table
+    multivalued: false
     inlined: true
     inlined_as_list: true
-  bead_y_profiles:
-    name: bead_y_profiles
+  bead_profiles_y:
+    name: bead_profiles_y
     description: The intensity profiles along the y axis of the analyzed beads as
       well as the fits.
-    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/psf_beads_schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/analyses/psf_beads_schema
     rank: 1000
-    multivalued: false
     domain_of:
     - PSFBeadsOutput
     range: Table
+    multivalued: false
     inlined: true
     inlined_as_list: true
-  bead_x_profiles:
-    name: bead_x_profiles
+  bead_profiles_x:
+    name: bead_profiles_x
     description: The intensity profiles along the x axis of the analyzed beads as
       well as the fits.
-    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/psf_beads_schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/analyses/psf_beads_schema
     rank: 1000
-    multivalued: false
     domain_of:
     - PSFBeadsOutput
     range: Table
+    multivalued: false
+    inlined: true
+    inlined_as_list: true
+  average_bead:
+    name: average_bead
+    description: The average bead image created from all the beads considered valid.
+      The average bead is calculated after aligning the beads in all three axes. This
+      one image contains all the channels. If the analysis does not detect at least
+      two beads in a channel, the average bead for this channel is not calculated.
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/analyses/psf_beads_schema
+    rank: 1000
+    domain_of:
+    - PSFBeadsOutput
+    range: Image
+    required: false
+    multivalued: false
     inlined: true
     inlined_as_list: true
 
@@ -655,189 +775,208 @@ attributes:
     name: analyzed_bead_centers
     description: The centers of the beads that have been analyzed. One point shape
       will be provided per bead correctly detected. One ROI per channel.
-    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/psf_beads_schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/analyses/psf_beads_schema
     rank: 1000
-    multivalued: true
     alias: analyzed_bead_centers
     owner: PSFBeadsOutput
     domain_of:
     - PSFBeadsOutput
     range: Roi
+    multivalued: true
     inlined: true
     inlined_as_list: true
-  discarded_bead_centers_lateral_edge:
-    name: discarded_bead_centers_lateral_edge
-    description: The centers of the beads detected but discarded as too close to the
-      edge of the image. One point will be provided per bead. One ROI per channel.
-    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/psf_beads_schema
+  considered_bead_centers_lateral_edge:
+    name: considered_bead_centers_lateral_edge
+    description: The centers of the beads detected but considered as too close to
+      the edge of the image. Measurements on these bead not considered for the dataset
+      analysis. One point will be provided per bead. One ROI per channel.
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/analyses/psf_beads_schema
     rank: 1000
-    multivalued: true
-    alias: discarded_bead_centers_lateral_edge
+    alias: considered_bead_centers_lateral_edge
     owner: PSFBeadsOutput
     domain_of:
     - PSFBeadsOutput
     range: Roi
+    multivalued: true
     inlined: true
     inlined_as_list: true
-  discarded_bead_centers_self_proximity:
-    name: discarded_bead_centers_self_proximity
-    description: The centers of the beads detected but discarded as too close to another
-      bead. One point will be provided per bead. One ROI per channel.
-    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/psf_beads_schema
+  considered_bead_centers_self_proximity:
+    name: considered_bead_centers_self_proximity
+    description: The centers of the beads detected but considered as too close to
+      another bead. Measurements on these bead not considered for the dataset analysis.
+      One point will be provided per bead. One ROI per channel.
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/analyses/psf_beads_schema
     rank: 1000
-    multivalued: true
-    alias: discarded_bead_centers_self_proximity
+    alias: considered_bead_centers_self_proximity
     owner: PSFBeadsOutput
     domain_of:
     - PSFBeadsOutput
     range: Roi
+    multivalued: true
     inlined: true
     inlined_as_list: true
   considered_bead_centers_axial_edge:
     name: considered_bead_centers_axial_edge
     description: The centers of the beads detected but considered as too close to
-      the top and or bottom of the image. Measurements not considered for the dataset
-      analysis. One point will be provided per bead. One ROI per channel.
-    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/psf_beads_schema
+      the top and or bottom of the image. Measurements on these bead not considered
+      for the dataset analysis. One point will be provided per bead. One ROI per channel.
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/analyses/psf_beads_schema
     rank: 1000
-    multivalued: true
     alias: considered_bead_centers_axial_edge
     owner: PSFBeadsOutput
     domain_of:
     - PSFBeadsOutput
     range: Roi
+    multivalued: true
     inlined: true
     inlined_as_list: true
   considered_bead_centers_intensity_outlier:
     name: considered_bead_centers_intensity_outlier
     description: The centers of the beads detected but considered as being too intense
       and potentially represent a cluster of beads. Intensity robust z-score over
-      requested threshold. Measurements not considered for the dataset analysis. One
-      point will be provided per bead. One ROI per channel.
-    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/psf_beads_schema
+      requested threshold. Measurements on these bead not considered for the dataset
+      analysis. One point will be provided per bead. One ROI per channel.
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/analyses/psf_beads_schema
     rank: 1000
-    multivalued: true
     alias: considered_bead_centers_intensity_outlier
     owner: PSFBeadsOutput
     domain_of:
     - PSFBeadsOutput
     range: Roi
+    multivalued: true
     inlined: true
     inlined_as_list: true
   considered_bead_centers_z_fit_quality:
     name: considered_bead_centers_z_fit_quality
     description: The centers of the beads detected but considered as the fit quality
-      in z was not good enough.  Coefficient of determination (R^2) over requested
-      threshold. Measurements in z not considered for the dataset analysis. One point
-      will be provided per bead. One ROI per channel.
-    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/psf_beads_schema
+      in z was not good enough.  coefficient of determination (R^2) (R^2) over requested
+      threshold. Measurements in z for this bead not considered for the dataset analysis.
+      One point will be provided per bead. One ROI per channel.
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/analyses/psf_beads_schema
     rank: 1000
-    multivalued: true
     alias: considered_bead_centers_z_fit_quality
     owner: PSFBeadsOutput
     domain_of:
     - PSFBeadsOutput
     range: Roi
+    multivalued: true
     inlined: true
     inlined_as_list: true
   considered_bead_centers_y_fit_quality:
     name: considered_bead_centers_y_fit_quality
     description: The centers of the beads detected but considered as the fit quality
-      in y was not good enough.  Coefficient of determination (R^2) over requested
-      threshold. Measurements in y not considered for the dataset analysis. One point
-      will be provided per bead. One ROI per channel.
-    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/psf_beads_schema
+      in y was not good enough.  coefficient of determination (R^2) (R^2) over requested
+      threshold. Measurements in y for this bead not considered for the dataset analysis.
+      One point will be provided per bead. One ROI per channel.
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/analyses/psf_beads_schema
     rank: 1000
-    multivalued: true
     alias: considered_bead_centers_y_fit_quality
     owner: PSFBeadsOutput
     domain_of:
     - PSFBeadsOutput
     range: Roi
+    multivalued: true
     inlined: true
     inlined_as_list: true
   considered_bead_centers_x_fit_quality:
     name: considered_bead_centers_x_fit_quality
     description: The centers of the beads detected but considered as the fit quality
-      in x was not good enough.  Coefficient of determination (R^2) over requested
-      threshold. Measurements in x not considered for the dataset analysis. One point
-      will be provided per bead. One ROI per channel.
-    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/psf_beads_schema
+      in x was not good enough.  coefficient of determination (R^2) (R^2) over requested
+      threshold. Measurements in x for this bead not considered for the dataset analysis.
+      One point will be provided per bead. One ROI per channel.
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/analyses/psf_beads_schema
     rank: 1000
-    multivalued: true
     alias: considered_bead_centers_x_fit_quality
     owner: PSFBeadsOutput
     domain_of:
     - PSFBeadsOutput
     range: Roi
+    multivalued: true
     inlined: true
     inlined_as_list: true
-  key_values:
-    name: key_values
+  key_measurements:
+    name: key_measurements
     description: The key measurements of the PSF beads analysis.
-    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/psf_beads_schema
-    multivalued: false
-    alias: key_values
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/analyses/psf_beads_schema
+    alias: key_measurements
     owner: PSFBeadsOutput
     domain_of:
     - FieldIlluminationOutput
     - PSFBeadsOutput
-    range: PSFBeadsKeyValues
+    range: PSFBeadsKeyMeasurements
+    multivalued: false
     inlined: true
     inlined_as_list: true
   bead_properties:
     name: bead_properties
     description: Properties associated with the analysis of the beads.
-    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/psf_beads_schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/analyses/psf_beads_schema
     rank: 1000
-    multivalued: false
     alias: bead_properties
     owner: PSFBeadsOutput
     domain_of:
     - PSFBeadsOutput
     range: Table
+    multivalued: false
     inlined: true
     inlined_as_list: true
-  bead_z_profiles:
-    name: bead_z_profiles
+  bead_profiles_z:
+    name: bead_profiles_z
     description: The intensity profiles along the z axis of the analyzed beads as
       well as the fits.
-    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/psf_beads_schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/analyses/psf_beads_schema
     rank: 1000
-    multivalued: false
-    alias: bead_z_profiles
+    alias: bead_profiles_z
     owner: PSFBeadsOutput
     domain_of:
     - PSFBeadsOutput
     range: Table
+    multivalued: false
     inlined: true
     inlined_as_list: true
-  bead_y_profiles:
-    name: bead_y_profiles
+  bead_profiles_y:
+    name: bead_profiles_y
     description: The intensity profiles along the y axis of the analyzed beads as
       well as the fits.
-    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/psf_beads_schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/analyses/psf_beads_schema
     rank: 1000
-    multivalued: false
-    alias: bead_y_profiles
+    alias: bead_profiles_y
     owner: PSFBeadsOutput
     domain_of:
     - PSFBeadsOutput
     range: Table
+    multivalued: false
     inlined: true
     inlined_as_list: true
-  bead_x_profiles:
-    name: bead_x_profiles
+  bead_profiles_x:
+    name: bead_profiles_x
     description: The intensity profiles along the x axis of the analyzed beads as
       well as the fits.
-    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/psf_beads_schema
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/analyses/psf_beads_schema
     rank: 1000
-    multivalued: false
-    alias: bead_x_profiles
+    alias: bead_profiles_x
     owner: PSFBeadsOutput
     domain_of:
     - PSFBeadsOutput
     range: Table
+    multivalued: false
+    inlined: true
+    inlined_as_list: true
+  average_bead:
+    name: average_bead
+    description: The average bead image created from all the beads considered valid.
+      The average bead is calculated after aligning the beads in all three axes. This
+      one image contains all the channels. If the analysis does not detect at least
+      two beads in a channel, the average bead for this channel is not calculated.
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/analyses/psf_beads_schema
+    rank: 1000
+    alias: average_bead
+    owner: PSFBeadsOutput
+    domain_of:
+    - PSFBeadsOutput
+    range: Image
+    required: false
+    multivalued: false
     inlined: true
     inlined_as_list: true
   processing_application:
@@ -845,97 +984,122 @@ attributes:
     description: The application used to process the dataset
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
-    multivalued: true
     alias: processing_application
     owner: PSFBeadsOutput
     domain_of:
     - MetricsOutput
     range: string
     required: true
+    multivalued: true
   processing_version:
     name: processing_version
     description: The version of the application used to process the dataset
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
-    multivalued: true
     alias: processing_version
     owner: PSFBeadsOutput
     domain_of:
     - MetricsOutput
     range: string
     required: true
+    multivalued: true
   processing_entity:
     name: processing_entity
     description: The entity that processed the dataset
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
-    multivalued: true
     alias: processing_entity
     owner: PSFBeadsOutput
     domain_of:
     - MetricsOutput
     range: string
     required: false
+    multivalued: true
   processing_datetime:
     name: processing_datetime
     description: The datetime of the processing by microscope-metrics
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
-    multivalued: false
     alias: processing_datetime
     owner: PSFBeadsOutput
     domain_of:
     - MetricsOutput
     range: datetime
     required: true
+    multivalued: false
   processing_log:
     name: processing_log
     description: The log of the processing by microscope-metrics
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
-    multivalued: false
     alias: processing_log
     owner: PSFBeadsOutput
     domain_of:
     - MetricsOutput
     range: string
     required: false
+    multivalued: false
   warnings:
     name: warnings
     description: The warnings of the processing by microscope-metrics
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
-    multivalued: true
     alias: warnings
     owner: PSFBeadsOutput
     domain_of:
     - MetricsOutput
     range: string
     required: false
+    multivalued: true
   errors:
     name: errors
     description: The errors of the processing by microscope-metrics
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
-    multivalued: true
     alias: errors
     owner: PSFBeadsOutput
     domain_of:
     - MetricsOutput
     range: string
     required: false
+    multivalued: true
+  validated:
+    name: validated
+    description: Has the dataset been validated by a human
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
+    rank: 1000
+    ifabsent: 'False'
+    alias: validated
+    owner: PSFBeadsOutput
+    domain_of:
+    - MetricsOutput
+    range: boolean
+    required: true
+    multivalued: false
+  validation_datetime:
+    name: validation_datetime
+    description: The datetime of the validation
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
+    rank: 1000
+    alias: validation_datetime
+    owner: PSFBeadsOutput
+    domain_of:
+    - MetricsOutput
+    range: datetime
+    required: false
+    multivalued: false
   comment:
     name: comment
     description: A human readable comment about the dataset
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
     rank: 1000
-    multivalued: false
     alias: comment
     owner: PSFBeadsOutput
     domain_of:
     - MetricsOutput
     range: Comment
     required: false
+    multivalued: false
 
 </code></pre>
 </details>
@@ -964,5 +1128,7 @@ attributes:
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["content.tabs.link"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
 <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
-<script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script><script>mermaid.initialize({});</script></body>
+<script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
+mermaid.initialize({});</script><script type="module">import mermaid from "https://unpkg.com/mermaid@10.9.0/dist/mermaid.esm.min.mjs";
+mermaid.initialize({});</script></body>
 </html>
