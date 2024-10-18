@@ -142,6 +142,11 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#inheritance">
+    Inheritance
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#slots">
     Slots
   </a>
@@ -205,13 +210,45 @@
 <div class="mermaid"> classDiagram
     class Experimenter
     click Experimenter href "../Experimenter"
+      MetricsObject &lt;|-- Experimenter
+        click MetricsObject href "../MetricsObject"
+
+      Experimenter : data_reference
+
+
+
+
+    Experimenter --&gt; "0..1" DataReference : data_reference
+    click DataReference href "../DataReference"
+
+
+      Experimenter : description
+
+      Experimenter : linked_references
+
+
+
+
+    Experimenter --&gt; "*" DataReference : linked_references
+    click DataReference href "../DataReference"
+
+
       Experimenter : name
 
       Experimenter : orcid
 
 
 </div>
-<!-- no inheritance hierarchy -->
+<h2 id="inheritance">Inheritance</h2>
+<ul>
+<li><a href="../NamedObject/">NamedObject</a><ul>
+<li><a href="../MetricsObject/">MetricsObject</a><ul>
+<li><strong>Experimenter</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <h2 id="slots">Slots</h2>
 <table>
 <thead>
@@ -234,6 +271,24 @@
 <td>1 <br/> <a href="../String/">String</a></td>
 <td>The ORCID of the experimenter</td>
 <td>direct</td>
+</tr>
+<tr>
+<td><a href="../data_reference/">data_reference</a></td>
+<td>0..1 <br/> <a href="../DataReference/">DataReference</a></td>
+<td>A reference to the data</td>
+<td><a href="../MetricsObject/">MetricsObject</a></td>
+</tr>
+<tr>
+<td><a href="../linked_references/">linked_references</a></td>
+<td>* <br/> <a href="../DataReference/">DataReference</a></td>
+<td>A list of linked references</td>
+<td><a href="../MetricsObject/">MetricsObject</a></td>
+</tr>
+<tr>
+<td><a href="../description/">description</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A human readable description of an entity</td>
+<td><a href="../NamedObject/">NamedObject</a></td>
 </tr>
 </tbody>
 </table>
@@ -311,6 +366,7 @@
 <pre><code class="language-yaml">name: Experimenter
 description: The person that performed the experiment or developed the protocol
 from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
+is_a: MetricsObject
 attributes:
   name:
     name: name
@@ -339,6 +395,7 @@ attributes:
 <pre><code class="language-yaml">name: Experimenter
 description: The person that performed the experiment or developed the protocol
 from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
+is_a: MetricsObject
 attributes:
   name:
     name: name
@@ -363,6 +420,45 @@ attributes:
     - Experimenter
     range: string
     required: true
+  data_reference:
+    name: data_reference
+    description: A reference to the data
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
+    rank: 1000
+    alias: data_reference
+    owner: Experimenter
+    domain_of:
+    - MetricsObject
+    range: DataReference
+    required: false
+    multivalued: false
+  linked_references:
+    name: linked_references
+    description: A list of linked references
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core_schema
+    rank: 1000
+    alias: linked_references
+    owner: Experimenter
+    domain_of:
+    - MetricsObject
+    range: DataReference
+    required: false
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+  description:
+    name: description
+    description: A human readable description of an entity
+    from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
+    rank: 1000
+    alias: description
+    owner: Experimenter
+    domain_of:
+    - NamedObject
+    - Tag
+    range: string
+    required: false
+    multivalued: false
 
 </code></pre>
 </details>
