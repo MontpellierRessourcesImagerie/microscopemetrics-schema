@@ -332,38 +332,8 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../Polygon/">Polygon</a></td>
-<td>A polygon as defined by a series of vertexes and a boolean to indicate if clo...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../HomogeneousField/">HomogeneousField</a></td>
-<td>An homogeneous field</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Point/">Point</a></td>
-<td>A point as defined by x and y coordinates</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../FieldIlluminationKeyMeasurements/">FieldIlluminationKeyMeasurements</a></td>
-<td></td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../ImageMask/">ImageMask</a></td>
-<td>A mask image</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Protocol/">Protocol</a></td>
-<td>Set of instructions for preparing and imaging a sample</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../MetricsDatasetCollection/">MetricsDatasetCollection</a></td>
-<td>A collection of microscope-metrics datasets</td>
+<td><a href="../Microscope/">Microscope</a></td>
+<td>A microscope</td>
 <td>no</td>
 </tr>
 <tr>
@@ -372,13 +342,18 @@
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../Shape/">Shape</a></td>
-<td>A shape</td>
+<td><a href="../Mask/">Mask</a></td>
+<td>A mask as defined by a boolean image</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../KeyMeasurements/">KeyMeasurements</a></td>
-<td>A table of key measurements</td>
+<td><a href="../Protocol/">Protocol</a></td>
+<td>Set of instructions for preparing and imaging a sample</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../ImageMask/">ImageMask</a></td>
+<td>A mask image</td>
 <td>no</td>
 </tr>
 <tr>
@@ -387,18 +362,13 @@
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../Ellipse/">Ellipse</a></td>
-<td>An ellipse as defined by x, y coordinates and x and y radii</td>
+<td><a href="../Line/">Line</a></td>
+<td>A line as defined by x1, y1, x2, y2 coordinates</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../FieldIlluminationDataset/">FieldIlluminationDataset</a></td>
-<td>A field illumination dataset</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Mask/">Mask</a></td>
-<td>A mask as defined by a boolean image</td>
+<td><a href="../HomogeneousField/">HomogeneousField</a></td>
+<td>An homogeneous field</td>
 <td>no</td>
 </tr>
 <tr>
@@ -407,43 +377,13 @@
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../Microscope/">Microscope</a></td>
-<td>A microscope</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../KeyValues/">KeyValues</a></td>
-<td>A collection of key-value pairs</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../PSFBeadsKeyMeasurements/">PSFBeadsKeyMeasurements</a></td>
+<td><a href="../FieldIlluminationKeyMeasurements/">FieldIlluminationKeyMeasurements</a></td>
 <td></td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../HarmonizedMetricsDatasetCollection/">HarmonizedMetricsDatasetCollection</a></td>
-<td>A collection of harmonized microscope-metrics datasets</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Column/">Column</a></td>
-<td>Attributes of a column</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Roi/">Roi</a></td>
-<td>A ROI (Region Of Interest)</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Sample/">Sample</a></td>
-<td>A sample is a standard physical object that is imaged by a microscope</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Line/">Line</a></td>
-<td>A line as defined by x1, y1, x2, y2 coordinates</td>
+<td><a href="../Image/">Image</a></td>
+<td>A microscope-metrics image</td>
 <td>no</td>
 </tr>
 <tr>
@@ -452,18 +392,23 @@
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../FluorescentHomogeneousThinField/">FluorescentHomogeneousThinField</a></td>
-<td>An homogeneous field with a fluorescent thin sample</td>
+<td><a href="../KeyMeasurements/">KeyMeasurements</a></td>
+<td>A table of key measurements</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../Table/">Table</a></td>
-<td>A microscope-metrics table</td>
+<td><a href="../Shape/">Shape</a></td>
+<td>A shape</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../Rectangle/">Rectangle</a></td>
-<td>A rectangle as defined by x, y coordinates and width, height</td>
+<td><a href="../PSFBeads/">PSFBeads</a></td>
+<td>A sample of sub-resolution sized beads used to measure the PSF of a microscop...</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../PSFBeadsKeyMeasurements/">PSFBeadsKeyMeasurements</a></td>
+<td></td>
 <td>no</td>
 </tr>
 <tr>
@@ -477,18 +422,73 @@
 <td>no</td>
 </tr>
 <tr>
+<td><a href="../Polygon/">Polygon</a></td>
+<td>A polygon as defined by a series of vertexes and a boolean to indicate if clo...</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Sample/">Sample</a></td>
+<td>A sample is a standard physical object that is imaged by a microscope</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../HarmonizedMetricsDatasetCollection/">HarmonizedMetricsDatasetCollection</a></td>
+<td>A collection of harmonized microscope-metrics datasets</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Column/">Column</a></td>
+<td>Attributes of a column</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../FieldIlluminationDataset/">FieldIlluminationDataset</a></td>
+<td>A field illumination dataset</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../KeyValues/">KeyValues</a></td>
+<td>A collection of key-value pairs</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Table/">Table</a></td>
+<td>A microscope-metrics table</td>
+<td>no</td>
+</tr>
+<tr>
 <td><a href="../Channel/">Channel</a></td>
 <td>A image channel</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../PSFBeads/">PSFBeads</a></td>
-<td>A sample of sub-resolution sized beads used to measure the PSF of a microscop...</td>
+<td><a href="../MetricsDatasetCollection/">MetricsDatasetCollection</a></td>
+<td>A collection of microscope-metrics datasets</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../Image/">Image</a></td>
-<td>A microscope-metrics image</td>
+<td><a href="../Rectangle/">Rectangle</a></td>
+<td>A rectangle as defined by x, y coordinates and width, height</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Ellipse/">Ellipse</a></td>
+<td>An ellipse as defined by x, y coordinates and x and y radii</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Point/">Point</a></td>
+<td>A point as defined by x and y coordinates</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../FluorescentHomogeneousThinField/">FluorescentHomogeneousThinField</a></td>
+<td>An homogeneous field with a fluorescent thin sample</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Roi/">Roi</a></td>
+<td>A ROI (Region Of Interest)</td>
 <td>no</td>
 </tr>
 </tbody>
