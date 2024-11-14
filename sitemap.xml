@@ -2,1294 +2,1294 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/Boolean/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/CentersFitted/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/CentersGeometric/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/CentersMaxIntensity/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/CentersOfMass/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/Channel/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/ChannelSeries/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/Color/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/Column/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/Comment/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/CommentTypesEnum/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/CriticalParameter/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/Curie/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/DataReference/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/Date/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/DateOrDatetime/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/Datetime/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/Decimal/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/Double/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/Ellipse/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/Experimenter/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/FieldIlluminationDataset/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/FieldIlluminationInputData/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/FieldIlluminationInputParameters/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/FieldIlluminationKeyMeasurements/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/FieldIlluminationOutput/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/Float/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/FluorescentHomogeneousThickField/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/FluorescentHomogeneousThinField/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/HarmonizedMetricsDatasetCollection/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/HomogeneousField/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/Image/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/ImageMask/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/Integer/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/Jsonpath/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/Jsonpointer/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/KeyMeasurements/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/KeyValues/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/Line/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/Mask/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/MetaObject/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/MetricsDataset/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/MetricsDatasetCollection/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/MetricsInputData/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/MetricsInputParameters/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/MetricsObject/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/MetricsOutput/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/Microscope/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/MicroscopeCollection/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/MicroscopeTypeEnum/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/NamedObject/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/Ncname/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/Nodeidentifier/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/OMEROObjectTypeEnum/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/Objectidentifier/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/PSFBeads/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/PSFBeadsDataset/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/PSFBeadsInputData/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/PSFBeadsInputParameters/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/PSFBeadsKeyMeasurements/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/PSFBeadsOutput/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/Point/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/Polygon/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/ProfilesIntensity/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/Protocol/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/Rectangle/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/Roi/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/RoiMeasurements/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/Sample/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/Shape/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/Sparqlpath/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/String/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/Table/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/Tag/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/Time/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/TimeSeries/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/Uri/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/Uriorcurie/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/Vertex/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/about/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/acquisition_datetime/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/alpha/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/analyzed_bead_centers/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/array_data/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/author/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/authors/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/average_bead/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/average_bead_fit_r2_x/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/average_bead_fit_r2_y/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/average_bead_fit_r2_z/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/average_bead_fwhm_lateral_asymmetry_ratio/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/average_bead_fwhm_micron_x/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/average_bead_fwhm_micron_y/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/average_bead_fwhm_micron_z/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/average_bead_fwhm_pixel_x/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/average_bead_fwhm_pixel_y/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/average_bead_fwhm_pixel_z/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/average_bead_intensity_integrated/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/average_bead_intensity_max/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/average_bead_intensity_min/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/average_bead_intensity_std/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/b/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/bead_diameter_micron/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/bead_profiles_x/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/bead_profiles_y/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/bead_profiles_z/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/bead_properties/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/bit_depth/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/bottom_center_intensity_mean/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/bottom_center_intensity_ratio/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/bottom_left_intensity_mean/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/bottom_left_intensity_ratio/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/bottom_right_intensity_mean/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/bottom_right_intensity_ratio/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/c/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/center_fitted_distance_relative/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/center_fitted_x/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/center_fitted_x_relative/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/center_fitted_y/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/center_fitted_y_relative/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/center_geometric_distance_relative/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/center_geometric_x/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/center_geometric_x_relative/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/center_geometric_y/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/center_geometric_y_relative/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/center_of_mass_distance_relative/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/center_of_mass_x/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/center_of_mass_x_relative/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/center_of_mass_y/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/center_of_mass_y_relative/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/center_region_area_fraction/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/center_region_intensity_fraction/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/channel_id/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/channel_name/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/channel_nr/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/channel_series/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/channels/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/columns/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/comment/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/comment_type/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/comments/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/considered_axial_edge_count/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/considered_bad_fit_x_count/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/considered_bad_fit_y_count/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/considered_bad_fit_z_count/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/considered_bead_centers_axial_edge/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/considered_bead_centers_intensity_outlier/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/considered_bead_centers_lateral_edge/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/considered_bead_centers_self_proximity/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/considered_bead_centers_x_fit_quality/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/considered_bead_centers_y_fit_quality/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/considered_bead_centers_z_fit_quality/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/considered_intensity_outlier_count/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/considered_lateral_edge_count/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/considered_self_proximity_count/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/considered_valid_count/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/corner_fraction/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/data_reference/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/data_type/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/data_uri/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/dataset_class/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/datasets/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/datetime/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/description/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/ellipses/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/emission_wavelength_nm/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/errors/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/excitation_wavelength_nm/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/experimenter/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/field_illumination_image/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/fill_color/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/fit_r2_x_mean/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/fit_r2_x_median/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/fit_r2_x_std/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/fit_r2_y_mean/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/fit_r2_y_median/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/fit_r2_y_std/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/fit_r2_z_mean/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/fit_r2_z_median/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/fit_r2_z_std/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/fitting_r2_threshold/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/fwhm_lateral_asymmetry_ratio_mean/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/fwhm_lateral_asymmetry_ratio_median/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/fwhm_lateral_asymmetry_ratio_std/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/fwhm_micron_x_mean/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/fwhm_micron_x_median/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/fwhm_micron_x_std/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/fwhm_micron_y_mean/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/fwhm_micron_y_median/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/fwhm_micron_y_std/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/fwhm_micron_z_mean/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/fwhm_micron_z_median/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/fwhm_micron_z_std/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/fwhm_pixel_x_mean/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/fwhm_pixel_x_median/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/fwhm_pixel_x_std/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/fwhm_pixel_y_mean/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/fwhm_pixel_y_median/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/fwhm_pixel_y_std/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/fwhm_pixel_z_mean/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/fwhm_pixel_z_median/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/fwhm_pixel_z_std/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/g/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/h/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/image_id/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/image_name/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/input_data/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/input_parameters/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/intensity_integrated_mean/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/intensity_integrated_median/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/intensity_integrated_std/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/intensity_max_mean/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/intensity_max_median/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/intensity_max_std/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/intensity_min_mean/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/intensity_min_median/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/intensity_min_std/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/intensity_profiles/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/intensity_profiles_table/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/intensity_robust_z_score_threshold/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/intensity_std_mean/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/intensity_std_median/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/intensity_std_std/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/is_open/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/key_measurements/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/lines/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/linked_references/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/manufacturer/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/mask/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/masks/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/max_intensity/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/max_intensity_distance_relative/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/max_intensity_pos_x/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/max_intensity_pos_x_relative/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/max_intensity_pos_y/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/max_intensity_pos_y_relative/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/measurements_table/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/microscope/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/microscopemetrics-schema/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/microscopes/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/middle_center_intensity_mean/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/middle_center_intensity_ratio/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/middle_left_intensity_mean/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/middle_left_intensity_ratio/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/middle_right_intensity_mean/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/middle_right_intensity_ratio/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/min_lateral_distance_factor/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/model/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/name/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/omero_host/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/omero_object_id/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/omero_object_type/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/omero_port/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/orcid/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/output/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/points/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/polygons/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/processed/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/processing_application/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/processing_datetime/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/processing_entity/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/processing_log/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/processing_version/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/protocol/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/psf_beads_images/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/r/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/rectangles/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/roi_center_region/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/roi_centers_fitted/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/roi_centers_geometric/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/roi_centers_max_intensity/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/roi_centers_of_mass/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/roi_corners/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/roi_profiles/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/sample/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/saturation_threshold/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/serial_number/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/shape_c/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/shape_t/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/shape_x/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/shape_y/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/shape_z/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/sigma/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/sigma_x/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/sigma_y/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/sigma_z/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/snr_threshold/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/source_images/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/source_reference/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/stroke_color/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/stroke_width/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/t/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/table_data/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/text/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/time_series/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/top_center_intensity_mean/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/top_center_intensity_ratio/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/top_left_intensity_mean/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/top_left_intensity_ratio/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/top_right_intensity_mean/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/top_right_intensity_ratio/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/type/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/url/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/validated/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/validation_datetime/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/values/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/version/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/vertexes/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/voxel_size_x_micron/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/voxel_size_y_micron/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/voxel_size_z_micron/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/w/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/warnings/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/x/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/x1/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/x2/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/x_rad/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/y/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/y1/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/y2/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/y_rad/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
     <url>
          <loc>https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/z/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-14</lastmod>
     </url>
 </urlset>

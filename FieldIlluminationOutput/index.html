@@ -301,7 +301,7 @@
 
 
 
-    FieldIlluminationOutput --&gt; "0..1" Roi : roi_corners
+    FieldIlluminationOutput --&gt; "*" Roi : roi_corners
     click Roi href "../Roi"
 
 
@@ -360,7 +360,7 @@
 </tr>
 <tr>
 <td><a href="../roi_corners/">roi_corners</a></td>
-<td>0..1 <br/> <a href="../Roi/">Roi</a></td>
+<td>* <br/> <a href="../Roi/">Roi</a></td>
 <td>Rectangular ROIs used to compute the corner intensities</td>
 <td>direct</td>
 </tr>
@@ -548,7 +548,7 @@ attributes:
     domain_of:
     - FieldIlluminationOutput
     range: Roi
-    multivalued: false
+    multivalued: true
   roi_centers_of_mass:
     name: roi_centers_of_mass
     description: Point ROIs marking the center of mass of the area of maximum illumination.
@@ -658,7 +658,7 @@ attributes:
     domain_of:
     - FieldIlluminationOutput
     range: Roi
-    multivalued: false
+    multivalued: true
   roi_centers_of_mass:
     name: roi_centers_of_mass
     description: Point ROIs marking the center of mass of the area of maximum illumination.
