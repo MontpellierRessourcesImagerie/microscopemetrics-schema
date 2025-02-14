@@ -212,12 +212,12 @@
       MetricsInputData &lt;|-- FieldIlluminationInputData
         click MetricsInputData href "../MetricsInputData"
 
-      FieldIlluminationInputData : field_illumination_image
+      FieldIlluminationInputData : field_illumination_images
 
 
 
 
-    FieldIlluminationInputData --&gt; "1..*" Image : field_illumination_image
+    FieldIlluminationInputData --&gt; "1..*" Image : field_illumination_images
     click Image href "../Image"
 
 
@@ -242,7 +242,7 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../field_illumination_image/">field_illumination_image</a></td>
+<td><a href="../field_illumination_images/">field_illumination_images</a></td>
 <td>1..* <br/> <a href="../Image/">Image</a></td>
 <td>Input parameter: homogeneity image provided in the order TZYXC</td>
 <td>direct</td>
@@ -300,7 +300,7 @@
 from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
 is_a: MetricsInputData
 slots:
-- field_illumination_image
+- field_illumination_images
 
 </code></pre>
 </details>
@@ -310,14 +310,14 @@ slots:
 from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
 is_a: MetricsInputData
 attributes:
-  field_illumination_image:
-    name: field_illumination_image
+  field_illumination_images:
+    name: field_illumination_images
     description: 'Input parameter: homogeneity image provided in the order TZYXC.
       While the analysis accepts multiple channels, the T and Z dimensions are expected
       to be 1.'
     from_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
     rank: 1000
-    alias: field_illumination_image
+    alias: field_illumination_images
     owner: FieldIlluminationInputData
     domain_of:
     - FieldIlluminationInputData
