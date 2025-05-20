@@ -10,8 +10,13 @@
       
         <link rel="canonical" href="https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/">
       
+      
+      
+        <link rel="next" href="about/">
+      
+      
       <link rel="icon" href="assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
@@ -19,15 +24,14 @@
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.975780f9.min.css">
-      
-        
-        <link rel="stylesheet" href="assets/stylesheets/palette.2505c338.min.css">
-        
+      <link rel="stylesheet" href="assets/stylesheets/main.342714a4.min.css">
       
       
 
+
     
+    
+      
     
     
       
@@ -39,7 +43,13 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+      <link rel="stylesheet" href="css/ansi-colours.css">
+    
+      <link rel="stylesheet" href="css/jupyter-cells.css">
+    
+      <link rel="stylesheet" href="css/pandas-dataframe.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -49,14 +59,8 @@
   </head>
   
   
-    
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="None" data-md-color-accent="None">
+    <body dir="ltr">
   
-    
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -76,16 +80,19 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="." title="microscopemetrics-schema" class="md-header__button md-logo" aria-label="microscopemetrics-schema" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -105,46 +112,56 @@
     </div>
     
     
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
-      <label class="md-header__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
   </div>
 </div>
+      
     
     
       <div class="md-header__source">
         <a href="https://github.com/MontpellierRessourcesImagerie/microscopemetrics-schema" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -174,12 +191,13 @@
                     
 
 
+
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="." title="microscopemetrics-schema" class="md-nav__button md-logo" aria-label="microscopemetrics-schema" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
     microscopemetrics-schema
@@ -189,7 +207,7 @@
       <a href="https://github.com/MontpellierRessourcesImagerie/microscopemetrics-schema" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -201,28 +219,43 @@
     
       
       
-      
-
   
   
     
   
   
+  
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
         
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Index
+          
+  
+  
+  <span class="md-ellipsis">
+    Index
+    
+  </span>
+  
+
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="." class="md-nav__link md-nav__link--active">
-        Index
+        
+  
+  
+  <span class="md-ellipsis">
+    Index
+    
+  </span>
+  
+
       </a>
       
         
@@ -242,35 +275,45 @@
       
         <li class="md-nav__item">
   <a href="#classes" class="md-nav__link">
-    Classes
+    <span class="md-ellipsis">
+      Classes
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#slots" class="md-nav__link">
-    Slots
+    <span class="md-ellipsis">
+      Slots
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#enumerations" class="md-nav__link">
-    Enumerations
+    <span class="md-ellipsis">
+      Enumerations
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#types" class="md-nav__link">
-    Types
+    <span class="md-ellipsis">
+      Types
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#subsets" class="md-nav__link">
-    Subsets
+    <span class="md-ellipsis">
+      Subsets
+    </span>
   </a>
   
 </li>
@@ -285,14 +328,21 @@
     
       
       
-      
-
+  
   
   
   
     <li class="md-nav__item">
       <a href="about/" class="md-nav__link">
-        About
+        
+  
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
       </a>
     </li>
   
@@ -326,35 +376,45 @@
       
         <li class="md-nav__item">
   <a href="#classes" class="md-nav__link">
-    Classes
+    <span class="md-ellipsis">
+      Classes
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#slots" class="md-nav__link">
-    Slots
+    <span class="md-ellipsis">
+      Slots
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#enumerations" class="md-nav__link">
-    Enumerations
+    <span class="md-ellipsis">
+      Enumerations
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#types" class="md-nav__link">
-    Types
+    <span class="md-ellipsis">
+      Types
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#subsets" class="md-nav__link">
-    Subsets
+    <span class="md-ellipsis">
+      Subsets
+    </span>
   </a>
   
 </li>
@@ -373,10 +433,9 @@
                 
                   
 
-  <a href="https://github.com/MontpellierRessourcesImagerie/microscopemetrics-schema/edit/master/docs/index.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+
+  
+  
 
 
 <h1 id="microscopemetrics-schema">microscopemetrics-schema</h1>
@@ -394,19 +453,19 @@
 <tbody>
 <tr>
 <td><a href="CentersFitted/">CentersFitted</a></td>
-<td>The fitted center of detected objects. Intended to be used with ROIs.</td>
+<td>The fitted center of detected objects</td>
 </tr>
 <tr>
 <td><a href="CentersGeometric/">CentersGeometric</a></td>
-<td>The geometric center of detected objects. Intended to be used with ROIs.</td>
+<td>The geometric center of detected objects</td>
 </tr>
 <tr>
 <td><a href="CentersMaxIntensity/">CentersMaxIntensity</a></td>
-<td>The position of maximum intensity of detected objects. Intended to be used with ROIs.</td>
+<td>The position of maximum intensity of detected objects</td>
 </tr>
 <tr>
 <td><a href="CentersOfMass/">CentersOfMass</a></td>
-<td>The center of mass of detected objects. Intended to be used with ROIs.</td>
+<td>The center of mass of detected objects</td>
 </tr>
 <tr>
 <td><a href="ChannelSeries/">ChannelSeries</a></td>
@@ -421,8 +480,20 @@
 <td>A reference to a data resource</td>
 </tr>
 <tr>
+<td><a href="HasInputParametersMixin/">HasInputParametersMixin</a></td>
+<td>A mixin for objects that have input parameters</td>
+</tr>
+<tr>
+<td><a href="HasSampleMixin/">HasSampleMixin</a></td>
+<td>A mixin for objects that have a sample</td>
+</tr>
+<tr>
+<td><a href="LightSource/">LightSource</a></td>
+<td>A light source</td>
+</tr>
+<tr>
 <td><a href="MetaObject/">MetaObject</a></td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="MetricsInputData/">MetricsInputData</a></td>
@@ -430,11 +501,15 @@
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="FieldIlluminationInputData/">FieldIlluminationInputData</a></td>
-<td>None</td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="LightSourcePowerInputData/">LightSourcePowerInputData</a></td>
+<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="PSFBeadsInputData/">PSFBeadsInputData</a></td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="MetricsInputParameters/">MetricsInputParameters</a></td>
@@ -442,11 +517,15 @@
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="FieldIlluminationInputParameters/">FieldIlluminationInputParameters</a></td>
-<td>None</td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="LightSourcePowerInputParameters/">LightSourcePowerInputParameters</a></td>
+<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="PSFBeadsInputParameters/">PSFBeadsInputParameters</a></td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="MetricsOutput/">MetricsOutput</a></td>
@@ -454,11 +533,15 @@
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="FieldIlluminationOutput/">FieldIlluminationOutput</a></td>
-<td>None</td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="LightSourcePowerOutput/">LightSourcePowerOutput</a></td>
+<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="PSFBeadsOutput/">PSFBeadsOutput</a></td>
-<td>None</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="MicroscopeCollection/">MicroscopeCollection</a></td>
@@ -474,7 +557,7 @@
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="MetricsObject/">MetricsObject</a></td>
-<td>A base object for all microscope-metrics objects.</td>
+<td>A base object for all microscope-metrics objects</td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Channel/">Channel</a></td>
@@ -494,23 +577,27 @@
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ImageMask/">ImageMask</a></td>
-<td>A mask image. Either a binary image or a label image</td>
+<td>A mask image</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="KeyValues/">KeyValues</a></td>
-<td>A collection of key-value pairs</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="OrthogonalImage/">OrthogonalImage</a></td>
+<td>An image that is orthogonal to the main image</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="KeyMeasurements/">KeyMeasurements</a></td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="KeyMeasurements/">KeyMeasurements</a></td>
 <td>A table of key measurements</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="FieldIlluminationKeyMeasurements/">FieldIlluminationKeyMeasurements</a></td>
-<td>None</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="FieldIlluminationKeyMeasurements/">FieldIlluminationKeyMeasurements</a></td>
+<td></td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="PSFBeadsKeyMeasurements/">PSFBeadsKeyMeasurements</a></td>
-<td>None</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="LightSourcePowerKeyMeasurements/">LightSourcePowerKeyMeasurements</a></td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="PSFBeadsKeyMeasurements/">PSFBeadsKeyMeasurements</a></td>
+<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="MetricsDataset/">MetricsDataset</a></td>
@@ -519,6 +606,10 @@
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="FieldIlluminationDataset/">FieldIlluminationDataset</a></td>
 <td>A field illumination dataset</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="LightSourcePowerDataset/">LightSourcePowerDataset</a></td>
+<td>Power measurements dataset</td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="PSFBeadsDataset/">PSFBeadsDataset</a></td>
@@ -530,7 +621,7 @@
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="HarmonizedMetricsDatasetCollection/">HarmonizedMetricsDatasetCollection</a></td>
-<td>A collection of harmonized microscope-metrics datasets. All of the datasets  in the collection share the same analysis and processing parameters.</td>
+<td>A collection of harmonized microscope-metrics datasets</td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Microscope/">Microscope</a></td>
@@ -538,19 +629,19 @@
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Roi/">Roi</a></td>
-<td>A ROI (Region Of Interest). Collection of shapes and an image to which they are applied</td>
+<td>A ROI (Region Of Interest)</td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Table/">Table</a></td>
 <td>A microscope-metrics table</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Tag/">Tag</a></td>
-<td>A tag</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="PowerMeter/">PowerMeter</a></td>
+<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Protocol/">Protocol</a></td>
-<td>Set of instructions for preparing and imaging a sample</td>
+<td>Set of instructions for preparing a sample or acquiring data</td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Sample/">Sample</a></td>
@@ -558,19 +649,23 @@
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="HomogeneousField/">HomogeneousField</a></td>
-<td>An homogeneous field.</td>
+<td>An homogeneous field</td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="FluorescentHomogeneousThickField/">FluorescentHomogeneousThickField</a></td>
-<td>An homogeneous field with a fluorescent thick sample. Similar to the Chroma slides.</td>
+<td>An homogeneous field with a fluorescent thick sample</td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="FluorescentHomogeneousThinField/">FluorescentHomogeneousThinField</a></td>
-<td>An homogeneous field with a fluorescent thin sample. Similar to a dye thin layer.</td>
+<td>An homogeneous field with a fluorescent thin sample</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="LightSourcePower/">LightSourcePower</a></td>
+<td>A sample providing measurements on light source power</td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="PSFBeads/">PSFBeads</a></td>
-<td>A sample of sub-resolution sized beads used to measure the PSF of a microscope.</td>
+<td>A sample of sub-resolution sized beads used to measure the PSF of a microscop...</td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Shape/">Shape</a></td>
@@ -594,19 +689,23 @@
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Polygon/">Polygon</a></td>
-<td>A polygon as defined by a series of vertexes and a boolean to indicate if closed or not</td>
+<td>A polygon as defined by a series of vertexes and a boolean to indicate if clo...</td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Rectangle/">Rectangle</a></td>
 <td>A rectangle as defined by x, y coordinates and width, height</td>
 </tr>
 <tr>
+<td><a href="PowerSample/">PowerSample</a></td>
+<td>A single power measurement for a light source</td>
+</tr>
+<tr>
 <td><a href="ProfilesIntensity/">ProfilesIntensity</a></td>
-<td>Profiles computed on the image. Intended to be used with ROIs.</td>
+<td>Profiles computed on the image</td>
 </tr>
 <tr>
 <td><a href="RoiMeasurements/">RoiMeasurements</a></td>
-<td>Measurements computed on the ROIs of an image. Intended to be used with ROIs.</td>
+<td>Measurements computed on the ROIs of an image</td>
 </tr>
 <tr>
 <td><a href="TimeSeries/">TimeSeries</a></td>
@@ -630,6 +729,10 @@
 <tr>
 <td><a href="acquisition_datetime/">acquisition_datetime</a></td>
 <td>The datetime of the acquisition</td>
+</tr>
+<tr>
+<td><a href="acquisition_protocol/">acquisition_protocol</a></td>
+<td>The protocol used to acquire the dataset</td>
 </tr>
 <tr>
 <td><a href="alpha/">alpha</a></td>
@@ -712,6 +815,10 @@
 <td>Standard deviation of the intensity for the average bead</td>
 </tr>
 <tr>
+<td><a href="axis/">axis</a></td>
+<td>The axis of the orthogonal image</td>
+</tr>
+<tr>
 <td><a href="b/">b</a></td>
 <td>The blue value of the color</td>
 </tr>
@@ -765,7 +872,7 @@
 </tr>
 <tr>
 <td><a href="c/">c</a></td>
-<td>The c coordinate of the shape</td>
+<td>The c coordinate</td>
 </tr>
 <tr>
 <td><a href="center_fitted_distance_relative/">center_fitted_distance_relative</a></td>
@@ -861,7 +968,11 @@
 </tr>
 <tr>
 <td><a href="comment/">comment</a></td>
-<td>A human readable comment about the dataset</td>
+<td>A human readable comment</td>
+</tr>
+<tr>
+<td><a href="comment_collection/">comment_collection</a></td>
+<td>A collection of comments</td>
 </tr>
 <tr>
 <td><a href="comment_type/">comment_type</a></td>
@@ -952,7 +1063,7 @@
 <td>The class of the datasets in the collection</td>
 </tr>
 <tr>
-<td><a href="datasets/">datasets</a></td>
+<td><a href="dataset_collection/">dataset_collection</a></td>
 <td>The datasets of the collection</td>
 </tr>
 <tr>
@@ -1121,7 +1232,7 @@
 </tr>
 <tr>
 <td><a href="h/">h</a></td>
-<td>The height of the rectangle</td>
+<td>The height</td>
 </tr>
 <tr>
 <td><a href="image_id/">image_id</a></td>
@@ -1138,6 +1249,10 @@
 <tr>
 <td><a href="input_parameters/">input_parameters</a></td>
 <td>The input parameters for the analysis</td>
+</tr>
+<tr>
+<td><a href="integration_time_ms/">integration_time_ms</a></td>
+<td>The integration time in milliseconds</td>
 </tr>
 <tr>
 <td><a href="intensity_integrated_mean/">intensity_integrated_mean</a></td>
@@ -1205,7 +1320,15 @@
 </tr>
 <tr>
 <td><a href="key_measurements/">key_measurements</a></td>
-<td>Key-Value pairs containing the Key measurements for the field illumination an...</td>
+<td>Key measurements is a table summarizing the most important  measurements as a...</td>
+</tr>
+<tr>
+<td><a href="light_source/">light_source</a></td>
+<td>The light source under investigation</td>
+</tr>
+<tr>
+<td><a href="linearity/">linearity</a></td>
+<td>The linearity of the power measurements</td>
 </tr>
 <tr>
 <td><a href="lines/">lines</a></td>
@@ -1217,7 +1340,7 @@
 </tr>
 <tr>
 <td><a href="manufacturer/">manufacturer</a></td>
-<td>The manufacturer of the microscope</td>
+<td>A manufacturer</td>
 </tr>
 <tr>
 <td><a href="mask/">mask</a></td>
@@ -1252,6 +1375,10 @@
 <td>The relative y position of the maximum intensity of the center of illuminatio...</td>
 </tr>
 <tr>
+<td><a href="measurement_device/">measurement_device</a></td>
+<td>The power meter used to measure the power</td>
+</tr>
+<tr>
 <td><a href="measurements_table/">measurements_table</a></td>
 <td>Linked table of measurements</td>
 </tr>
@@ -1260,8 +1387,12 @@
 <td>The microscope that was used to acquire the dataset</td>
 </tr>
 <tr>
-<td><a href="microscopes/">microscopes</a></td>
+<td><a href="microscope_collection/">microscope_collection</a></td>
 <td>The microscopes of the collection</td>
+</tr>
+<tr>
+<td><a href="microscope_type/">microscope_type</a></td>
+<td>The type of the microscope</td>
 </tr>
 <tr>
 <td><a href="middle_center_intensity_mean/">middle_center_intensity_mean</a></td>
@@ -1293,7 +1424,7 @@
 </tr>
 <tr>
 <td><a href="model/">model</a></td>
-<td>The model of the microscope</td>
+<td>The model of a device</td>
 </tr>
 <tr>
 <td><a href="name/">name</a></td>
@@ -1332,6 +1463,42 @@
 <td>A list of polygons included in the ROI</td>
 </tr>
 <tr>
+<td><a href="power_max_mw/">power_max_mw</a></td>
+<td>The maximum power measured in milliwatts</td>
+</tr>
+<tr>
+<td><a href="power_mean_mw/">power_mean_mw</a></td>
+<td>The mean power measured in milliwatts</td>
+</tr>
+<tr>
+<td><a href="power_median_mw/">power_median_mw</a></td>
+<td>The median power measured in milliwatts</td>
+</tr>
+<tr>
+<td><a href="power_min_mw/">power_min_mw</a></td>
+<td>The minimum power measured in milliwatts</td>
+</tr>
+<tr>
+<td><a href="power_mw/">power_mw</a></td>
+<td>The power measured in milliwatts</td>
+</tr>
+<tr>
+<td><a href="power_samples/">power_samples</a></td>
+<td>This is a collection of power samples for different light sources</td>
+</tr>
+<tr>
+<td><a href="power_set_point/">power_set_point</a></td>
+<td>The power set point as a fraction of the nominal power of the light source</td>
+</tr>
+<tr>
+<td><a href="power_std_mw/">power_std_mw</a></td>
+<td>The standard deviation of the power measured in milliwatts</td>
+</tr>
+<tr>
+<td><a href="preparation_protocol/">preparation_protocol</a></td>
+<td>The protocol used to prepare a sample</td>
+</tr>
+<tr>
 <td><a href="processed/">processed</a></td>
 <td>Has the dataset been processed by microscope-metrics</td>
 </tr>
@@ -1354,10 +1521,6 @@
 <tr>
 <td><a href="processing_version/">processing_version</a></td>
 <td>The version of the application used to process the dataset</td>
-</tr>
-<tr>
-<td><a href="protocol/">protocol</a></td>
-<td>The protocol used to prepare the sample</td>
 </tr>
 <tr>
 <td><a href="psf_beads_images/">psf_beads_images</a></td>
@@ -1404,32 +1567,36 @@
 <td>The physical sample that was imaged</td>
 </tr>
 <tr>
+<td><a href="sampling_location/">sampling_location</a></td>
+<td>The location at which the sampling was taken</td>
+</tr>
+<tr>
 <td><a href="saturation_threshold/">saturation_threshold</a></td>
 <td>Tolerated saturation threshold</td>
 </tr>
 <tr>
 <td><a href="serial_number/">serial_number</a></td>
-<td>The serial number of the microscope</td>
+<td>The serial number of a device</td>
 </tr>
 <tr>
 <td><a href="shape_c/">shape_c</a></td>
-<td>The shape of the image in the c dimension</td>
+<td>The shape of an image in the c dimension</td>
 </tr>
 <tr>
 <td><a href="shape_t/">shape_t</a></td>
-<td>The shape of the image in the t dimension</td>
+<td>The shape of an image in the t dimension</td>
 </tr>
 <tr>
 <td><a href="shape_x/">shape_x</a></td>
-<td>The shape of the image in the x dimension</td>
+<td>The shape of an image in the x dimension</td>
 </tr>
 <tr>
 <td><a href="shape_y/">shape_y</a></td>
-<td>The shape of the image in the y dimension</td>
+<td>The shape of an image in the y dimension</td>
 </tr>
 <tr>
 <td><a href="shape_z/">shape_z</a></td>
-<td>The shape of the image in the z dimension</td>
+<td>The shape of an image in the z dimension</td>
 </tr>
 <tr>
 <td><a href="sigma/">sigma</a></td>
@@ -1460,6 +1627,10 @@
 <td>The source object of the column</td>
 </tr>
 <tr>
+<td><a href="source_roi/">source_roi</a></td>
+<td>The source ROI of the orthogonal image</td>
+</tr>
+<tr>
 <td><a href="stroke_color/">stroke_color</a></td>
 <td>The stroke color of the shape</td>
 </tr>
@@ -1469,7 +1640,7 @@
 </tr>
 <tr>
 <td><a href="t/">t</a></td>
-<td>The t coordinate of the shape</td>
+<td>The t coordinate</td>
 </tr>
 <tr>
 <td><a href="table_data/">table_data</a></td>
@@ -1478,6 +1649,10 @@
 <tr>
 <td><a href="text/">text</a></td>
 <td>The text of the comment</td>
+</tr>
+<tr>
+<td><a href="time_points_sec/">time_points_sec</a></td>
+<td>The relative times at which the time series were acquired in seconds</td>
 </tr>
 <tr>
 <td><a href="time_series/">time_series</a></td>
@@ -1508,8 +1683,8 @@
 <td>The mean intensity of the top-right corner of the image  divided by the maxim...</td>
 </tr>
 <tr>
-<td><a href="type/">type</a></td>
-<td>The type of the microscope</td>
+<td><a href="total_bead_count/">total_bead_count</a></td>
+<td>Total number of beads detected in the image</td>
 </tr>
 <tr>
 <td><a href="url/">url</a></td>
@@ -1525,7 +1700,7 @@
 </tr>
 <tr>
 <td><a href="values/">values</a></td>
-<td>The values of the TimeSeries in seconds</td>
+<td>An optional container for the values of the column</td>
 </tr>
 <tr>
 <td><a href="version/">version</a></td>
@@ -1549,15 +1724,19 @@
 </tr>
 <tr>
 <td><a href="w/">w</a></td>
-<td>The width of the rectangle</td>
+<td>The width</td>
 </tr>
 <tr>
 <td><a href="warnings/">warnings</a></td>
 <td>The warnings of the processing by microscope-metrics</td>
 </tr>
 <tr>
+<td><a href="wavelength_nm/">wavelength_nm</a></td>
+<td>The wavelength of the light source in nanometers</td>
+</tr>
+<tr>
 <td><a href="x/">x</a></td>
-<td>The x coordinate of the point</td>
+<td>The x coordinate</td>
 </tr>
 <tr>
 <td><a href="x1/">x1</a></td>
@@ -1568,12 +1747,8 @@
 <td>The x coordinate of the second point of the line</td>
 </tr>
 <tr>
-<td><a href="x_rad/">x_rad</a></td>
-<td>The x radius of the ellipse</td>
-</tr>
-<tr>
 <td><a href="y/">y</a></td>
-<td>The y coordinate of the point</td>
+<td>The y coordinate</td>
 </tr>
 <tr>
 <td><a href="y1/">y1</a></td>
@@ -1584,12 +1759,8 @@
 <td>The y coordinate of the second point of the line</td>
 </tr>
 <tr>
-<td><a href="y_rad/">y_rad</a></td>
-<td>The y radius of the ellipse</td>
-</tr>
-<tr>
 <td><a href="z/">z</a></td>
-<td>The z coordinate of the shape</td>
+<td>The z coordinate</td>
 </tr>
 </tbody>
 </table>
@@ -1603,6 +1774,10 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="AxisEnum/">AxisEnum</a></td>
+<td>The axis of the image</td>
+</tr>
+<tr>
 <td><a href="CommentTypesEnum/">CommentTypesEnum</a></td>
 <td>The type of the comment</td>
 </tr>
@@ -1613,6 +1788,14 @@
 <tr>
 <td><a href="OMEROObjectTypeEnum/">OMEROObjectTypeEnum</a></td>
 <td>The type of the OMERO object</td>
+</tr>
+<tr>
+<td><a href="PlaneAxisEnum/">PlaneAxisEnum</a></td>
+<td>The axis of the plane</td>
+</tr>
+<tr>
+<td><a href="SamplingLocationEnum/">SamplingLocationEnum</a></td>
+<td>The location at which the sampling was taken</td>
 </tr>
 </tbody>
 </table>
@@ -1723,39 +1906,26 @@
 
 
 
+
+
+
+
+
+
+
                 
               </article>
             </div>
           
           
-  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
 
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
       </main>
       
         <footer class="md-footer">
-  
-    
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
-      
-      
-        
-        <a href="about/" class="md-footer__link md-footer__link--next" aria-label="Next: About" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              About
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -1778,12 +1948,18 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["content.tabs.link"], "search": "assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.5a2dcb6a.min.js"></script>
       
+      <script id="__config" type="application/json">{"base": ".", "features": ["content.tabs.link"], "search": "assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
+    
+      <script src="assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="javascripts/tablesort.js"></script>
+      
     
   </body>
 </html>
