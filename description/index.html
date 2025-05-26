@@ -381,13 +381,8 @@ Alias: description</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="../PowerMeter/">PowerMeter</a></td>
-<td></td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Image/">Image</a></td>
-<td>A microscope-metrics image</td>
+<td><a href="../LightSourcePowerDataset/">LightSourcePowerDataset</a></td>
+<td>Power measurements dataset</td>
 <td>no</td>
 </tr>
 <tr>
@@ -396,13 +391,8 @@ Alias: description</p>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../Experimenter/">Experimenter</a></td>
-<td>The person that performed the experiment or developed the protocol</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Shape/">Shape</a></td>
-<td>A shape</td>
+<td><a href="../Sample/">Sample</a></td>
+<td>A sample is a standard physical object that is imaged by a microscope</td>
 <td>no</td>
 </tr>
 <tr>
@@ -411,8 +401,18 @@ Alias: description</p>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../Column/">Column</a></td>
-<td>Attributes of a column</td>
+<td><a href="../LightSourcePower/">LightSourcePower</a></td>
+<td>A sample providing measurements on light source power</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Table/">Table</a></td>
+<td>A microscope-metrics table</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../MetricsDataset/">MetricsDataset</a></td>
+<td>A base object on which microscope-metrics runs the analysis</td>
 <td>no</td>
 </tr>
 <tr>
@@ -421,8 +421,118 @@ Alias: description</p>
 <td>no</td>
 </tr>
 <tr>
+<td><a href="../Ellipse/">Ellipse</a></td>
+<td>An ellipse as defined by x, y coordinates and x and y radii</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Rectangle/">Rectangle</a></td>
+<td>A rectangle as defined by x, y coordinates and width, height</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../MetricsObject/">MetricsObject</a></td>
+<td>A base object for all microscope-metrics objects</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Channel/">Channel</a></td>
+<td>A image channel</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Roi/">Roi</a></td>
+<td>A ROI (Region Of Interest)</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../PSFBeads/">PSFBeads</a></td>
+<td>A sample of sub-resolution sized beads used to measure the PSF of a microscop...</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../FluorescentHomogeneousThinField/">FluorescentHomogeneousThinField</a></td>
+<td>An homogeneous field with a fluorescent thin sample</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../ImageMask/">ImageMask</a></td>
+<td>A mask image</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../OrthogonalImage/">OrthogonalImage</a></td>
+<td>An image that is orthogonal to the main image</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../KeyMeasurements/">KeyMeasurements</a></td>
+<td>A table of key measurements</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Mask/">Mask</a></td>
+<td>A mask as defined by a boolean image</td>
+<td>no</td>
+</tr>
+<tr>
 <td><a href="../NamedObject/">NamedObject</a></td>
 <td>An object with a name and a description</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Comment/">Comment</a></td>
+<td>A comment</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Image/">Image</a></td>
+<td>A microscope-metrics image</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Shape/">Shape</a></td>
+<td>A shape</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../FluorescentHomogeneousThickField/">FluorescentHomogeneousThickField</a></td>
+<td>An homogeneous field with a fluorescent thick sample</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../HarmonizedMetricsDatasetCollection/">HarmonizedMetricsDatasetCollection</a></td>
+<td>A collection of harmonized microscope-metrics datasets</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Column/">Column</a></td>
+<td>Attributes of a column</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../FieldIlluminationKeyMeasurements/">FieldIlluminationKeyMeasurements</a></td>
+<td></td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../PSFBeadsDataset/">PSFBeadsDataset</a></td>
+<td>A PSF beads dataset</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Experimenter/">Experimenter</a></td>
+<td>The person that performed the experiment or developed the protocol</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../MetricsDatasetCollection/">MetricsDatasetCollection</a></td>
+<td>A collection of microscope-metrics datasets</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Point/">Point</a></td>
+<td>A point as defined by x and y coordinates</td>
 <td>no</td>
 </tr>
 <tr>
@@ -436,33 +546,8 @@ Alias: description</p>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../KeyMeasurements/">KeyMeasurements</a></td>
-<td>A table of key measurements</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../FluorescentHomogeneousThinField/">FluorescentHomogeneousThinField</a></td>
-<td>An homogeneous field with a fluorescent thin sample</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Table/">Table</a></td>
-<td>A microscope-metrics table</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../MetricsObject/">MetricsObject</a></td>
-<td>A base object for all microscope-metrics objects</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../FieldIlluminationKeyMeasurements/">FieldIlluminationKeyMeasurements</a></td>
-<td></td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Point/">Point</a></td>
-<td>A point as defined by x and y coordinates</td>
+<td><a href="../FieldIlluminationDataset/">FieldIlluminationDataset</a></td>
+<td>A field illumination dataset</td>
 <td>no</td>
 </tr>
 <tr>
@@ -471,98 +556,13 @@ Alias: description</p>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../PSFBeads/">PSFBeads</a></td>
-<td>A sample of sub-resolution sized beads used to measure the PSF of a microscop...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../LightSourcePowerDataset/">LightSourcePowerDataset</a></td>
-<td>Power measurements dataset</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../FluorescentHomogeneousThickField/">FluorescentHomogeneousThickField</a></td>
-<td>An homogeneous field with a fluorescent thick sample</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Comment/">Comment</a></td>
-<td>A comment</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Roi/">Roi</a></td>
-<td>A ROI (Region Of Interest)</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Rectangle/">Rectangle</a></td>
-<td>A rectangle as defined by x, y coordinates and width, height</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../ImageMask/">ImageMask</a></td>
-<td>A mask image</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../LightSourcePower/">LightSourcePower</a></td>
-<td>A sample providing measurements on light source power</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../HarmonizedMetricsDatasetCollection/">HarmonizedMetricsDatasetCollection</a></td>
-<td>A collection of harmonized microscope-metrics datasets</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../PSFBeadsDataset/">PSFBeadsDataset</a></td>
-<td>A PSF beads dataset</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../OrthogonalImage/">OrthogonalImage</a></td>
-<td>An image that is orthogonal to the main image</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Mask/">Mask</a></td>
-<td>A mask as defined by a boolean image</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../MetricsDatasetCollection/">MetricsDatasetCollection</a></td>
-<td>A collection of microscope-metrics datasets</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../MetricsDataset/">MetricsDataset</a></td>
-<td>A base object on which microscope-metrics runs the analysis</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Channel/">Channel</a></td>
-<td>A image channel</td>
+<td><a href="../PowerMeter/">PowerMeter</a></td>
+<td></td>
 <td>no</td>
 </tr>
 <tr>
 <td><a href="../PSFBeadsKeyMeasurements/">PSFBeadsKeyMeasurements</a></td>
 <td></td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../FieldIlluminationDataset/">FieldIlluminationDataset</a></td>
-<td>A field illumination dataset</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Sample/">Sample</a></td>
-<td>A sample is a standard physical object that is imaged by a microscope</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Ellipse/">Ellipse</a></td>
-<td>An ellipse as defined by x, y coordinates and x and y radii</td>
 <td>no</td>
 </tr>
 </tbody>
